@@ -9,9 +9,14 @@ import UIKit
 
 class EventsViewController: UIViewController {
 
+    @IBOutlet weak var eventTableView: UITableView!
+    
+    let eventManager = EventManager()
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        eventManager.performRequest()
     }
 
 

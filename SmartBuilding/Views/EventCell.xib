@@ -18,10 +18,10 @@
                 <rect key="frame" x="0.0" y="0.0" width="465" height="133"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q1k-OX-PQr">
+                    <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Q1k-OX-PQr">
                         <rect key="frame" x="10" y="10" width="445" height="113"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fxu-wG-j0W">
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fxu-wG-j0W">
                                 <rect key="frame" x="0.0" y="0.0" width="315" height="113"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bAk-3a-XUh">
@@ -57,6 +57,11 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="eventImage" destination="LzO-QX-wPd" id="ior-r1-ZTV"/>
+                <outlet property="eventName" destination="bAk-3a-XUh" id="FRe-bc-tgL"/>
+                <outlet property="eventView" destination="Fxu-wG-j0W" id="G6g-u4-Gtf"/>
+            </connections>
             <point key="canvasLocation" x="-870.28985507246387" y="44.53125"/>
         </tableViewCell>
     </objects>

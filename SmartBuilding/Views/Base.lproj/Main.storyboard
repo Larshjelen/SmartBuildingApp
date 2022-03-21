@@ -41,6 +41,9 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="y3b-SO-oM8" secondAttribute="bottom" id="eAA-DC-498"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="eventTableView" destination="y3b-SO-oM8" id="edi-Nh-Rk7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
