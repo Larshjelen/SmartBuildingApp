@@ -21,7 +21,7 @@
                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q1k-OX-PQr">
                         <rect key="frame" x="10" y="10" width="445" height="113"/>
                         <subviews>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fxu-wG-j0W">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fxu-wG-j0W">
                                 <rect key="frame" x="0.0" y="0.0" width="315" height="113"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bAk-3a-XUh">
@@ -34,10 +34,19 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemGrayColor"/>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LzO-QX-wPd">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LzO-QX-wPd">
                                 <rect key="frame" x="315" y="0.0" width="130" height="113"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="130" id="Co8-TY-VLK"/>
+                                </constraints>
                             </imageView>
                         </subviews>
+                        <constraints>
+                            <constraint firstItem="Fxu-wG-j0W" firstAttribute="leading" secondItem="Q1k-OX-PQr" secondAttribute="leading" id="5OK-bZ-8aK"/>
+                            <constraint firstItem="LzO-QX-wPd" firstAttribute="leading" secondItem="Fxu-wG-j0W" secondAttribute="trailing" id="dvm-ET-Wba"/>
+                            <constraint firstItem="Fxu-wG-j0W" firstAttribute="top" secondItem="Q1k-OX-PQr" secondAttribute="top" id="hZN-Vd-NMI"/>
+                            <constraint firstAttribute="bottom" secondItem="Fxu-wG-j0W" secondAttribute="bottom" id="wGi-Ka-xVl"/>
+                        </constraints>
                     </stackView>
                 </subviews>
                 <constraints>
