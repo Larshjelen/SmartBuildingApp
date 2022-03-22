@@ -30,12 +30,15 @@ class EventsViewController: UIViewController{
         eventTableView.dataSource = self
         
         eventManager.delegate = self
-        
+    
        
         
         eventManager.performRequest()
         
     }
+    
+    
+ 
     
 
 
@@ -89,11 +92,23 @@ extension EventsViewController:EventManagerDelegate {
     }
 
     func didFailWithError(error: Error) {
+        
 
-        print(error)
+        DispatchQueue.main.async {
+            let alert = UIAlertController(title: "Error connecting to server", message: error.localizedDescription, preferredStyle: .alert)
+
+                    // add an action (button)
+                    alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+
+                    // show the alert
+                    self.present(alert, animated: true, completion: nil)
+        }
     }
 
+}
 
-
+extension  UITableView {
+    
+    
 }
 
