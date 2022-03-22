@@ -7,7 +7,18 @@
 
 import Foundation
 
+// Protocol to send data to the controller
+
+protocol EventManagerDelegate {
+ 
+    func didUpdateEvents(events : [EventData])
+    func didFailWithError(error : Error)
+    
+}
+
 struct EventManager {
+    
+    var delegate : EventManagerDelegate?
     
     let eventURL = "https://api.entraos.io/activity/list"
     
@@ -25,13 +36,18 @@ struct EventManager {
                 
                 if error != nil {
                     
-                print(error)
+                    self.delegate?.didFailWithError(error: error!)
                     return
                 }
                 
                 if let safeData = data {
                     
-                    parseJSON(eventData: safeData)
+                    if let fetchedData =  parseJSON(eventData: safeData){
+                        
+                        self.delegate?.didUpdateEvents(events: fetchedData)
+                    }
+                    
+                    
                 }
                 
             }
@@ -44,16 +60,17 @@ struct EventManager {
         
     }
     
-    func parseJSON(eventData : Data){
+    func parseJSON(eventData : Data) -> [EventData]?{
         
         let decoder = JSONDecoder()
         
         do{
             let decodedData =  try decoder.decode([EventData].self, from: eventData)
-            print(decodedData[0].name)
+            return decodedData
             
         }catch {
-            print(error)
+            delegate?.didFailWithError(error: error)
+            return nil
         }
         
     }
