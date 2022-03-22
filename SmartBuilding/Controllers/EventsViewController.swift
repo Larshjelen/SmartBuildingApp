@@ -19,26 +19,34 @@ class EventsViewController: UIViewController{
     
     var fetchedEvents : [EventData] = []
     
+    var refreshControll = UIRefreshControl()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         
         eventTableView.register(UINib(nibName: K.cellNibName, bundle: nil), forCellReuseIdentifier: K.eventCellIdentifier)
         
-        //fetch api-data
         
         eventTableView.dataSource = self
-        
         eventManager.delegate = self
-    
-       
         
+    
+        //fetch api-data
         eventManager.performRequest()
+        
+        refreshControll.addTarget(self, action: #selector(self.updateTable(refreshController:)), for: UIControl.Event.valueChanged)
+        eventTableView.addSubview(refreshControll)
         
     }
     
     
- 
+    @objc func updateTable(refreshController : UIRefreshControl){
+        
+        DispatchQueue.main.async {
+            self.eventManager.performRequest()
+            self.refreshControll.endRefreshing()
+        }
+    }
     
 
 
