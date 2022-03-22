@@ -7,13 +7,15 @@
 
 import UIKit
 
-class EventsViewController: UIViewController , EventManagerDelegate{
+class EventsViewController: UIViewController{
    
     
 
     @IBOutlet weak var eventTableView: UITableView!
     
-    let eventManager = EventManager()
+    var eventManager = EventManager()
+    
+    var eventImage : UIImage?
     
     var fetchedEvents : [EventData] = []
     
@@ -21,27 +23,20 @@ class EventsViewController: UIViewController , EventManagerDelegate{
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
+        eventTableView.register(UINib(nibName: K.cellNibName, bundle: nil), forCellReuseIdentifier: K.eventCellIdentifier)
+        
         //fetch api-data
-        eventManager.performRequest()
         
         eventTableView.dataSource = self
         
-        //Register cell nib
+        eventManager.delegate = self
         
-        eventTableView.register(UINib(nibName: K.cellNibName, bundle: nil), forCellReuseIdentifier: K.eventCellIdentifier)
+       
         
-    }
-    
-    func didUpdateEvents(events: [EventData]) {
-        
-       fetchedEvents = events
+        eventManager.performRequest()
         
     }
     
-    func didFailWithError(error: Error) {
-        
-        print(error)
-    }
 
 
 }
@@ -49,14 +44,31 @@ class EventsViewController: UIViewController , EventManagerDelegate{
 extension EventsViewController:UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return 3
+        return fetchedEvents.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: K.eventCellIdentifier, for: indexPath) as! EventCell
         
-        cell.eventName.text = "test"
+        cell.eventName.text = fetchedEvents[indexPath.row].name
+        
+        let imageKey = fetchedEvents[indexPath.row].headliner
+        
+    
+        
+        if let image = fetchedEvents[indexPath.row].captionAndActivityImages[imageKey]{
+            if let url = URL(string: image){
+                if let data = try? Data(contentsOf: url){
+                    eventImage = UIImage(data: data)
+
+                    cell.eventImage.image = self.eventImage
+                    
+                    cell.selectionStyle = .none
+                }
+            }
+        }
         
         return cell
         
@@ -64,5 +76,24 @@ extension EventsViewController:UITableViewDataSource {
     }
     
     
+}
+
+extension EventsViewController:EventManagerDelegate {
+    func didUpdateEvents(events: [EventData]) {
+
+        fetchedEvents = events
+
+        DispatchQueue.main.async {
+            self.eventTableView.reloadData()
+        }
+    }
+
+    func didFailWithError(error: Error) {
+
+        print(error)
+    }
+
+
+
 }
 

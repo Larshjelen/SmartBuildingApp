@@ -12,8 +12,8 @@ struct EventData : Decodable {
     
     let name : String
     let headliner : String
-    let start : String
-    let end : String
-    
+    let eventOrganizer : String
+    let captionAndActivityImages : [String : String]
 }
+
 

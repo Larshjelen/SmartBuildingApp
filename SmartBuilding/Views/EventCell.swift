@@ -9,13 +9,17 @@ import UIKit
 
 class EventCell: UITableViewCell {
 
-    @IBOutlet weak var eventView: UIView!
-    @IBOutlet weak var eventImage: UIImageView!
     @IBOutlet weak var eventName: UILabel!
+    
+    
+    @IBOutlet weak var eventNameView: UIView!
+    
+    @IBOutlet weak var eventImage: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        eventNameView.layer.cornerRadius = eventNameView.frame.size.height / 5
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

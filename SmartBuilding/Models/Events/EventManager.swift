@@ -43,11 +43,10 @@ struct EventManager {
                 if let safeData = data {
                     
                     if let fetchedData =  parseJSON(eventData: safeData){
-                        
+                                        
                         self.delegate?.didUpdateEvents(events: fetchedData)
                     }
-                    
-                    
+       
                 }
                 
             }
@@ -67,9 +66,12 @@ struct EventManager {
         do{
             let decodedData =  try decoder.decode([EventData].self, from: eventData)
             return decodedData
+           
             
         }catch {
+          
             delegate?.didFailWithError(error: error)
+            
             return nil
         }
         
