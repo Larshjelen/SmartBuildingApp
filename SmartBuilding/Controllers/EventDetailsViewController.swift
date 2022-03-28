@@ -8,7 +8,10 @@
 import UIKit
 
 class EventDetailsViewController: UIViewController {
-
+    
+    
+    @IBOutlet weak var eventImage: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
