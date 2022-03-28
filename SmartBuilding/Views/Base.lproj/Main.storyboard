@@ -331,11 +331,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="nW3-78-9sJ"/>
                     <connections>
-                        <outlet property="eventDate" destination="uhT-Mi-735" id="Lj6-22-bwO"/>
+                        <outlet property="eventDate" destination="uhT-Mi-735" id="lbM-Qv-sEd"/>
                         <outlet property="eventDescription" destination="Uo7-ns-LcX" id="pkm-JT-TQr"/>
                         <outlet property="eventImage" destination="fWl-I6-OQJ" id="luT-PX-0AC"/>
                         <outlet property="eventName" destination="OEA-Id-U16" id="d6v-8z-0n5"/>
-                        <outlet property="eventStart" destination="Bev-hV-36R" id="fBN-EV-cKD"/>
+                        <outlet property="eventStart" destination="Bev-hV-36R" id="yQB-kC-zhf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rbZ-iI-Fef" sceneMemberID="firstResponder"/>

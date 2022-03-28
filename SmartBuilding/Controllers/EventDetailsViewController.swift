@@ -25,7 +25,10 @@ class EventDetailsViewController: UIViewController {
         eventName.text = selectedEvent!.name
         eventDescription.text = selectedEvent!.descriptiveActivityMarkdown
         
-        let formattedTime = helpers.getFormatedDate(date_string: selectedEvent!.startDateAndTime, dateFormat: "yyyy-MM-dd'T'HH:mm:ssZ", desiredFormat: "dd-MM-yyyy")
+        let formattedDate = helpers.getFormatedDate(date_string: selectedEvent!.startDateAndTime, dateFormat: "yyyy-MM-dd'T'HH:mm:ssZ", desiredFormat: "dd-MM-yyyy")
+        eventDate.text = formattedDate
+        
+        let formattedTime = helpers.getFormatedDate(date_string: selectedEvent!.startDateAndTime, dateFormat: "yyyy-MM-dd'T'HH:mm:ssZ", desiredFormat: "HH:mm")
         eventStart.text = formattedTime
         
         let imageKey = selectedEvent!.headliner
