@@ -15,6 +15,7 @@ struct EventData : Decodable {
     let eventOrganizer : String
     let startDateAndTime: String
     let descriptiveActivityMarkdown: String
+    let activityPosterUrl: String
     let captionAndActivityImages : [String : String]
 }
 

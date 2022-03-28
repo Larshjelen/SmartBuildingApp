@@ -101,11 +101,11 @@ extension EventsViewController {
             if let EventDetailsVC = storyboard?.instantiateViewController(identifier: "EventDetails") as? EventDetailsViewController{
                 self.navigationController?.pushViewController(EventDetailsVC, animated: true)
                 
-                var selectedEvent = indexPath.row
+                let selectedEvent = indexPath.row
                 
                 let event = fetchedEvents[selectedEvent]
                 print(event)
-                //EventDetailsVC.selectedEvent = event
+                EventDetailsVC.selectedEvent = event
                 
                 present(EventDetailsVC, animated: true)
             
