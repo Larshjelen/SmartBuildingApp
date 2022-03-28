@@ -9,11 +9,16 @@ import UIKit
 
 class EventDetailsViewController: UIViewController {
     
+    var selectedEvent: EventData?
+    
     
     @IBOutlet weak var eventImage: UIImageView!
+    @IBOutlet weak var eventName: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        eventName.text = "selectedEvent"
 
 }
     

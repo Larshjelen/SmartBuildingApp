@@ -7,13 +7,15 @@
 
 import UIKit
 
-class EventsViewController: UIViewController{
+class EventsViewController: UIViewController, UITableViewDelegate{
    
     
 
     @IBOutlet weak var eventTableView: UITableView!
     
     var eventManager = EventManager()
+    
+    var eventDetailsViewController = EventDetailsViewController()
     
     var eventImage : UIImage?
     
@@ -28,7 +30,9 @@ class EventsViewController: UIViewController{
         
         
         eventTableView.dataSource = self
+        eventTableView.delegate = self
         eventManager.delegate = self
+        
         
     
         //fetch api-data
@@ -89,6 +93,28 @@ extension EventsViewController:UITableViewDataSource {
     
     
 }
+
+extension EventsViewController {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+            
+            if let EventDetailsVC = storyboard?.instantiateViewController(identifier: "EventDetails") as? EventDetailsViewController{
+                self.navigationController?.pushViewController(EventDetailsVC, animated: true)
+                
+                var selectedEvent = indexPath.row
+                
+                let event = fetchedEvents[selectedEvent]
+                print(event)
+                //EventDetailsVC.selectedEvent = event
+                
+                present(EventDetailsVC, animated: true)
+            
+
+            }
+    }
+}
+
+
 
 extension EventsViewController:EventManagerDelegate {
     func didUpdateEvents(events: [EventData]) {
