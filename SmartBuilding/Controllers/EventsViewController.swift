@@ -40,6 +40,7 @@ class EventsViewController: UIViewController{
     }
     
     
+    // Update data on refresh
     @objc func updateTable(refreshController : UIRefreshControl){
         
         DispatchQueue.main.async {
@@ -100,8 +101,6 @@ extension EventsViewController:EventManagerDelegate {
     }
 
     func didFailWithError(error: Error) {
-        
-
         DispatchQueue.main.async {
             let alert = UIAlertController(title: "Error connecting to server", message: error.localizedDescription, preferredStyle: .alert)
 
