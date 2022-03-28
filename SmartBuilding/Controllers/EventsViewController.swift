@@ -14,6 +14,7 @@ class EventsViewController: UIViewController, UITableViewDelegate{
     @IBOutlet weak var eventTableView: UITableView!
     
     var eventManager = EventManager()
+    var helpers = Helpers()
     
     var eventDetailsViewController = EventDetailsViewController()
     
@@ -71,28 +72,20 @@ extension EventsViewController:UITableViewDataSource {
         cell.eventName.text = fetchedEvents[indexPath.row].name
         
         let imageKey = fetchedEvents[indexPath.row].headliner
-        
-    
-        
+   
         if let image = fetchedEvents[indexPath.row].captionAndActivityImages[imageKey]{
-            if let url = URL(string: image){
-                if let data = try? Data(contentsOf: url){
-                    eventImage = UIImage(data: data)
+                    
+            let convertedImage = helpers.urlToImage(StringImage: image)
 
-                    cell.eventImage.image = self.eventImage
+                    cell.eventImage.image = convertedImage
                     
                     cell.selectionStyle = .none
                 }
-            }
+        
+          return cell
         }
-        
-        return cell
-        
-        
     }
     
-    
-}
 
 extension EventsViewController {
     

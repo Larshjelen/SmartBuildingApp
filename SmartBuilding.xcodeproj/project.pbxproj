@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2A1C614127F1B44700FFD2D4 /* EventDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1C614027F1B44700FFD2D4 /* EventDetailsViewController.swift */; };
+		2A1C614527F1FD7800FFD2D4 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1C614427F1FD7800FFD2D4 /* Helpers.swift */; };
 		2AB7647E27E89F8D0084062C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB7647D27E89F8D0084062C /* AppDelegate.swift */; };
 		2AB7648027E89F8D0084062C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB7647F27E89F8D0084062C /* SceneDelegate.swift */; };
 		2AB7648227E89F8D0084062C /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB7648127E89F8D0084062C /* EventsViewController.swift */; };
@@ -44,6 +45,7 @@
 
 /* Begin PBXFileReference section */
 		2A1C614027F1B44700FFD2D4 /* EventDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailsViewController.swift; sourceTree = "<group>"; };
+		2A1C614427F1FD7800FFD2D4 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		2AB7647A27E89F8D0084062C /* SmartBuilding.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartBuilding.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AB7647D27E89F8D0084062C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2AB7647F27E89F8D0084062C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 				2AB7648E27E89F940084062C /* Info.plist */,
 				2AB7648627E89F8D0084062C /* SmartBuilding.xcdatamodeld */,
 				2AB764B327E8A32C0084062C /* Constants.swift */,
+				2A1C614427F1FD7800FFD2D4 /* Helpers.swift */,
 			);
 			path = SmartBuilding;
 			sourceTree = "<group>";
@@ -315,6 +318,7 @@
 				2AB764B427E8A32C0084062C /* Constants.swift in Sources */,
 				2AB7648227E89F8D0084062C /* EventsViewController.swift in Sources */,
 				2AB764BF27E8C7460084062C /* EventData.swift in Sources */,
+				2A1C614527F1FD7800FFD2D4 /* Helpers.swift in Sources */,
 				2AB764BC27E8B9B90084062C /* EventManager.swift in Sources */,
 				2AB7647E27E89F8D0084062C /* AppDelegate.swift in Sources */,
 				2AB7648027E89F8D0084062C /* SceneDelegate.swift in Sources */,
