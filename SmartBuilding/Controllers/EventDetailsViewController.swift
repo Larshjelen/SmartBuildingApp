@@ -22,6 +22,21 @@ class EventDetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        populateUIWithData()
+
+}
+    
+    //Open Tickets-URL
+    @IBAction func eventTicketButton(_ sender: UIButton) {
+        if let url = URL(string: selectedEvent!.activityPosterUrl) {
+                UIApplication.shared.open(url)
+              } else {
+                print("url is not correct")
+              }
+    }
+    
+    func populateUIWithData(){
+        
         eventName.text = selectedEvent!.name
         eventDescription.text = selectedEvent!.descriptiveActivityMarkdown
         
@@ -38,15 +53,6 @@ class EventDetailsViewController: UIViewController {
             eventImage.image = convertedImage
             
         }
-}
-    
-    //Open Tickets-URL
-    @IBAction func eventTicketButton(_ sender: UIButton) {
-        if let url = URL(string: selectedEvent!.activityPosterUrl) {
-                UIApplication.shared.open(url)
-              } else {
-                print("url is not correct")
-              }
     }
 
 }
