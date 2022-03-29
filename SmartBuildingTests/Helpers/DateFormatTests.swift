@@ -6,30 +6,39 @@
 //
 
 import XCTest
-
+@testable import SmartBuilding
 class DateFormatTests: XCTestCase {
+    
+    var helpers = Helpers()
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    func testDateNotNil(){
+        
+        let formattedDateEx1  = helpers.getFormatedDate(date_string: "2022-04-05T15:00:00Z", dateFormat: "yyyy-MM-dd'T'HH:mm:ssZ", desiredFormat: "dd-MM-yyyy")
+        let formattedDateEx2  = helpers.getFormatedDate(date_string: "2022-03-29", dateFormat: "yyyy-MM-dd", desiredFormat: "MMM d, yyyy")
+        
+        XCTAssertNotNil(formattedDateEx1)
+        XCTAssertNotNil(formattedDateEx2)
     }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    
+    func testDateIsNotCorrect(){
+        
+        let formattedDateNotCorrect = helpers.getFormatedDate(date_string: "01-01-2023", dateFormat: "yyyy-MM-dd", desiredFormat: "MMM d, yyyy")
+        let formattedDateCorrect = helpers.getFormatedDate(date_string: "2023-01-01", dateFormat: "yyyy-MM-dd", desiredFormat: "MMM d, yyyy")
+        
+        XCTAssertNotEqual(formattedDateCorrect, formattedDateNotCorrect, "Incorerect Date")
     }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    
+    func testDateFormatEqualDesiredFormat(){
+        
+        let formattedDateEx1 = helpers.getFormatedDate(date_string: "2022-04-05T15:00:00Z", dateFormat: "yyyy-MM-dd'T'HH:mm:ssZ", desiredFormat: "MM/dd/yyyy")
+        let correctDateFormatEx1 = "04/05/2022"
+        
+        let formattedDateEx2 = helpers.getFormatedDate(date_string: "2022-04-05T15:00:00Z", dateFormat: "yyyy-MM-dd'T'HH:mm:ssZ", desiredFormat: "dd.MM.yy")
+        let correctDateFormatEx2 = "05.04.22"
+        
+        XCTAssertEqual(formattedDateEx1, correctDateFormatEx1, "Correct date format")
+        XCTAssertEqual(formattedDateEx2, correctDateFormatEx2, "Correct date format")
+        
     }
 
 }
