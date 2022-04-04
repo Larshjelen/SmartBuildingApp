@@ -11,6 +11,10 @@
 		2A0A31AD27F334E9000FBAB0 /* ConvertUrlToImageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0A31AC27F334E9000FBAB0 /* ConvertUrlToImageTests.swift */; };
 		2A1C614127F1B44700FFD2D4 /* EventDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1C614027F1B44700FFD2D4 /* EventDetailsViewController.swift */; };
 		2A1C614527F1FD7800FFD2D4 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1C614427F1FD7800FFD2D4 /* Helpers.swift */; };
+		2A54CF5D27FB01A4002487E4 /* PhoneFUEL.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A54CF5C27FB01A4002487E4 /* PhoneFUEL.xcframework */; };
+		2A54CF5E27FB01A4002487E4 /* PhoneFUEL.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2A54CF5C27FB01A4002487E4 /* PhoneFUEL.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2A54CF6027FB02D6002487E4 /* ForkbeardCore.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A54CF5F27FB02D6002487E4 /* ForkbeardCore.xcframework */; };
+		2A54CF6127FB02D6002487E4 /* ForkbeardCore.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2A54CF5F27FB02D6002487E4 /* ForkbeardCore.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2AB7647E27E89F8D0084062C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB7647D27E89F8D0084062C /* AppDelegate.swift */; };
 		2AB7648027E89F8D0084062C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB7647F27E89F8D0084062C /* SceneDelegate.swift */; };
 		2AB7648227E89F8D0084062C /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB7648127E89F8D0084062C /* EventsViewController.swift */; };
@@ -26,8 +30,6 @@
 		2AB764BA27E8A8120084062C /* EventCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2AB764B827E8A8100084062C /* EventCell.xib */; };
 		2AB764BC27E8B9B90084062C /* EventManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB764BB27E8B9B90084062C /* EventManager.swift */; };
 		2AB764BF27E8C7460084062C /* EventData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB764BE27E8C7460084062C /* EventData.swift */; };
-		81A1405027FAD8CF00A6448D /* PhoneFUEL.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81A1404F27FAD8CF00A6448D /* PhoneFUEL.xcframework */; };
-		81A1405127FAD8CF00A6448D /* PhoneFUEL.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 81A1404F27FAD8CF00A6448D /* PhoneFUEL.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		81A1405427FAFB2600A6448D /* CustomLocationManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A1405327FAFB2600A6448D /* CustomLocationManagerDelegate.swift */; };
 /* End PBXBuildFile section */
 
@@ -49,13 +51,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		81A1405227FAD8CF00A6448D /* Embed Frameworks */ = {
+		2A54CF5B27FB0127002487E4 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				81A1405127FAD8CF00A6448D /* PhoneFUEL.xcframework in Embed Frameworks */,
+				2A54CF5E27FB01A4002487E4 /* PhoneFUEL.xcframework in Embed Frameworks */,
+				2A54CF6127FB02D6002487E4 /* ForkbeardCore.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -67,6 +70,8 @@
 		2A0A31AC27F334E9000FBAB0 /* ConvertUrlToImageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertUrlToImageTests.swift; sourceTree = "<group>"; };
 		2A1C614027F1B44700FFD2D4 /* EventDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailsViewController.swift; sourceTree = "<group>"; };
 		2A1C614427F1FD7800FFD2D4 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		2A54CF5C27FB01A4002487E4 /* PhoneFUEL.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = PhoneFUEL.xcframework; sourceTree = "<group>"; };
+		2A54CF5F27FB02D6002487E4 /* ForkbeardCore.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = ForkbeardCore.xcframework; sourceTree = "<group>"; };
 		2AB7647A27E89F8D0084062C /* SmartBuilding.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartBuilding.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AB7647D27E89F8D0084062C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2AB7647F27E89F8D0084062C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -86,7 +91,6 @@
 		2AB764B827E8A8100084062C /* EventCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventCell.xib; sourceTree = "<group>"; };
 		2AB764BB27E8B9B90084062C /* EventManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventManager.swift; sourceTree = "<group>"; };
 		2AB764BE27E8C7460084062C /* EventData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventData.swift; sourceTree = "<group>"; };
-		81A1404F27FAD8CF00A6448D /* PhoneFUEL.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = PhoneFUEL.xcframework; path = ../../../../Downloads/PhoneFUEL.xcframework; sourceTree = "<group>"; };
 		81A1405327FAFB2600A6448D /* CustomLocationManagerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLocationManagerDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -95,7 +99,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				81A1405027FAD8CF00A6448D /* PhoneFUEL.xcframework in Frameworks */,
+				2A54CF5D27FB01A4002487E4 /* PhoneFUEL.xcframework in Frameworks */,
+				2A54CF6027FB02D6002487E4 /* ForkbeardCore.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -222,7 +227,8 @@
 		81A1404E27FAD8CE00A6448D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				81A1404F27FAD8CF00A6448D /* PhoneFUEL.xcframework */,
+				2A54CF5F27FB02D6002487E4 /* ForkbeardCore.xcframework */,
+				2A54CF5C27FB01A4002487E4 /* PhoneFUEL.xcframework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -237,7 +243,7 @@
 				2AB7647627E89F8D0084062C /* Sources */,
 				2AB7647727E89F8D0084062C /* Frameworks */,
 				2AB7647827E89F8D0084062C /* Resources */,
-				81A1405227FAD8CF00A6448D /* Embed Frameworks */,
+				2A54CF5B27FB0127002487E4 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

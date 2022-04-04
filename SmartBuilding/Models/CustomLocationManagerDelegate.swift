@@ -18,15 +18,5 @@ class CustomLocationManagerDelegate: NSObject, SPFLocationManagerDelegate {
     }
 }
 
-class CustomAuthenticationDelegate: NSObject, SPFLocationServiceAuthenticationDelegate {
-
-    func onGetToken() {
-        return "<token>";
-    }
-}
-
-var delegate = CustomAuthenticationDelegate();
-SPFLocationService.setAuthenticationDelegate(delegate);
 
 
-try SPFLocationService.setAuthenticationAnonymous(Authentication.anonAuthApiKey)
