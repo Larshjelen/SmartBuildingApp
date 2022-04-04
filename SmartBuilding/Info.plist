@@ -2,6 +2,20 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSBluetoothAlwaysUsageDescription</key>
+	<string>Location used for determining coarse location and improved position accuracy.</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Location used for determining coarse location and improved position accuracy.</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>Location used for determining coarse location and improved position accuracy.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Location used for determining coarse location and improved position accuracy.
+Location used for determining coarse location and improved position accuracy.
+Location used for determining coarse location and improved position accuracy.
+Location used for determining coarse location and improved position accuracy.
+Location used for determining coarse location and improved position accuracy.</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Microphone used for ultrasound positioning.</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
