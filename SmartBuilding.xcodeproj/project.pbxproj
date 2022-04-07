@@ -30,6 +30,7 @@
 		2AB764BA27E8A8120084062C /* EventCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2AB764B827E8A8100084062C /* EventCell.xib */; };
 		2AB764BC27E8B9B90084062C /* EventManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB764BB27E8B9B90084062C /* EventManager.swift */; };
 		2AB764BF27E8C7460084062C /* EventData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB764BE27E8C7460084062C /* EventData.swift */; };
+		8136652027FEDF71001FD732 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8136651F27FEDF71001FD732 /* MapViewController.swift */; };
 		81A1405427FAFB2600A6448D /* CustomLocationManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A1405327FAFB2600A6448D /* CustomLocationManagerDelegate.swift */; };
 /* End PBXBuildFile section */
 
@@ -91,6 +92,7 @@
 		2AB764B827E8A8100084062C /* EventCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventCell.xib; sourceTree = "<group>"; };
 		2AB764BB27E8B9B90084062C /* EventManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventManager.swift; sourceTree = "<group>"; };
 		2AB764BE27E8C7460084062C /* EventData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventData.swift; sourceTree = "<group>"; };
+		8136651F27FEDF71001FD732 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		81A1405327FAFB2600A6448D /* CustomLocationManagerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLocationManagerDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -211,6 +213,7 @@
 				2AB764B727E8A8100084062C /* EventCellController.swift */,
 				2AB7648127E89F8D0084062C /* EventsViewController.swift */,
 				2A1C614027F1B44700FFD2D4 /* EventDetailsViewController.swift */,
+				8136651F27FEDF71001FD732 /* MapViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -373,6 +376,7 @@
 				81A1405427FAFB2600A6448D /* CustomLocationManagerDelegate.swift in Sources */,
 				2AB764BC27E8B9B90084062C /* EventManager.swift in Sources */,
 				2AB7647E27E89F8D0084062C /* AppDelegate.swift in Sources */,
+				8136652027FEDF71001FD732 /* MapViewController.swift in Sources */,
 				2AB7648027E89F8D0084062C /* SceneDelegate.swift in Sources */,
 				2A1C614127F1B44700FFD2D4 /* EventDetailsViewController.swift in Sources */,
 				2AB7648827E89F8D0084062C /* SmartBuilding.xcdatamodeld in Sources */,

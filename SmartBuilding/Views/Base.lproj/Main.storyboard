@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nge-4x-rSc">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -9,6 +9,24 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Tab Bar Controller-->
+        <scene sceneID="C7c-9Z-fFk">
+            <objects>
+                <tabBarController id="nge-4x-rSc" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hzC-Ta-gQz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="CPf-vQ-CAL"/>
+                        <segue destination="qsv-hy-RSR" kind="relationship" relationship="viewControllers" id="8lX-C7-hXu"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="anm-3L-kpK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2111" y="353"/>
+        </scene>
         <!--EventsTable View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -18,7 +36,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="y3b-SO-oM8">
-                                <rect key="frame" x="0.0" y="44" width="390" height="766"/>
+                                <rect key="frame" x="0.0" y="44" width="390" height="700"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="separatorColor" systemColor="labelColor"/>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -30,9 +48,10 @@
                             <constraint firstItem="y3b-SO-oM8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="D36-8D-GGJ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="y3b-SO-oM8" secondAttribute="trailing" id="HN7-TM-g21"/>
                             <constraint firstItem="y3b-SO-oM8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="TOP-SO-n1z"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="y3b-SO-oM8" secondAttribute="bottom" id="eAA-DC-498"/>
+                            <constraint firstAttribute="bottom" secondItem="y3b-SO-oM8" secondAttribute="bottom" constant="100" id="f6b-qu-Pak"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="2fB-b9-nGd"/>
                     <connections>
                         <outlet property="eventTableView" destination="y3b-SO-oM8" id="edi-Nh-Rk7"/>
                         <segue destination="tW0-F9-OEa" kind="presentation" identifier="EventDetailsSegue" id="pSZ-1H-y5K"/>
@@ -341,6 +360,33 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rbZ-iI-Fef" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="0.0" y="57.582938388625593"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="bVu-Lk-8ri">
+            <objects>
+                <viewController id="qsv-hy-RSR" customClass="MapViewController" customModule="SmartBuilding" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vZu-WQ-TCI">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="LqO-th-g30">
+                                <rect key="frame" x="0.0" y="44" width="390" height="717"/>
+                            </mapView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="57y-Ey-Q1C"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="LqO-th-g30" firstAttribute="leading" secondItem="57y-Ey-Q1C" secondAttribute="leading" id="0Nu-CJ-SfB"/>
+                            <constraint firstItem="57y-Ey-Q1C" firstAttribute="bottom" secondItem="LqO-th-g30" secondAttribute="bottom" id="l5u-vO-pCL"/>
+                            <constraint firstItem="57y-Ey-Q1C" firstAttribute="trailing" secondItem="LqO-th-g30" secondAttribute="trailing" id="sww-ZD-06F"/>
+                            <constraint firstItem="LqO-th-g30" firstAttribute="top" secondItem="57y-Ey-Q1C" secondAttribute="top" id="wrQ-AJ-Jwo"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="caN-6K-1Q9"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FFh-LN-dV0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1066" y="712"/>
         </scene>
     </scenes>
     <resources>
