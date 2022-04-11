@@ -44,6 +44,8 @@ class EventsViewController: UIViewController, UITableViewDelegate{
         refreshControll.addTarget(self, action: #selector(self.updateTable(refreshController:)), for: UIControl.Event.valueChanged)
         eventTableView.addSubview(refreshControll)
         
+       
+        
     }
     
     

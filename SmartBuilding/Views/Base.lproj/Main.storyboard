@@ -369,24 +369,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="LqO-th-g30">
-                                <rect key="frame" x="0.0" y="44" width="390" height="717"/>
-                            </mapView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hXM-oG-LJF" customClass="GMSMapView">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="57y-Ey-Q1C"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="LqO-th-g30" firstAttribute="leading" secondItem="57y-Ey-Q1C" secondAttribute="leading" id="0Nu-CJ-SfB"/>
-                            <constraint firstItem="57y-Ey-Q1C" firstAttribute="bottom" secondItem="LqO-th-g30" secondAttribute="bottom" id="l5u-vO-pCL"/>
-                            <constraint firstItem="57y-Ey-Q1C" firstAttribute="trailing" secondItem="LqO-th-g30" secondAttribute="trailing" id="sww-ZD-06F"/>
-                            <constraint firstItem="LqO-th-g30" firstAttribute="top" secondItem="57y-Ey-Q1C" secondAttribute="top" id="wrQ-AJ-Jwo"/>
-                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="caN-6K-1Q9"/>
+                    <connections>
+                        <outlet property="gMapView" destination="hXM-oG-LJF" id="c0Q-Wu-Rhi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FFh-LN-dV0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1066" y="712"/>
+            <point key="canvasLocation" x="-1066.1538461538462" y="711.61137440758296"/>
         </scene>
     </scenes>
     <resources>
