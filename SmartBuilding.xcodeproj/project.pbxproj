@@ -30,8 +30,11 @@
 		2AB764BA27E8A8120084062C /* EventCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2AB764B827E8A8100084062C /* EventCell.xib */; };
 		2AB764BC27E8B9B90084062C /* EventManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB764BB27E8B9B90084062C /* EventManager.swift */; };
 		2AB764BF27E8C7460084062C /* EventData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB764BE27E8C7460084062C /* EventData.swift */; };
+		2ABC746D27FEF0260064E656 /* PhoneFUELGoogleMaps.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2ABC746C27FEF0260064E656 /* PhoneFUELGoogleMaps.xcframework */; };
+		2ABC746E27FEF0260064E656 /* PhoneFUELGoogleMaps.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2ABC746C27FEF0260064E656 /* PhoneFUELGoogleMaps.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8136652027FEDF71001FD732 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8136651F27FEDF71001FD732 /* MapViewController.swift */; };
 		81A1405427FAFB2600A6448D /* CustomLocationManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A1405327FAFB2600A6448D /* CustomLocationManagerDelegate.swift */; };
+		A61AAF06452904ED82ED1A85 /* Pods_SmartBuilding.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C954FCF1FC1AEB5C4E2C2D0F /* Pods_SmartBuilding.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +61,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				2ABC746E27FEF0260064E656 /* PhoneFUELGoogleMaps.xcframework in Embed Frameworks */,
 				2A54CF5E27FB01A4002487E4 /* PhoneFUEL.xcframework in Embed Frameworks */,
 				2A54CF6127FB02D6002487E4 /* ForkbeardCore.xcframework in Embed Frameworks */,
 			);
@@ -92,8 +96,12 @@
 		2AB764B827E8A8100084062C /* EventCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventCell.xib; sourceTree = "<group>"; };
 		2AB764BB27E8B9B90084062C /* EventManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventManager.swift; sourceTree = "<group>"; };
 		2AB764BE27E8C7460084062C /* EventData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventData.swift; sourceTree = "<group>"; };
+		2ABC746C27FEF0260064E656 /* PhoneFUELGoogleMaps.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = PhoneFUELGoogleMaps.xcframework; sourceTree = "<group>"; };
+		7052F1C2A4E20E84015F025C /* Pods-SmartBuilding.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartBuilding.release.xcconfig"; path = "Target Support Files/Pods-SmartBuilding/Pods-SmartBuilding.release.xcconfig"; sourceTree = "<group>"; };
+		7E490D7452BA0D65963784F6 /* Pods-SmartBuilding.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartBuilding.debug.xcconfig"; path = "Target Support Files/Pods-SmartBuilding/Pods-SmartBuilding.debug.xcconfig"; sourceTree = "<group>"; };
 		8136651F27FEDF71001FD732 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		81A1405327FAFB2600A6448D /* CustomLocationManagerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLocationManagerDelegate.swift; sourceTree = "<group>"; };
+		C954FCF1FC1AEB5C4E2C2D0F /* Pods_SmartBuilding.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartBuilding.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,8 +109,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2ABC746D27FEF0260064E656 /* PhoneFUELGoogleMaps.xcframework in Frameworks */,
 				2A54CF5D27FB01A4002487E4 /* PhoneFUEL.xcframework in Frameworks */,
 				2A54CF6027FB02D6002487E4 /* ForkbeardCore.xcframework in Frameworks */,
+				A61AAF06452904ED82ED1A85 /* Pods_SmartBuilding.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,6 +150,7 @@
 				2AB764A027E89F940084062C /* SmartBuildingUITests */,
 				2AB7647B27E89F8D0084062C /* Products */,
 				81A1404E27FAD8CE00A6448D /* Frameworks */,
+				C1FE237C62E2E4DCF73BE970 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -230,10 +241,22 @@
 		81A1404E27FAD8CE00A6448D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2ABC746C27FEF0260064E656 /* PhoneFUELGoogleMaps.xcframework */,
 				2A54CF5F27FB02D6002487E4 /* ForkbeardCore.xcframework */,
 				2A54CF5C27FB01A4002487E4 /* PhoneFUEL.xcframework */,
+				C954FCF1FC1AEB5C4E2C2D0F /* Pods_SmartBuilding.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C1FE237C62E2E4DCF73BE970 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7E490D7452BA0D65963784F6 /* Pods-SmartBuilding.debug.xcconfig */,
+				7052F1C2A4E20E84015F025C /* Pods-SmartBuilding.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,10 +266,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2AB764A727E89F940084062C /* Build configuration list for PBXNativeTarget "SmartBuilding" */;
 			buildPhases = (
+				E18D9AB9A850A324C14F084C /* [CP] Check Pods Manifest.lock */,
 				2AB7647627E89F8D0084062C /* Sources */,
 				2AB7647727E89F8D0084062C /* Frameworks */,
 				2AB7647827E89F8D0084062C /* Resources */,
 				2A54CF5B27FB0127002487E4 /* Embed Frameworks */,
+				78ADA5CFE113396F5D6F6A5F /* [CP] Embed Pods Frameworks */,
+				5A31DB81B556C0FD1A7DAB1F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -363,6 +389,65 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5A31DB81B556C0FD1A7DAB1F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SmartBuilding/Pods-SmartBuilding-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SmartBuilding/Pods-SmartBuilding-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SmartBuilding/Pods-SmartBuilding-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		78ADA5CFE113396F5D6F6A5F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SmartBuilding/Pods-SmartBuilding-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SmartBuilding/Pods-SmartBuilding-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SmartBuilding/Pods-SmartBuilding-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E18D9AB9A850A324C14F084C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SmartBuilding-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2AB7647627E89F8D0084062C /* Sources */ = {
@@ -554,6 +639,7 @@
 		};
 		2AB764A827E89F940084062C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7E490D7452BA0D65963784F6 /* Pods-SmartBuilding.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -583,6 +669,7 @@
 		};
 		2AB764A927E89F940084062C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7052F1C2A4E20E84015F025C /* Pods-SmartBuilding.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
