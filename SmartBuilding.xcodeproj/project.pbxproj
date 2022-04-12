@@ -11,10 +11,6 @@
 		2A0A31AD27F334E9000FBAB0 /* ConvertUrlToImageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0A31AC27F334E9000FBAB0 /* ConvertUrlToImageTests.swift */; };
 		2A1C614127F1B44700FFD2D4 /* EventDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1C614027F1B44700FFD2D4 /* EventDetailsViewController.swift */; };
 		2A1C614527F1FD7800FFD2D4 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1C614427F1FD7800FFD2D4 /* Helpers.swift */; };
-		2A54CF5D27FB01A4002487E4 /* PhoneFUEL.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A54CF5C27FB01A4002487E4 /* PhoneFUEL.xcframework */; };
-		2A54CF5E27FB01A4002487E4 /* PhoneFUEL.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2A54CF5C27FB01A4002487E4 /* PhoneFUEL.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		2A54CF6027FB02D6002487E4 /* ForkbeardCore.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A54CF5F27FB02D6002487E4 /* ForkbeardCore.xcframework */; };
-		2A54CF6127FB02D6002487E4 /* ForkbeardCore.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2A54CF5F27FB02D6002487E4 /* ForkbeardCore.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2A9D816C2804599F00DA6B02 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9D816B2804599F00DA6B02 /* Authentication.swift */; };
 		2A9D816E280459CB00DA6B02 /* OpenIdAuthenticationServiceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9D816D280459CB00DA6B02 /* OpenIdAuthenticationServiceDelegate.swift */; };
 		2AB7647E27E89F8D0084062C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB7647D27E89F8D0084062C /* AppDelegate.swift */; };
@@ -32,11 +28,14 @@
 		2AB764BA27E8A8120084062C /* EventCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2AB764B827E8A8100084062C /* EventCell.xib */; };
 		2AB764BC27E8B9B90084062C /* EventManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB764BB27E8B9B90084062C /* EventManager.swift */; };
 		2AB764BF27E8C7460084062C /* EventData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB764BE27E8C7460084062C /* EventData.swift */; };
-		2ABC746D27FEF0260064E656 /* PhoneFUELGoogleMaps.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2ABC746C27FEF0260064E656 /* PhoneFUELGoogleMaps.xcframework */; };
-		2ABC746E27FEF0260064E656 /* PhoneFUELGoogleMaps.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2ABC746C27FEF0260064E656 /* PhoneFUELGoogleMaps.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8136652027FEDF71001FD732 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8136651F27FEDF71001FD732 /* MapViewController.swift */; };
+		819835DD28058609007BB7D7 /* PhoneFUELGoogleMaps.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2ABC746C27FEF0260064E656 /* PhoneFUELGoogleMaps.xcframework */; };
+		819835DF2805860A007BB7D7 /* Pods_SmartBuilding.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F79748D6ED2F637BF5B1BA7C /* Pods_SmartBuilding.framework */; };
+		819835E12805868A007BB7D7 /* ForkbeardCore.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A54CF5F27FB02D6002487E4 /* ForkbeardCore.xcframework */; };
+		819835E22805868A007BB7D7 /* ForkbeardCore.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2A54CF5F27FB02D6002487E4 /* ForkbeardCore.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		819835E4280586BE007BB7D7 /* PhoneFUEL.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A54CF5C27FB01A4002487E4 /* PhoneFUEL.xcframework */; };
+		819835E5280586BE007BB7D7 /* PhoneFUEL.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2A54CF5C27FB01A4002487E4 /* PhoneFUEL.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		81A1405427FAFB2600A6448D /* CustomLocationManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A1405327FAFB2600A6448D /* CustomLocationManagerDelegate.swift */; };
-		967B492A596280D398ADE988 /* Pods_SmartBuilding.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F79748D6ED2F637BF5B1BA7C /* Pods_SmartBuilding.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,15 +56,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		2A54CF5B27FB0127002487E4 /* Embed Frameworks */ = {
+		819835E32805868A007BB7D7 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				2ABC746E27FEF0260064E656 /* PhoneFUELGoogleMaps.xcframework in Embed Frameworks */,
-				2A54CF5E27FB01A4002487E4 /* PhoneFUEL.xcframework in Embed Frameworks */,
-				2A54CF6127FB02D6002487E4 /* ForkbeardCore.xcframework in Embed Frameworks */,
+				819835E5280586BE007BB7D7 /* PhoneFUEL.xcframework in Embed Frameworks */,
+				819835E22805868A007BB7D7 /* ForkbeardCore.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -113,10 +111,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2ABC746D27FEF0260064E656 /* PhoneFUELGoogleMaps.xcframework in Frameworks */,
-				2A54CF5D27FB01A4002487E4 /* PhoneFUEL.xcframework in Frameworks */,
-				2A54CF6027FB02D6002487E4 /* ForkbeardCore.xcframework in Frameworks */,
-				967B492A596280D398ADE988 /* Pods_SmartBuilding.framework in Frameworks */,
+				819835DD28058609007BB7D7 /* PhoneFUELGoogleMaps.xcframework in Frameworks */,
+				819835E12805868A007BB7D7 /* ForkbeardCore.xcframework in Frameworks */,
+				819835E4280586BE007BB7D7 /* PhoneFUEL.xcframework in Frameworks */,
+				819835DF2805860A007BB7D7 /* Pods_SmartBuilding.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,9 +281,9 @@
 				2AB7647627E89F8D0084062C /* Sources */,
 				2AB7647727E89F8D0084062C /* Frameworks */,
 				2AB7647827E89F8D0084062C /* Resources */,
-				2A54CF5B27FB0127002487E4 /* Embed Frameworks */,
 				78ADA5CFE113396F5D6F6A5F /* [CP] Embed Pods Frameworks */,
 				5A31DB81B556C0FD1A7DAB1F /* [CP] Copy Pods Resources */,
+				819835E32805868A007BB7D7 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -351,7 +349,6 @@
 					};
 					2AB7649C27E89F940084062C = {
 						CreatedOnToolsVersion = 13.3;
-						TestTargetID = 2AB7647927E89F8D0084062C;
 					};
 				};
 			};
@@ -574,6 +571,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -595,6 +593,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VALIDATE_WORKSPACE = YES;
 			};
 			name = Debug;
 		};
@@ -649,6 +648,7 @@
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
+				VALIDATE_WORKSPACE = YES;
 			};
 			name = Release;
 		};
@@ -660,9 +660,14 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 73NCHQP3L2;
+				DEVELOPMENT_TEAM = 978NW4ULQ6;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SmartBuilding/Info.plist;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Location used for determining coarse location and improved position accuracy.";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Location used for determining coarse location and improved position accuracy.";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "Location used for determining coarse location and improved position accuracy.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Location used for determining coarse location and improved position accuracy.\nLocation used for determining coarse location and improved position accuracy.\nLocation used for determining coarse location and improved position accuracy.\nLocation used for determining coarse location and improved position accuracy.\nLocation used for determining coarse location and improved position accuracy.";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Microphone used for ultrasound positioning.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -675,7 +680,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = no.kristiania.SmartBuilding;
+				PRODUCT_BUNDLE_IDENTIFIER = no.shortcut.SmartBuilding;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -691,9 +696,14 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 73NCHQP3L2;
+				DEVELOPMENT_TEAM = 978NW4ULQ6;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SmartBuilding/Info.plist;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Location used for determining coarse location and improved position accuracy.";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Location used for determining coarse location and improved position accuracy.";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "Location used for determining coarse location and improved position accuracy.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Location used for determining coarse location and improved position accuracy.\nLocation used for determining coarse location and improved position accuracy.\nLocation used for determining coarse location and improved position accuracy.\nLocation used for determining coarse location and improved position accuracy.\nLocation used for determining coarse location and improved position accuracy.";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Microphone used for ultrasound positioning.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -706,7 +716,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				ONLY_ACTIVE_ARCH = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = no.kristiania.SmartBuilding;
+				PRODUCT_BUNDLE_IDENTIFIER = no.shortcut.SmartBuilding;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -719,13 +729,15 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 73NCHQP3L2;
+				DEVELOPMENT_TEAM = 978NW4ULQ6;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = no.kristiania.SmartBuildingTests;
+				"PRODUCT_BUNDLE_IDENTIFIER[sdk=macosx*]" = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -739,13 +751,15 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 73NCHQP3L2;
+				DEVELOPMENT_TEAM = 978NW4ULQ6;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = no.kristiania.SmartBuildingTests;
+				"PRODUCT_BUNDLE_IDENTIFIER[sdk=macosx*]" = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -758,17 +772,20 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 73NCHQP3L2;
+				DEVELOPMENT_TEAM = 978NW4ULQ6;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = no.kristiania.SmartBuildingUITests;
+				"PRODUCT_BUNDLE_IDENTIFIER[sdk=macosx*]" = no.shortcut.SmartBuilding;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = SmartBuilding;
 			};
 			name = Debug;
 		};
@@ -776,17 +793,22 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 73NCHQP3L2;
+				DEVELOPMENT_TEAM = 978NW4ULQ6;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = no.kristiania.SmartBuildingUITests;
+				"PRODUCT_BUNDLE_IDENTIFIER[sdk=macosx*]" = no.shortcut.SmartBuilding;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = SmartBuilding;
 			};
 			name = Release;
 		};

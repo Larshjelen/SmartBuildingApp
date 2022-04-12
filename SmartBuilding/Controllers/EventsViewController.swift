@@ -95,6 +95,7 @@ extension EventsViewController {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
             
+        if #available(iOS 13.0, *) {
             if let EventDetailsVC = storyboard?.instantiateViewController(identifier: "EventDetails") as? EventDetailsViewController{
                 self.navigationController?.pushViewController(EventDetailsVC, animated: true)
                 
@@ -105,9 +106,12 @@ extension EventsViewController {
                 EventDetailsVC.selectedEvent = event
                 
                 present(EventDetailsVC, animated: true)
-            
-
+                
+                
             }
+        } else {
+            // Fallback on earlier versions
+        }
     }
 }
 

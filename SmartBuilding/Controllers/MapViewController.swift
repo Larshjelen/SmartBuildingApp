@@ -38,14 +38,14 @@ class MapViewController: UIViewController {
     }
     
     private func nextStartupStep(){
-        
         DispatchQueue.main.async {
             // Check location settings
             if self.needInput() {
                 self.requestInput()
             } else if self.locationAuthorizationStatus == nil {
                 // Wait for locationAuthorizationStatus to be set
-                self.nextStartupStep()
+                //self.nextStartupStep()
+                self.startPhoneFUEL()
             } else if self.locationAuthorizationStatus == .denied {
                 let alertController = UIAlertController (title: "Location denied", message: "Go to Settings?", preferredStyle: .alert)
                 let settingsAction = UIAlertAction(title: "Settings", style: .default) { (_) -> Void in
@@ -100,16 +100,21 @@ class MapViewController: UIViewController {
     }
 
     private func needInput() -> Bool {
+        print("needInput called")
         guard let name = UserDefaults.standard.string(forKey: UserDefaults.Keys.spfName) else {
+            print("needInput else return true")
             return true
         }
         if name == "" {
+            print("needInput if name blank return true")
             return true
         }
+        print("needInput return haveRequestedInput")
         return !haveRequestedInput
     }
 
     private func requestInput() {
+        print("requestInput called")
         haveRequestedInput = true
         let alertController = UIAlertController (title: "Configuration", message: nil, preferredStyle: .alert)
         alertController.addTextField { (textField) in
