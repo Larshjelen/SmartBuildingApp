@@ -26,8 +26,9 @@ class MapViewController: UIViewController,FloatingPanelControllerDelegate{
   
     @IBOutlet weak var gMapView: GMSMapView!
     
-    
     var fpc : FloatingPanelController!
+    
+    var mapMarker : GMSMarker!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,6 +38,16 @@ class MapViewController: UIViewController,FloatingPanelControllerDelegate{
         }
         showFloatingPanel()
         nextStartupStep()
+        showAnnotations()
+    }
+    
+    func showAnnotations(){
+        
+        let position = CLLocationCoordinate2D(latitude: 52.649030, longitude: 1.174155)
+        let locationMarker = GMSMarker(position: position)
+        locationMarker.title = "This is an annotation"
+        locationMarker.map = gMapView
+        
     }
     
     func showFloatingPanel(){
@@ -53,8 +64,6 @@ class MapViewController: UIViewController,FloatingPanelControllerDelegate{
 
         // Add and show the views managed by the `FloatingPanelController` object to self.view.
         fpc.addPanel(toParent: self)
-        
-        
     }
     
     private func nextStartupStep(){
