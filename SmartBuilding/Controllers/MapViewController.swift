@@ -10,8 +10,9 @@ import PhoneFUEL
 import CoreLocation
 import CoreBluetooth
 import PhoneFUELGoogleMaps
+import FloatingPanel
 
-class MapViewController: UIViewController {
+class MapViewController: UIViewController,FloatingPanelControllerDelegate{
 
     private lazy var openIdAuthenticationServiceDelegate = OpenIdAuthenticationServiceDelegate(viewController: self)
     private lazy var spfLocationManager = SPFLocationManager()
@@ -26,6 +27,7 @@ class MapViewController: UIViewController {
     @IBOutlet weak var gMapView: GMSMapView!
     
     
+    var fpc : FloatingPanelController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,8 +35,26 @@ class MapViewController: UIViewController {
         if mapViewEnhancer == nil {
             mapViewEnhancer = SPFGMSMapEnhancer.init(mapView: gMapView)
         }
-        
+        showFloatingPanel()
         nextStartupStep()
+    }
+    
+    func showFloatingPanel(){
+        fpc = FloatingPanelController()
+        
+        fpc.delegate = self
+        
+        // Set a content view controller.
+        guard let contentVC = storyboard?.instantiateViewController(withIdentifier: "fpc_controller") as? FloatingPanelContentViewController else {
+            
+            return
+        }
+        fpc.set(contentViewController: contentVC)
+
+        // Add and show the views managed by the `FloatingPanelController` object to self.view.
+        fpc.addPanel(toParent: self)
+        
+        
     }
     
     private func nextStartupStep(){
@@ -187,6 +207,9 @@ extension UserDefaults {
         static let spfInstallationId = "spf_installation_id"
     }
 }
+
+    
+  
 
 // MARK: Forkbeard location updates
 extension MapViewController: SPFLocationManagerDelegate {

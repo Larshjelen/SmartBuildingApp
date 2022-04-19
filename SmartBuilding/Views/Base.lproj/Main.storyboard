@@ -9,6 +9,21 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Floating Panel Content View Controller-->
+        <scene sceneID="RMJ-nN-Lfp">
+            <objects>
+                <viewController storyboardIdentifier="fpc_controller" id="vcu-Wc-DtC" customClass="FloatingPanelContentViewController" customModule="SmartBuilding" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="j4R-qh-2I2">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="f1g-Fy-RFV"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cBc-nz-CFp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="712"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="C7c-9Z-fFk">
             <objects>

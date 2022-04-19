@@ -11,6 +11,7 @@
 		2A0A31AD27F334E9000FBAB0 /* ConvertUrlToImageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0A31AC27F334E9000FBAB0 /* ConvertUrlToImageTests.swift */; };
 		2A1C614127F1B44700FFD2D4 /* EventDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1C614027F1B44700FFD2D4 /* EventDetailsViewController.swift */; };
 		2A1C614527F1FD7800FFD2D4 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1C614427F1FD7800FFD2D4 /* Helpers.swift */; };
+		2A87A517280EA733008672E3 /* FloatingPanelContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A87A516280EA733008672E3 /* FloatingPanelContentViewController.swift */; };
 		2A9D816C2804599F00DA6B02 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9D816B2804599F00DA6B02 /* Authentication.swift */; };
 		2A9D816E280459CB00DA6B02 /* OpenIdAuthenticationServiceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9D816D280459CB00DA6B02 /* OpenIdAuthenticationServiceDelegate.swift */; };
 		2AB7647E27E89F8D0084062C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB7647D27E89F8D0084062C /* AppDelegate.swift */; };
@@ -77,6 +78,7 @@
 		2A1C614427F1FD7800FFD2D4 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		2A54CF5C27FB01A4002487E4 /* PhoneFUEL.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = PhoneFUEL.xcframework; sourceTree = "<group>"; };
 		2A54CF5F27FB02D6002487E4 /* ForkbeardCore.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = ForkbeardCore.xcframework; sourceTree = "<group>"; };
+		2A87A516280EA733008672E3 /* FloatingPanelContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingPanelContentViewController.swift; sourceTree = "<group>"; };
 		2A9D816B2804599F00DA6B02 /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
 		2A9D816D280459CB00DA6B02 /* OpenIdAuthenticationServiceDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenIdAuthenticationServiceDelegate.swift; sourceTree = "<group>"; };
 		2AB7647A27E89F8D0084062C /* SmartBuilding.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartBuilding.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -237,6 +239,7 @@
 				2AB7648127E89F8D0084062C /* EventsViewController.swift */,
 				2A1C614027F1B44700FFD2D4 /* EventDetailsViewController.swift */,
 				8136651F27FEDF71001FD732 /* MapViewController.swift */,
+				2A87A516280EA733008672E3 /* FloatingPanelContentViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -467,6 +470,7 @@
 				2AB764B427E8A32C0084062C /* Constants.swift in Sources */,
 				2AB7648227E89F8D0084062C /* EventsViewController.swift in Sources */,
 				2AB764BF27E8C7460084062C /* EventData.swift in Sources */,
+				2A87A517280EA733008672E3 /* FloatingPanelContentViewController.swift in Sources */,
 				2A9D816E280459CB00DA6B02 /* OpenIdAuthenticationServiceDelegate.swift in Sources */,
 				2A1C614527F1FD7800FFD2D4 /* Helpers.swift in Sources */,
 				2A9D816C2804599F00DA6B02 /* Authentication.swift in Sources */,
