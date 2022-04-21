@@ -10,7 +10,7 @@ import SafariServices
 
 class FloatingPanelContentViewController: UIViewController, SFSafariViewControllerDelegate {
 
-    let authUrl =  "https://api.entraos.io/person​/persons/authorize?clientId=g3PLRTK4OAnTWQGd0vbaGG.Cp7GlNLFyE9hA26qP5r0-&applicationName=Rebel Wayfinder&applicationUrl=http://localhost/&redirectUrl=SmartBuildingAuth://"
+    private lazy var openIdAuthenticationServiceDelegate = OpenIdAuthenticationServiceDelegate(viewController: self)
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,10 +19,8 @@ class FloatingPanelContentViewController: UIViewController, SFSafariViewControll
     
     @IBAction func authBtn(_ sender: UIButton) {
         
-        print("safari")
-        if let url = URL(string: authUrl){
-            UIApplication.shared.open(url)
-        }
+    
+        
         
     }
     

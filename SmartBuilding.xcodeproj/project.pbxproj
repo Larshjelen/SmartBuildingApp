@@ -12,6 +12,8 @@
 		2A1C614127F1B44700FFD2D4 /* EventDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1C614027F1B44700FFD2D4 /* EventDetailsViewController.swift */; };
 		2A1C614527F1FD7800FFD2D4 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1C614427F1FD7800FFD2D4 /* Helpers.swift */; };
 		2A87A517280EA733008672E3 /* FloatingPanelContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A87A516280EA733008672E3 /* FloatingPanelContentViewController.swift */; };
+		2A87A519280EFDF2008672E3 /* RebelAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A87A518280EFDF2008672E3 /* RebelAuthentication.swift */; };
+		2A87A51B280F0270008672E3 /* RebelOpenIdAuthDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A87A51A280F0270008672E3 /* RebelOpenIdAuthDelegate.swift */; };
 		2A9D816C2804599F00DA6B02 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9D816B2804599F00DA6B02 /* Authentication.swift */; };
 		2A9D816E280459CB00DA6B02 /* OpenIdAuthenticationServiceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9D816D280459CB00DA6B02 /* OpenIdAuthenticationServiceDelegate.swift */; };
 		2AB7647E27E89F8D0084062C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB7647D27E89F8D0084062C /* AppDelegate.swift */; };
@@ -79,6 +81,8 @@
 		2A54CF5C27FB01A4002487E4 /* PhoneFUEL.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = PhoneFUEL.xcframework; sourceTree = "<group>"; };
 		2A54CF5F27FB02D6002487E4 /* ForkbeardCore.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = ForkbeardCore.xcframework; sourceTree = "<group>"; };
 		2A87A516280EA733008672E3 /* FloatingPanelContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingPanelContentViewController.swift; sourceTree = "<group>"; };
+		2A87A518280EFDF2008672E3 /* RebelAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RebelAuthentication.swift; sourceTree = "<group>"; };
+		2A87A51A280F0270008672E3 /* RebelOpenIdAuthDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RebelOpenIdAuthDelegate.swift; sourceTree = "<group>"; };
 		2A9D816B2804599F00DA6B02 /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
 		2A9D816D280459CB00DA6B02 /* OpenIdAuthenticationServiceDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenIdAuthenticationServiceDelegate.swift; sourceTree = "<group>"; };
 		2AB7647A27E89F8D0084062C /* SmartBuilding.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartBuilding.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -151,6 +155,8 @@
 			children = (
 				2A9D816B2804599F00DA6B02 /* Authentication.swift */,
 				2A9D816D280459CB00DA6B02 /* OpenIdAuthenticationServiceDelegate.swift */,
+				2A87A518280EFDF2008672E3 /* RebelAuthentication.swift */,
+				2A87A51A280F0270008672E3 /* RebelOpenIdAuthDelegate.swift */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -480,7 +486,9 @@
 				8136652027FEDF71001FD732 /* MapViewController.swift in Sources */,
 				2AB7648027E89F8D0084062C /* SceneDelegate.swift in Sources */,
 				2A1C614127F1B44700FFD2D4 /* EventDetailsViewController.swift in Sources */,
+				2A87A51B280F0270008672E3 /* RebelOpenIdAuthDelegate.swift in Sources */,
 				2AB7648827E89F8D0084062C /* SmartBuilding.xcdatamodeld in Sources */,
+				2A87A519280EFDF2008672E3 /* RebelAuthentication.swift in Sources */,
 				2AB764B927E8A8110084062C /* EventCellController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
