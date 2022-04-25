@@ -23,8 +23,8 @@ class OpenIdAuthenticationServiceDelegate: NSObject {
     private var authState: OIDAuthState?
     
     func login(loginCallback: @escaping loginCallback) {
-        guard let issuer = URL(string: Authentication.authDomain) else {
-            NSLog("Error creating URL for : \(Authentication.authDomain)")
+        guard let issuer = URL(string: ForkbeardAuthentication.authDomain) else {
+            NSLog("Error creating URL for : \(ForkbeardAuthentication.authDomain)")
             return
         }
 
@@ -39,7 +39,7 @@ class OpenIdAuthenticationServiceDelegate: NSObject {
                 return
             }
             
-            guard let redirectURL = URL(string: Authentication.appRedirectScheme + "://app") else {
+            guard let redirectURL = URL(string: ForkbeardAuthentication.appRedirectScheme + "://app") else {
                 NSLog("Error creating URL from Authentication.appRedirectScheme")
                 self.setAuthState(nil)
                 return
@@ -59,12 +59,12 @@ class OpenIdAuthenticationServiceDelegate: NSObject {
             
             // builds authentication request
             let request = OIDAuthorizationRequest(configuration: config,
-                                                  clientId: Authentication.authClientId,
+                                                  clientId: ForkbeardAuthentication.authClientId,
                                                   clientSecret: nil,
                                                   scopes: [OIDScopeOpenID],
                                                   redirectURL: redirectURL,
                                                   responseType: OIDResponseTypeCode,
-                                                  additionalParameters: ["audience": Authentication.authAudience, "prompt": "login"])
+                                                  additionalParameters: ["audience": ForkbeardAuthentication.authAudience, "prompt": "login"])
             
             appDelegate.currentAuthorizationFlow = OIDAuthState.authState(byPresenting: request, presenting: viewController) { authState, error in
                 if let authState = authState {

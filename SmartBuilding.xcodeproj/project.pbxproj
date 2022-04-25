@@ -16,8 +16,7 @@
 		2A1C614527F1FD7800FFD2D4 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1C614427F1FD7800FFD2D4 /* Helpers.swift */; };
 		2A87A517280EA733008672E3 /* FloatingPanelContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A87A516280EA733008672E3 /* FloatingPanelContentViewController.swift */; };
 		2A87A519280EFDF2008672E3 /* RebelAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A87A518280EFDF2008672E3 /* RebelAuthentication.swift */; };
-		2A87A51B280F0270008672E3 /* RebelOpenIdAuthDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A87A51A280F0270008672E3 /* RebelOpenIdAuthDelegate.swift */; };
-		2A9D816C2804599F00DA6B02 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9D816B2804599F00DA6B02 /* Authentication.swift */; };
+		2A9D816C2804599F00DA6B02 /* ForkbeardAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9D816B2804599F00DA6B02 /* ForkbeardAuthentication.swift */; };
 		2A9D816E280459CB00DA6B02 /* OpenIdAuthenticationServiceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9D816D280459CB00DA6B02 /* OpenIdAuthenticationServiceDelegate.swift */; };
 		2AB7647E27E89F8D0084062C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB7647D27E89F8D0084062C /* AppDelegate.swift */; };
 		2AB7648027E89F8D0084062C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB7647F27E89F8D0084062C /* SceneDelegate.swift */; };
@@ -34,13 +33,14 @@
 		2AB764BA27E8A8120084062C /* EventCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2AB764B827E8A8100084062C /* EventCell.xib */; };
 		2AB764BC27E8B9B90084062C /* EventManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB764BB27E8B9B90084062C /* EventManager.swift */; };
 		2AB764BF27E8C7460084062C /* EventData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB764BE27E8C7460084062C /* EventData.swift */; };
+		2AD3D62E2816A9CB0008B8D2 /* PhoneFUELWayfinding.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AD3D6292816A3530008B8D2 /* PhoneFUELWayfinding.xcframework */; };
+		2AD3D62F2816A9CB0008B8D2 /* PhoneFUELWayfinding.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2AD3D6292816A3530008B8D2 /* PhoneFUELWayfinding.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2AD3D6302816AA650008B8D2 /* PhoneFUEL.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A54CF5C27FB01A4002487E4 /* PhoneFUEL.xcframework */; };
+		2AD3D6322816AAD40008B8D2 /* PhoneFUELGoogleMaps.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2ABC746C27FEF0260064E656 /* PhoneFUELGoogleMaps.xcframework */; };
 		8136652027FEDF71001FD732 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8136651F27FEDF71001FD732 /* MapViewController.swift */; };
-		819835DD28058609007BB7D7 /* PhoneFUELGoogleMaps.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2ABC746C27FEF0260064E656 /* PhoneFUELGoogleMaps.xcframework */; };
 		819835DF2805860A007BB7D7 /* Pods_SmartBuilding.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F79748D6ED2F637BF5B1BA7C /* Pods_SmartBuilding.framework */; };
 		819835E12805868A007BB7D7 /* ForkbeardCore.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A54CF5F27FB02D6002487E4 /* ForkbeardCore.xcframework */; };
 		819835E22805868A007BB7D7 /* ForkbeardCore.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2A54CF5F27FB02D6002487E4 /* ForkbeardCore.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		819835E4280586BE007BB7D7 /* PhoneFUEL.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A54CF5C27FB01A4002487E4 /* PhoneFUEL.xcframework */; };
-		819835E5280586BE007BB7D7 /* PhoneFUEL.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2A54CF5C27FB01A4002487E4 /* PhoneFUEL.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		81A1405427FAFB2600A6448D /* CustomLocationManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A1405327FAFB2600A6448D /* CustomLocationManagerDelegate.swift */; };
 /* End PBXBuildFile section */
 
@@ -68,7 +68,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				819835E5280586BE007BB7D7 /* PhoneFUEL.xcframework in Embed Frameworks */,
+				2AD3D62F2816A9CB0008B8D2 /* PhoneFUELWayfinding.xcframework in Embed Frameworks */,
 				819835E22805868A007BB7D7 /* ForkbeardCore.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -88,8 +88,7 @@
 		2A54CF5F27FB02D6002487E4 /* ForkbeardCore.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = ForkbeardCore.xcframework; sourceTree = "<group>"; };
 		2A87A516280EA733008672E3 /* FloatingPanelContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingPanelContentViewController.swift; sourceTree = "<group>"; };
 		2A87A518280EFDF2008672E3 /* RebelAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RebelAuthentication.swift; sourceTree = "<group>"; };
-		2A87A51A280F0270008672E3 /* RebelOpenIdAuthDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RebelOpenIdAuthDelegate.swift; sourceTree = "<group>"; };
-		2A9D816B2804599F00DA6B02 /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
+		2A9D816B2804599F00DA6B02 /* ForkbeardAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForkbeardAuthentication.swift; sourceTree = "<group>"; };
 		2A9D816D280459CB00DA6B02 /* OpenIdAuthenticationServiceDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenIdAuthenticationServiceDelegate.swift; sourceTree = "<group>"; };
 		2AB7647A27E89F8D0084062C /* SmartBuilding.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartBuilding.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AB7647D27E89F8D0084062C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -111,6 +110,7 @@
 		2AB764BB27E8B9B90084062C /* EventManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventManager.swift; sourceTree = "<group>"; };
 		2AB764BE27E8C7460084062C /* EventData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventData.swift; sourceTree = "<group>"; };
 		2ABC746C27FEF0260064E656 /* PhoneFUELGoogleMaps.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = PhoneFUELGoogleMaps.xcframework; sourceTree = "<group>"; };
+		2AD3D6292816A3530008B8D2 /* PhoneFUELWayfinding.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = PhoneFUELWayfinding.xcframework; sourceTree = "<group>"; };
 		8136651F27FEDF71001FD732 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		81A1405327FAFB2600A6448D /* CustomLocationManagerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLocationManagerDelegate.swift; sourceTree = "<group>"; };
 		DEE8CEFABCAD7BE2E8EBD8F4 /* Pods-SmartBuilding.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartBuilding.debug.xcconfig"; path = "Target Support Files/Pods-SmartBuilding/Pods-SmartBuilding.debug.xcconfig"; sourceTree = "<group>"; };
@@ -123,10 +123,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				819835DD28058609007BB7D7 /* PhoneFUELGoogleMaps.xcframework in Frameworks */,
+				2AD3D6302816AA650008B8D2 /* PhoneFUEL.xcframework in Frameworks */,
 				819835E12805868A007BB7D7 /* ForkbeardCore.xcframework in Frameworks */,
-				819835E4280586BE007BB7D7 /* PhoneFUEL.xcframework in Frameworks */,
 				819835DF2805860A007BB7D7 /* Pods_SmartBuilding.framework in Frameworks */,
+				2AD3D6322816AAD40008B8D2 /* PhoneFUELGoogleMaps.xcframework in Frameworks */,
+				2AD3D62E2816A9CB0008B8D2 /* PhoneFUELWayfinding.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -159,10 +160,10 @@
 		2A9D816A2804598900DA6B02 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
-				2A9D816B2804599F00DA6B02 /* Authentication.swift */,
+				2A035EBE28118D2A00E037AC /* RebelAuthManager.swift */,
+				2A9D816B2804599F00DA6B02 /* ForkbeardAuthentication.swift */,
 				2A9D816D280459CB00DA6B02 /* OpenIdAuthenticationServiceDelegate.swift */,
 				2A87A518280EFDF2008672E3 /* RebelAuthentication.swift */,
-				2A87A51A280F0270008672E3 /* RebelOpenIdAuthDelegate.swift */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -263,7 +264,6 @@
 			children = (
 				2AB764BB27E8B9B90084062C /* EventManager.swift */,
 				2AB764BE27E8C7460084062C /* EventData.swift */,
-				2A035EBE28118D2A00E037AC /* RebelAuthManager.swift */,
 			);
 			path = Events;
 			sourceTree = "<group>";
@@ -271,6 +271,7 @@
 		81A1404E27FAD8CE00A6448D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2AD3D6292816A3530008B8D2 /* PhoneFUELWayfinding.xcframework */,
 				2ABC746C27FEF0260064E656 /* PhoneFUELGoogleMaps.xcframework */,
 				2A54CF5F27FB02D6002487E4 /* ForkbeardCore.xcframework */,
 				2A54CF5C27FB01A4002487E4 /* PhoneFUEL.xcframework */,
@@ -489,7 +490,7 @@
 				2A87A517280EA733008672E3 /* FloatingPanelContentViewController.swift in Sources */,
 				2A9D816E280459CB00DA6B02 /* OpenIdAuthenticationServiceDelegate.swift in Sources */,
 				2A1C614527F1FD7800FFD2D4 /* Helpers.swift in Sources */,
-				2A9D816C2804599F00DA6B02 /* Authentication.swift in Sources */,
+				2A9D816C2804599F00DA6B02 /* ForkbeardAuthentication.swift in Sources */,
 				81A1405427FAFB2600A6448D /* CustomLocationManagerDelegate.swift in Sources */,
 				2A035EBF28118D2B00E037AC /* RebelAuthManager.swift in Sources */,
 				2AB764BC27E8B9B90084062C /* EventManager.swift in Sources */,
@@ -497,7 +498,6 @@
 				8136652027FEDF71001FD732 /* MapViewController.swift in Sources */,
 				2AB7648027E89F8D0084062C /* SceneDelegate.swift in Sources */,
 				2A1C614127F1B44700FFD2D4 /* EventDetailsViewController.swift in Sources */,
-				2A87A51B280F0270008672E3 /* RebelOpenIdAuthDelegate.swift in Sources */,
 				2AB7648827E89F8D0084062C /* SmartBuilding.xcdatamodeld in Sources */,
 				2A035EBB2811643900E037AC /* CustomMapMarker.swift in Sources */,
 				2A87A519280EFDF2008672E3 /* RebelAuthentication.swift in Sources */,

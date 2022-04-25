@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Authentication {
+struct ForkbeardAuthentication {
     // CHANGE:
     // Use the client identifier provided for use with the Forkbeard development,
     // or use the client identifier for you own authentication server.

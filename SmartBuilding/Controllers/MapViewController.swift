@@ -10,6 +10,7 @@ import PhoneFUEL
 import CoreLocation
 import CoreBluetooth
 import PhoneFUELGoogleMaps
+import PhoneFUELWayfinding
 import FloatingPanel
 
 class MapViewController: UIViewController,FloatingPanelControllerDelegate{
@@ -26,23 +27,82 @@ class MapViewController: UIViewController,FloatingPanelControllerDelegate{
   
     @IBOutlet weak var gMapView: GMSMapView!
     
+    @IBOutlet weak var calculateRouteBtn: UIButton!
+    
     var fpc : FloatingPanelController!
     
     var mapMarker : GMSMarker!
     
     var infoWindow : CustomMapMarker!
     
+    let MapStyle = """
+        [
+            {
+              "featureType": "poi",
+              "stylers": [
+                { "visibility": "off" }
+              ]
+            }
+        ]
+        """
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        do {
+            gMapView.mapStyle = try GMSMapStyle(jsonString: MapStyle)
+        } catch {}
+        
+        gMapView.delegate = self
+        calculateRouteBtn.isHidden = true
         clLocationManager.delegate = self
         if mapViewEnhancer == nil {
             mapViewEnhancer = SPFGMSMapEnhancer.init(mapView: gMapView)
+            mapViewEnhancer?.settings.cameraFollowEnabled = true
+            mapViewEnhancer?.settings.renderLocationOverlays = true
+            mapViewEnhancer?.settings.renderLocationOutlines = true
         }
         showFloatingPanel()
         nextStartupStep()
         showAnnotations()
     }
     
+    func prepareWayfinding() {
+        SPFWayfindingService.prepare() { prepared, error in
+            if(!prepared) {
+                print("Unable to prepare wayfinding (%s)", error?.localizedDescription ?? "");
+            }
+            else {
+                print("Prepared wayfinding");
+            }
+        }
+    }
+    
+    @IBAction func calculateWayfindingRoute(_ sender: Any) {
+        print("calculating route...")
+        // example on floor 1
+        let startLocation = SPFLocationBase.forCoordinate(CLLocationCoordinate2DMake(59.91724980437658, 10.739991031587124), onFloor: 1)
+        let endLocation = SPFLocationBase.forCoordinate(CLLocationCoordinate2DMake(59.91745668219593, 10.740041323006153), onFloor: 1)
+        
+        // example on floor 2
+//        let startLocation = SPFLocationBase.forCoordinate(CLLocationCoordinate2DMake(59.917461, 10.740221), onFloor: 2)
+//        let endLocation = SPFLocationBase.forCoordinate(CLLocationCoordinate2DMake(59.917304, 10.739747), onFloor: 2)
+
+        SPFWayfindingService.directions(from: startLocation, to: endLocation, optimize: false) { directions, locations, error in
+            if(error != nil) {
+                print("Unable to find directions (%s)", error?.localizedDescription ?? "");
+                return
+            }
+            
+            guard let route = directions?.routes.first else {
+                print("Unable to find directions", error?.localizedDescription ?? "");
+                return
+            }
+            
+            self.mapViewEnhancer?.startNavigation(route)
+        }
+    }
     
     func showAnnotations(){
         let position = CLLocationCoordinate2D(latitude: 52.649030, longitude: 1.174155)
@@ -107,7 +167,7 @@ class MapViewController: UIViewController,FloatingPanelControllerDelegate{
     }
     
     private func needAuthentication() -> Bool {
-        switch Authentication.currentAuthenticationMethod {
+        switch ForkbeardAuthentication.currentAuthenticationMethod {
         case .openId:
             return !openIdAuthenticationServiceDelegate.isAuthorized()
         case .anonymous:
@@ -116,7 +176,7 @@ class MapViewController: UIViewController,FloatingPanelControllerDelegate{
     }
 
     private func requestAuthentication() {
-        switch Authentication.currentAuthenticationMethod {
+        switch ForkbeardAuthentication.currentAuthenticationMethod {
         case .openId:
             openIdAuthenticationServiceDelegate.login(loginCallback: { success in
                 if success {
@@ -179,12 +239,12 @@ class MapViewController: UIViewController,FloatingPanelControllerDelegate{
     }
 
     private func startPhoneFUEL() {
-        switch Authentication.currentAuthenticationMethod {
+        switch ForkbeardAuthentication.currentAuthenticationMethod {
         case .openId:
             SPFLocationService.setAuthenticationDelegate(openIdAuthenticationServiceDelegate)
         case .anonymous:
             do {
-                try SPFLocationService.setAuthenticationAnonymous(Authentication.anonAuthApiKey)
+                try SPFLocationService.setAuthenticationAnonymous(ForkbeardAuthentication.anonAuthApiKey)
             } catch {
 
             }
@@ -231,6 +291,21 @@ extension MapViewController: SPFLocationManagerDelegate {
             NSLog("Forkbeard Location Update: Unknown")
         }
     }
+    
+    func spfLocationManager(_ manager: SPFLocationManager, stateChanged state: SPFState?, withError error: Error?) {
+        DispatchQueue.main.async {
+            if let state = state {
+                // prepare for wayfinding
+                if state.isPositioning() {
+                    self.prepareWayfinding()
+                    self.calculateRouteBtn.isHidden = false
+                }
+                else {
+                    self.calculateRouteBtn.isHidden = true
+                }
+            }
+        }
+    }
 }
 
         
@@ -242,3 +317,4 @@ extension MapViewController : GMSMapViewDelegate {
         return infoWindow
     }
 }
+

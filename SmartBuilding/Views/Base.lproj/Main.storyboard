@@ -490,17 +490,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hXM-oG-LJF" customClass="GMSMapView">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hXM-oG-LJF" customClass="GMSMapView">
                                 <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dqe-ox-Kmm">
+                                        <rect key="frame" x="242" y="52" width="126" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Calculate Route"/>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="dqe-ox-Kmm" secondAttribute="bottom" constant="761" id="1nR-nm-FMB"/>
+                                    <constraint firstItem="dqe-ox-Kmm" firstAttribute="leading" secondItem="hXM-oG-LJF" secondAttribute="leading" constant="242" id="dwQ-5i-WCg"/>
+                                    <constraint firstItem="dqe-ox-Kmm" firstAttribute="top" secondItem="hXM-oG-LJF" secondAttribute="top" constant="52" id="dxe-5B-Pdp"/>
+                                    <constraint firstAttribute="trailing" secondItem="dqe-ox-Kmm" secondAttribute="trailing" constant="22" id="pch-Ke-HgW"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="57y-Ey-Q1C"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="hXM-oG-LJF" firstAttribute="centerX" secondItem="vZu-WQ-TCI" secondAttribute="centerX" id="Fg0-25-6b8"/>
+                            <constraint firstItem="hXM-oG-LJF" firstAttribute="centerY" secondItem="vZu-WQ-TCI" secondAttribute="centerY" id="mVe-4G-8XM"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="caN-6K-1Q9"/>
                     <connections>
+                        <outlet property="calculateRouteBtn" destination="dqe-ox-Kmm" id="J2S-87-42o"/>
                         <outlet property="gMapView" destination="hXM-oG-LJF" id="c0Q-Wu-Rhi"/>
                     </connections>
                 </viewController>
