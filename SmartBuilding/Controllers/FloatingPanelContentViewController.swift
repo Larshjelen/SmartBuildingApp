@@ -10,7 +10,8 @@ import SafariServices
 
 class FloatingPanelContentViewController: UIViewController, SFSafariViewControllerDelegate {
 
-    private lazy var openIdAuthenticationServiceDelegate = OpenIdAuthenticationServiceDelegate(viewController: self)
+    private lazy var rebelAuthManager = RebelAuthManager(viewController: self)
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,9 +20,7 @@ class FloatingPanelContentViewController: UIViewController, SFSafariViewControll
     
     @IBAction func authBtn(_ sender: UIButton) {
         
-    
-        
-        
+        rebelAuthManager.login()
     }
     
 }

@@ -30,6 +30,8 @@ class MapViewController: UIViewController,FloatingPanelControllerDelegate{
     
     var mapMarker : GMSMarker!
     
+    var infoWindow : CustomMapMarker!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         clLocationManager.delegate = self
@@ -41,10 +43,10 @@ class MapViewController: UIViewController,FloatingPanelControllerDelegate{
         showAnnotations()
     }
     
+    
     func showAnnotations(){
         let position = CLLocationCoordinate2D(latitude: 52.649030, longitude: 1.174155)
         let locationMarker = GMSMarker(position: position)
-        locationMarker.title = "This is an annotation"
         locationMarker.map = gMapView
         
     }
@@ -232,4 +234,11 @@ extension MapViewController: SPFLocationManagerDelegate {
 }
 
         
-
+extension MapViewController : GMSMapViewDelegate {
+    
+    func mapView(_ mapView: GMSMapView, markerInfoWindow marker: GMSMarker) -> UIView? {
+    
+       
+        return infoWindow
+    }
+}

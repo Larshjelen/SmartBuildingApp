@@ -6,7 +6,8 @@
 //
 
 import UIKit
-
+import AppAuth
+import AuthenticationServices
 
 class EventsViewController: UIViewController, UITableViewDelegate{
    
@@ -18,6 +19,7 @@ class EventsViewController: UIViewController, UITableViewDelegate{
     var eventManager = EventManager()
     var helpers = Helpers()
     
+    
     var eventDetailsViewController = EventDetailsViewController()
     
     var eventImage : UIImage?
@@ -25,7 +27,7 @@ class EventsViewController: UIViewController, UITableViewDelegate{
     var fetchedEvents : [EventData] = []
     
     var refreshControll = UIRefreshControl()
-    
+    var authSession: ASWebAuthenticationSession?
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -43,12 +45,9 @@ class EventsViewController: UIViewController, UITableViewDelegate{
         
         refreshControll.addTarget(self, action: #selector(self.updateTable(refreshController:)), for: UIControl.Event.valueChanged)
         eventTableView.addSubview(refreshControll)
-        
-       
-        
+    
     }
-    
-    
+ 
     // Update data on refresh
     @objc func updateTable(refreshController : UIRefreshControl){
         
@@ -57,8 +56,6 @@ class EventsViewController: UIViewController, UITableViewDelegate{
             self.refreshControll.endRefreshing()
         }
     }
-    
-
 
 }
 
@@ -141,8 +138,10 @@ extension EventsViewController:EventManagerDelegate {
 
 }
 
-extension  UITableView {
-    
-    
-}
 
+extension EventsViewController : ASWebAuthenticationPresentationContextProviding{
+    
+    func presentationAnchor(for session: ASWebAuthenticationSession) -> ASPresentationAnchor {
+        self.view.window ?? ASPresentationAnchor()
+    }
+}

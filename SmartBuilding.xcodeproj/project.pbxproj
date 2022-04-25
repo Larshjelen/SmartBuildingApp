@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A035EBB2811643900E037AC /* CustomMapMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A035EBA2811643900E037AC /* CustomMapMarker.swift */; };
+		2A035EBD2811647E00E037AC /* CustomMapMarkerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A035EBC2811647E00E037AC /* CustomMapMarkerView.xib */; };
+		2A035EBF28118D2B00E037AC /* RebelAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A035EBE28118D2A00E037AC /* RebelAuthManager.swift */; };
 		2A0A31AB27F327D3000FBAB0 /* DateFormatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0A31AA27F327D3000FBAB0 /* DateFormatTests.swift */; };
 		2A0A31AD27F334E9000FBAB0 /* ConvertUrlToImageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0A31AC27F334E9000FBAB0 /* ConvertUrlToImageTests.swift */; };
 		2A1C614127F1B44700FFD2D4 /* EventDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1C614027F1B44700FFD2D4 /* EventDetailsViewController.swift */; };
@@ -74,6 +77,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2A035EBA2811643900E037AC /* CustomMapMarker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMapMarker.swift; sourceTree = "<group>"; };
+		2A035EBC2811647E00E037AC /* CustomMapMarkerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomMapMarkerView.xib; sourceTree = "<group>"; };
+		2A035EBE28118D2A00E037AC /* RebelAuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RebelAuthManager.swift; sourceTree = "<group>"; };
 		2A0A31AA27F327D3000FBAB0 /* DateFormatTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatTests.swift; sourceTree = "<group>"; };
 		2A0A31AC27F334E9000FBAB0 /* ConvertUrlToImageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertUrlToImageTests.swift; sourceTree = "<group>"; };
 		2A1C614027F1B44700FFD2D4 /* EventDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailsViewController.swift; sourceTree = "<group>"; };
@@ -234,6 +240,7 @@
 			children = (
 				2AB7648327E89F8D0084062C /* Main.storyboard */,
 				2AB764B827E8A8100084062C /* EventCell.xib */,
+				2A035EBC2811647E00E037AC /* CustomMapMarkerView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -246,6 +253,7 @@
 				2A1C614027F1B44700FFD2D4 /* EventDetailsViewController.swift */,
 				8136651F27FEDF71001FD732 /* MapViewController.swift */,
 				2A87A516280EA733008672E3 /* FloatingPanelContentViewController.swift */,
+				2A035EBA2811643900E037AC /* CustomMapMarker.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -255,6 +263,7 @@
 			children = (
 				2AB764BB27E8B9B90084062C /* EventManager.swift */,
 				2AB764BE27E8C7460084062C /* EventData.swift */,
+				2A035EBE28118D2A00E037AC /* RebelAuthManager.swift */,
 			);
 			path = Events;
 			sourceTree = "<group>";
@@ -388,6 +397,7 @@
 			files = (
 				2AB764BA27E8A8120084062C /* EventCell.xib in Resources */,
 				2AB7648D27E89F940084062C /* LaunchScreen.storyboard in Resources */,
+				2A035EBD2811647E00E037AC /* CustomMapMarkerView.xib in Resources */,
 				2AB7648A27E89F940084062C /* Assets.xcassets in Resources */,
 				2AB7648527E89F8D0084062C /* Main.storyboard in Resources */,
 			);
@@ -481,6 +491,7 @@
 				2A1C614527F1FD7800FFD2D4 /* Helpers.swift in Sources */,
 				2A9D816C2804599F00DA6B02 /* Authentication.swift in Sources */,
 				81A1405427FAFB2600A6448D /* CustomLocationManagerDelegate.swift in Sources */,
+				2A035EBF28118D2B00E037AC /* RebelAuthManager.swift in Sources */,
 				2AB764BC27E8B9B90084062C /* EventManager.swift in Sources */,
 				2AB7647E27E89F8D0084062C /* AppDelegate.swift in Sources */,
 				8136652027FEDF71001FD732 /* MapViewController.swift in Sources */,
@@ -488,6 +499,7 @@
 				2A1C614127F1B44700FFD2D4 /* EventDetailsViewController.swift in Sources */,
 				2A87A51B280F0270008672E3 /* RebelOpenIdAuthDelegate.swift in Sources */,
 				2AB7648827E89F8D0084062C /* SmartBuilding.xcdatamodeld in Sources */,
+				2A035EBB2811643900E037AC /* CustomMapMarker.swift in Sources */,
 				2A87A519280EFDF2008672E3 /* RebelAuthentication.swift in Sources */,
 				2AB764B927E8A8110084062C /* EventCellController.swift in Sources */,
 			);
