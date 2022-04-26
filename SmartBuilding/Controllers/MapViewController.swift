@@ -27,7 +27,6 @@ class MapViewController: UIViewController,FloatingPanelControllerDelegate{
   
     @IBOutlet weak var gMapView: GMSMapView!
     
-    @IBOutlet weak var calculateRouteBtn: UIButton!
     
     var fpc : FloatingPanelController!
     
@@ -55,7 +54,7 @@ class MapViewController: UIViewController,FloatingPanelControllerDelegate{
         } catch {}
         
         gMapView.delegate = self
-        calculateRouteBtn.isHidden = true
+    
         clLocationManager.delegate = self
         if mapViewEnhancer == nil {
             mapViewEnhancer = SPFGMSMapEnhancer.init(mapView: gMapView)
@@ -66,24 +65,17 @@ class MapViewController: UIViewController,FloatingPanelControllerDelegate{
         showFloatingPanel()
         nextStartupStep()
         showAnnotations()
+        
+        
     }
     
-    func prepareWayfinding() {
-        SPFWayfindingService.prepare() { prepared, error in
-            if(!prepared) {
-                print("Unable to prepare wayfinding (%s)", error?.localizedDescription ?? "");
-            }
-            else {
-                print("Prepared wayfinding");
-            }
-        }
-    }
     
-    @IBAction func calculateWayfindingRoute(_ sender: Any) {
+    @IBAction func calculateRouteBtn(_ sender: Any) {
+        
         print("calculating route...")
         // example on floor 1
-        let startLocation = SPFLocationBase.forCoordinate(CLLocationCoordinate2DMake(59.91724980437658, 10.739991031587124), onFloor: 1)
-        let endLocation = SPFLocationBase.forCoordinate(CLLocationCoordinate2DMake(59.91745668219593, 10.740041323006153), onFloor: 1)
+        let startLocation = SPFLocationBase.forCoordinate(CLLocationCoordinate2DMake(59.91731609124395, 10.73998361873677), onFloor: 2)
+        let endLocation = SPFLocationBase.forCoordinate(CLLocationCoordinate2DMake(59.917426756995305, 10.74009350046742), onFloor: 2)
         
         // example on floor 2
 //        let startLocation = SPFLocationBase.forCoordinate(CLLocationCoordinate2DMake(59.917461, 10.740221), onFloor: 2)
@@ -103,6 +95,20 @@ class MapViewController: UIViewController,FloatingPanelControllerDelegate{
             self.mapViewEnhancer?.startNavigation(route)
         }
     }
+    
+    func prepareWayfinding() {
+        SPFWayfindingService.prepare() { prepared, error in
+            if(!prepared) {
+                print("Unable to prepare wayfinding (%s)", error?.localizedDescription ?? "");
+            }
+            else {
+                print("Prepared wayfinding");
+            }
+        }
+    }
+    
+  
+  
     
     func showAnnotations(){
         let position = CLLocationCoordinate2D(latitude: 52.649030, longitude: 1.174155)
@@ -286,10 +292,13 @@ extension MapViewController: SPFLocationManagerDelegate {
     func spfLocationManager(_ manager: SPFLocationManager, didUpdate location: SPFLocation?) {
         if let location = location {
             NSLog("Forkbeard Location Update: \(location.coordinate.latitude),\(location.coordinate.longitude)")
+            
          
         } else {
             NSLog("Forkbeard Location Update: Unknown")
         }
+        
+        print(location?.coordinate.longitude, location?.coordinate.latitude)
     }
     
     func spfLocationManager(_ manager: SPFLocationManager, stateChanged state: SPFState?, withError error: Error?) {
@@ -298,10 +307,9 @@ extension MapViewController: SPFLocationManagerDelegate {
                 // prepare for wayfinding
                 if state.isPositioning() {
                     self.prepareWayfinding()
-                    self.calculateRouteBtn.isHidden = false
                 }
                 else {
-                    self.calculateRouteBtn.isHidden = true
+                    
                 }
             }
         }
@@ -313,7 +321,6 @@ extension MapViewController : GMSMapViewDelegate {
     
     func mapView(_ mapView: GMSMapView, markerInfoWindow marker: GMSMarker) -> UIView? {
     
-       
         return infoWindow
     }
 }

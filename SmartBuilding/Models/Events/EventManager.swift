@@ -4,7 +4,6 @@
 //
 //  Created by Ammar Khalil on 21/03/2022.
 //
-
 import Foundation
 
 // Protocol to send data to the controller
@@ -23,7 +22,6 @@ struct EventManager {
     let eventURL = "https://api.entraos.io/activity/list"
     
     func performRequest(){
-        
         //create URL
         if let url = URL(string: eventURL) {
             
@@ -52,7 +50,6 @@ struct EventManager {
             }
             
             //start the task
-            
             task.resume()
         }
         

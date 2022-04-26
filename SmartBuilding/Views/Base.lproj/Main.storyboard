@@ -115,6 +115,15 @@
                                     <action selector="authBtn:" destination="vcu-Wc-DtC" eventType="touchUpInside" id="RTH-d0-jnN"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j8J-90-tRk">
+                                <rect key="frame" x="151" y="666" width="90" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="get_token"/>
+                                <connections>
+                                    <action selector="getToekn:" destination="vcu-Wc-DtC" eventType="touchUpInside" id="5DM-oH-XD0"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="f1g-Fy-RFV"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -491,33 +500,30 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hXM-oG-LJF" customClass="GMSMapView">
-                                <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dqe-ox-Kmm">
-                                        <rect key="frame" x="242" y="52" width="126" height="31"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Calculate Route"/>
-                                    </button>
-                                </subviews>
+                                <rect key="frame" x="0.0" y="151" width="390" height="693"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="dqe-ox-Kmm" secondAttribute="bottom" constant="761" id="1nR-nm-FMB"/>
-                                    <constraint firstItem="dqe-ox-Kmm" firstAttribute="leading" secondItem="hXM-oG-LJF" secondAttribute="leading" constant="242" id="dwQ-5i-WCg"/>
-                                    <constraint firstItem="dqe-ox-Kmm" firstAttribute="top" secondItem="hXM-oG-LJF" secondAttribute="top" constant="52" id="dxe-5B-Pdp"/>
-                                    <constraint firstAttribute="trailing" secondItem="dqe-ox-Kmm" secondAttribute="trailing" constant="22" id="pch-Ke-HgW"/>
-                                </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Fi-dw-v6z">
+                                <rect key="frame" x="273" y="55" width="67" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="calculateRouteBtn:" destination="qsv-hy-RSR" eventType="touchUpInside" id="F0s-EL-cG9"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="57y-Ey-Q1C"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="hXM-oG-LJF" firstAttribute="centerX" secondItem="vZu-WQ-TCI" secondAttribute="centerX" id="Fg0-25-6b8"/>
-                            <constraint firstItem="hXM-oG-LJF" firstAttribute="centerY" secondItem="vZu-WQ-TCI" secondAttribute="centerY" id="mVe-4G-8XM"/>
+                            <constraint firstAttribute="bottom" secondItem="hXM-oG-LJF" secondAttribute="bottom" id="IXH-vS-tQn"/>
+                            <constraint firstItem="hXM-oG-LJF" firstAttribute="top" secondItem="57y-Ey-Q1C" secondAttribute="top" constant="107" id="KBo-kX-BhX"/>
+                            <constraint firstItem="hXM-oG-LJF" firstAttribute="trailing" secondItem="57y-Ey-Q1C" secondAttribute="trailing" id="Uha-Su-7nT"/>
+                            <constraint firstItem="hXM-oG-LJF" firstAttribute="leading" secondItem="57y-Ey-Q1C" secondAttribute="leading" id="xOD-HX-nbe"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="caN-6K-1Q9"/>
                     <connections>
-                        <outlet property="calculateRouteBtn" destination="dqe-ox-Kmm" id="J2S-87-42o"/>
                         <outlet property="gMapView" destination="hXM-oG-LJF" id="c0Q-Wu-Rhi"/>
                     </connections>
                 </viewController>

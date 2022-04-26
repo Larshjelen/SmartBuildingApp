@@ -35,8 +35,10 @@
 		2AB764BF27E8C7460084062C /* EventData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB764BE27E8C7460084062C /* EventData.swift */; };
 		2AD3D62E2816A9CB0008B8D2 /* PhoneFUELWayfinding.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AD3D6292816A3530008B8D2 /* PhoneFUELWayfinding.xcframework */; };
 		2AD3D62F2816A9CB0008B8D2 /* PhoneFUELWayfinding.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2AD3D6292816A3530008B8D2 /* PhoneFUELWayfinding.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		2AD3D6302816AA650008B8D2 /* PhoneFUEL.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A54CF5C27FB01A4002487E4 /* PhoneFUEL.xcframework */; };
 		2AD3D6322816AAD40008B8D2 /* PhoneFUELGoogleMaps.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2ABC746C27FEF0260064E656 /* PhoneFUELGoogleMaps.xcframework */; };
+		2AD3D6342816B1FA0008B8D2 /* PhoneFUEL.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A54CF5C27FB01A4002487E4 /* PhoneFUEL.xcframework */; };
+		2AD3D6352816B1FA0008B8D2 /* PhoneFUEL.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2A54CF5C27FB01A4002487E4 /* PhoneFUEL.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2AD3D63928181B6F0008B8D2 /* MeetingRomManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD3D63828181B6F0008B8D2 /* MeetingRomManager.swift */; };
 		8136652027FEDF71001FD732 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8136651F27FEDF71001FD732 /* MapViewController.swift */; };
 		819835DF2805860A007BB7D7 /* Pods_SmartBuilding.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F79748D6ED2F637BF5B1BA7C /* Pods_SmartBuilding.framework */; };
 		819835E12805868A007BB7D7 /* ForkbeardCore.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A54CF5F27FB02D6002487E4 /* ForkbeardCore.xcframework */; };
@@ -68,6 +70,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				2AD3D6352816B1FA0008B8D2 /* PhoneFUEL.xcframework in Embed Frameworks */,
 				2AD3D62F2816A9CB0008B8D2 /* PhoneFUELWayfinding.xcframework in Embed Frameworks */,
 				819835E22805868A007BB7D7 /* ForkbeardCore.xcframework in Embed Frameworks */,
 			);
@@ -111,6 +114,7 @@
 		2AB764BE27E8C7460084062C /* EventData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventData.swift; sourceTree = "<group>"; };
 		2ABC746C27FEF0260064E656 /* PhoneFUELGoogleMaps.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = PhoneFUELGoogleMaps.xcframework; sourceTree = "<group>"; };
 		2AD3D6292816A3530008B8D2 /* PhoneFUELWayfinding.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = PhoneFUELWayfinding.xcframework; sourceTree = "<group>"; };
+		2AD3D63828181B6F0008B8D2 /* MeetingRomManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetingRomManager.swift; sourceTree = "<group>"; };
 		8136651F27FEDF71001FD732 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		81A1405327FAFB2600A6448D /* CustomLocationManagerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLocationManagerDelegate.swift; sourceTree = "<group>"; };
 		DEE8CEFABCAD7BE2E8EBD8F4 /* Pods-SmartBuilding.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartBuilding.debug.xcconfig"; path = "Target Support Files/Pods-SmartBuilding/Pods-SmartBuilding.debug.xcconfig"; sourceTree = "<group>"; };
@@ -123,7 +127,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2AD3D6302816AA650008B8D2 /* PhoneFUEL.xcframework in Frameworks */,
+				2AD3D6342816B1FA0008B8D2 /* PhoneFUEL.xcframework in Frameworks */,
 				819835E12805868A007BB7D7 /* ForkbeardCore.xcframework in Frameworks */,
 				819835DF2805860A007BB7D7 /* Pods_SmartBuilding.framework in Frameworks */,
 				2AD3D6322816AAD40008B8D2 /* PhoneFUELGoogleMaps.xcframework in Frameworks */,
@@ -193,6 +197,7 @@
 		2AB7647C27E89F8D0084062C /* SmartBuilding */ = {
 			isa = PBXGroup;
 			children = (
+				2AD3D6362818142C0008B8D2 /* Resources */,
 				2A9D816A2804598900DA6B02 /* Authentication */,
 				2AB764B227E8A2F40084062C /* Controllers */,
 				2AB764B127E8A2E10084062C /* Views */,
@@ -262,10 +267,26 @@
 		2AB764BD27E8C7180084062C /* Events */ = {
 			isa = PBXGroup;
 			children = (
+				2AD3D63728181B3F0008B8D2 /* RebelNetworking */,
 				2AB764BB27E8B9B90084062C /* EventManager.swift */,
 				2AB764BE27E8C7460084062C /* EventData.swift */,
 			);
 			path = Events;
+			sourceTree = "<group>";
+		};
+		2AD3D6362818142C0008B8D2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		2AD3D63728181B3F0008B8D2 /* RebelNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				2AD3D63828181B6F0008B8D2 /* MeetingRomManager.swift */,
+			);
+			path = RebelNetworking;
 			sourceTree = "<group>";
 		};
 		81A1404E27FAD8CE00A6448D /* Frameworks */ = {
@@ -499,6 +520,7 @@
 				2AB7648027E89F8D0084062C /* SceneDelegate.swift in Sources */,
 				2A1C614127F1B44700FFD2D4 /* EventDetailsViewController.swift in Sources */,
 				2AB7648827E89F8D0084062C /* SmartBuilding.xcdatamodeld in Sources */,
+				2AD3D63928181B6F0008B8D2 /* MeetingRomManager.swift in Sources */,
 				2A035EBB2811643900E037AC /* CustomMapMarker.swift in Sources */,
 				2A87A519280EFDF2008672E3 /* RebelAuthentication.swift in Sources */,
 				2AB764B927E8A8110084062C /* EventCellController.swift in Sources */,

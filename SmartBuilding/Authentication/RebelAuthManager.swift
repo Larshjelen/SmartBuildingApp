@@ -18,6 +18,10 @@ class RebelAuthManager : NSObject{
         self.viewController = viewController
     }
     
+    override init(){
+        super.init()
+    }
+    
     let issuer = URL(string: "https://entrasso-qa.entraos.io/oauth2")
     private var authState: OIDAuthState?
     
@@ -45,7 +49,7 @@ class RebelAuthManager : NSObject{
             
             let request = OIDAuthorizationRequest(configuration:config , clientId: RebelAuthentication.clientId,
                                                   clientSecret:RebelAuthentication.clientSecret ,
-                                                  scopes: [OIDScopeOpenID,OIDScopeProfile],
+                                                  scopes: [OIDScopeOpenID,OIDScopeProfile, OIDScopeEmail, OIDScopePhone],
                                                   redirectURL: redirectURL,
                                                   responseType: OIDResponseTypeCode,
                                                   additionalParameters: ["audience": RebelAuthentication.rebelAuthAudience, "prompt": "login"])
@@ -56,9 +60,10 @@ class RebelAuthManager : NSObject{
             OIDAuthState.authState(byPresenting: request, presenting: viewController ) { authState ,error in
               if let authState = authState {
                 self.setAuthState(authState)
-                print("Got authorization tokens. Access token: " +
-                      "\(authState.lastTokenResponse?.accessToken ?? "nil")")
-                  print(authState.lastTokenResponse?.scope)
+               // print("Got authorization tokens. Access token: " +
+                 //     "\(authState.lastTokenResponse?.accessToken ?? "nil")")
+                 
+                  
               } else {
                 print("Authorization error: \(error?.localizedDescription ?? "Unknown error")")
                 self.setAuthState(nil)
@@ -70,16 +75,12 @@ class RebelAuthManager : NSObject{
       
   }
     
-    func saveState() {
-        var data: Data? = nil
-
-        if let authState = self.authState {
-            data = NSKeyedArchiver.archivedData(withRootObject: authState)
-        }
-
-        UserDefaults.standard.set(data, forKey: UserDefaults.Keys.rebelOpenIdToken)
-        UserDefaults.standard.synchronize()
+    func saveRebelToken (){
+        
+        UserDefaults.standard.set(authState?.lastTokenResponse?.accessToken, forKey: UserDefaults.Keys.rebelOpenIdToken)
     }
+    
+
     
     func setAuthState(_ authState: OIDAuthState?) {
         if (self.authState == authState) {
@@ -91,8 +92,22 @@ class RebelAuthManager : NSObject{
     }
     
     func stateChanged() {
-        self.saveState()
+        self.saveRebelToken()
     }
+    
+    func logout(){
+        authState?.update(with: nil)
+        UserDefaults.standard.removeObject(forKey: UserDefaults.Keys.rebelOpenIdToken)
+        print("loggin out...")
+        
+    }
+    
+    func getSavedRebelToken() -> String{
+        guard let savedToken = UserDefaults.standard.object(forKey: UserDefaults.Keys.rebelOpenIdToken) as? String else {return "nil"}
+        return savedToken
+    }
+    
+
 
 }
 
@@ -108,5 +123,5 @@ extension RebelAuthManager: OIDAuthStateChangeDelegate, OIDAuthStateErrorDelegat
 }
 
 extension UserDefaults.Keys {
-    static let rebelOpenIdToken = "open_id_token"
+    static let rebelOpenIdToken = "rebelOpenIdToken"
 }

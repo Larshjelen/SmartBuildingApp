@@ -12,15 +12,23 @@ class FloatingPanelContentViewController: UIViewController, SFSafariViewControll
 
     private lazy var rebelAuthManager = RebelAuthManager(viewController: self)
     
+    var meetingRomManager = MeetingRomManager()
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
     }
     
     @IBAction func authBtn(_ sender: UIButton) {
         
         rebelAuthManager.login()
+        
     }
     
+    @IBAction func getToekn(_ sender: Any) {
+        
+        meetingRomManager.sendRequest()
+    }
 }
