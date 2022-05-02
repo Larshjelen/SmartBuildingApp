@@ -23,6 +23,7 @@ class EventDetailsViewController: UIViewController {
         super.viewDidLoad()
         
         populateUIWithData()
+        
 
 }
     

@@ -7,6 +7,9 @@
 
 import Foundation
 import UIKit
+
+
+
 struct Helpers {
     
     //Convert URL to image
@@ -38,4 +41,6 @@ struct Helpers {
             return ("Error while converting the date")
         }
     }
+    
+
 }

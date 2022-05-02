@@ -14,6 +14,9 @@
 		2A0A31AD27F334E9000FBAB0 /* ConvertUrlToImageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0A31AC27F334E9000FBAB0 /* ConvertUrlToImageTests.swift */; };
 		2A1C614127F1B44700FFD2D4 /* EventDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1C614027F1B44700FFD2D4 /* EventDetailsViewController.swift */; };
 		2A1C614527F1FD7800FFD2D4 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1C614427F1FD7800FFD2D4 /* Helpers.swift */; };
+		2A57C6CD281FF12500FCB7EE /* Coordinates_Rebel.json in Resources */ = {isa = PBXBuildFile; fileRef = 2A57C6CC281FF12500FCB7EE /* Coordinates_Rebel.json */; };
+		2A57C6CF281FF19100FCB7EE /* CoordinatesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A57C6CE281FF19100FCB7EE /* CoordinatesData.swift */; };
+		2A57C6D22820082200FCB7EE /* CoordinatesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A57C6D12820082200FCB7EE /* CoordinatesManager.swift */; };
 		2A87A517280EA733008672E3 /* FloatingPanelContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A87A516280EA733008672E3 /* FloatingPanelContentViewController.swift */; };
 		2A87A519280EFDF2008672E3 /* RebelAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A87A518280EFDF2008672E3 /* RebelAuthentication.swift */; };
 		2A9D816C2804599F00DA6B02 /* ForkbeardAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9D816B2804599F00DA6B02 /* ForkbeardAuthentication.swift */; };
@@ -89,6 +92,9 @@
 		2A1C614427F1FD7800FFD2D4 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		2A54CF5C27FB01A4002487E4 /* PhoneFUEL.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = PhoneFUEL.xcframework; sourceTree = "<group>"; };
 		2A54CF5F27FB02D6002487E4 /* ForkbeardCore.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = ForkbeardCore.xcframework; sourceTree = "<group>"; };
+		2A57C6CC281FF12500FCB7EE /* Coordinates_Rebel.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Coordinates_Rebel.json; sourceTree = "<group>"; };
+		2A57C6CE281FF19100FCB7EE /* CoordinatesData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatesData.swift; sourceTree = "<group>"; };
+		2A57C6D12820082200FCB7EE /* CoordinatesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatesManager.swift; sourceTree = "<group>"; };
 		2A87A516280EA733008672E3 /* FloatingPanelContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingPanelContentViewController.swift; sourceTree = "<group>"; };
 		2A87A518280EFDF2008672E3 /* RebelAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RebelAuthentication.swift; sourceTree = "<group>"; };
 		2A9D816B2804599F00DA6B02 /* ForkbeardAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForkbeardAuthentication.swift; sourceTree = "<group>"; };
@@ -161,6 +167,14 @@
 			path = HelpersTests;
 			sourceTree = "<group>";
 		};
+		2A57C6D02820080A00FCB7EE /* Coordinates */ = {
+			isa = PBXGroup;
+			children = (
+				2A57C6D12820082200FCB7EE /* CoordinatesManager.swift */,
+			);
+			path = Coordinates;
+			sourceTree = "<group>";
+		};
 		2A9D816A2804598900DA6B02 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
@@ -197,6 +211,7 @@
 		2AB7647C27E89F8D0084062C /* SmartBuilding */ = {
 			isa = PBXGroup;
 			children = (
+				2A57C6CC281FF12500FCB7EE /* Coordinates_Rebel.json */,
 				2AD3D6362818142C0008B8D2 /* Resources */,
 				2A9D816A2804598900DA6B02 /* Authentication */,
 				2AB764B227E8A2F40084062C /* Controllers */,
@@ -233,6 +248,7 @@
 		2AB764B027E8A2D20084062C /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				2A57C6D02820080A00FCB7EE /* Coordinates */,
 				2AB764B327E8A32C0084062C /* Constants.swift */,
 				2A1C614427F1FD7800FFD2D4 /* Helpers.swift */,
 				2AB764BD27E8C7180084062C /* Events */,
@@ -270,6 +286,7 @@
 				2AD3D63728181B3F0008B8D2 /* RebelNetworking */,
 				2AB764BB27E8B9B90084062C /* EventManager.swift */,
 				2AB764BE27E8C7460084062C /* EventData.swift */,
+				2A57C6CE281FF19100FCB7EE /* CoordinatesData.swift */,
 			);
 			path = Events;
 			sourceTree = "<group>";
@@ -417,6 +434,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A57C6CD281FF12500FCB7EE /* Coordinates_Rebel.json in Resources */,
 				2AB764BA27E8A8120084062C /* EventCell.xib in Resources */,
 				2AB7648D27E89F940084062C /* LaunchScreen.storyboard in Resources */,
 				2A035EBD2811647E00E037AC /* CustomMapMarkerView.xib in Resources */,
@@ -518,10 +536,12 @@
 				2AB7647E27E89F8D0084062C /* AppDelegate.swift in Sources */,
 				8136652027FEDF71001FD732 /* MapViewController.swift in Sources */,
 				2AB7648027E89F8D0084062C /* SceneDelegate.swift in Sources */,
+				2A57C6CF281FF19100FCB7EE /* CoordinatesData.swift in Sources */,
 				2A1C614127F1B44700FFD2D4 /* EventDetailsViewController.swift in Sources */,
 				2AB7648827E89F8D0084062C /* SmartBuilding.xcdatamodeld in Sources */,
 				2AD3D63928181B6F0008B8D2 /* MeetingRomManager.swift in Sources */,
 				2A035EBB2811643900E037AC /* CustomMapMarker.swift in Sources */,
+				2A57C6D22820082200FCB7EE /* CoordinatesManager.swift in Sources */,
 				2A87A519280EFDF2008672E3 /* RebelAuthentication.swift in Sources */,
 				2AB764B927E8A8110084062C /* EventCellController.swift in Sources */,
 			);

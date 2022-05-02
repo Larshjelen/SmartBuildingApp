@@ -8,6 +8,7 @@
 import Foundation
 
 
+
 struct MeetingRomManager{
     
     var rebelAuthManger = RebelAuthManager()

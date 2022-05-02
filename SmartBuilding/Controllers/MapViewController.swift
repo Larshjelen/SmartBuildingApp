@@ -45,6 +45,9 @@ class MapViewController: UIViewController,FloatingPanelControllerDelegate{
         ]
         """
 
+    var helpers = Helpers()
+    
+    var coordinates : Coordinates!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,7 +69,7 @@ class MapViewController: UIViewController,FloatingPanelControllerDelegate{
         nextStartupStep()
         showAnnotations()
         
-        
+        helpers.loadJson(fileName:"Coordinates_Rebel")
     }
     
     
@@ -74,12 +77,12 @@ class MapViewController: UIViewController,FloatingPanelControllerDelegate{
         
         print("calculating route...")
         // example on floor 1
-        let startLocation = SPFLocationBase.forCoordinate(CLLocationCoordinate2DMake(59.91731609124395, 10.73998361873677), onFloor: 2)
-        let endLocation = SPFLocationBase.forCoordinate(CLLocationCoordinate2DMake(59.917426756995305, 10.74009350046742), onFloor: 2)
-        
+//        let startLocation = SPFLocationBase.forCoordinate(CLLocationCoordinate2DMake(59.91726884082771, 10.740086307142782), onFloor: 2)
+//        let endLocation = SPFLocationBase.forCoordinate(CLLocationCoordinate2DMake(59.917207967354620, 10.73998017571109), onFloor: 2)
+//
         // example on floor 2
-//        let startLocation = SPFLocationBase.forCoordinate(CLLocationCoordinate2DMake(59.917461, 10.740221), onFloor: 2)
-//        let endLocation = SPFLocationBase.forCoordinate(CLLocationCoordinate2DMake(59.917304, 10.739747), onFloor: 2)
+        let startLocation = SPFLocationBase.forCoordinate(CLLocationCoordinate2DMake(59.91736700636181, 10.740019705105848), onFloor: 1)
+        let endLocation = SPFLocationBase.forCoordinate(CLLocationCoordinate2DMake(59.917146574871964, 10.739995238559287), onFloor: 2)
 
         SPFWayfindingService.directions(from: startLocation, to: endLocation, optimize: false) { directions, locations, error in
             if(error != nil) {
@@ -293,12 +296,13 @@ extension MapViewController: SPFLocationManagerDelegate {
         if let location = location {
             NSLog("Forkbeard Location Update: \(location.coordinate.latitude),\(location.coordinate.longitude)")
             
+           // print( location.floor ?? 0)
          
         } else {
             NSLog("Forkbeard Location Update: Unknown")
         }
         
-        print(location?.coordinate.longitude, location?.coordinate.latitude)
+      //  print(location?.coordinate.longitude, location?.coordinate.latitude)
     }
     
     func spfLocationManager(_ manager: SPFLocationManager, stateChanged state: SPFState?, withError error: Error?) {
