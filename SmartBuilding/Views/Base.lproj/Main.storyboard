@@ -107,12 +107,12 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WPF-D8-PSB">
-                                <rect key="frame" x="162" y="563" width="67" height="31"/>
+                                <rect key="frame" x="133" y="563" width="125" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Meeting Rooms"/>
                                 <connections>
-                                    <action selector="authBtn:" destination="vcu-Wc-DtC" eventType="touchUpInside" id="RTH-d0-jnN"/>
+                                    <action selector="MeetingRoomPressed:" destination="vcu-Wc-DtC" eventType="touchUpInside" id="K7i-Ww-JTB"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j8J-90-tRk">
@@ -134,10 +134,36 @@
                             <constraint firstItem="Go6-YL-IFQ" firstAttribute="leading" secondItem="f1g-Fy-RFV" secondAttribute="leading" id="xnq-nz-SMw"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="meetingRoomButton" destination="WPF-D8-PSB" id="RRg-vB-U6V"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cBc-nz-CFp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="0.0" y="711.61137440758296"/>
+        </scene>
+        <!--Meeting Room View Controller-->
+        <scene sceneID="Kky-Qd-05Q">
+            <objects>
+                <viewController storyboardIdentifier="FP_Meeting_Room" id="adh-MH-3K3" customClass="FPMeetingRoomViewController" customModule="SmartBuilding" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UKH-AL-eGz">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ep-yB-ayX" customClass="SharedClass" customModule="SmartBuilding" customModuleProvider="target">
+                                <rect key="frame" x="162" y="407" width="67" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ajd-dl-tg6"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dJT-YS-V2d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="1369"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="C7c-9Z-fFk">
@@ -499,8 +525,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hXM-oG-LJF" customClass="GMSMapView">
-                                <rect key="frame" x="0.0" y="151" width="390" height="693"/>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hXM-oG-LJF" customClass="GMSMapView">
+                                <rect key="frame" x="0.0" y="94" width="390" height="750"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Fi-dw-v6z">

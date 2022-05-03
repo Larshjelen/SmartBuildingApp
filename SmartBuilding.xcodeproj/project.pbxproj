@@ -17,6 +17,14 @@
 		2A57C6CD281FF12500FCB7EE /* Coordinates_Rebel.json in Resources */ = {isa = PBXBuildFile; fileRef = 2A57C6CC281FF12500FCB7EE /* Coordinates_Rebel.json */; };
 		2A57C6CF281FF19100FCB7EE /* CoordinatesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A57C6CE281FF19100FCB7EE /* CoordinatesData.swift */; };
 		2A57C6D22820082200FCB7EE /* CoordinatesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A57C6D12820082200FCB7EE /* CoordinatesManager.swift */; };
+		2A57C6D62820215800FCB7EE /* FPMeetingRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A57C6D52820215800FCB7EE /* FPMeetingRoomViewController.swift */; };
+		2A57C6D828204D6200FCB7EE /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A57C6D728204D6200FCB7EE /* CustomButton.swift */; };
+		2A57C6D92821344A00FCB7EE /* PhoneFUEL.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A54CF5C27FB01A4002487E4 /* PhoneFUEL.xcframework */; };
+		2A57C6DA2821344A00FCB7EE /* PhoneFUEL.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2A54CF5C27FB01A4002487E4 /* PhoneFUEL.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2A57C6DC2821345700FCB7EE /* ForkbeardCore.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A54CF5F27FB02D6002487E4 /* ForkbeardCore.xcframework */; };
+		2A57C6DD2821345700FCB7EE /* ForkbeardCore.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2A54CF5F27FB02D6002487E4 /* ForkbeardCore.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2A57C6DE2821349D00FCB7EE /* PhoneFUELWayfinding.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AD3D6292816A3530008B8D2 /* PhoneFUELWayfinding.xcframework */; };
+		2A57C6DF2821349D00FCB7EE /* PhoneFUELWayfinding.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2AD3D6292816A3530008B8D2 /* PhoneFUELWayfinding.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2A87A517280EA733008672E3 /* FloatingPanelContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A87A516280EA733008672E3 /* FloatingPanelContentViewController.swift */; };
 		2A87A519280EFDF2008672E3 /* RebelAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A87A518280EFDF2008672E3 /* RebelAuthentication.swift */; };
 		2A9D816C2804599F00DA6B02 /* ForkbeardAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9D816B2804599F00DA6B02 /* ForkbeardAuthentication.swift */; };
@@ -36,16 +44,10 @@
 		2AB764BA27E8A8120084062C /* EventCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2AB764B827E8A8100084062C /* EventCell.xib */; };
 		2AB764BC27E8B9B90084062C /* EventManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB764BB27E8B9B90084062C /* EventManager.swift */; };
 		2AB764BF27E8C7460084062C /* EventData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB764BE27E8C7460084062C /* EventData.swift */; };
-		2AD3D62E2816A9CB0008B8D2 /* PhoneFUELWayfinding.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AD3D6292816A3530008B8D2 /* PhoneFUELWayfinding.xcframework */; };
-		2AD3D62F2816A9CB0008B8D2 /* PhoneFUELWayfinding.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2AD3D6292816A3530008B8D2 /* PhoneFUELWayfinding.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2AD3D6322816AAD40008B8D2 /* PhoneFUELGoogleMaps.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2ABC746C27FEF0260064E656 /* PhoneFUELGoogleMaps.xcframework */; };
-		2AD3D6342816B1FA0008B8D2 /* PhoneFUEL.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A54CF5C27FB01A4002487E4 /* PhoneFUEL.xcframework */; };
-		2AD3D6352816B1FA0008B8D2 /* PhoneFUEL.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2A54CF5C27FB01A4002487E4 /* PhoneFUEL.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2AD3D63928181B6F0008B8D2 /* MeetingRomManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD3D63828181B6F0008B8D2 /* MeetingRomManager.swift */; };
 		8136652027FEDF71001FD732 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8136651F27FEDF71001FD732 /* MapViewController.swift */; };
 		819835DF2805860A007BB7D7 /* Pods_SmartBuilding.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F79748D6ED2F637BF5B1BA7C /* Pods_SmartBuilding.framework */; };
-		819835E12805868A007BB7D7 /* ForkbeardCore.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A54CF5F27FB02D6002487E4 /* ForkbeardCore.xcframework */; };
-		819835E22805868A007BB7D7 /* ForkbeardCore.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2A54CF5F27FB02D6002487E4 /* ForkbeardCore.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		81A1405427FAFB2600A6448D /* CustomLocationManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A1405327FAFB2600A6448D /* CustomLocationManagerDelegate.swift */; };
 /* End PBXBuildFile section */
 
@@ -67,15 +69,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		819835E32805868A007BB7D7 /* Embed Frameworks */ = {
+		2A57C6DB2821344A00FCB7EE /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				2AD3D6352816B1FA0008B8D2 /* PhoneFUEL.xcframework in Embed Frameworks */,
-				2AD3D62F2816A9CB0008B8D2 /* PhoneFUELWayfinding.xcframework in Embed Frameworks */,
-				819835E22805868A007BB7D7 /* ForkbeardCore.xcframework in Embed Frameworks */,
+				2A57C6DA2821344A00FCB7EE /* PhoneFUEL.xcframework in Embed Frameworks */,
+				2A57C6DF2821349D00FCB7EE /* PhoneFUELWayfinding.xcframework in Embed Frameworks */,
+				2A57C6DD2821345700FCB7EE /* ForkbeardCore.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -95,6 +97,8 @@
 		2A57C6CC281FF12500FCB7EE /* Coordinates_Rebel.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Coordinates_Rebel.json; sourceTree = "<group>"; };
 		2A57C6CE281FF19100FCB7EE /* CoordinatesData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatesData.swift; sourceTree = "<group>"; };
 		2A57C6D12820082200FCB7EE /* CoordinatesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatesManager.swift; sourceTree = "<group>"; };
+		2A57C6D52820215800FCB7EE /* FPMeetingRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPMeetingRoomViewController.swift; sourceTree = "<group>"; };
+		2A57C6D728204D6200FCB7EE /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		2A87A516280EA733008672E3 /* FloatingPanelContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingPanelContentViewController.swift; sourceTree = "<group>"; };
 		2A87A518280EFDF2008672E3 /* RebelAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RebelAuthentication.swift; sourceTree = "<group>"; };
 		2A9D816B2804599F00DA6B02 /* ForkbeardAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForkbeardAuthentication.swift; sourceTree = "<group>"; };
@@ -133,11 +137,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2AD3D6342816B1FA0008B8D2 /* PhoneFUEL.xcframework in Frameworks */,
-				819835E12805868A007BB7D7 /* ForkbeardCore.xcframework in Frameworks */,
+				2A57C6D92821344A00FCB7EE /* PhoneFUEL.xcframework in Frameworks */,
 				819835DF2805860A007BB7D7 /* Pods_SmartBuilding.framework in Frameworks */,
+				2A57C6DC2821345700FCB7EE /* ForkbeardCore.xcframework in Frameworks */,
 				2AD3D6322816AAD40008B8D2 /* PhoneFUELGoogleMaps.xcframework in Frameworks */,
-				2AD3D62E2816A9CB0008B8D2 /* PhoneFUELWayfinding.xcframework in Frameworks */,
+				2A57C6DE2821349D00FCB7EE /* PhoneFUELWayfinding.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -223,6 +227,7 @@
 				2AB7648B27E89F940084062C /* LaunchScreen.storyboard */,
 				2AB7648E27E89F940084062C /* Info.plist */,
 				2AB7648627E89F8D0084062C /* SmartBuilding.xcdatamodeld */,
+				2A57C6D728204D6200FCB7EE /* CustomButton.swift */,
 			);
 			path = SmartBuilding;
 			sourceTree = "<group>";
@@ -276,6 +281,7 @@
 				8136651F27FEDF71001FD732 /* MapViewController.swift */,
 				2A87A516280EA733008672E3 /* FloatingPanelContentViewController.swift */,
 				2A035EBA2811643900E037AC /* CustomMapMarker.swift */,
+				2A57C6D52820215800FCB7EE /* FPMeetingRoomViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -340,7 +346,7 @@
 				2AB7647827E89F8D0084062C /* Resources */,
 				78ADA5CFE113396F5D6F6A5F /* [CP] Embed Pods Frameworks */,
 				5A31DB81B556C0FD1A7DAB1F /* [CP] Copy Pods Resources */,
-				819835E32805868A007BB7D7 /* Embed Frameworks */,
+				2A57C6DB2821344A00FCB7EE /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -524,6 +530,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2AB764B427E8A32C0084062C /* Constants.swift in Sources */,
+				2A57C6D62820215800FCB7EE /* FPMeetingRoomViewController.swift in Sources */,
 				2AB7648227E89F8D0084062C /* EventsViewController.swift in Sources */,
 				2AB764BF27E8C7460084062C /* EventData.swift in Sources */,
 				2A87A517280EA733008672E3 /* FloatingPanelContentViewController.swift in Sources */,
@@ -539,6 +546,7 @@
 				2A57C6CF281FF19100FCB7EE /* CoordinatesData.swift in Sources */,
 				2A1C614127F1B44700FFD2D4 /* EventDetailsViewController.swift in Sources */,
 				2AB7648827E89F8D0084062C /* SmartBuilding.xcdatamodeld in Sources */,
+				2A57C6D828204D6200FCB7EE /* CustomButton.swift in Sources */,
 				2AD3D63928181B6F0008B8D2 /* MeetingRomManager.swift in Sources */,
 				2A035EBB2811643900E037AC /* CustomMapMarker.swift in Sources */,
 				2A57C6D22820082200FCB7EE /* CoordinatesManager.swift in Sources */,
@@ -726,7 +734,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 978NW4ULQ6;
+				DEVELOPMENT_TEAM = 73NCHQP3L2;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SmartBuilding/Info.plist;
 				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Location used for determining coarse location and improved position accuracy.";
@@ -762,7 +770,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 978NW4ULQ6;
+				DEVELOPMENT_TEAM = 73NCHQP3L2;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SmartBuilding/Info.plist;
 				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Location used for determining coarse location and improved position accuracy.";

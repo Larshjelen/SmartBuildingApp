@@ -13,7 +13,7 @@ import PhoneFUELGoogleMaps
 import PhoneFUELWayfinding
 import FloatingPanel
 
-class MapViewController: UIViewController,FloatingPanelControllerDelegate{
+class MapViewController: UIViewController, FloatingPanelControllerDelegate{
 
     private lazy var openIdAuthenticationServiceDelegate = OpenIdAuthenticationServiceDelegate(viewController: self)
     private lazy var spfLocationManager = SPFLocationManager()
@@ -24,15 +24,17 @@ class MapViewController: UIViewController,FloatingPanelControllerDelegate{
     private var requestingLocationAuth = false
     private var haveRequestedInput = false
     
-  
+   
+    var currentFloatingPanel : FloatingPanelController!
+        
     @IBOutlet weak var gMapView: GMSMapView!
     
-    
-    var fpc : FloatingPanelController!
-    
+ 
     var mapMarker : GMSMarker!
     
     var infoWindow : CustomMapMarker!
+    
+   
     
     let MapStyle = """
         [
@@ -48,6 +50,11 @@ class MapViewController: UIViewController,FloatingPanelControllerDelegate{
     var helpers = Helpers()
     
     var coordinates : Coordinates!
+    
+    var endLat : Double!
+    var endLong : Double!
+    var currentFloor : Int!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -69,34 +76,47 @@ class MapViewController: UIViewController,FloatingPanelControllerDelegate{
         nextStartupStep()
         showAnnotations()
         
-        helpers.loadJson(fileName:"Coordinates_Rebel")
+       
     }
+    
     
     
     @IBAction func calculateRouteBtn(_ sender: Any) {
         
-        print("calculating route...")
-        // example on floor 1
-//        let startLocation = SPFLocationBase.forCoordinate(CLLocationCoordinate2DMake(59.91726884082771, 10.740086307142782), onFloor: 2)
-//        let endLocation = SPFLocationBase.forCoordinate(CLLocationCoordinate2DMake(59.917207967354620, 10.73998017571109), onFloor: 2)
-//
-        // example on floor 2
-        let startLocation = SPFLocationBase.forCoordinate(CLLocationCoordinate2DMake(59.91736700636181, 10.740019705105848), onFloor: 1)
-        let endLocation = SPFLocationBase.forCoordinate(CLLocationCoordinate2DMake(59.917146574871964, 10.739995238559287), onFloor: 2)
-
-        SPFWayfindingService.directions(from: startLocation, to: endLocation, optimize: false) { directions, locations, error in
-            if(error != nil) {
-                print("Unable to find directions (%s)", error?.localizedDescription ?? "");
+        if let spfLocationManager = self.spfLocationManager{
+            
+            guard let startLat = spfLocationManager.getLastKnownLocation()?.coordinate.latitude else {
                 return
             }
             
-            guard let route = directions?.routes.first else {
-                print("Unable to find directions", error?.localizedDescription ?? "");
+            guard let startLong = spfLocationManager.getLastKnownLocation()?.coordinate.longitude else {
+                
                 return
-            }
-            
-            self.mapViewEnhancer?.startNavigation(route)
         }
+            guard let startFloor = spfLocationManager.getLastKnownLocation()?.floor else {
+                 return
+            }
+            let startLocation = SPFLocationBase.forCoordinate(CLLocationCoordinate2DMake(startLat, startLong), onFloor: Int(startFloor))
+            
+            let endLocation = SPFLocationBase.forCoordinate(CLLocationCoordinate2DMake(59.917266462541185, 10.740013489228327), onFloor: 2)
+
+            SPFWayfindingService.directions(from: startLocation, to: endLocation, optimize: false) { directions, locations, error in
+                if(error != nil) {
+                    print("Unable to find directions (%s)", error?.localizedDescription ?? "");
+                    return
+                }
+
+                guard let route = directions?.routes.first else {
+                    print("Unable to find directions", error?.localizedDescription ?? "");
+                    return
+                }
+
+                self.mapViewEnhancer?.startNavigation(route)
+            }
+        }
+ 
+        print("calculating route...")
+
     }
     
     func prepareWayfinding() {
@@ -108,9 +128,55 @@ class MapViewController: UIViewController,FloatingPanelControllerDelegate{
                 print("Prepared wayfinding");
             }
         }
+        
     }
     
+    func removePanel(fpc : FloatingPanelController){
+        fpc.willMove(toParent: nil)
+        
+        fpc.removePanelFromParent(animated: true)
+    }
   
+    func showMeetingRoomFloatingPanel (){
+      
+        if let currentFloatingPanel = currentFloatingPanel{
+            
+            removePanel(fpc: currentFloatingPanel)
+        }
+        
+        let fpcMeetingRoom = FloatingPanelController()
+        
+        fpcMeetingRoom.delegate = self
+        guard let meetingRoomVC = storyboard?.instantiateViewController(withIdentifier: "FP_Meeting_Room") as? FPMeetingRoomViewController else {
+            print("main view return")
+            return
+        }
+        
+        fpcMeetingRoom.set(contentViewController: meetingRoomVC)
+        fpcMeetingRoom.addPanel(toParent: self)
+        
+        
+    }
+    func showFloatingPanel(){
+        
+        let fpcMain = FloatingPanelController()
+    
+        fpcMain.delegate = self
+        
+        currentFloatingPanel = fpcMain
+    
+            guard let mainVC = storyboard?.instantiateViewController(withIdentifier: "fpc_controller") as? FloatingPanelContentViewController else {
+                print("main view return")
+                return
+            }
+            fpcMain.set(contentViewController: mainVC)
+   
+        // Add and show the views managed by the `FloatingPanelController` object to self.view.
+        fpcMain.addPanel(toParent: self)
+        
+    
+       
+    }
   
     
     func showAnnotations(){
@@ -120,23 +186,11 @@ class MapViewController: UIViewController,FloatingPanelControllerDelegate{
         
     }
     
-    func showFloatingPanel(){
-        fpc = FloatingPanelController()
-        
-        fpc.delegate = self
-        
-        // Set a content view controller.
-        guard let contentVC = storyboard?.instantiateViewController(withIdentifier: "fpc_controller") as? FloatingPanelContentViewController else {
-            
-            return
-        }
-        fpc.set(contentViewController: contentVC)
+    
 
-        // Add and show the views managed by the `FloatingPanelController` object to self.view.
-        fpc.addPanel(toParent: self)
-    }
     
     private func nextStartupStep(){
+    
         DispatchQueue.main.async {
             // Check location settings
             if self.needInput() {
@@ -171,6 +225,7 @@ class MapViewController: UIViewController,FloatingPanelControllerDelegate{
                 self.requestAuthentication()
             } else {
                 self.startPhoneFUEL()
+                
             }
       }
     }
@@ -267,6 +322,7 @@ class MapViewController: UIViewController,FloatingPanelControllerDelegate{
         
         spfLocationManager?.delegate = self
         spfLocationManager?.startUpdatingLocation()
+       
     }
 }
 
@@ -292,18 +348,23 @@ extension UserDefaults {
 
 // MARK: Forkbeard location updates
 extension MapViewController: SPFLocationManagerDelegate {
+    
     func spfLocationManager(_ manager: SPFLocationManager, didUpdate location: SPFLocation?) {
         if let location = location {
             NSLog("Forkbeard Location Update: \(location.coordinate.latitude),\(location.coordinate.longitude)")
             
-           // print( location.floor ?? 0)
+               
          
         } else {
             NSLog("Forkbeard Location Update: Unknown")
         }
         
       //  print(location?.coordinate.longitude, location?.coordinate.latitude)
+        
+        
     }
+
+    
     
     func spfLocationManager(_ manager: SPFLocationManager, stateChanged state: SPFState?, withError error: Error?) {
         DispatchQueue.main.async {
@@ -311,6 +372,7 @@ extension MapViewController: SPFLocationManagerDelegate {
                 // prepare for wayfinding
                 if state.isPositioning() {
                     self.prepareWayfinding()
+                   
                 }
                 else {
                     
@@ -318,6 +380,8 @@ extension MapViewController: SPFLocationManagerDelegate {
             }
         }
     }
+    
+    
 }
 
         

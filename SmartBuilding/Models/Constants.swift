@@ -11,4 +11,6 @@ struct K {
     static let appName = "SmartBuilding"
     static let eventCellIdentifier = "EventReusableCell"
     static let cellNibName = "EventCell"
+    
+    
 }

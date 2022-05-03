@@ -14,11 +14,19 @@ class FloatingPanelContentViewController: UIViewController, SFSafariViewControll
     
     var meetingRomManager = MeetingRomManager()
     
-
+    var mapViewController = MapViewController()
+    
+    @IBOutlet weak var meetingRoomButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        SharedClass.sharedInstance.styleForComponents(button: meetingRoomButton)
         
+    }
+    @IBAction func MeetingRoomPressed(_ sender: UIButton) {
+       
+        mapViewController.showMeetingRoomFloatingPanel()
     }
     
     @IBAction func authBtn(_ sender: UIButton) {
