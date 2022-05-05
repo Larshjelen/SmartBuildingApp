@@ -21,22 +21,25 @@ struct CoordinatesManager {
     var delegate : CoordinatesDelegate?
     
     
-    func loadJson(fileName: String){
+    func loadJson(fileName: String) -> Coordinates?{
 
-        print("decoding file...")
+        
         guard  let path = Bundle.main.url(forResource: fileName, withExtension: "json") else {
             
-          return
+          return nil
         }
-        print(path)
+        
         do{
-           print("decoding file...")
+           print("doing")
             let data = try Data(contentsOf: path)
+            print("data")
             let result = try JSONDecoder().decode(Coordinates.self, from: data)
-            print(result.meetingRooms[0].name)
-            delegate?.didReadCoordinatesdata(coordinates: result)
+            print("has decoded")
+            print(result.elevator.elevatorFirst.floor)
+            return result
         }catch{
-            delegate?.didFailWithError(error: error)
+            print(error.localizedDescription)
+            return nil
         }
         
     }

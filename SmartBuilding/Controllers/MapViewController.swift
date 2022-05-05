@@ -24,8 +24,6 @@ class MapViewController: UIViewController, FloatingPanelControllerDelegate{
     private var requestingLocationAuth = false
     private var haveRequestedInput = false
     
-   
-    var currentFloatingPanel : FloatingPanelController!
         
     @IBOutlet weak var gMapView: GMSMapView!
     
@@ -34,7 +32,7 @@ class MapViewController: UIViewController, FloatingPanelControllerDelegate{
     
     var infoWindow : CustomMapMarker!
     
-   
+   var isNavgating = false
     
     let MapStyle = """
         [
@@ -48,13 +46,7 @@ class MapViewController: UIViewController, FloatingPanelControllerDelegate{
         """
 
     var helpers = Helpers()
-    
-    var coordinates : Coordinates!
-    
-    var endLat : Double!
-    var endLong : Double!
-    var currentFloor : Int!
-    
+    var coordinatesManager = CoordinatesManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -80,44 +72,81 @@ class MapViewController: UIViewController, FloatingPanelControllerDelegate{
     }
     
     
-    
-    @IBAction func calculateRouteBtn(_ sender: Any) {
+    func startNavigation (){
+        
+        guard let constantCoordinates =  coordinatesManager.loadJson(fileName: "Coordinates_Rebel") else {
+            return
+        }
         
         if let spfLocationManager = self.spfLocationManager{
-            
+
             guard let startLat = spfLocationManager.getLastKnownLocation()?.coordinate.latitude else {
                 return
             }
-            
+
             guard let startLong = spfLocationManager.getLastKnownLocation()?.coordinate.longitude else {
-                
+
                 return
         }
-            guard let startFloor = spfLocationManager.getLastKnownLocation()?.floor else {
+            guard let currentFloor = spfLocationManager.getLastKnownLocation()?.floor else {
                  return
             }
-            let startLocation = SPFLocationBase.forCoordinate(CLLocationCoordinate2DMake(startLat, startLong), onFloor: Int(startFloor))
-            
-            let endLocation = SPFLocationBase.forCoordinate(CLLocationCoordinate2DMake(59.917266462541185, 10.740013489228327), onFloor: 2)
+            let startLocation = SPFLocationBase.forCoordinate(CLLocationCoordinate2DMake(startLat, startLong), onFloor: Int(currentFloor))
 
-            SPFWayfindingService.directions(from: startLocation, to: endLocation, optimize: false) { directions, locations, error in
-                if(error != nil) {
-                    print("Unable to find directions (%s)", error?.localizedDescription ?? "");
-                    return
+            if (currentFloor == 2){
+                //if at the same floor, navigate direct to destination
+                let endLocation = SPFLocationBase.forCoordinate(CLLocationCoordinate2DMake(constantCoordinates.meetingRooms[0].location.lat, constantCoordinates.meetingRooms[0].location.long), onFloor: constantCoordinates.meetingRooms[0].floor)
+                SPFWayfindingService.directions(from: startLocation, to: endLocation, optimize: false) { directions, locations, error in
+                    if(error != nil) {
+                        print("Unable to find directions (%s)", error?.localizedDescription ?? "");
+                        return
+                    }
+
+                    guard let route = directions?.routes.first else {
+                        print("Unable to find directions", error?.localizedDescription ?? "");
+                        return
+                    }
+
+                    self.mapViewEnhancer?.startNavigation(route)
                 }
+    
+            } else {
+                //if not, take the elevator
+                let endLocation = SPFLocationBase.forCoordinate(CLLocationCoordinate2DMake(constantCoordinates.elevator.elevatorFirst.lat, constantCoordinates.elevator.elevatorFirst.long), onFloor: constantCoordinates.elevator.elevatorFirst.floor)
+                 SPFWayfindingService.directions(from: startLocation, to: endLocation, optimize: false) { directions, locations, error in
+                     if(error != nil) {
+                         print("Unable to find directions (%s)", error?.localizedDescription ?? "");
+                         return
+                     }
 
-                guard let route = directions?.routes.first else {
-                    print("Unable to find directions", error?.localizedDescription ?? "");
-                    return
-                }
+                     guard let route = directions?.routes.first else {
+                         print("Unable to find directions", error?.localizedDescription ?? "");
+                         return
+                     }
 
-                self.mapViewEnhancer?.startNavigation(route)
+                     self.mapViewEnhancer?.startNavigation(route)
+                 }
+                
             }
-        }
- 
-        print("calculating route...")
 
+        }
     }
+    
+    //Toggle navigation
+    @IBAction func calculateRouteBtn(_ sender: Any) {
+       
+        isNavgating = !isNavgating
+        
+        if(!isNavgating){
+            self.mapViewEnhancer?.stopNavigation()
+            
+        }
+    }
+    
+ 
+    
+    
+   
     
     func prepareWayfinding() {
         SPFWayfindingService.prepare() { prepared, error in
@@ -130,40 +159,13 @@ class MapViewController: UIViewController, FloatingPanelControllerDelegate{
         }
         
     }
-    
-    func removePanel(fpc : FloatingPanelController){
-        fpc.willMove(toParent: nil)
-        
-        fpc.removePanelFromParent(animated: true)
-    }
   
-    func showMeetingRoomFloatingPanel (){
-      
-        if let currentFloatingPanel = currentFloatingPanel{
-            
-            removePanel(fpc: currentFloatingPanel)
-        }
-        
-        let fpcMeetingRoom = FloatingPanelController()
-        
-        fpcMeetingRoom.delegate = self
-        guard let meetingRoomVC = storyboard?.instantiateViewController(withIdentifier: "FP_Meeting_Room") as? FPMeetingRoomViewController else {
-            print("main view return")
-            return
-        }
-        
-        fpcMeetingRoom.set(contentViewController: meetingRoomVC)
-        fpcMeetingRoom.addPanel(toParent: self)
-        
-        
-    }
     func showFloatingPanel(){
         
         let fpcMain = FloatingPanelController()
     
         fpcMain.delegate = self
         
-        currentFloatingPanel = fpcMain
     
             guard let mainVC = storyboard?.instantiateViewController(withIdentifier: "fpc_controller") as? FloatingPanelContentViewController else {
                 print("main view return")
@@ -173,8 +175,7 @@ class MapViewController: UIViewController, FloatingPanelControllerDelegate{
    
         // Add and show the views managed by the `FloatingPanelController` object to self.view.
         fpcMain.addPanel(toParent: self)
-        
-    
+
        
     }
   
@@ -351,10 +352,13 @@ extension MapViewController: SPFLocationManagerDelegate {
     
     func spfLocationManager(_ manager: SPFLocationManager, didUpdate location: SPFLocation?) {
         if let location = location {
-            NSLog("Forkbeard Location Update: \(location.coordinate.latitude),\(location.coordinate.longitude)")
-            
-               
-         
+            //NSLog("Forkbeard Location Update: \(location.coordinate.latitude),\(location.coordinate.longitude)"
+            if isNavgating {
+                startNavigation()
+            }else {
+                
+                print("stop navigation")
+            }
         } else {
             NSLog("Forkbeard Location Update: Unknown")
         }

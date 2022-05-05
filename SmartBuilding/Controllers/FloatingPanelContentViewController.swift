@@ -18,10 +18,10 @@ class FloatingPanelContentViewController: UIViewController, SFSafariViewControll
     
     @IBOutlet weak var meetingRoomButton: UIButton!
     
+    @IBOutlet weak var activeTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        SharedClass.sharedInstance.styleForComponents(button: meetingRoomButton)
         
     }
     @IBAction func MeetingRoomPressed(_ sender: UIButton) {

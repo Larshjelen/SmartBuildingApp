@@ -7,6 +7,8 @@
 
 import UIKit
 
+
+
 class EventDetailsViewController: UIViewController {
     
     var selectedEvent: EventData?
