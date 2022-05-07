@@ -575,6 +575,20 @@
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ZIE-ar-TIy">
                                         <rect key="frame" x="5" y="5" width="380" height="736"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="63e-Uj-Ffh">
+                                                <rect key="frame" x="169.33333333333334" y="0.0" width="41.333333333333343" height="736"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="63e-Uj-Ffh" secondAttribute="trailing" constant="169.33000000000001" id="653-Lw-Rfp"/>
+                                            <constraint firstItem="63e-Uj-Ffh" firstAttribute="leading" secondItem="ZIE-ar-TIy" secondAttribute="leading" constant="169.33000000000001" id="h0J-np-GvN"/>
+                                            <constraint firstItem="63e-Uj-Ffh" firstAttribute="top" secondItem="ZIE-ar-TIy" secondAttribute="top" id="k6o-A6-291"/>
+                                            <constraint firstAttribute="bottom" secondItem="63e-Uj-Ffh" secondAttribute="bottom" id="wH3-Li-Xeg"/>
+                                        </constraints>
                                     </stackView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
