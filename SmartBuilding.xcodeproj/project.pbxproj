@@ -14,7 +14,6 @@
 		2A0A31AD27F334E9000FBAB0 /* ConvertUrlToImageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0A31AC27F334E9000FBAB0 /* ConvertUrlToImageTests.swift */; };
 		2A1C614127F1B44700FFD2D4 /* EventDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1C614027F1B44700FFD2D4 /* EventDetailsViewController.swift */; };
 		2A1C614527F1FD7800FFD2D4 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1C614427F1FD7800FFD2D4 /* Helpers.swift */; };
-		2A57C6CD281FF12500FCB7EE /* Coordinates_Rebel.json in Resources */ = {isa = PBXBuildFile; fileRef = 2A57C6CC281FF12500FCB7EE /* Coordinates_Rebel.json */; };
 		2A57C6CF281FF19100FCB7EE /* CoordinatesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A57C6CE281FF19100FCB7EE /* CoordinatesData.swift */; };
 		2A57C6D22820082200FCB7EE /* CoordinatesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A57C6D12820082200FCB7EE /* CoordinatesManager.swift */; };
 		2A57C6D62820215800FCB7EE /* FPMeetingRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A57C6D52820215800FCB7EE /* FPMeetingRoomViewController.swift */; };
@@ -48,6 +47,7 @@
 		2AD3D6322816AAD40008B8D2 /* PhoneFUELGoogleMaps.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2ABC746C27FEF0260064E656 /* PhoneFUELGoogleMaps.xcframework */; };
 		2AD3D63928181B6F0008B8D2 /* MeetingRomManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD3D63828181B6F0008B8D2 /* MeetingRomManager.swift */; };
 		8136652027FEDF71001FD732 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8136651F27FEDF71001FD732 /* MapViewController.swift */; };
+		8163F7DB2826D05C0002C60A /* Coordinates_Rebel.json in Resources */ = {isa = PBXBuildFile; fileRef = 8163F7DA2826D05C0002C60A /* Coordinates_Rebel.json */; };
 		819835DF2805860A007BB7D7 /* Pods_SmartBuilding.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F79748D6ED2F637BF5B1BA7C /* Pods_SmartBuilding.framework */; };
 		81A1405427FAFB2600A6448D /* CustomLocationManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A1405327FAFB2600A6448D /* CustomLocationManagerDelegate.swift */; };
 /* End PBXBuildFile section */
@@ -95,7 +95,6 @@
 		2A1C614427F1FD7800FFD2D4 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		2A54CF5C27FB01A4002487E4 /* PhoneFUEL.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = PhoneFUEL.xcframework; sourceTree = "<group>"; };
 		2A54CF5F27FB02D6002487E4 /* ForkbeardCore.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = ForkbeardCore.xcframework; sourceTree = "<group>"; };
-		2A57C6CC281FF12500FCB7EE /* Coordinates_Rebel.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Coordinates_Rebel.json; sourceTree = "<group>"; };
 		2A57C6CE281FF19100FCB7EE /* CoordinatesData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatesData.swift; sourceTree = "<group>"; };
 		2A57C6D12820082200FCB7EE /* CoordinatesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatesManager.swift; sourceTree = "<group>"; };
 		2A57C6D52820215800FCB7EE /* FPMeetingRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPMeetingRoomViewController.swift; sourceTree = "<group>"; };
@@ -128,6 +127,7 @@
 		2AD3D6292816A3530008B8D2 /* PhoneFUELWayfinding.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = PhoneFUELWayfinding.xcframework; sourceTree = "<group>"; };
 		2AD3D63828181B6F0008B8D2 /* MeetingRomManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetingRomManager.swift; sourceTree = "<group>"; };
 		8136651F27FEDF71001FD732 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		8163F7DA2826D05C0002C60A /* Coordinates_Rebel.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Coordinates_Rebel.json; path = ../../../../../../Downloads/Coordinates_Rebel.json; sourceTree = "<group>"; };
 		81A1405327FAFB2600A6448D /* CustomLocationManagerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLocationManagerDelegate.swift; sourceTree = "<group>"; };
 		DEE8CEFABCAD7BE2E8EBD8F4 /* Pods-SmartBuilding.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartBuilding.debug.xcconfig"; path = "Target Support Files/Pods-SmartBuilding/Pods-SmartBuilding.debug.xcconfig"; sourceTree = "<group>"; };
 		F79748D6ED2F637BF5B1BA7C /* Pods_SmartBuilding.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartBuilding.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -242,9 +242,8 @@
 		2AB7647C27E89F8D0084062C /* SmartBuilding */ = {
 			isa = PBXGroup;
 			children = (
+				8163F7D92826D0460002C60A /* Resources */,
 				2A64A2012823F572002F63C3 /* Components */,
-				2A57C6CC281FF12500FCB7EE /* Coordinates_Rebel.json */,
-				2AD3D6362818142C0008B8D2 /* Resources */,
 				2A9D816A2804598900DA6B02 /* Authentication */,
 				2AB764B227E8A2F40084062C /* Controllers */,
 				2AB764B127E8A2E10084062C /* Views */,
@@ -324,19 +323,20 @@
 			path = Events;
 			sourceTree = "<group>";
 		};
-		2AD3D6362818142C0008B8D2 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
 		2AD3D63728181B3F0008B8D2 /* RebelNetworking */ = {
 			isa = PBXGroup;
 			children = (
 				2AD3D63828181B6F0008B8D2 /* MeetingRomManager.swift */,
 			);
 			path = RebelNetworking;
+			sourceTree = "<group>";
+		};
+		8163F7D92826D0460002C60A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8163F7DA2826D05C0002C60A /* Coordinates_Rebel.json */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		81A1404E27FAD8CE00A6448D /* Frameworks */ = {
@@ -467,7 +467,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2A57C6CD281FF12500FCB7EE /* Coordinates_Rebel.json in Resources */,
+				8163F7DB2826D05C0002C60A /* Coordinates_Rebel.json in Resources */,
 				2AB764BA27E8A8120084062C /* EventCell.xib in Resources */,
 				2AB7648D27E89F940084062C /* LaunchScreen.storyboard in Resources */,
 				2A035EBD2811647E00E037AC /* CustomMapMarkerView.xib in Resources */,

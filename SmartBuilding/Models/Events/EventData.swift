@@ -17,6 +17,12 @@ struct EventData : Decodable {
     let descriptiveActivityMarkdown: String
     let activityPosterUrl: String
     let captionAndActivityImages : [String : String]
+    var organizedAtVenue : OrganizedVenue
+}
+
+struct OrganizedVenue : Decodable {
+    
+    let name  :  String
 }
 
 
