@@ -48,6 +48,12 @@
 		2AD3D63928181B6F0008B8D2 /* MeetingRomManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD3D63828181B6F0008B8D2 /* MeetingRomManager.swift */; };
 		8136652027FEDF71001FD732 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8136651F27FEDF71001FD732 /* MapViewController.swift */; };
 		8163F7DB2826D05C0002C60A /* Coordinates_Rebel.json in Resources */ = {isa = PBXBuildFile; fileRef = 8163F7DA2826D05C0002C60A /* Coordinates_Rebel.json */; };
+		8163F7E02827F01D0002C60A /* Resturants_Rebel.json in Resources */ = {isa = PBXBuildFile; fileRef = 8163F7DF2827F01D0002C60A /* Resturants_Rebel.json */; };
+		8163F7E22827F03F0002C60A /* ResturantsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8163F7E12827F03F0002C60A /* ResturantsManager.swift */; };
+		8163F7E42827F12F0002C60A /* ResturantsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8163F7E32827F12F0002C60A /* ResturantsData.swift */; };
+		8163F7E62827FA7D0002C60A /* ResturantsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8163F7E52827FA7D0002C60A /* ResturantsViewController.swift */; };
+		8163F7E9282806090002C60A /* ResturantCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8163F7E7282806090002C60A /* ResturantCellController.swift */; };
+		8163F7EA282806090002C60A /* ResturantCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8163F7E8282806090002C60A /* ResturantCell.xib */; };
 		819835DF2805860A007BB7D7 /* Pods_SmartBuilding.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F79748D6ED2F637BF5B1BA7C /* Pods_SmartBuilding.framework */; };
 		81A1405427FAFB2600A6448D /* CustomLocationManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A1405327FAFB2600A6448D /* CustomLocationManagerDelegate.swift */; };
 /* End PBXBuildFile section */
@@ -128,6 +134,12 @@
 		2AD3D63828181B6F0008B8D2 /* MeetingRomManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetingRomManager.swift; sourceTree = "<group>"; };
 		8136651F27FEDF71001FD732 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		8163F7DA2826D05C0002C60A /* Coordinates_Rebel.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Coordinates_Rebel.json; path = ../../../../../../Downloads/Coordinates_Rebel.json; sourceTree = "<group>"; };
+		8163F7DF2827F01D0002C60A /* Resturants_Rebel.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Resturants_Rebel.json; path = ../../../../../../Downloads/Resturants_Rebel.json; sourceTree = "<group>"; };
+		8163F7E12827F03F0002C60A /* ResturantsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResturantsManager.swift; sourceTree = "<group>"; };
+		8163F7E32827F12F0002C60A /* ResturantsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResturantsData.swift; sourceTree = "<group>"; };
+		8163F7E52827FA7D0002C60A /* ResturantsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResturantsViewController.swift; sourceTree = "<group>"; };
+		8163F7E7282806090002C60A /* ResturantCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResturantCellController.swift; sourceTree = "<group>"; };
+		8163F7E8282806090002C60A /* ResturantCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResturantCell.xib; sourceTree = "<group>"; };
 		81A1405327FAFB2600A6448D /* CustomLocationManagerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLocationManagerDelegate.swift; sourceTree = "<group>"; };
 		DEE8CEFABCAD7BE2E8EBD8F4 /* Pods-SmartBuilding.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartBuilding.debug.xcconfig"; path = "Target Support Files/Pods-SmartBuilding/Pods-SmartBuilding.debug.xcconfig"; sourceTree = "<group>"; };
 		F79748D6ED2F637BF5B1BA7C /* Pods_SmartBuilding.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartBuilding.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -279,6 +291,7 @@
 		2AB764B027E8A2D20084062C /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				8163F7DE2827EF920002C60A /* Resturants */,
 				2A57C6D02820080A00FCB7EE /* Coordinates */,
 				2AB764B327E8A32C0084062C /* Constants.swift */,
 				2A1C614427F1FD7800FFD2D4 /* Helpers.swift */,
@@ -294,6 +307,7 @@
 				2AB7648327E89F8D0084062C /* Main.storyboard */,
 				2AB764B827E8A8100084062C /* EventCell.xib */,
 				2A035EBC2811647E00E037AC /* CustomMapMarkerView.xib */,
+				8163F7E8282806090002C60A /* ResturantCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -301,6 +315,7 @@
 		2AB764B227E8A2F40084062C /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				8163F7E7282806090002C60A /* ResturantCellController.swift */,
 				2AB764B727E8A8100084062C /* EventCellController.swift */,
 				2AB7648127E89F8D0084062C /* EventsViewController.swift */,
 				2A1C614027F1B44700FFD2D4 /* EventDetailsViewController.swift */,
@@ -308,6 +323,7 @@
 				2A87A516280EA733008672E3 /* FloatingPanelContentViewController.swift */,
 				2A035EBA2811643900E037AC /* CustomMapMarker.swift */,
 				2A57C6D52820215800FCB7EE /* FPMeetingRoomViewController.swift */,
+				8163F7E52827FA7D0002C60A /* ResturantsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -335,8 +351,18 @@
 			isa = PBXGroup;
 			children = (
 				8163F7DA2826D05C0002C60A /* Coordinates_Rebel.json */,
+				8163F7DF2827F01D0002C60A /* Resturants_Rebel.json */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		8163F7DE2827EF920002C60A /* Resturants */ = {
+			isa = PBXGroup;
+			children = (
+				8163F7E12827F03F0002C60A /* ResturantsManager.swift */,
+				8163F7E32827F12F0002C60A /* ResturantsData.swift */,
+			);
+			path = Resturants;
 			sourceTree = "<group>";
 		};
 		81A1404E27FAD8CE00A6448D /* Frameworks */ = {
@@ -467,7 +493,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8163F7EA282806090002C60A /* ResturantCell.xib in Resources */,
 				8163F7DB2826D05C0002C60A /* Coordinates_Rebel.json in Resources */,
+				8163F7E02827F01D0002C60A /* Resturants_Rebel.json in Resources */,
 				2AB764BA27E8A8120084062C /* EventCell.xib in Resources */,
 				2AB7648D27E89F940084062C /* LaunchScreen.storyboard in Resources */,
 				2A035EBD2811647E00E037AC /* CustomMapMarkerView.xib in Resources */,
@@ -557,7 +585,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				2AB764B427E8A32C0084062C /* Constants.swift in Sources */,
+				8163F7E62827FA7D0002C60A /* ResturantsViewController.swift in Sources */,
 				2A57C6D62820215800FCB7EE /* FPMeetingRoomViewController.swift in Sources */,
+				8163F7E22827F03F0002C60A /* ResturantsManager.swift in Sources */,
 				2AB7648227E89F8D0084062C /* EventsViewController.swift in Sources */,
 				2AB764BF27E8C7460084062C /* EventData.swift in Sources */,
 				2A87A517280EA733008672E3 /* FloatingPanelContentViewController.swift in Sources */,
@@ -566,6 +596,7 @@
 				2A9D816C2804599F00DA6B02 /* ForkbeardAuthentication.swift in Sources */,
 				81A1405427FAFB2600A6448D /* CustomLocationManagerDelegate.swift in Sources */,
 				2A035EBF28118D2B00E037AC /* RebelAuthManager.swift in Sources */,
+				8163F7E9282806090002C60A /* ResturantCellController.swift in Sources */,
 				2AB764BC27E8B9B90084062C /* EventManager.swift in Sources */,
 				2A64A2052823F742002F63C3 /* SecondaryLargeButton.swift in Sources */,
 				2AB7647E27E89F8D0084062C /* AppDelegate.swift in Sources */,
@@ -577,6 +608,7 @@
 				2AB7648827E89F8D0084062C /* SmartBuilding.xcdatamodeld in Sources */,
 				2AD3D63928181B6F0008B8D2 /* MeetingRomManager.swift in Sources */,
 				2A035EBB2811643900E037AC /* CustomMapMarker.swift in Sources */,
+				8163F7E42827F12F0002C60A /* ResturantsData.swift in Sources */,
 				2A57C6D22820082200FCB7EE /* CoordinatesManager.swift in Sources */,
 				2A87A519280EFDF2008672E3 /* RebelAuthentication.swift in Sources */,
 				2AB764B927E8A8110084062C /* EventCellController.swift in Sources */,
