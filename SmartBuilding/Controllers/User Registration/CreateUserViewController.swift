@@ -25,15 +25,27 @@ class CreateUserViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        passwordTextField.isSecureTextEntry = true
     }
     
     
     @IBAction func nextBtnPressed(_ sender: Any) {
         
-        let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "personalia") as? PersonaliaViewController
-        self.navigationController?.pushViewController(vc!, animated: true)
+//        let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "personalia") as? PersonaliaViewController
+//        self.navigationController?.pushViewController(vc!, animated: true)
+        
+        print(emailTextField.text!)
     }
     
 
 
+}
+
+
+extension CreateUserViewController : UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.
+    }
+    
 }
