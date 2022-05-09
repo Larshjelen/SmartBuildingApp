@@ -93,24 +93,36 @@ extension EventsViewController {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
             
         if #available(iOS 13.0, *) {
-            if let EventDetailsVC = storyboard?.instantiateViewController(identifier: "EventDetails") as? EventDetailsViewController{
+           if let EventDetailsVC = storyboard?.instantiateViewController(identifier: "EventDetails") as? EventDetailsViewController{
                 self.navigationController?.pushViewController(EventDetailsVC, animated: true)
-                
+
                 let selectedEvent = indexPath.row
-                
+
                 let event = fetchedEvents[selectedEvent]
-                print(event)
-                EventDetailsVC.selectedEvent = event
-                
+               print(event)
+               EventDetailsVC.selectedEvent = event
+
                 present(EventDetailsVC, animated: true)
                 
+//                let EventDetailsVC = UIStoryboard.init(name: "Events", bundle: Bundle.main).instantiateViewController(withIdentifier: "EventDetails") as? EventDetailsViewController
+//                self.navigationController?.pushViewController(EventDetailsVC!, animated: true)
+//
+//                let selectedEvent = indexPath.row
+//
+//                let event = fetchedEvents[selectedEvent]
+//                print(event)
+//        EventDetailsVC!.selectedEvent = event
                 
             }
         } else {
-            // Fallback on earlier versions
-        }
+           //Fallback on earlier versions
+    }
     }
 }
+    
+
+
+
 
 
 
@@ -137,6 +149,7 @@ extension EventsViewController:EventManagerDelegate {
     }
 
 }
+
 
 
 extension EventsViewController : ASWebAuthenticationPresentationContextProviding{

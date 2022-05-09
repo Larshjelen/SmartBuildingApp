@@ -12,7 +12,6 @@
         <!--Floating Panel Content View Controller-->
         <scene sceneID="RMJ-nN-Lfp">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cBc-nz-CFp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="fpc_controller" id="vcu-Wc-DtC" customClass="FloatingPanelContentViewController" customModule="SmartBuilding" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="j4R-qh-2I2">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
@@ -36,8 +35,8 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Mwo-Qp-vdx">
                                                         <rect key="frame" x="0.0" y="0.0" width="130" height="178"/>
                                                         <subviews>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="imageView:wiI-Qd-37B:image" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="wiI-Qd-37B">
-                                                                <rect key="frame" x="35" y="1" width="60" height="82.666666666666671"/>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="imageView:wiI-Qd-37B:image" translatesAutoresizingMaskIntoConstraints="NO" id="wiI-Qd-37B">
+                                                                <rect key="frame" x="35" y="0.0" width="60" height="84"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="60" id="Ii9-Ua-EHl"/>
                                                                     <constraint firstAttribute="height" constant="84" id="c1e-30-dGd"/>
@@ -54,8 +53,8 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="GgF-FM-aAl">
                                                         <rect key="frame" x="130" y="0.0" width="130" height="178"/>
                                                         <subviews>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="imageView:wiI-Qd-37B:image" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="ZlG-ML-hVf">
-                                                                <rect key="frame" x="35" y="1" width="60" height="82.666666666666671"/>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="imageView:wiI-Qd-37B:image" translatesAutoresizingMaskIntoConstraints="NO" id="ZlG-ML-hVf">
+                                                                <rect key="frame" x="35" y="0.0" width="60" height="84"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="60" id="MmH-Yj-lfH"/>
                                                                     <constraint firstAttribute="height" constant="84" id="k4m-hw-cwH"/>
@@ -72,8 +71,8 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="1nL-ga-arm">
                                                         <rect key="frame" x="260" y="0.0" width="130" height="178"/>
                                                         <subviews>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="imageView:wiI-Qd-37B:image" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Hey-zf-7sO">
-                                                                <rect key="frame" x="35" y="1" width="60" height="82.666666666666671"/>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="imageView:wiI-Qd-37B:image" translatesAutoresizingMaskIntoConstraints="NO" id="Hey-zf-7sO">
+                                                                <rect key="frame" x="35" y="0.0" width="60" height="84"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="84" id="f3K-rT-RY8"/>
                                                                     <constraint firstAttribute="width" constant="60" id="ime-Tk-uhD"/>
@@ -130,6 +129,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="eventsButtonPressed:" destination="vcu-Wc-DtC" eventType="touchUpInside" id="WOz-XF-h1W"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="f1g-Fy-RFV"/>
@@ -143,8 +145,10 @@
                     </view>
                     <connections>
                         <outlet property="meetingRoomButton" destination="WPF-D8-PSB" id="RRg-vB-U6V"/>
+                        <segue destination="Qp3-eT-B7b" kind="presentation" identifier="eventsSegue" id="vNM-pf-PK6"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cBc-nz-CFp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="0.0" y="711.61137440758296"/>
         </scene>
@@ -832,7 +836,6 @@
         <!--Item-->
         <scene sceneID="bVu-Lk-8ri">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="FFh-LN-dV0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="qsv-hy-RSR" customClass="MapViewController" customModule="SmartBuilding" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vZu-WQ-TCI">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
@@ -867,6 +870,7 @@
                         <outlet property="gMapView" destination="hXM-oG-LJF" id="c0Q-Wu-Rhi"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FFh-LN-dV0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1066.1538461538462" y="711.61137440758296"/>
         </scene>
@@ -1996,10 +2000,10 @@
             </objects>
             <point key="canvasLocation" x="-7352.3076923076924" y="28.436018957345969"/>
         </scene>
-        <!--Events-->
+        <!--events-->
         <scene sceneID="iaf-uB-ZFN">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="Events" storyboardName="Events" referencedIdentifier="Events" id="Qp3-eT-B7b" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardIdentifier="events" storyboardName="Events" referencedIdentifier="events" id="Qp3-eT-B7b" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bo3-wV-No7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-371" y="99"/>
@@ -2010,7 +2014,7 @@
         <image name="chevron-left" width="24" height="24"/>
         <image name="chevron-right" width="24" height="24"/>
         <image name="eye" width="24" height="24"/>
-        <image name="imageView:wiI-Qd-37B:image" catalog="system" width="128" height="121">
+        <image name="imageView:wiI-Qd-37B:image" width="128" height="121">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGBwpYJHZlcnNpb25ZJGFyY2hpdmVyVCR0b3BYJG9iamVjdHMSAAGGoF8QD05T
 S2V5ZWRBcmNoaXZlctEICVRyb290gAGvEBELDBscIRkmKywzNjlDS0xQU1UkbnVsbNcNDg8QERITFBUW
