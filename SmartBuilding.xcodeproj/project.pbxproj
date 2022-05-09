@@ -26,11 +26,8 @@
 		2A57C6D22820082200FCB7EE /* CoordinatesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A57C6D12820082200FCB7EE /* CoordinatesManager.swift */; };
 		2A57C6D62820215800FCB7EE /* FPMeetingRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A57C6D52820215800FCB7EE /* FPMeetingRoomViewController.swift */; };
 		2A57C6D92821344A00FCB7EE /* PhoneFUEL.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A54CF5C27FB01A4002487E4 /* PhoneFUEL.xcframework */; };
-		2A57C6DA2821344A00FCB7EE /* PhoneFUEL.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2A54CF5C27FB01A4002487E4 /* PhoneFUEL.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2A57C6DC2821345700FCB7EE /* ForkbeardCore.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A54CF5F27FB02D6002487E4 /* ForkbeardCore.xcframework */; };
-		2A57C6DD2821345700FCB7EE /* ForkbeardCore.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2A54CF5F27FB02D6002487E4 /* ForkbeardCore.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2A57C6DE2821349D00FCB7EE /* PhoneFUELWayfinding.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AD3D6292816A3530008B8D2 /* PhoneFUELWayfinding.xcframework */; };
-		2A57C6DF2821349D00FCB7EE /* PhoneFUELWayfinding.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2AD3D6292816A3530008B8D2 /* PhoneFUELWayfinding.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2A64A2052823F742002F63C3 /* SecondaryLargeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A64A2042823F742002F63C3 /* SecondaryLargeButton.swift */; };
 		2A64A2072823F772002F63C3 /* StyleAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A64A2062823F772002F63C3 /* StyleAttributes.swift */; };
 		2A87A517280EA733008672E3 /* FloatingPanelContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A87A516280EA733008672E3 /* FloatingPanelContentViewController.swift */; };
@@ -80,22 +77,6 @@
 			remoteInfo = SmartBuilding;
 		};
 /* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		2A57C6DB2821344A00FCB7EE /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				2A57C6DA2821344A00FCB7EE /* PhoneFUEL.xcframework in Embed Frameworks */,
-				2A57C6DF2821349D00FCB7EE /* PhoneFUELWayfinding.xcframework in Embed Frameworks */,
-				2A57C6DD2821345700FCB7EE /* ForkbeardCore.xcframework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		2A035EBA2811643900E037AC /* CustomMapMarker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMapMarker.swift; sourceTree = "<group>"; };
@@ -425,7 +406,6 @@
 				2AB7647827E89F8D0084062C /* Resources */,
 				78ADA5CFE113396F5D6F6A5F /* [CP] Embed Pods Frameworks */,
 				5A31DB81B556C0FD1A7DAB1F /* [CP] Copy Pods Resources */,
-				2A57C6DB2821344A00FCB7EE /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
