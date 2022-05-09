@@ -791,7 +791,7 @@
                     <navigationItem key="navigationItem" id="HyV-iH-Lav"/>
                     <connections>
                         <outlet property="progressBarBorder" destination="DVg-fc-VAA" id="1HJ-ky-W8C"/>
-                        <segue destination="qsv-hy-RSR" kind="show" identifier="toHomeMap" id="fkV-zf-KUI"/>
+                        <segue destination="qsv-hy-RSR" kind="presentation" identifier="toHomeMap" modalPresentationStyle="fullScreen" id="fkV-zf-KUI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RFb-yu-tFh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
