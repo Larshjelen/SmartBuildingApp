@@ -29,15 +29,13 @@ class PersonaliaViewController: UIViewController {
     
     @IBAction func nextBtnPressed(_ sender: Any) {
         
-        self.performSegue(withIdentifier: "aboutCompany", sender: self)
+        let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "aboutCompany") as? AboutCompanyViewController
+        self.navigationController?.pushViewController(vc!, animated: true)
     }
     
     
     
-    @IBAction func backBtnPressed(_ sender: UIButton) {
-        
-        self.performSegue(withIdentifier: "fromPersonaliaToCreate", sender: self)
-    }
+   
     /*
     // MARK: - Navigation
 

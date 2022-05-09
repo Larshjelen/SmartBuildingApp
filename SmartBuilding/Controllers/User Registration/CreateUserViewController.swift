@@ -30,22 +30,10 @@ class CreateUserViewController: UIViewController {
     
     @IBAction func nextBtnPressed(_ sender: Any) {
         
-        self.performSegue(withIdentifier: "personalia", sender: self)
+        let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "personalia") as? PersonaliaViewController
+        self.navigationController?.pushViewController(vc!, animated: true)
     }
     
-    @IBAction func BackBtnPressed(_ sender: UIButton) {
-        
-        self.performSegue(withIdentifier: "fromCreateToEmployee", sender: self)
-    }
-    
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

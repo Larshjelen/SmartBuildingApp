@@ -29,7 +29,7 @@ class AboutCompanyViewController: UIViewController {
     
     @IBAction func backBtnPressed(_ sender: UIButton) {
         
-        self.performSegue(withIdentifier: "fromOboutCompanyToPeronalia", sender: self)
+        self.dismiss(animated: true)
     }
     
     

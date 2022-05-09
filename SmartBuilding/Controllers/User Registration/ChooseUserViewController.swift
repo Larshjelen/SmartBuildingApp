@@ -26,8 +26,8 @@ class ChooseUserViewController: UIViewController {
     
     @IBAction func EmployeePressed(_ sender: Any) {
         
-        self.performSegue(withIdentifier: "ifEmployee", sender: self)
-  
+        let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "welcome-employee") as? IfEmployeeViewController
+        self.navigationController?.pushViewController(vc!, animated: true)
     }
     
     @IBAction func guestBtnPressed(_ sender: Any) {
