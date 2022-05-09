@@ -26,16 +26,9 @@ class AboutCompanyViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    
-    @IBAction func backBtnPressed(_ sender: UIButton) {
-        
-        self.dismiss(animated: true)
-    }
-    
-    
-    
     @IBAction func nextBtnPressed(_ sender: UIButton) {
-        self.performSegue(withIdentifier: "userCreated", sender: self)
+        let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "completed") as? CompletedUserRegistrationViewController
+        self.navigationController?.pushViewController(vc!, animated: true)
     }
     
     /*
