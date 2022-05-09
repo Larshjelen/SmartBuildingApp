@@ -29,9 +29,13 @@ class CreateUserViewController: UIViewController {
     
     
     @IBAction func nextBtnPressed(_ sender: Any) {
+        
+        self.performSegue(withIdentifier: "personalia", sender: self)
     }
     
     @IBAction func BackBtnPressed(_ sender: UIButton) {
+        
+        self.performSegue(withIdentifier: "fromCreateToEmployee", sender: self)
     }
     
     /*

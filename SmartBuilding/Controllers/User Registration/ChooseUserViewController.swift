@@ -26,21 +26,17 @@ class ChooseUserViewController: UIViewController {
     
     @IBAction func EmployeePressed(_ sender: Any) {
         
-        let storyBoard: UIStoryboard = UIStoryboard(name: "ifEmployee", bundle: nil)
-        let balanceViewController = storyBoard.instantiateViewController(withIdentifier: "balance") as! IfEmployeeViewController
-        self.present(balanceViewController, animated: true, completion: nil)
+        self.performSegue(withIdentifier: "ifEmployee", sender: self)
+  
     }
     
     @IBAction func guestBtnPressed(_ sender: Any) {
     }
-    /*
+    
+    
+    
     // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    
+    
 
 }

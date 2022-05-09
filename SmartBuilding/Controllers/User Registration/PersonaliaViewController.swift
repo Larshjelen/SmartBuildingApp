@@ -28,8 +28,16 @@ class PersonaliaViewController: UIViewController {
     
     
     @IBAction func nextBtnPressed(_ sender: Any) {
+        
+        self.performSegue(withIdentifier: "aboutCompany", sender: self)
     }
     
+    
+    
+    @IBAction func backBtnPressed(_ sender: UIButton) {
+        
+        self.performSegue(withIdentifier: "fromPersonaliaToCreate", sender: self)
+    }
     /*
     // MARK: - Navigation
 

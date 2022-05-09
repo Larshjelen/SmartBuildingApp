@@ -28,11 +28,14 @@ class AboutCompanyViewController: UIViewController {
     
     
     @IBAction func backBtnPressed(_ sender: UIButton) {
+        
+        self.performSegue(withIdentifier: "fromOboutCompanyToPeronalia", sender: self)
     }
     
     
     
     @IBAction func nextBtnPressed(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "userCreated", sender: self)
     }
     
     /*

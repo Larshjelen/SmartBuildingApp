@@ -21,6 +21,8 @@ class IfEmployeeViewController: UIViewController {
     @IBAction func skipCreateUserPressed(_ sender: UIButton) {
     }
     @IBAction func CreateUserPressed(_ sender: UIButton) {
+        
+        self.performSegue(withIdentifier: "createUser", sender: self)
     }
     /*
     // MARK: - Navigation
