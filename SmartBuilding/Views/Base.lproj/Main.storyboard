@@ -789,7 +789,7 @@
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E4t-8v-dSh">
                                                         <rect key="frame" x="8" y="0.0" width="361" height="60"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -959,6 +959,37 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rbZ-iI-Fef" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="0.0" y="57.582938388625593"/>
+        </scene>
+        <!--Resturants View Controller-->
+        <scene sceneID="m6D-QM-gd7">
+            <objects>
+                <tableViewController storyboardIdentifier="ResturantsView" id="ZPk-GK-QR4" customClass="ResturantsViewController" customModule="SmartBuilding" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="R0g-D0-H8w" userLabel="Resturants Table View">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="dK6-gN-A0K">
+                                <rect key="frame" x="0.0" y="44.666666030883789" width="390" height="43.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dK6-gN-A0K" id="VOh-Rg-zXT">
+                                    <rect key="frame" x="0.0" y="0.0" width="390" height="43.666667938232422"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="ZPk-GK-QR4" id="7wk-cz-gVe"/>
+                            <outlet property="delegate" destination="ZPk-GK-QR4" id="gmP-1B-V3Y"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="resturantTableView" destination="R0g-D0-H8w" id="4vL-gR-zLa"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wgZ-Id-cbz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="800" y="77"/>
         </scene>
         <!--Item-->
         <scene sceneID="bVu-Lk-8ri">
