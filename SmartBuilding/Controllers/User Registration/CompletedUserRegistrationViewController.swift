@@ -19,12 +19,10 @@ class CompletedUserRegistrationViewController: UIViewController {
     }
     
     
-    @IBAction func backbtnPressed(_ sender: UIButton) {
-        
-        self.dismiss(animated: true)
-    }
-    
+  
     @IBAction func createUserPressed(_ sender: UIButton) {
+        
+        self.performSegue(withIdentifier: "toHomeMap", sender: self)
     }
     
     /*
