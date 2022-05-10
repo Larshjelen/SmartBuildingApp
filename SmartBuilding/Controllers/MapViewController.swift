@@ -179,16 +179,13 @@ class MapViewController: UIViewController, FloatingPanelControllerDelegate{
        
     }
   
-    
     func showAnnotations(){
         let position = CLLocationCoordinate2D(latitude: 52.649030, longitude: 1.174155)
         let locationMarker = GMSMarker(position: position)
+        locationMarker.icon = UIImage
         locationMarker.map = gMapView
         
     }
-    
-    
-
     
     private func nextStartupStep(){
     

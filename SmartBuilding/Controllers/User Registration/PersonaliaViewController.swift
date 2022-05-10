@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreData
 
 class PersonaliaViewController: UIViewController {
     
@@ -19,18 +20,33 @@ class PersonaliaViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        loadUser()
+        
     }
     
     
     
     @IBAction func nextBtnPressed(_ sender: Any) {
         
-        let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "aboutCompany") as? AboutCompanyViewController
+       
+       let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "aboutCompany") as? AboutCompanyViewController
         self.navigationController?.pushViewController(vc!, animated: true)
     }
     
     
+    
+    func updateUserInfo(){
+        let request : NSFetchRequest<User> = User.fetchRequest()
+        
+        do{
+            let user = try context.fetch(request)
+            user.first?.name = nameTextField.text
+            user.first?.lastName = lastNameTextField.text
+            helpers.saveToDB(context: context)
+        }catch {
+            print(error.localizedDescription)
+        }
+        
+    }
     
     func loadUser(){
         
@@ -40,6 +56,7 @@ class PersonaliaViewController: UIViewController {
         }
         
         print(user[0].password!)
+        print(user[0].name!)
     }
 
 }

@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import CoreData
 class AboutCompanyViewController: UIViewController {
     
     @IBOutlet weak var progressBarBorder: UIView!
@@ -20,6 +20,9 @@ class AboutCompanyViewController: UIViewController {
     
     @IBOutlet weak var nextBtn: UIButton!
     
+    var helpers = Utils()
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -31,14 +34,18 @@ class AboutCompanyViewController: UIViewController {
         self.navigationController?.pushViewController(vc!, animated: true)
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func updateUserInfo(){
+        let request : NSFetchRequest<User> = User.fetchRequest()
+        
+        do{
+            let user = try context.fetch(request)
+            user.first?.company = companyNameTextField.text
+            user.first?.position = positionTextField.text
+            helpers.saveToDB(context: context)
+        }catch {
+            print(error.localizedDescription)
+        }
+        
     }
-    */
 
 }
