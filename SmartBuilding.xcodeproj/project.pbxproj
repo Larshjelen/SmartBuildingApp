@@ -53,6 +53,13 @@
 		2AD3D63928181B6F0008B8D2 /* MeetingRomManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD3D63828181B6F0008B8D2 /* MeetingRomManager.swift */; };
 		8136652027FEDF71001FD732 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8136651F27FEDF71001FD732 /* MapViewController.swift */; };
 		815228BA282A6240007EEE74 /* AccessCode.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 815228B8282A6240007EEE74 /* AccessCode.storyboard */; };
+		815228BD282A7D5B007EEE74 /* LoginAccessCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815228BC282A7D5B007EEE74 /* LoginAccessCodeViewController.swift */; };
+		815228BF282A7E5E007EEE74 /* FindEmployeeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815228BE282A7E5E007EEE74 /* FindEmployeeViewController.swift */; };
+		815228C1282A7F15007EEE74 /* FoundEmployeeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815228C0282A7F15007EEE74 /* FoundEmployeeViewController.swift */; };
+		815228C3282A7F50007EEE74 /* NotifiedEmployeeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815228C2282A7F50007EEE74 /* NotifiedEmployeeViewController.swift */; };
+		815228C5282A7F84007EEE74 /* GenerateCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815228C4282A7F84007EEE74 /* GenerateCodeViewController.swift */; };
+		815228C7282A7FAA007EEE74 /* GeneratingCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815228C6282A7FAA007EEE74 /* GeneratingCodeViewController.swift */; };
+		815228C9282A7FC2007EEE74 /* GeneratedCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815228C8282A7FC2007EEE74 /* GeneratedCodeViewController.swift */; };
 		8163F7E22827F03F0002C60A /* ResturantsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8163F7E12827F03F0002C60A /* ResturantsManager.swift */; };
 		8163F7E42827F12F0002C60A /* ResturantsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8163F7E32827F12F0002C60A /* ResturantsData.swift */; };
 		8163F7E62827FA7D0002C60A /* ResturantsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8163F7E52827FA7D0002C60A /* ResturantsViewController.swift */; };
@@ -130,6 +137,13 @@
 		2AD3D63828181B6F0008B8D2 /* MeetingRomManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetingRomManager.swift; sourceTree = "<group>"; };
 		8136651F27FEDF71001FD732 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		815228B9282A6240007EEE74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/AccessCode.storyboard; sourceTree = "<group>"; };
+		815228BC282A7D5B007EEE74 /* LoginAccessCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAccessCodeViewController.swift; sourceTree = "<group>"; };
+		815228BE282A7E5E007EEE74 /* FindEmployeeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindEmployeeViewController.swift; sourceTree = "<group>"; };
+		815228C0282A7F15007EEE74 /* FoundEmployeeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoundEmployeeViewController.swift; sourceTree = "<group>"; };
+		815228C2282A7F50007EEE74 /* NotifiedEmployeeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotifiedEmployeeViewController.swift; sourceTree = "<group>"; };
+		815228C4282A7F84007EEE74 /* GenerateCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateCodeViewController.swift; sourceTree = "<group>"; };
+		815228C6282A7FAA007EEE74 /* GeneratingCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneratingCodeViewController.swift; sourceTree = "<group>"; };
+		815228C8282A7FC2007EEE74 /* GeneratedCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneratedCodeViewController.swift; sourceTree = "<group>"; };
 		8163F7E12827F03F0002C60A /* ResturantsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResturantsManager.swift; sourceTree = "<group>"; };
 		8163F7E32827F12F0002C60A /* ResturantsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResturantsData.swift; sourceTree = "<group>"; };
 		8163F7E52827FA7D0002C60A /* ResturantsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResturantsViewController.swift; sourceTree = "<group>"; };
@@ -325,6 +339,7 @@
 		2AB764B227E8A2F40084062C /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				815228BB282A7D08007EEE74 /* AccessCode */,
 				2A0BCC3E28291CC500363BEA /* User Registration */,
 				8163F7E7282806090002C60A /* ResturantCellController.swift */,
 				2AB764B727E8A8100084062C /* EventCellController.swift */,
@@ -357,6 +372,20 @@
 				2AD3D63828181B6F0008B8D2 /* MeetingRomManager.swift */,
 			);
 			path = RebelNetworking;
+			sourceTree = "<group>";
+		};
+		815228BB282A7D08007EEE74 /* AccessCode */ = {
+			isa = PBXGroup;
+			children = (
+				815228BC282A7D5B007EEE74 /* LoginAccessCodeViewController.swift */,
+				815228BE282A7E5E007EEE74 /* FindEmployeeViewController.swift */,
+				815228C0282A7F15007EEE74 /* FoundEmployeeViewController.swift */,
+				815228C2282A7F50007EEE74 /* NotifiedEmployeeViewController.swift */,
+				815228C4282A7F84007EEE74 /* GenerateCodeViewController.swift */,
+				815228C6282A7FAA007EEE74 /* GeneratingCodeViewController.swift */,
+				815228C8282A7FC2007EEE74 /* GeneratedCodeViewController.swift */,
+			);
+			path = AccessCode;
 			sourceTree = "<group>";
 		};
 		8163F7D92826D0460002C60A /* Resources */ = {
@@ -593,29 +622,36 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				815228C5282A7F84007EEE74 /* GenerateCodeViewController.swift in Sources */,
 				2A0BCC4828291D9900363BEA /* AboutCompanyViewController.swift in Sources */,
 				2AB764B427E8A32C0084062C /* Constants.swift in Sources */,
 				8163F7E62827FA7D0002C60A /* ResturantsViewController.swift in Sources */,
+				815228BF282A7E5E007EEE74 /* FindEmployeeViewController.swift in Sources */,
 				2A0BCC4C28291DEF00363BEA /* LogInViewController.swift in Sources */,
 				2A57C6D62820215800FCB7EE /* FPMeetingRoomViewController.swift in Sources */,
 				2A0BCC4028291CF600363BEA /* ChooseUserViewController.swift in Sources */,
 				8163F7E22827F03F0002C60A /* ResturantsManager.swift in Sources */,
 				2AB7648227E89F8D0084062C /* EventsViewController.swift in Sources */,
+				815228C7282A7FAA007EEE74 /* GeneratingCodeViewController.swift in Sources */,
 				2A0BCC4628291D8600363BEA /* PersonaliaViewController.swift in Sources */,
+				815228C3282A7F50007EEE74 /* NotifiedEmployeeViewController.swift in Sources */,
 				2AB764BF27E8C7460084062C /* EventData.swift in Sources */,
 				2A87A517280EA733008672E3 /* FloatingPanelContentViewController.swift in Sources */,
+				815228BD282A7D5B007EEE74 /* LoginAccessCodeViewController.swift in Sources */,
 				2A9D816E280459CB00DA6B02 /* OpenIdAuthenticationServiceDelegate.swift in Sources */,
 				2A1C614527F1FD7800FFD2D4 /* Helpers.swift in Sources */,
 				2A9D816C2804599F00DA6B02 /* ForkbeardAuthentication.swift in Sources */,
 				81A1405427FAFB2600A6448D /* CustomLocationManagerDelegate.swift in Sources */,
 				2A035EBF28118D2B00E037AC /* RebelAuthManager.swift in Sources */,
 				8163F7E9282806090002C60A /* ResturantCellController.swift in Sources */,
+				815228C1282A7F15007EEE74 /* FoundEmployeeViewController.swift in Sources */,
 				2AB764BC27E8B9B90084062C /* EventManager.swift in Sources */,
 				2A64A2052823F742002F63C3 /* SecondaryLargeButton.swift in Sources */,
 				2AB7647E27E89F8D0084062C /* AppDelegate.swift in Sources */,
 				8136652027FEDF71001FD732 /* MapViewController.swift in Sources */,
 				2AB7648027E89F8D0084062C /* SceneDelegate.swift in Sources */,
 				2A57C6CF281FF19100FCB7EE /* CoordinatesData.swift in Sources */,
+				815228C9282A7FC2007EEE74 /* GeneratedCodeViewController.swift in Sources */,
 				2A64A2072823F772002F63C3 /* StyleAttributes.swift in Sources */,
 				2A1C614127F1B44700FFD2D4 /* EventDetailsViewController.swift in Sources */,
 				2AB7648827E89F8D0084062C /* SmartBuilding.xcdatamodeld in Sources */,
