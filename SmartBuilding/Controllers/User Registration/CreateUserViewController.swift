@@ -62,28 +62,31 @@ class CreateUserViewController: UIViewController {
     
 
     
-    func checkUserInputValid() {
+    func checkUserInputValid(){
        
-       
-       if ((passwordTextField.text?.isEmpty) != nil){
+        if passwordTextField.text?.count == 0{
            passwordView.layer.borderColor = UIColor(ciColor: .red).cgColor
-           ready = false
-       }
-       if passwordTextField.text!.count <= 4 && passwordTextField.text!.count > 1 {
-           passwordView.layer.borderColor = helpers.colorWithHexString(hexString: styleAttributes.primary).cgColor
-           ready = false
-       }
-       if repeatPassTextField.text != passwordTextField.text{
-           repeatPasswordView.layer.borderColor = UIColor(ciColor: .red).cgColor
-       
-           wrongPasswordText.textColor = UIColor(ciColor: .red)
-           wrongPasswordText.isHidden = false
-           ready =  false
+            ready =  false
        }else {
-           
-           ready = true
+           if passwordTextField.text!.count <= 4 && passwordTextField.text!.count > 1 {
+               passwordView.layer.borderColor = helpers.colorWithHexString(hexString: styleAttributes.primary).cgColor
+               ready = false
+           } else {
+               ready = true
+           }
        }
         
+    
+        if repeatPassTextField.text!.count > 0 {
+            if repeatPassTextField.text != passwordTextField.text{
+                repeatPasswordView.layer.borderColor = UIColor(ciColor: .red).cgColor
+                wrongPasswordText.textColor = UIColor(ciColor: .red)
+                wrongPasswordText.isHidden = false
+                
+            }else {
+                ready = true
+            }
+        }
     }
     
     
@@ -94,7 +97,6 @@ class CreateUserViewController: UIViewController {
     
     
  
-    
     @IBAction func nextBtnPressed(_ sender: Any) {
        checkUserInputValid()
         
