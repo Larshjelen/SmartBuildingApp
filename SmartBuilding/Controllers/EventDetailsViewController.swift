@@ -23,7 +23,9 @@ class EventDetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        //if #available(iOS 13.0, *) {
+        //          navigationController?.navigationBar.setNeedsLayout()
+        //     }
         populateUIWithData()
         
 

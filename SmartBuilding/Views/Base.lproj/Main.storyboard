@@ -2000,10 +2000,10 @@
             </objects>
             <point key="canvasLocation" x="-7352.3076923076924" y="28.436018957345969"/>
         </scene>
-        <!--events-->
+        <!--Events-->
         <scene sceneID="iaf-uB-ZFN">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="events" storyboardName="Events" referencedIdentifier="events" id="Qp3-eT-B7b" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardIdentifier="events" storyboardName="Events" id="Qp3-eT-B7b" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bo3-wV-No7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-371" y="99"/>
