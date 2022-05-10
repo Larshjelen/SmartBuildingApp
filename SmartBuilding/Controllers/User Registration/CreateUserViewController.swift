@@ -19,7 +19,7 @@ class CreateUserViewController: UIViewController {
     
     @IBOutlet weak var repeatPassTextField: UITextField!
     
-    var isExpand : Bool = false
+  
     @IBOutlet weak var nextButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,20 +30,17 @@ class CreateUserViewController: UIViewController {
         passwordTextField.delegate = self
         repeatPassTextField.delegate = self
         
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardApear), name: UIResponder.keyboardWillShowNotification, object: nil)
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardDisapear), name: UIResponder.keyboardWillShowNotification, object: nil)
+        setupKeyboardHiding()
         
     }
     
-    
-    @obj func keyboardApear(){
-        
-        if !isExpand{
-            self.scrollView
-        }
+    private func setupKeyboardHiding() {
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
+    
+    
+ 
     
     @IBAction func nextBtnPressed(_ sender: Any) {
         
@@ -58,14 +55,31 @@ class CreateUserViewController: UIViewController {
 }
 
 
+
+
+// MARK: Keyboard
 extension CreateUserViewController : UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-       
         emailTextField.endEditing(true)
         passwordTextField.endEditing(true)
-        
+        repeatPassTextField.endEditing(true)
         return true
+        
     }
+  
     
+    @objc func keyboardWillShow(sender: NSNotification) {
+       
+        if repeatPassTextField.isEditing && view.frame.origin.y > -200{
+            
+            view.frame.origin.y = view.frame.origin.y - 200
+        }
+        
+    }
+
+    @objc func keyboardWillHide(notification: NSNotification) {
+        
+        view.frame.origin.y = 0
+    }
 }
