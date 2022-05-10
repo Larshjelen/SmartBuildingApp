@@ -19,15 +19,31 @@ class CreateUserViewController: UIViewController {
     
     @IBOutlet weak var repeatPassTextField: UITextField!
     
-    
+    var isExpand : Bool = false
     @IBOutlet weak var nextButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        passwordTextField.isSecureTextEntry = true
+        
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
+        repeatPassTextField.delegate = self
+        
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardApear), name: UIResponder.keyboardWillShowNotification, object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardDisapear), name: UIResponder.keyboardWillShowNotification, object: nil)
+        
     }
     
+    
+    @obj func keyboardApear(){
+        
+        if !isExpand{
+            self.scrollView
+        }
+    }
     
     @IBAction func nextBtnPressed(_ sender: Any) {
         
@@ -45,7 +61,11 @@ class CreateUserViewController: UIViewController {
 extension CreateUserViewController : UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.
+       
+        emailTextField.endEditing(true)
+        passwordTextField.endEditing(true)
+        
+        return true
     }
     
 }
