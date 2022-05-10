@@ -34,7 +34,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="edftgyhuij" id="XIp-aO-ozb">
-                        <barButtonItem key="backBarButtonItem" title="Back" id="QpM-TE-NTA"/>
+                        <barButtonItem key="backBarButtonItem" title="Lastscreenohyeah" id="QpM-TE-NTA"/>
                     </navigationItem>
                     <connections>
                         <outlet property="eventTableView" destination="y3b-SO-oM8" id="edi-Nh-Rk7"/>
@@ -45,7 +45,7 @@
             </objects>
             <point key="canvasLocation" x="784.05797101449286" y="57.589285714285708"/>
         </scene>
-        <!--Event Details View Controller-->
+        <!--Title-->
         <scene sceneID="ntP-Q0-n9a">
             <objects>
                 <viewController storyboardIdentifier="EventDetails" id="tW0-F9-OEa" customClass="EventDetailsViewController" customModule="SmartBuilding" customModuleProvider="target" sceneMemberID="viewController">
@@ -222,7 +222,7 @@
                             <constraint firstItem="DFr-n6-uFv" firstAttribute="top" secondItem="6hq-id-4K9" secondAttribute="top" constant="88" id="Kdc-qt-v00"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="nW3-78-9sJ"/>
+                    <navigationItem key="navigationItem" title="Title" id="nW3-78-9sJ"/>
                     <connections>
                         <outlet property="eventDate" destination="sD7-Pm-Dm3" id="TxD-VD-MX8"/>
                         <outlet property="eventDescription" destination="v8j-gm-ma2" id="oDy-lz-NA1"/>
