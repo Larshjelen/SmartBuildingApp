@@ -20,7 +20,7 @@
 		2A0BCC4A28291DB400363BEA /* CompletedUserRegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0BCC4928291DB400363BEA /* CompletedUserRegistrationViewController.swift */; };
 		2A0BCC4C28291DEF00363BEA /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0BCC4B28291DEF00363BEA /* LogInViewController.swift */; };
 		2A1C614127F1B44700FFD2D4 /* EventDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1C614027F1B44700FFD2D4 /* EventDetailsViewController.swift */; };
-		2A1C614527F1FD7800FFD2D4 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1C614427F1FD7800FFD2D4 /* Helpers.swift */; };
+		2A1C614527F1FD7800FFD2D4 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1C614427F1FD7800FFD2D4 /* Utils.swift */; };
 		2A20BE3128298F8400D7024A /* Events.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A20BE2F28298F8400D7024A /* Events.storyboard */; };
 		2A20BE5E282A880500D7024A /* ForkbeardCore.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A20BE5D282A880500D7024A /* ForkbeardCore.xcframework */; };
 		2A20BE62282A880F00D7024A /* PhoneFUEL.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A20BE61282A880F00D7024A /* PhoneFUEL.xcframework */; };
@@ -100,7 +100,7 @@
 		2A0BCC4928291DB400363BEA /* CompletedUserRegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedUserRegistrationViewController.swift; sourceTree = "<group>"; };
 		2A0BCC4B28291DEF00363BEA /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		2A1C614027F1B44700FFD2D4 /* EventDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailsViewController.swift; sourceTree = "<group>"; };
-		2A1C614427F1FD7800FFD2D4 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		2A1C614427F1FD7800FFD2D4 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		2A20BE3028298F8400D7024A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Events.storyboard; sourceTree = "<group>"; };
 		2A20BE5D282A880500D7024A /* ForkbeardCore.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = ForkbeardCore.xcframework; sourceTree = "<group>"; };
 		2A20BE61282A880F00D7024A /* PhoneFUEL.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = PhoneFUEL.xcframework; sourceTree = "<group>"; };
@@ -316,7 +316,7 @@
 				8163F7DE2827EF920002C60A /* Resturants */,
 				2A57C6D02820080A00FCB7EE /* Coordinates */,
 				2AB764B327E8A32C0084062C /* Constants.swift */,
-				2A1C614427F1FD7800FFD2D4 /* Helpers.swift */,
+				2A1C614427F1FD7800FFD2D4 /* Utils.swift */,
 				2AB764BD27E8C7180084062C /* Events */,
 				81A1405327FAFB2600A6448D /* CustomLocationManagerDelegate.swift */,
 			);
@@ -639,7 +639,7 @@
 				2A87A517280EA733008672E3 /* FloatingPanelContentViewController.swift in Sources */,
 				815228BD282A7D5B007EEE74 /* LoginAccessCodeViewController.swift in Sources */,
 				2A9D816E280459CB00DA6B02 /* OpenIdAuthenticationServiceDelegate.swift in Sources */,
-				2A1C614527F1FD7800FFD2D4 /* Helpers.swift in Sources */,
+				2A1C614527F1FD7800FFD2D4 /* Utils.swift in Sources */,
 				2A9D816C2804599F00DA6B02 /* ForkbeardAuthentication.swift in Sources */,
 				81A1405427FAFB2600A6448D /* CustomLocationManagerDelegate.swift in Sources */,
 				2A035EBF28118D2B00E037AC /* RebelAuthManager.swift in Sources */,

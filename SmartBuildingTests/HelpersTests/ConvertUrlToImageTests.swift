@@ -10,7 +10,7 @@ import XCTest
 
 class ConvertUrlToImageTests: XCTestCase {
 
-    var helpers = Helpers()
+    var helpers = Utils()
     
     let imageUrlValid = "https://cdn.sanity.io/images/fbztprtz/production/86a1eff7bf32d075a7ac46ae6b3d17261a18c815-800x533.jpg"
     let imageUrlNotValid = "https://image.jpg"

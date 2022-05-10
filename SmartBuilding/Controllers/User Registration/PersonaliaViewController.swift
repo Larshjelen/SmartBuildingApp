@@ -9,20 +9,17 @@ import UIKit
 
 class PersonaliaViewController: UIViewController {
     
-    
     @IBOutlet weak var progressBarBorder: UIView!
-    
     @IBOutlet weak var nameTextField: UITextField!
-    
-    
     @IBOutlet weak var lastNameTextField: UITextField!
-    
-    
     @IBOutlet weak var nextBtn: UIButton!
+    
+    var helpers = Utils()
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        loadUser()
     }
     
     
@@ -35,15 +32,14 @@ class PersonaliaViewController: UIViewController {
     
     
     
-   
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func loadUser(){
+        
+        guard  let user = helpers.loadFromDB(context: context) else {
+            
+            return
+        }
+        
+        print(user[0].password!)
     }
-    */
 
 }

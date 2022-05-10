@@ -12,7 +12,7 @@ import UIKit
 class EventDetailsViewController: UIViewController {
     
     var selectedEvent: EventData?
-    var helpers = Helpers()
+    var helpers = Utils()
     
     @IBOutlet weak var eventImage: UIImageView!
     @IBOutlet weak var eventName: UILabel!

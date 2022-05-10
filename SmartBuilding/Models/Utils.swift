@@ -7,10 +7,12 @@
 
 import Foundation
 import UIKit
+import CoreData
 
 
-
-struct Helpers {
+struct Utils {
+    
+    
     
     //Convert URL to image
     func urlToImage (StringImage : String) -> UIImage?{
@@ -66,6 +68,27 @@ struct Helpers {
         // Scan hex value
         scanner.scanHexInt32(&hexInt)
         return hexInt
+    }
+    
+    func saveToDB(context : NSManagedObjectContext){
+        
+        do{
+            try context.save()
+        }catch{
+            print(error.localizedDescription)
+        }
+        
+    }
+    
+    func loadFromDB(context : NSManagedObjectContext) -> [User]?{
+        let request : NSFetchRequest<User> = User.fetchRequest()
+        do{
+          let user =   try context.fetch(request)
+          return user
+        }catch{
+            print(error.localizedDescription)
+            return nil
+        }
     }
 
 }

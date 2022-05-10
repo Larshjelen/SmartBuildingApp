@@ -9,7 +9,7 @@ import XCTest
 @testable import SmartBuilding
 class DateFormatTests: XCTestCase {
     
-    var helpers = Helpers()
+    var helpers = Utils()
 
     func testDateNotNil(){
         

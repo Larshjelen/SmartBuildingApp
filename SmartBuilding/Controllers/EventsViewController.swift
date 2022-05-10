@@ -17,7 +17,7 @@ class EventsViewController: UIViewController, UITableViewDelegate{
     @IBOutlet weak var eventTableView: UITableView!
     
     var eventManager = EventManager()
-    var helpers = Helpers()
+    var helpers = Utils()
     
     
     var eventDetailsViewController = EventDetailsViewController()

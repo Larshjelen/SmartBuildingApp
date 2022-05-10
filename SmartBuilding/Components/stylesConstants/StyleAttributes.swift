@@ -9,9 +9,9 @@ import Foundation
 
 struct StyleAttributes {
     
-    let  backgroundDark = "#3C3C3C"
+    let backgroundDark = "#3C3C3C"
     
     let systemLightBlue = "#007AFF"
     
-    let primary = "#2F80ED"
+    let primary = "#FFD400"
 }

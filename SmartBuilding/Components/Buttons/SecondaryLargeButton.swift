@@ -10,7 +10,7 @@ import UIKit
 class SecondaryLargeButton : UIButton {
     
         var styleAttributes = StyleAttributes()
-        var helpers = Helpers()
+        var helpers = Utils()
     
     override func awakeFromNib() {
         

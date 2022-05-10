@@ -45,7 +45,7 @@ class MapViewController: UIViewController, FloatingPanelControllerDelegate{
         ]
         """
 
-    var helpers = Helpers()
+    var helpers = Utils()
     var coordinatesManager = CoordinatesManager()
     
     override func viewDidLoad() {
