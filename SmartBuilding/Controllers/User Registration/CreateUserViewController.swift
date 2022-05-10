@@ -45,19 +45,6 @@ class CreateUserViewController: UIViewController {
         setupKeyboardHiding()
         
         wrongPasswordText.isHidden = true
-        
-        emailView.layer.borderWidth = 0.5
-        emailView.layer.cornerRadius = 8
-        passwordView.layer.borderWidth = 0.5
-        passwordView.layer.cornerRadius = 8
-        repeatPasswordView.layer.borderWidth = 0.5
-        repeatPasswordView.layer.cornerRadius = 8
-        emailView.layer.borderColor = helpers.colorWithHexString(hexString: styleAttributes.backgroundDark).cgColor
-        passwordView.layer.borderColor = helpers.colorWithHexString(hexString: styleAttributes.backgroundDark).cgColor
-        repeatPasswordView.layer.borderColor = helpers.colorWithHexString(hexString: styleAttributes.backgroundDark).cgColor
-      
-     
-
     }
     
 

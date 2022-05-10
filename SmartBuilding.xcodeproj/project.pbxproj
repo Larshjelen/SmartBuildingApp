@@ -26,6 +26,7 @@
 		2A20BE62282A880F00D7024A /* PhoneFUEL.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A20BE61282A880F00D7024A /* PhoneFUEL.xcframework */; };
 		2A20BE65282A881C00D7024A /* PhoneFUELGoogleMaps.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A20BE64282A881C00D7024A /* PhoneFUELGoogleMaps.xcframework */; };
 		2A20BE68282A882700D7024A /* PhoneFUELWayfinding.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A20BE67282A882700D7024A /* PhoneFUELWayfinding.xcframework */; };
+		2A20BE6C282AE30C00D7024A /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A20BE6B282AE30B00D7024A /* CustomTextField.swift */; };
 		2A57C6CF281FF19100FCB7EE /* CoordinatesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A57C6CE281FF19100FCB7EE /* CoordinatesData.swift */; };
 		2A57C6D22820082200FCB7EE /* CoordinatesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A57C6D12820082200FCB7EE /* CoordinatesManager.swift */; };
 		2A57C6D62820215800FCB7EE /* FPMeetingRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A57C6D52820215800FCB7EE /* FPMeetingRoomViewController.swift */; };
@@ -106,6 +107,7 @@
 		2A20BE61282A880F00D7024A /* PhoneFUEL.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = PhoneFUEL.xcframework; sourceTree = "<group>"; };
 		2A20BE64282A881C00D7024A /* PhoneFUELGoogleMaps.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = PhoneFUELGoogleMaps.xcframework; sourceTree = "<group>"; };
 		2A20BE67282A882700D7024A /* PhoneFUELWayfinding.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = PhoneFUELWayfinding.xcframework; sourceTree = "<group>"; };
+		2A20BE6B282AE30B00D7024A /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		2A57C6CE281FF19100FCB7EE /* CoordinatesData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatesData.swift; sourceTree = "<group>"; };
 		2A57C6D12820082200FCB7EE /* CoordinatesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatesManager.swift; sourceTree = "<group>"; };
 		2A57C6D52820215800FCB7EE /* FPMeetingRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPMeetingRoomViewController.swift; sourceTree = "<group>"; };
@@ -207,6 +209,14 @@
 			path = "User Registration";
 			sourceTree = "<group>";
 		};
+		2A20BE6A282AE2D100D7024A /* Text Field */ = {
+			isa = PBXGroup;
+			children = (
+				2A20BE6B282AE30B00D7024A /* CustomTextField.swift */,
+			);
+			path = "Text Field";
+			sourceTree = "<group>";
+		};
 		2A57C6D02820080A00FCB7EE /* Coordinates */ = {
 			isa = PBXGroup;
 			children = (
@@ -218,6 +228,7 @@
 		2A64A2012823F572002F63C3 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				2A20BE6A282AE2D100D7024A /* Text Field */,
 				2A64A2032823F686002F63C3 /* Buttons */,
 				2A64A2022823F655002F63C3 /* stylesConstants */,
 			);
@@ -638,6 +649,7 @@
 				2AB764BF27E8C7460084062C /* EventData.swift in Sources */,
 				2A87A517280EA733008672E3 /* FloatingPanelContentViewController.swift in Sources */,
 				815228BD282A7D5B007EEE74 /* LoginAccessCodeViewController.swift in Sources */,
+				2A20BE6C282AE30C00D7024A /* CustomTextField.swift in Sources */,
 				2A9D816E280459CB00DA6B02 /* OpenIdAuthenticationServiceDelegate.swift in Sources */,
 				2A1C614527F1FD7800FFD2D4 /* Utils.swift in Sources */,
 				2A9D816C2804599F00DA6B02 /* ForkbeardAuthentication.swift in Sources */,
