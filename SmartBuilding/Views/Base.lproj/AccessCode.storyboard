@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -11,7 +12,7 @@
         <!--Find EmployeeView Controller-->
         <scene sceneID="3fc-4j-M0d">
             <objects>
-                <viewController id="FFy-ep-0FH" userLabel="Find EmployeeView Controller" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FindEmployeeViewController" id="FFy-ep-0FH" userLabel="Find EmployeeView Controller" customClass="FindEmployeeViewController" customModule="SmartBuilding" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9cM-3l-npE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -98,7 +99,7 @@
         <!--Found Employee View Controller-->
         <scene sceneID="8XR-cv-Hqf">
             <objects>
-                <viewController id="rbw-GZ-PQb" customClass="FoundEmployeeViewController" customModule="FloatingPanel" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="rbw-GZ-PQb" customClass="FoundEmployeeViewController" customModule="SmartBuilding" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Wwr-q5-fld">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

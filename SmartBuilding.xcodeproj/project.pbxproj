@@ -70,6 +70,8 @@
 		81A1405427FAFB2600A6448D /* CustomLocationManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A1405327FAFB2600A6448D /* CustomLocationManagerDelegate.swift */; };
 		81C06C1D282BDAB80084F996 /* EmployeeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C06C1B282BDAB80084F996 /* EmployeeTableViewCell.swift */; };
 		81C06C1E282BDAB80084F996 /* EmployeeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81C06C1C282BDAB80084F996 /* EmployeeTableViewCell.xib */; };
+		81C06C21282BE4EE0084F996 /* CustomProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C06C20282BE4EE0084F996 /* CustomProgressBar.swift */; };
+		81C06C26282BF1DF0084F996 /* Invite.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81C06C24282BF1DF0084F996 /* Invite.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -156,6 +158,8 @@
 		81A1405327FAFB2600A6448D /* CustomLocationManagerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLocationManagerDelegate.swift; sourceTree = "<group>"; };
 		81C06C1B282BDAB80084F996 /* EmployeeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EmployeeTableViewCell.swift; path = SmartBuilding/Controllers/AccessCode/EmployeeTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 		81C06C1C282BDAB80084F996 /* EmployeeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = EmployeeTableViewCell.xib; path = "SmartBuilding/Controllers/User Registration/EmployeeTableViewCell.xib"; sourceTree = SOURCE_ROOT; };
+		81C06C20282BE4EE0084F996 /* CustomProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomProgressBar.swift; sourceTree = "<group>"; };
+		81C06C25282BF1DF0084F996 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Invite.storyboard; sourceTree = "<group>"; };
 		DEE8CEFABCAD7BE2E8EBD8F4 /* Pods-SmartBuilding.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartBuilding.debug.xcconfig"; path = "Target Support Files/Pods-SmartBuilding/Pods-SmartBuilding.debug.xcconfig"; sourceTree = "<group>"; };
 		F79748D6ED2F637BF5B1BA7C /* Pods_SmartBuilding.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartBuilding.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF91335F35C030B66A0B9AC8 /* Pods-SmartBuilding.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartBuilding.release.xcconfig"; path = "Target Support Files/Pods-SmartBuilding/Pods-SmartBuilding.release.xcconfig"; sourceTree = "<group>"; };
@@ -232,6 +236,7 @@
 		2A64A2012823F572002F63C3 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				81C06C1F282BE4C00084F996 /* Progress Bar */,
 				2A20BE6A282AE2D100D7024A /* Text Field */,
 				2A64A2032823F686002F63C3 /* Buttons */,
 				2A64A2022823F655002F63C3 /* stylesConstants */,
@@ -341,6 +346,7 @@
 		2AB764B127E8A2E10084062C /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				81C06C24282BF1DF0084F996 /* Invite.storyboard */,
 				81C06C1C282BDAB80084F996 /* EmployeeTableViewCell.xib */,
 				815228B8282A6240007EEE74 /* AccessCode.storyboard */,
 				2A20BE2F28298F8400D7024A /* Events.storyboard */,
@@ -431,6 +437,14 @@
 				F79748D6ED2F637BF5B1BA7C /* Pods_SmartBuilding.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		81C06C1F282BE4C00084F996 /* Progress Bar */ = {
+			isa = PBXGroup;
+			children = (
+				81C06C20282BE4EE0084F996 /* CustomProgressBar.swift */,
+			);
+			path = "Progress Bar";
 			sourceTree = "<group>";
 		};
 		9BCE2D64A5B9A4018E172016 /* Pods */ = {
@@ -553,6 +567,7 @@
 				815228BA282A6240007EEE74 /* AccessCode.storyboard in Resources */,
 				2AB764BA27E8A8120084062C /* EventCell.xib in Resources */,
 				2A20BE3128298F8400D7024A /* Events.storyboard in Resources */,
+				81C06C26282BF1DF0084F996 /* Invite.storyboard in Resources */,
 				2AB7648D27E89F940084062C /* LaunchScreen.storyboard in Resources */,
 				2A035EBD2811647E00E037AC /* CustomMapMarkerView.xib in Resources */,
 				2AB7648A27E89F940084062C /* Assets.xcassets in Resources */,
@@ -668,6 +683,7 @@
 				2AB764BC27E8B9B90084062C /* EventManager.swift in Sources */,
 				2A64A2052823F742002F63C3 /* SecondaryLargeButton.swift in Sources */,
 				2AB7647E27E89F8D0084062C /* AppDelegate.swift in Sources */,
+				81C06C21282BE4EE0084F996 /* CustomProgressBar.swift in Sources */,
 				8136652027FEDF71001FD732 /* MapViewController.swift in Sources */,
 				2AB7648027E89F8D0084062C /* SceneDelegate.swift in Sources */,
 				2A57C6CF281FF19100FCB7EE /* CoordinatesData.swift in Sources */,
@@ -752,6 +768,14 @@
 				815228B9282A6240007EEE74 /* Base */,
 			);
 			name = AccessCode.storyboard;
+			sourceTree = "<group>";
+		};
+		81C06C24282BF1DF0084F996 /* Invite.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				81C06C25282BF1DF0084F996 /* Base */,
+			);
+			name = Invite.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
