@@ -48,7 +48,6 @@ class CreateUserViewController: UIViewController {
         
         
     }
-    
 
     
     func checkUserInputValid(){
