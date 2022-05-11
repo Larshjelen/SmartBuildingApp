@@ -23,7 +23,6 @@ class CreateUserViewController: UIViewController {
     @IBOutlet weak var repeatPasswordView: UIView!
     @IBOutlet weak var emailView: UIView!
     
-    
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     var helpers = Utils()
@@ -38,13 +37,16 @@ class CreateUserViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         
-        emailTextField.delegate = self
-        passwordTextField.delegate = self
-        repeatPassTextField.delegate = self
+        //emailTextField.delegate = self
+        //passwordTextField.delegate = self
+        //repeatPassTextField.delegate = self
         
-        setupKeyboardHiding()
+        //setupKeyboardHiding()
         
-        wrongPasswordText.isHidden = true
+        //wrongPasswordText.isHidden = true
+        
+        
+        
     }
     
 
