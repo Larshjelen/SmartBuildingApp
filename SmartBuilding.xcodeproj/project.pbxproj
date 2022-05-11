@@ -68,6 +68,8 @@
 		8163F7EA282806090002C60A /* ResturantCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8163F7E8282806090002C60A /* ResturantCell.xib */; };
 		819835DF2805860A007BB7D7 /* Pods_SmartBuilding.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F79748D6ED2F637BF5B1BA7C /* Pods_SmartBuilding.framework */; };
 		81A1405427FAFB2600A6448D /* CustomLocationManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A1405327FAFB2600A6448D /* CustomLocationManagerDelegate.swift */; };
+		81C06C1D282BDAB80084F996 /* EmployeeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C06C1B282BDAB80084F996 /* EmployeeTableViewCell.swift */; };
+		81C06C1E282BDAB80084F996 /* EmployeeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81C06C1C282BDAB80084F996 /* EmployeeTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -152,6 +154,8 @@
 		8163F7E7282806090002C60A /* ResturantCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResturantCellController.swift; sourceTree = "<group>"; };
 		8163F7E8282806090002C60A /* ResturantCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResturantCell.xib; sourceTree = "<group>"; };
 		81A1405327FAFB2600A6448D /* CustomLocationManagerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLocationManagerDelegate.swift; sourceTree = "<group>"; };
+		81C06C1B282BDAB80084F996 /* EmployeeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EmployeeTableViewCell.swift; path = SmartBuilding/Controllers/AccessCode/EmployeeTableViewCell.swift; sourceTree = SOURCE_ROOT; };
+		81C06C1C282BDAB80084F996 /* EmployeeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = EmployeeTableViewCell.xib; path = "SmartBuilding/Controllers/User Registration/EmployeeTableViewCell.xib"; sourceTree = SOURCE_ROOT; };
 		DEE8CEFABCAD7BE2E8EBD8F4 /* Pods-SmartBuilding.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartBuilding.debug.xcconfig"; path = "Target Support Files/Pods-SmartBuilding/Pods-SmartBuilding.debug.xcconfig"; sourceTree = "<group>"; };
 		F79748D6ED2F637BF5B1BA7C /* Pods_SmartBuilding.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartBuilding.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF91335F35C030B66A0B9AC8 /* Pods-SmartBuilding.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartBuilding.release.xcconfig"; path = "Target Support Files/Pods-SmartBuilding/Pods-SmartBuilding.release.xcconfig"; sourceTree = "<group>"; };
@@ -337,6 +341,7 @@
 		2AB764B127E8A2E10084062C /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				81C06C1C282BDAB80084F996 /* EmployeeTableViewCell.xib */,
 				815228B8282A6240007EEE74 /* AccessCode.storyboard */,
 				2A20BE2F28298F8400D7024A /* Events.storyboard */,
 				2AB7648327E89F8D0084062C /* Main.storyboard */,
@@ -388,6 +393,7 @@
 		815228BB282A7D08007EEE74 /* AccessCode */ = {
 			isa = PBXGroup;
 			children = (
+				81C06C1B282BDAB80084F996 /* EmployeeTableViewCell.swift */,
 				815228BC282A7D5B007EEE74 /* LoginAccessCodeViewController.swift */,
 				815228BE282A7E5E007EEE74 /* FindEmployeeViewController.swift */,
 				815228C0282A7F15007EEE74 /* FoundEmployeeViewController.swift */,
@@ -542,6 +548,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81C06C1E282BDAB80084F996 /* EmployeeTableViewCell.xib in Resources */,
 				8163F7EA282806090002C60A /* ResturantCell.xib in Resources */,
 				815228BA282A6240007EEE74 /* AccessCode.storyboard in Resources */,
 				2AB764BA27E8A8120084062C /* EventCell.xib in Resources */,
@@ -650,6 +657,7 @@
 				2A87A517280EA733008672E3 /* FloatingPanelContentViewController.swift in Sources */,
 				815228BD282A7D5B007EEE74 /* LoginAccessCodeViewController.swift in Sources */,
 				2A20BE6C282AE30C00D7024A /* CustomTextField.swift in Sources */,
+				81C06C1D282BDAB80084F996 /* EmployeeTableViewCell.swift in Sources */,
 				2A9D816E280459CB00DA6B02 /* OpenIdAuthenticationServiceDelegate.swift in Sources */,
 				2A1C614527F1FD7800FFD2D4 /* Utils.swift in Sources */,
 				2A9D816C2804599F00DA6B02 /* ForkbeardAuthentication.swift in Sources */,

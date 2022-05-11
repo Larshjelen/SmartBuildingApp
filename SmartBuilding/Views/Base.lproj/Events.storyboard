@@ -223,6 +223,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="nW3-78-9sJ"/>
+                    <value key="contentSizeForViewInPopover" type="size" width="414" height="896"/>
                     <connections>
                         <outlet property="eventDate" destination="sD7-Pm-Dm3" id="TxD-VD-MX8"/>
                         <outlet property="eventDescription" destination="v8j-gm-ma2" id="oDy-lz-NA1"/>
