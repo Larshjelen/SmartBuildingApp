@@ -8,7 +8,7 @@
 import Foundation
 
 import UIKit
-class CustomTextField : UITextField {
+class CustomTextField : UIView {
     
         var styleAttributes = StyleAttributes()
         var helpers = Utils()
