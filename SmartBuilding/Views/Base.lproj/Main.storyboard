@@ -1020,7 +1020,6 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.44705885649999999" green="0.1294117719" blue="0.1176470518" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="oEq-iI-ReE">
                                         <rect key="frame" x="15" y="124" width="343" height="183"/>
@@ -1045,10 +1044,15 @@
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                         </subviews>
-                                                        <color key="backgroundColor" systemColor="systemMintColor"/>
                                                     </view>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="ZXD-Ow-tPX" secondAttribute="bottom" id="35C-eK-HFd"/>
+                                                    <constraint firstItem="ZXD-Ow-tPX" firstAttribute="top" secondItem="Fm1-0Z-Uxm" secondAttribute="bottom" constant="2" id="7Vm-OS-4cL"/>
+                                                    <constraint firstAttribute="trailing" secondItem="ZXD-Ow-tPX" secondAttribute="trailing" id="CJc-dw-bSo"/>
+                                                    <constraint firstItem="ZXD-Ow-tPX" firstAttribute="leading" secondItem="Dfx-mM-ija" secondAttribute="leading" id="DF7-35-9Gt"/>
+                                                </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="cBQ-mP-huU">
                                                 <rect key="frame" x="0.0" y="105" width="343" height="78"/>
@@ -1070,7 +1074,6 @@
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                         </subviews>
-                                                        <color key="backgroundColor" systemColor="systemMintColor"/>
                                                     </view>
                                                 </subviews>
                                                 <constraints>
@@ -1087,23 +1090,19 @@
                                             <constraint firstItem="cBQ-mP-huU" firstAttribute="leading" secondItem="oEq-iI-ReE" secondAttribute="leading" id="8iL-pa-qBx"/>
                                             <constraint firstAttribute="bottom" secondItem="cBQ-mP-huU" secondAttribute="bottom" id="VjO-Dr-5rh"/>
                                             <constraint firstItem="cBQ-mP-huU" firstAttribute="top" secondItem="Dfx-mM-ija" secondAttribute="bottom" constant="35" id="cva-Ud-Qhy"/>
-                                            <constraint firstItem="cBQ-mP-huU" firstAttribute="top" secondItem="oEq-iI-ReE" secondAttribute="top" constant="105" id="eKt-rQ-Ibw"/>
+                                            <constraint firstAttribute="height" constant="183" id="ixn-KL-mk3"/>
                                             <constraint firstItem="cBQ-mP-huU" firstAttribute="top" secondItem="Dfx-mM-ija" secondAttribute="bottom" constant="35" id="pbC-WK-KhP"/>
                                             <constraint firstItem="Dfx-mM-ija" firstAttribute="leading" secondItem="oEq-iI-ReE" secondAttribute="leading" id="vuC-LA-8fG"/>
                                             <constraint firstItem="Dfx-mM-ija" firstAttribute="top" secondItem="oEq-iI-ReE" secondAttribute="top" id="xJk-ws-Ymk"/>
                                         </constraints>
                                     </stackView>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemCyanColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="oEq-iI-ReE" secondAttribute="bottom" constant="113" id="0gp-7h-igY"/>
                                     <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="oEq-iI-ReE" secondAttribute="bottom" constant="113" id="122-t8-q6T"/>
-                                    <constraint firstItem="oEq-iI-ReE" firstAttribute="top" secondItem="avI-d0-V97" secondAttribute="top" constant="124" id="51Q-0L-jV2"/>
                                     <constraint firstItem="oEq-iI-ReE" firstAttribute="top" secondItem="Rw8-i1-N5R" secondAttribute="bottom" constant="30.329999999999998" id="Svi-Tq-Znq"/>
                                     <constraint firstItem="Rw8-i1-N5R" firstAttribute="top" secondItem="avI-d0-V97" secondAttribute="top" constant="32" id="ZJq-MT-4Wc"/>
                                     <constraint firstItem="Rw8-i1-N5R" firstAttribute="leading" secondItem="avI-d0-V97" secondAttribute="leading" constant="15" id="fGK-Wm-xOz"/>
                                     <constraint firstItem="oEq-iI-ReE" firstAttribute="leading" secondItem="avI-d0-V97" secondAttribute="leading" constant="15" id="gwE-u0-G3h"/>
-                                    <constraint firstItem="oEq-iI-ReE" firstAttribute="top" secondItem="Rw8-i1-N5R" secondAttribute="bottom" constant="30.329999999999998" id="tY9-th-AEA"/>
                                     <constraint firstAttribute="trailing" secondItem="Rw8-i1-N5R" secondAttribute="trailing" constant="127" id="v7k-SO-Q5V"/>
                                     <constraint firstAttribute="trailing" secondItem="oEq-iI-ReE" secondAttribute="trailing" constant="17" id="zkf-xI-dYa"/>
                                 </constraints>
@@ -1154,7 +1153,6 @@
                                         </constraints>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="lHc-Op-OA0" secondAttribute="bottom" constant="74" id="2fa-fc-X7u"/>
                                     <constraint firstItem="lHc-Op-OA0" firstAttribute="leading" secondItem="fyP-wq-jHK" secondAttribute="leading" constant="40" id="Euc-rl-Kar"/>
@@ -1808,15 +1806,6 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemCyanColor">
-            <color red="0.19607843137254902" green="0.67843137254901964" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemMintColor">
-            <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemPurpleColor">
             <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
