@@ -6,33 +6,43 @@
 //
 
 import UIKit
+import CoreData
 
 class CompletedUserRegistrationViewController: UIViewController {
     
     
     @IBOutlet weak var progressBarBorder: UIView!
+    var helpers = Utils()
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        self.navigationController?.navigationBar.tintColor = .black
     }
     
     
-  
-    @IBAction func createUserPressed(_ sender: UIButton) {
+
+    func updateUserInfo(){
+        let request : NSFetchRequest<User> = User.fetchRequest()
         
-        self.performSegue(withIdentifier: "toHomeMap", sender: self)
+        do{
+            let user = try context.fetch(request)
+            user.first?.isLoggedIn = true
+            helpers.saveToDB(context: context)
+        }catch {
+            print(error.localizedDescription)
+        }
+        
     }
     
-    /*
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+     @IBAction func createUserPressed(_ sender: UIButton) {
+         
+         self.performSegue(withIdentifier: "toHomeMap", sender: self)
+     }
+
 
 }

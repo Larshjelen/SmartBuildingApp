@@ -20,7 +20,9 @@ class PersonaliaViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
+        nameTextField.delegate = self
+        lastNameTextField.delegate = self
+        self.navigationController?.navigationBar.tintColor = .black
     }
     
     
@@ -58,5 +60,18 @@ class PersonaliaViewController: UIViewController {
         print(user[0].password!)
         print(user[0].name!)
     }
+    
+ 
 
+}
+
+// MARK: Keyboard
+extension PersonaliaViewController : UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        nameTextField.endEditing(true)
+        lastNameTextField.endEditing(true)
+        return true
+        
+    }
 }

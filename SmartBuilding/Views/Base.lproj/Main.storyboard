@@ -317,21 +317,21 @@
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hKU-p2-KD9" customClass="CustomProgressBar" customModule="SmartBuilding" customModuleProvider="target">
                                                         <rect key="frame" x="36.333333333333343" y="0.0" width="36.333333333333343" height="8"/>
-                                                        <color key="backgroundColor" systemColor="systemTealColor"/>
+                                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="8" id="UzU-Wk-o7S"/>
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SzU-MO-J4L" customClass="CustomProgressBar" customModule="SmartBuilding" customModuleProvider="target">
                                                         <rect key="frame" x="72.666666666666657" y="0.0" width="36" height="8"/>
-                                                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="8" id="If2-zh-kTs"/>
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UJ9-ys-nc7" customClass="CustomProgressBar" customModule="SmartBuilding" customModuleProvider="target">
                                                         <rect key="frame" x="108.66666666666666" y="0.0" width="36.333333333333343" height="8"/>
-                                                        <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                                                        <color key="backgroundColor" systemColor="labelColor"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="8" id="GZE-Ls-Hgb"/>
                                                         </constraints>
@@ -566,11 +566,16 @@
                     </view>
                     <navigationItem key="navigationItem" title="Lag en bruker" id="VPp-pf-oyz"/>
                     <connections>
+                        <outlet property="ProgressBarBorder" destination="HgG-vv-RnZ" id="e5o-Tw-69i"/>
                         <outlet property="emailTextField" destination="msv-Lr-gS4" id="ZLV-PW-ZCd"/>
                         <outlet property="emailView" destination="mVC-yu-Xdc" id="hJ5-dU-39n"/>
                         <outlet property="nextButton" destination="eyG-6Y-kAJ" id="v8B-Bw-ZJQ"/>
                         <outlet property="passwordTextField" destination="45a-jO-fYt" id="AIK-Ti-kGh"/>
                         <outlet property="passwordView" destination="0Mz-sS-eHK" id="aLY-WE-1Dm"/>
+                        <outlet property="progress100" destination="UJ9-ys-nc7" id="5Tb-5M-vkA"/>
+                        <outlet property="progress25" destination="Pdw-un-2kR" id="3Fd-N3-dd4"/>
+                        <outlet property="progress50" destination="hKU-p2-KD9" id="u2F-6W-YCy"/>
+                        <outlet property="progress75" destination="SzU-MO-J4L" id="Sqq-eI-dZO"/>
                         <outlet property="repeatPassTextField" destination="ZTI-ok-tNT" id="AeT-3X-bvq"/>
                         <outlet property="repeatPasswordView" destination="CGo-An-RUK" id="bgg-Dz-LtO"/>
                         <segue destination="qUC-oC-cZB" kind="show" id="uhs-jT-xyN"/>
@@ -1232,6 +1237,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="4DI-6p-KOi"/>
                     <connections>
+                        <outlet property="lastNameTextField" destination="ozR-fe-YRl" id="5Gd-G3-fRI"/>
+                        <outlet property="nameTextField" destination="tlI-rK-vJc" id="t3D-9i-Vyb"/>
+                        <outlet property="nextBtn" destination="jtS-yV-eQS" id="sPg-ou-OGp"/>
                         <segue destination="EZY-fe-d1p" kind="show" id="dE4-qb-A0w"/>
                     </connections>
                 </viewController>
@@ -1660,8 +1668,8 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="hKQ-eu-m57">
                                 <rect key="frame" x="16" y="262" width="343" height="75"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fornavn" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k1O-Mv-z6S">
-                                        <rect key="frame" x="0.0" y="0.0" width="57" height="18"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bedrift" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k1O-Mv-z6S">
+                                        <rect key="frame" x="0.0" y="0.0" width="47" height="18"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -1692,8 +1700,8 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="eri-RK-nE8">
                                 <rect key="frame" x="15" y="367" width="345" height="74"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Etternavn" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="voy-P2-tjW">
-                                        <rect key="frame" x="0.0" y="0.0" width="67" height="18"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Din stilling" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="voy-P2-tjW">
+                                        <rect key="frame" x="0.0" y="0.0" width="72" height="18"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -1744,6 +1752,9 @@
                                                     <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                     <color key="baseBackgroundColor" red="0.8901960784313725" green="0.88235294117647056" blue="0.83137254901960778" alpha="0.89803921568627454" colorSpace="calibratedRGB"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="workHerePressed:" destination="EZY-fe-d1p" eventType="touchUpInside" id="Tnd-Mi-Qeo"/>
+                                                </connections>
                                             </button>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="SHM-Hv-Lv8" customClass="CircleImageView" customModule="SmartBuilding" customModuleProvider="target">
                                                 <rect key="frame" x="301" y="13" width="24" height="24"/>
@@ -1777,6 +1788,9 @@
                                                     <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                     <color key="baseBackgroundColor" red="0.89019607840000003" green="0.88235294119999996" blue="0.83137254900000002" alpha="0.8980392157" colorSpace="calibratedRGB"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="guestPressed:" destination="EZY-fe-d1p" eventType="touchUpInside" id="Mm3-bi-B5U"/>
+                                                </connections>
                                             </button>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="QRZ-XN-YgO" customClass="CircleImageView" customModule="SmartBuilding" customModuleProvider="target">
                                                 <rect key="frame" x="301" y="12" width="24" height="25"/>
@@ -1878,6 +1892,12 @@
                     </view>
                     <navigationItem key="navigationItem" id="9v6-s9-Yql"/>
                     <connections>
+                        <outlet property="companyNameTextField" destination="gnS-ax-ikA" id="1Fz-ls-kaq"/>
+                        <outlet property="guestBtn" destination="A89-KD-GGN" id="R4K-Pu-qyU"/>
+                        <outlet property="isEmployeeCheckMark" destination="SHM-Hv-Lv8" id="VxZ-dP-7ep"/>
+                        <outlet property="isGuestCheckMark" destination="QRZ-XN-YgO" id="SPI-Aj-UzX"/>
+                        <outlet property="positionTextField" destination="h0Q-Xu-Dpd" id="cBT-bW-4jq"/>
+                        <outlet property="workHereBtn" destination="2oS-Cs-lhh" id="LSp-dZ-rmw"/>
                         <segue destination="p9W-W7-yw3" kind="show" id="Fr2-R5-SMB"/>
                     </connections>
                 </viewController>
@@ -1962,6 +1982,9 @@
         <image name="envelope" catalog="system" width="128" height="93"/>
         <image name="eye" catalog="system" width="128" height="81"/>
         <image name="mail" width="24" height="24"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

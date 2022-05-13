@@ -18,15 +18,41 @@ class AboutCompanyViewController: UIViewController {
     @IBOutlet weak var positionTextField: UITextField!
     
     
-    @IBOutlet weak var nextBtn: UIButton!
+    @IBOutlet weak var workHereBtn: CheckButton!
+    
+    @IBOutlet weak var guestBtn: CheckButton!
+    
+    @IBOutlet weak var isEmployeeCheckMark: CircleImageView!
+    
+    @IBOutlet weak var isGuestCheckMark: CircleImageView!
     
     var helpers = Utils()
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    var isGuest = false
+    var isEmployee = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        companyNameTextField.delegate = self
+        positionTextField.delegate = self
+        self.navigationController?.navigationBar.tintColor = .black
+    }
+    
+    
+    
+    @IBAction func workHerePressed(_ sender: UIButton) {
+        
+        guestBtn.isEnabled = false
+        isEmployeeCheckMark.backgroundColor = .green
+        isEmployee = true
+        
+    }
+    
+    
+    @IBAction func guestPressed(_ sender: UIButton) {
+        workHereBtn.isEnabled = false
+        isGuestCheckMark.backgroundColor = .green
+        isGuest = true
     }
     
     @IBAction func nextBtnPressed(_ sender: UIButton) {
@@ -41,6 +67,8 @@ class AboutCompanyViewController: UIViewController {
             let user = try context.fetch(request)
             user.first?.company = companyNameTextField.text
             user.first?.position = positionTextField.text
+            user.first?.isGuest = isGuest
+            user.first?.isEmployee = isEmployee
             helpers.saveToDB(context: context)
         }catch {
             print(error.localizedDescription)
@@ -48,4 +76,15 @@ class AboutCompanyViewController: UIViewController {
         
     }
 
+}
+
+// MARK: Keyboard
+extension AboutCompanyViewController : UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        companyNameTextField.endEditing(true)
+        positionTextField.endEditing(true)
+        return true
+        
+    }
 }

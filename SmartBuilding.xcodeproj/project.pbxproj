@@ -67,7 +67,6 @@
 		819835DF2805860A007BB7D7 /* Pods_SmartBuilding.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F79748D6ED2F637BF5B1BA7C /* Pods_SmartBuilding.framework */; };
 		819B915E282E522B00863FEC /* GuestInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819B915D282E522B00863FEC /* GuestInformationViewController.swift */; };
 		819B9160282E52C600863FEC /* InviteSentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819B915F282E52C600863FEC /* InviteSentViewController.swift */; };
-		819B9162282E649700863FEC /* BookingDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819B9161282E649700863FEC /* BookingDateViewController.swift */; };
 		819B9164282E64E700863FEC /* MeetingRoomsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819B9163282E64E700863FEC /* MeetingRoomsTableViewController.swift */; };
 		819B9166282E653200863FEC /* MeetingRoomsDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819B9165282E653200863FEC /* MeetingRoomsDetailsViewController.swift */; };
 		819B9168282E66F500863FEC /* BookingSummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819B9167282E66F500863FEC /* BookingSummaryViewController.swift */; };
@@ -166,7 +165,6 @@
 		8163F7E8282806090002C60A /* ResturantCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResturantCell.xib; sourceTree = "<group>"; };
 		819B915D282E522B00863FEC /* GuestInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestInformationViewController.swift; sourceTree = "<group>"; };
 		819B915F282E52C600863FEC /* InviteSentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteSentViewController.swift; sourceTree = "<group>"; };
-		819B9161282E649700863FEC /* BookingDateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingDateViewController.swift; sourceTree = "<group>"; };
 		819B9163282E64E700863FEC /* MeetingRoomsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetingRoomsTableViewController.swift; sourceTree = "<group>"; };
 		819B9165282E653200863FEC /* MeetingRoomsDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetingRoomsDetailsViewController.swift; sourceTree = "<group>"; };
 		819B9167282E66F500863FEC /* BookingSummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingSummaryViewController.swift; sourceTree = "<group>"; };
@@ -494,7 +492,6 @@
 			isa = PBXGroup;
 			children = (
 				81C06C32282D63080084F996 /* MeetingRoomTableViewCell.swift */,
-				819B9161282E649700863FEC /* BookingDateViewController.swift */,
 				819B9163282E64E700863FEC /* MeetingRoomsTableViewController.swift */,
 				819B9165282E653200863FEC /* MeetingRoomsDetailsViewController.swift */,
 				819B9167282E66F500863FEC /* BookingSummaryViewController.swift */,
@@ -764,7 +761,6 @@
 				2A0BCC4228291D3900363BEA /* IfEmployeeViewController.swift in Sources */,
 				2A0BCC4428291D7500363BEA /* CreateUserViewController.swift in Sources */,
 				2A87A519280EFDF2008672E3 /* RebelAuthentication.swift in Sources */,
-				819B9162282E649700863FEC /* BookingDateViewController.swift in Sources */,
 				2A0BCC4A28291DB400363BEA /* CompletedUserRegistrationViewController.swift in Sources */,
 				2AB764B927E8A8110084062C /* EventCellController.swift in Sources */,
 				819B9168282E66F500863FEC /* BookingSummaryViewController.swift in Sources */,
