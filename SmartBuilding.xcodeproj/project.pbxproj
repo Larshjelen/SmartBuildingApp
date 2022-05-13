@@ -59,14 +59,20 @@
 		815228C1282A7F15007EEE74 /* FoundEmployeeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815228C0282A7F15007EEE74 /* FoundEmployeeViewController.swift */; };
 		815228C3282A7F50007EEE74 /* NotifiedEmployeeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815228C2282A7F50007EEE74 /* NotifiedEmployeeViewController.swift */; };
 		815228C5282A7F84007EEE74 /* GenerateCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815228C4282A7F84007EEE74 /* GenerateCodeViewController.swift */; };
-		815228C7282A7FAA007EEE74 /* GeneratingCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815228C6282A7FAA007EEE74 /* GeneratingCodeViewController.swift */; };
-		815228C9282A7FC2007EEE74 /* GeneratedCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815228C8282A7FC2007EEE74 /* GeneratedCodeViewController.swift */; };
 		8163F7E22827F03F0002C60A /* ResturantsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8163F7E12827F03F0002C60A /* ResturantsManager.swift */; };
 		8163F7E42827F12F0002C60A /* ResturantsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8163F7E32827F12F0002C60A /* ResturantsData.swift */; };
 		8163F7E62827FA7D0002C60A /* ResturantsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8163F7E52827FA7D0002C60A /* ResturantsViewController.swift */; };
 		8163F7E9282806090002C60A /* ResturantCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8163F7E7282806090002C60A /* ResturantCellController.swift */; };
 		8163F7EA282806090002C60A /* ResturantCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8163F7E8282806090002C60A /* ResturantCell.xib */; };
 		819835DF2805860A007BB7D7 /* Pods_SmartBuilding.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F79748D6ED2F637BF5B1BA7C /* Pods_SmartBuilding.framework */; };
+		819B915E282E522B00863FEC /* GuestInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819B915D282E522B00863FEC /* GuestInformationViewController.swift */; };
+		819B9160282E52C600863FEC /* InviteSentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819B915F282E52C600863FEC /* InviteSentViewController.swift */; };
+		819B9162282E649700863FEC /* BookingDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819B9161282E649700863FEC /* BookingDateViewController.swift */; };
+		819B9164282E64E700863FEC /* MeetingRoomsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819B9163282E64E700863FEC /* MeetingRoomsTableViewController.swift */; };
+		819B9166282E653200863FEC /* MeetingRoomsDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819B9165282E653200863FEC /* MeetingRoomsDetailsViewController.swift */; };
+		819B9168282E66F500863FEC /* BookingSummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819B9167282E66F500863FEC /* BookingSummaryViewController.swift */; };
+		819B916A282E672900863FEC /* BookingConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819B9169282E672900863FEC /* BookingConfirmationViewController.swift */; };
+		819B916C282E675600863FEC /* BookingDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819B916B282E675600863FEC /* BookingDetailsViewController.swift */; };
 		81A1405427FAFB2600A6448D /* CustomLocationManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A1405327FAFB2600A6448D /* CustomLocationManagerDelegate.swift */; };
 		81C06C1D282BDAB80084F996 /* EmployeeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C06C1B282BDAB80084F996 /* EmployeeTableViewCell.swift */; };
 		81C06C1E282BDAB80084F996 /* EmployeeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81C06C1C282BDAB80084F996 /* EmployeeTableViewCell.xib */; };
@@ -153,13 +159,19 @@
 		815228C0282A7F15007EEE74 /* FoundEmployeeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoundEmployeeViewController.swift; sourceTree = "<group>"; };
 		815228C2282A7F50007EEE74 /* NotifiedEmployeeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotifiedEmployeeViewController.swift; sourceTree = "<group>"; };
 		815228C4282A7F84007EEE74 /* GenerateCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateCodeViewController.swift; sourceTree = "<group>"; };
-		815228C6282A7FAA007EEE74 /* GeneratingCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneratingCodeViewController.swift; sourceTree = "<group>"; };
-		815228C8282A7FC2007EEE74 /* GeneratedCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneratedCodeViewController.swift; sourceTree = "<group>"; };
 		8163F7E12827F03F0002C60A /* ResturantsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResturantsManager.swift; sourceTree = "<group>"; };
 		8163F7E32827F12F0002C60A /* ResturantsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResturantsData.swift; sourceTree = "<group>"; };
 		8163F7E52827FA7D0002C60A /* ResturantsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResturantsViewController.swift; sourceTree = "<group>"; };
 		8163F7E7282806090002C60A /* ResturantCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResturantCellController.swift; sourceTree = "<group>"; };
 		8163F7E8282806090002C60A /* ResturantCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResturantCell.xib; sourceTree = "<group>"; };
+		819B915D282E522B00863FEC /* GuestInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestInformationViewController.swift; sourceTree = "<group>"; };
+		819B915F282E52C600863FEC /* InviteSentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteSentViewController.swift; sourceTree = "<group>"; };
+		819B9161282E649700863FEC /* BookingDateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingDateViewController.swift; sourceTree = "<group>"; };
+		819B9163282E64E700863FEC /* MeetingRoomsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetingRoomsTableViewController.swift; sourceTree = "<group>"; };
+		819B9165282E653200863FEC /* MeetingRoomsDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetingRoomsDetailsViewController.swift; sourceTree = "<group>"; };
+		819B9167282E66F500863FEC /* BookingSummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingSummaryViewController.swift; sourceTree = "<group>"; };
+		819B9169282E672900863FEC /* BookingConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingConfirmationViewController.swift; sourceTree = "<group>"; };
+		819B916B282E675600863FEC /* BookingDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingDetailsViewController.swift; sourceTree = "<group>"; };
 		81A1405327FAFB2600A6448D /* CustomLocationManagerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLocationManagerDelegate.swift; sourceTree = "<group>"; };
 		81C06C1B282BDAB80084F996 /* EmployeeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EmployeeTableViewCell.swift; path = SmartBuilding/Controllers/AccessCode/EmployeeTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 		81C06C1C282BDAB80084F996 /* EmployeeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = EmployeeTableViewCell.xib; path = "SmartBuilding/Controllers/User Registration/EmployeeTableViewCell.xib"; sourceTree = SOURCE_ROOT; };
@@ -375,6 +387,7 @@
 		2AB764B227E8A2F40084062C /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				819B915C282E51E900863FEC /* InviteGuest */,
 				81C06C2E282D61F60084F996 /* MeetingRooms */,
 				815228BB282A7D08007EEE74 /* AccessCode */,
 				2A0BCC3E28291CC500363BEA /* User Registration */,
@@ -420,8 +433,6 @@
 				815228C0282A7F15007EEE74 /* FoundEmployeeViewController.swift */,
 				815228C2282A7F50007EEE74 /* NotifiedEmployeeViewController.swift */,
 				815228C4282A7F84007EEE74 /* GenerateCodeViewController.swift */,
-				815228C6282A7FAA007EEE74 /* GeneratingCodeViewController.swift */,
-				815228C8282A7FC2007EEE74 /* GeneratedCodeViewController.swift */,
 			);
 			path = AccessCode;
 			sourceTree = "<group>";
@@ -440,6 +451,15 @@
 				8163F7E32827F12F0002C60A /* ResturantsData.swift */,
 			);
 			path = Resturants;
+			sourceTree = "<group>";
+		};
+		819B915C282E51E900863FEC /* InviteGuest */ = {
+			isa = PBXGroup;
+			children = (
+				819B915D282E522B00863FEC /* GuestInformationViewController.swift */,
+				819B915F282E52C600863FEC /* InviteSentViewController.swift */,
+			);
+			path = InviteGuest;
 			sourceTree = "<group>";
 		};
 		81A1404E27FAD8CE00A6448D /* Frameworks */ = {
@@ -474,6 +494,12 @@
 			isa = PBXGroup;
 			children = (
 				81C06C32282D63080084F996 /* MeetingRoomTableViewCell.swift */,
+				819B9161282E649700863FEC /* BookingDateViewController.swift */,
+				819B9163282E64E700863FEC /* MeetingRoomsTableViewController.swift */,
+				819B9165282E653200863FEC /* MeetingRoomsDetailsViewController.swift */,
+				819B9167282E66F500863FEC /* BookingSummaryViewController.swift */,
+				819B9169282E672900863FEC /* BookingConfirmationViewController.swift */,
+				819B916B282E675600863FEC /* BookingDetailsViewController.swift */,
 			);
 			path = MeetingRooms;
 			sourceTree = "<group>";
@@ -695,17 +721,19 @@
 				8163F7E62827FA7D0002C60A /* ResturantsViewController.swift in Sources */,
 				815228BF282A7E5E007EEE74 /* FindEmployeeViewController.swift in Sources */,
 				2A0BCC4C28291DEF00363BEA /* LogInViewController.swift in Sources */,
+				819B9160282E52C600863FEC /* InviteSentViewController.swift in Sources */,
 				2A57C6D62820215800FCB7EE /* FPMeetingRoomViewController.swift in Sources */,
 				81C06C2D282D01AF0084F996 /* CircleImageView.swift in Sources */,
 				2A0BCC4028291CF600363BEA /* ChooseUserViewController.swift in Sources */,
 				8163F7E22827F03F0002C60A /* ResturantsManager.swift in Sources */,
 				2AB7648227E89F8D0084062C /* EventsViewController.swift in Sources */,
-				815228C7282A7FAA007EEE74 /* GeneratingCodeViewController.swift in Sources */,
+				819B916C282E675600863FEC /* BookingDetailsViewController.swift in Sources */,
 				2A0BCC4628291D8600363BEA /* PersonaliaViewController.swift in Sources */,
 				815228C3282A7F50007EEE74 /* NotifiedEmployeeViewController.swift in Sources */,
 				2AB764BF27E8C7460084062C /* EventData.swift in Sources */,
 				2A87A517280EA733008672E3 /* FloatingPanelContentViewController.swift in Sources */,
 				815228BD282A7D5B007EEE74 /* LoginAccessCodeViewController.swift in Sources */,
+				819B915E282E522B00863FEC /* GuestInformationViewController.swift in Sources */,
 				2A20BE6C282AE30C00D7024A /* CustomTextField.swift in Sources */,
 				81C06C1D282BDAB80084F996 /* EmployeeTableViewCell.swift in Sources */,
 				2A9D816E280459CB00DA6B02 /* OpenIdAuthenticationServiceDelegate.swift in Sources */,
@@ -717,16 +745,18 @@
 				81C06C2A282CF8DE0084F996 /* CheckButton.swift in Sources */,
 				815228C1282A7F15007EEE74 /* FoundEmployeeViewController.swift in Sources */,
 				2AB764BC27E8B9B90084062C /* EventManager.swift in Sources */,
+				819B9166282E653200863FEC /* MeetingRoomsDetailsViewController.swift in Sources */,
+				819B9164282E64E700863FEC /* MeetingRoomsTableViewController.swift in Sources */,
 				2A64A2052823F742002F63C3 /* SecondaryLargeButton.swift in Sources */,
 				2AB7647E27E89F8D0084062C /* AppDelegate.swift in Sources */,
 				81C06C21282BE4EE0084F996 /* CustomProgressBar.swift in Sources */,
 				8136652027FEDF71001FD732 /* MapViewController.swift in Sources */,
 				2AB7648027E89F8D0084062C /* SceneDelegate.swift in Sources */,
 				2A57C6CF281FF19100FCB7EE /* CoordinatesData.swift in Sources */,
-				815228C9282A7FC2007EEE74 /* GeneratedCodeViewController.swift in Sources */,
 				2A64A2072823F772002F63C3 /* StyleAttributes.swift in Sources */,
 				2A1C614127F1B44700FFD2D4 /* EventDetailsViewController.swift in Sources */,
 				2AB7648827E89F8D0084062C /* SmartBuilding.xcdatamodeld in Sources */,
+				819B916A282E672900863FEC /* BookingConfirmationViewController.swift in Sources */,
 				2AD3D63928181B6F0008B8D2 /* MeetingRomManager.swift in Sources */,
 				2A035EBB2811643900E037AC /* CustomMapMarker.swift in Sources */,
 				8163F7E42827F12F0002C60A /* ResturantsData.swift in Sources */,
@@ -734,8 +764,10 @@
 				2A0BCC4228291D3900363BEA /* IfEmployeeViewController.swift in Sources */,
 				2A0BCC4428291D7500363BEA /* CreateUserViewController.swift in Sources */,
 				2A87A519280EFDF2008672E3 /* RebelAuthentication.swift in Sources */,
+				819B9162282E649700863FEC /* BookingDateViewController.swift in Sources */,
 				2A0BCC4A28291DB400363BEA /* CompletedUserRegistrationViewController.swift in Sources */,
 				2AB764B927E8A8110084062C /* EventCellController.swift in Sources */,
+				819B9168282E66F500863FEC /* BookingSummaryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -951,7 +983,7 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 73NCHQP3L2;
+				DEVELOPMENT_TEAM = 978NW4ULQ6;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SmartBuilding/Info.plist;
 				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Location used for determining coarse location and improved position accuracy.";
@@ -988,7 +1020,7 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 73NCHQP3L2;
+				DEVELOPMENT_TEAM = 978NW4ULQ6;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SmartBuilding/Info.plist;
 				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Location used for determining coarse location and improved position accuracy.";

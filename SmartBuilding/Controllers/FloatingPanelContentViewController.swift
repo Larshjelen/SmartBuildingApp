@@ -26,9 +26,20 @@ class FloatingPanelContentViewController: UIViewController, SFSafariViewControll
     }
     
     @IBAction func eventsButtonPressed(_ sender: UIButton) {
-        performSegue(withIdentifier: "eventsSegue", sender: self)
+        performSegue(withIdentifier: "toEvents", sender: self)
         //let vc = UIStoryboard.init(name: "Events", bundle: Bundle.main).instantiateViewController(withIdentifier: "events") as? EventsViewController
        // self.navigationController?.pushViewController(vc!, animated: true)
+    }
+    
+    @IBAction func accessCodeButtonPressed(_ sender: UIButton) {
+        performSegue(withIdentifier: "toFindEmployee", sender: self)
+    }
+    
+    @IBAction func meetingRoomButtonPressed(_ sender: UIButton) {
+        performSegue(withIdentifier: "toMeetingRoom", sender: self)
+    }
+    @IBAction func inviteGuestPressed(_ sender: UIButton) {
+        performSegue(withIdentifier: "toInvite", sender: self)
     }
     
     @IBAction func MeetingRoomPressed(_ sender: UIButton) {

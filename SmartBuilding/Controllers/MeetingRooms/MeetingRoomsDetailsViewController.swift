@@ -1,13 +1,13 @@
 //
-//  GeneratingCodeViewController.swift
+//  MeetingRoomsDetailsViewController.swift
 //  SmartBuilding
 //
-//  Created by Lars Even Hjelen on 10/05/2022.
+//  Created by Lars Even Hjelen on 13/05/2022.
 //
 
 import UIKit
 
-class GeneratingCodeViewController: UINavigationController {
+class MeetingRoomsDetailsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -15,7 +15,11 @@ class GeneratingCodeViewController: UINavigationController {
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func choosePressed(_ sender: UIButton) {
+        let vc = UIStoryboard.init(name: "MeetingRoom", bundle: Bundle.main).instantiateViewController(withIdentifier: "bookingSummary") as? PersonaliaViewController
+         self.navigationController?.pushViewController(vc!, animated: true)
+    }
+    
     /*
     // MARK: - Navigation
 

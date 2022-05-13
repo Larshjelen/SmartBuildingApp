@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LIN-0g-bIo">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -12,7 +12,7 @@
         <!--Find EmployeeView Controller-->
         <scene sceneID="3fc-4j-M0d">
             <objects>
-                <viewController storyboardIdentifier="FindEmployeeViewController" id="FFy-ep-0FH" userLabel="Find EmployeeView Controller" customClass="FindEmployeeViewController" customModule="SmartBuilding" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="findEmployee" id="FFy-ep-0FH" userLabel="Find EmployeeView Controller" customClass="FindEmployeeViewController" customModule="SmartBuilding" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9cM-3l-npE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -89,7 +89,7 @@
                         <barButtonItem key="backBarButtonItem" title="Tilbake" id="vIL-8J-www"/>
                     </navigationItem>
                     <connections>
-                        <segue destination="rbw-GZ-PQb" kind="show" id="70W-gD-1ml"/>
+                        <segue destination="rbw-GZ-PQb" kind="show" identifier="toNotifyEmployee" id="70W-gD-1ml"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yxt-kt-sMv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -99,7 +99,7 @@
         <!--Found Employee View Controller-->
         <scene sceneID="8XR-cv-Hqf">
             <objects>
-                <viewController id="rbw-GZ-PQb" customClass="FoundEmployeeViewController" customModule="SmartBuilding" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="notifyEmployee" id="rbw-GZ-PQb" customClass="FoundEmployeeViewController" customModule="SmartBuilding" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Wwr-q5-fld">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -209,8 +209,8 @@
                         <barButtonItem key="backBarButtonItem" title="Tilbake" id="lFK-fP-ZOp"/>
                     </navigationItem>
                     <connections>
-                        <segue destination="aab-x7-Lcc" kind="show" id="hi2-Rg-SlQ"/>
-                        <segue destination="J0Y-DQ-iYA" kind="show" id="6lM-iI-G3E"/>
+                        <segue destination="aab-x7-Lcc" kind="show" identifier="toNotifiedEmployee" id="hi2-Rg-SlQ"/>
+                        <segue destination="J0Y-DQ-iYA" kind="show" identifier="toGenerateCode" id="6lM-iI-G3E"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4HU-eg-fqk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -220,7 +220,7 @@
         <!--View Controller-->
         <scene sceneID="104-wQ-zY8">
             <objects>
-                <viewController id="aab-x7-Lcc" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="notifiedEmployee" id="aab-x7-Lcc" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cih-B2-54b">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

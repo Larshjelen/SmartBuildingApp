@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zzR-OR-F3U">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -11,7 +12,7 @@
         <!--Inviter gjest-->
         <scene sceneID="jBf-UM-ffN">
             <objects>
-                <viewController id="gOD-NA-js9" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="guestInformation" id="gOD-NA-js9" customClass="GuestInformationViewController" customModule="SmartBuilding" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2nN-hm-mrp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -180,6 +181,9 @@
                                     <fontDescription key="titleFontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
                                     <color key="baseForegroundColor" red="0.13725490196078433" green="0.12156862745098039" blue="0.12549019607843137" alpha="1" colorSpace="calibratedRGB"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="sendInvitePressed:" destination="gOD-NA-js9" eventType="touchUpInside" id="wI6-mi-RVI"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="PAK-Nn-clc"/>
@@ -198,17 +202,17 @@
                         <barButtonItem key="backBarButtonItem" title="Tilbake" id="H0o-Ab-8lK"/>
                     </navigationItem>
                     <connections>
-                        <segue destination="iwL-vy-dmO" kind="show" id="iAr-Vi-tj2"/>
+                        <segue destination="iwL-vy-dmO" kind="show" identifier="toInviteSent" id="iAr-Vi-tj2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Ec-W7-xpV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="6220" y="858.76777251184831"/>
         </scene>
-        <!--View Controller-->
+        <!--Invite Sent View Controller-->
         <scene sceneID="8yp-jH-QsE">
             <objects>
-                <viewController id="iwL-vy-dmO" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="inviteSent" id="iwL-vy-dmO" customClass="InviteSentViewController" customModule="SmartBuilding" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Huu-tE-awH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

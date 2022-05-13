@@ -24,11 +24,53 @@
                                 <color key="textColor" red="0.23529411764705882" green="0.23529411764705882" blue="0.23529411764705882" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hlz-Oc-WcE">
+                                <rect key="frame" x="154" y="195" width="68" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Events"/>
+                                <connections>
+                                    <action selector="eventsButtonPressed:" destination="vcu-Wc-DtC" eventType="touchUpInside" id="GOJ-ac-9Wf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VLE-hW-dg0">
+                                <rect key="frame" x="135" y="281" width="105" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="AccessCode"/>
+                                <connections>
+                                    <action selector="accessCodeButtonPressed:" destination="vcu-Wc-DtC" eventType="touchUpInside" id="pEo-xO-XIS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sTo-xL-HZG">
+                                <rect key="frame" x="125" y="371" width="125" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Meeting Rooms"/>
+                                <connections>
+                                    <action selector="meetingRoomButtonPressed:" destination="vcu-Wc-DtC" eventType="touchUpInside" id="Deb-JT-e2Z"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U1m-WT-cdd">
+                                <rect key="frame" x="137" y="458" width="101" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Invite Guest"/>
+                                <connections>
+                                    <action selector="inviteGuestPressed:" destination="vcu-Wc-DtC" eventType="touchUpInside" id="ylh-XN-aza"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="f1g-Fy-RFV"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <value key="contentSizeForViewInPopover" type="size" width="375" height="812"/>
+                    <connections>
+                        <segue destination="Qp3-eT-B7b" kind="presentation" identifier="toEvents" id="xFl-uu-xVo"/>
+                        <segue destination="QmT-hi-FLa" kind="presentation" identifier="toFindEmployee" id="omb-wb-tUf"/>
+                        <segue destination="BD2-Si-QBC" kind="presentation" identifier="toMeetingRoom" id="wlZ-nR-eeH"/>
+                        <segue destination="5T2-il-QQg" kind="presentation" identifier="toInvite" id="Cfh-gj-tRC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cBc-nz-CFp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -281,14 +323,14 @@
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SzU-MO-J4L" customClass="CustomProgressBar" customModule="SmartBuilding" customModuleProvider="target">
-                                                        <rect key="frame" x="72.666666666666629" y="0.0" width="36" height="8"/>
+                                                        <rect key="frame" x="72.666666666666657" y="0.0" width="36" height="8"/>
                                                         <color key="backgroundColor" systemColor="systemRedColor"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="8" id="If2-zh-kTs"/>
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UJ9-ys-nc7" customClass="CustomProgressBar" customModule="SmartBuilding" customModuleProvider="target">
-                                                        <rect key="frame" x="108.66666666666663" y="0.0" width="36.333333333333343" height="8"/>
+                                                        <rect key="frame" x="108.66666666666666" y="0.0" width="36.333333333333343" height="8"/>
                                                         <color key="backgroundColor" systemColor="systemPurpleColor"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="8" id="GZE-Ls-Hgb"/>
@@ -393,7 +435,7 @@
                                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                             </textField>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eye" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Ewi-zt-FJK">
-                                                <rect key="frame" x="300.66666666666674" y="12.00000000000002" width="26.333333333333314" height="24.000000000000004"/>
+                                                <rect key="frame" x="300.66666666666669" y="12.00000000000002" width="26.333333333333314" height="24.000000000000004"/>
                                                 <color key="tintColor" red="0.47058823529999999" green="0.47058823529999999" blue="0.47058823529999999" alpha="1" colorSpace="calibratedRGB"/>
                                             </imageView>
                                         </subviews>
@@ -435,7 +477,7 @@
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eye" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="NgV-x0-bco">
-                                                <rect key="frame" x="300.66666666666674" y="12.00000000000002" width="26.333333333333314" height="24.000000000000004"/>
+                                                <rect key="frame" x="300.66666666666669" y="12.00000000000002" width="26.333333333333314" height="24.000000000000004"/>
                                                 <color key="tintColor" red="0.47058823529999999" green="0.47058823529999999" blue="0.47058823529999999" alpha="1" colorSpace="calibratedRGB"/>
                                             </imageView>
                                         </subviews>
@@ -480,7 +522,7 @@
                                         </connections>
                                     </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.right" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="pb9-GT-ynM">
-                                        <rect key="frame" x="268.33333333333326" y="16" width="12.666666666666686" height="16.666666666666664"/>
+                                        <rect key="frame" x="268.33333333333331" y="16" width="12.666666666666686" height="16.666666666666664"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </imageView>
@@ -706,7 +748,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wgZ-Id-cbz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1729.2307692307693" y="76.777251184834114"/>
+            <point key="canvasLocation" x="1990" y="-89"/>
         </scene>
         <!--Item-->
         <scene sceneID="bVu-Lk-8ri">
@@ -852,7 +894,7 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="IzF-9Y-34Q">
-                                        <rect key="frame" x="40" y="156.33333333333326" width="295" height="106"/>
+                                        <rect key="frame" x="40" y="156.33333333333331" width="295" height="106"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qda-RW-3ou">
                                                 <rect key="frame" x="0.0" y="0.0" width="295" height="52"/>
@@ -1627,7 +1669,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Shi-z9-rZo" customClass="CustomTextField" customModule="SmartBuilding" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="25" width="343" height="50"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gnS-ax-ikA">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gnS-ax-ikA">
                                                 <rect key="frame" x="12" y="6" width="331" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
@@ -1659,7 +1701,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6mz-fh-WI1" customClass="CustomTextField" customModule="SmartBuilding" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="25" width="343" height="49"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h0Q-Xu-Dpd">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h0Q-Xu-Dpd">
                                                 <rect key="frame" x="12" y="6" width="331" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
@@ -1780,6 +1822,7 @@
                                         <connections>
                                             <action selector="CreateUserPressed:" destination="xmD-rf-Zrs" eventType="touchUpInside" id="r1Q-JJ-ZU1"/>
                                             <action selector="nextBtnPressed:" destination="qUC-oC-cZB" eventType="touchUpInside" id="QeQ-Sf-BcJ"/>
+                                            <action selector="nextBtnPressed:" destination="EZY-fe-d1p" eventType="touchUpInside" id="aRV-vc-L5C"/>
                                         </connections>
                                     </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.right" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="ZH0-He-vZc">
@@ -1860,6 +1903,14 @@
             </objects>
             <point key="canvasLocation" x="-7352.3076923076924" y="28.436018957345969"/>
         </scene>
+        <!--Invite-->
+        <scene sceneID="zk0-OO-Tuo">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Invite" id="5T2-il-QQg" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aSc-c3-Ni8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-372" y="-10"/>
+        </scene>
         <!--Events-->
         <scene sceneID="iaf-uB-ZFN">
             <objects>
@@ -1868,13 +1919,21 @@
             </objects>
             <point key="canvasLocation" x="-371" y="99"/>
         </scene>
-        <!--FindEmployeeViewController-->
+        <!--MeetingRoom-->
+        <scene sceneID="V3u-RL-eIr">
+            <objects>
+                <viewControllerPlaceholder storyboardName="MeetingRoom" id="BD2-Si-QBC" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s38-PS-NmQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="151" y="-9"/>
+        </scene>
+        <!--findEmployee-->
         <scene sceneID="B0E-eZ-sTl">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="FindEmployeeViewController" storyboardName="AccessCode" referencedIdentifier="FindEmployeeViewController" id="QmT-hi-FLa" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardIdentifier="findEmployee" storyboardName="AccessCode" referencedIdentifier="findEmployee" id="QmT-hi-FLa" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b2p-bw-v6D" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1765" y="941"/>
+            <point key="canvasLocation" x="184" y="98"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="i3X-6h-y8o">
@@ -1889,7 +1948,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n0k-gm-8XW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1107" y="1242"/>
+            <point key="canvasLocation" x="1582" y="1329"/>
         </scene>
     </scenes>
     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

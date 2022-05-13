@@ -1,13 +1,13 @@
 //
-//  GeneratedCodeViewController.swift
+//  BookingConfirmationViewController.swift
 //  SmartBuilding
 //
-//  Created by Lars Even Hjelen on 10/05/2022.
+//  Created by Lars Even Hjelen on 13/05/2022.
 //
 
 import UIKit
 
-class GeneratedCodeViewController: UINavigationController {
+class BookingConfirmationViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -15,7 +15,11 @@ class GeneratedCodeViewController: UINavigationController {
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func completePressed(_ sender: UIButton) {
+        let vc = UIStoryboard.init(name: "MeetingRoom", bundle: Bundle.main).instantiateViewController(withIdentifier: "bookingDetails") as? PersonaliaViewController
+         self.navigationController?.pushViewController(vc!, animated: true)
+    }
+    
     /*
     // MARK: - Navigation
 
