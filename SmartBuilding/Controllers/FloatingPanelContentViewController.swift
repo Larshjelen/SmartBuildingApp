@@ -19,6 +19,9 @@ class FloatingPanelContentViewController: UIViewController, SFSafariViewControll
     @IBOutlet weak var meetingRoomButton: UIButton!
     
     @IBOutlet weak var activeTextField: UITextField!
+    @IBOutlet weak var BottomAccesCodeView: UIView!
+    @IBOutlet weak var TopAccessCodeView: UIView!
+    @IBOutlet weak var MiddleAccessCodeView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +33,31 @@ class FloatingPanelContentViewController: UIViewController, SFSafariViewControll
         //let vc = UIStoryboard.init(name: "Events", bundle: Bundle.main).instantiateViewController(withIdentifier: "events") as? EventsViewController
        // self.navigationController?.pushViewController(vc!, animated: true)
     }
+    
+    //Testing overlaying buttons
+    
+    @IBAction func TopAccesCodeButtonPressed(_ sender: UIButton) {
+        print("TopAccessCodeButton Pressed")
+    }
+    @IBAction func MiddleAccessCodeButtonPressed(_ sender: UIButton) {
+        print("MiddleAccessCodeButton Pressed")
+    }
+    @IBAction func BottomAccessCodeButtonPressed(_ sender: UIButton) {
+        print("BottomAccessCodeButton Pressed")
+    }
+    @IBAction func SecondButtonPressed(_ sender: UIButton) {
+        BottomAccesCodeView.isHidden = true
+        //TopAccessCodeView.isHidden = true
+        MiddleAccessCodeView.isHidden = true
+    }
+    @IBAction func ThirdButtonPressed(_ sender: UIButton) {
+        //BottomAccesCodeView.isHidden = false
+        //TopAccessCodeView.isHidden = false
+        MiddleAccessCodeView.isHidden = false
+    }
+    
+    
+    
     
     @IBAction func accessCodeButtonPressed(_ sender: UIButton) {
         performSegue(withIdentifier: "toFindEmployee", sender: self)
