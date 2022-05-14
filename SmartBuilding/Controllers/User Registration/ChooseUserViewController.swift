@@ -31,6 +31,8 @@ class ChooseUserViewController: UIViewController {
     }
     
     @IBAction func guestBtnPressed(_ sender: Any) {
+        let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "mapView") as? MapViewController
+        self.present(vc!, animated: true)
     }
     
     
