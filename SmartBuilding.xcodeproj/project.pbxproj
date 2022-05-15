@@ -73,6 +73,9 @@
 		819B916A282E672900863FEC /* BookingConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819B9169282E672900863FEC /* BookingConfirmationViewController.swift */; };
 		819B916C282E675600863FEC /* BookingDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819B916B282E675600863FEC /* BookingDetailsViewController.swift */; };
 		81A1405427FAFB2600A6448D /* CustomLocationManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A1405327FAFB2600A6448D /* CustomLocationManagerDelegate.swift */; };
+		81B7CAE62831291A006DE8A4 /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B7CAE52831291A006DE8A4 /* Employee.swift */; };
+		81B7CAEB283129C8006DE8A4 /* Employers.json in Resources */ = {isa = PBXBuildFile; fileRef = 81B7CAEA283129C8006DE8A4 /* Employers.json */; };
+		81B7CAED28312A24006DE8A4 /* BookingDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B7CAEC28312A24006DE8A4 /* BookingDateViewController.swift */; };
 		81C06C1D282BDAB80084F996 /* EmployeeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C06C1B282BDAB80084F996 /* EmployeeTableViewCell.swift */; };
 		81C06C1E282BDAB80084F996 /* EmployeeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81C06C1C282BDAB80084F996 /* EmployeeTableViewCell.xib */; };
 		81C06C21282BE4EE0084F996 /* CustomProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C06C20282BE4EE0084F996 /* CustomProgressBar.swift */; };
@@ -171,6 +174,9 @@
 		819B9169282E672900863FEC /* BookingConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingConfirmationViewController.swift; sourceTree = "<group>"; };
 		819B916B282E675600863FEC /* BookingDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingDetailsViewController.swift; sourceTree = "<group>"; };
 		81A1405327FAFB2600A6448D /* CustomLocationManagerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLocationManagerDelegate.swift; sourceTree = "<group>"; };
+		81B7CAE52831291A006DE8A4 /* Employee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Employee.swift; sourceTree = "<group>"; };
+		81B7CAEA283129C8006DE8A4 /* Employers.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Employers.json; sourceTree = "<group>"; };
+		81B7CAEC28312A24006DE8A4 /* BookingDateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingDateViewController.swift; sourceTree = "<group>"; };
 		81C06C1B282BDAB80084F996 /* EmployeeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EmployeeTableViewCell.swift; path = SmartBuilding/Controllers/AccessCode/EmployeeTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 		81C06C1C282BDAB80084F996 /* EmployeeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = EmployeeTableViewCell.xib; path = "SmartBuilding/Controllers/User Registration/EmployeeTableViewCell.xib"; sourceTree = SOURCE_ROOT; };
 		81C06C20282BE4EE0084F996 /* CustomProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomProgressBar.swift; sourceTree = "<group>"; };
@@ -318,7 +324,7 @@
 		2AB7647C27E89F8D0084062C /* SmartBuilding */ = {
 			isa = PBXGroup;
 			children = (
-				8163F7D92826D0460002C60A /* Resources */,
+				81B7CAE72831294B006DE8A4 /* Resources */,
 				2A64A2012823F572002F63C3 /* Components */,
 				2A9D816A2804598900DA6B02 /* Authentication */,
 				2AB764B227E8A2F40084062C /* Controllers */,
@@ -361,6 +367,7 @@
 				2A1C614427F1FD7800FFD2D4 /* Utils.swift */,
 				2AB764BD27E8C7180084062C /* Events */,
 				81A1405327FAFB2600A6448D /* CustomLocationManagerDelegate.swift */,
+				81B7CAE52831291A006DE8A4 /* Employee.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -435,13 +442,6 @@
 			path = AccessCode;
 			sourceTree = "<group>";
 		};
-		8163F7D92826D0460002C60A /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
 		8163F7DE2827EF920002C60A /* Resturants */ = {
 			isa = PBXGroup;
 			children = (
@@ -472,6 +472,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		81B7CAE72831294B006DE8A4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				81B7CAEA283129C8006DE8A4 /* Employers.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		81C06C1F282BE4C00084F996 /* Progress Bar */ = {
 			isa = PBXGroup;
 			children = (
@@ -497,6 +505,7 @@
 				819B9167282E66F500863FEC /* BookingSummaryViewController.swift */,
 				819B9169282E672900863FEC /* BookingConfirmationViewController.swift */,
 				819B916B282E675600863FEC /* BookingDetailsViewController.swift */,
+				81B7CAEC28312A24006DE8A4 /* BookingDateViewController.swift */,
 			);
 			path = MeetingRooms;
 			sourceTree = "<group>";
@@ -618,6 +627,7 @@
 			files = (
 				81C06C31282D62650084F996 /* MeetingRoom.storyboard in Resources */,
 				81C06C1E282BDAB80084F996 /* EmployeeTableViewCell.xib in Resources */,
+				81B7CAEB283129C8006DE8A4 /* Employers.json in Resources */,
 				8163F7EA282806090002C60A /* ResturantCell.xib in Resources */,
 				815228BA282A6240007EEE74 /* AccessCode.storyboard in Resources */,
 				2AB764BA27E8A8120084062C /* EventCell.xib in Resources */,
@@ -730,7 +740,9 @@
 				2AB764BF27E8C7460084062C /* EventData.swift in Sources */,
 				2A87A517280EA733008672E3 /* FloatingPanelContentViewController.swift in Sources */,
 				815228BD282A7D5B007EEE74 /* LoginAccessCodeViewController.swift in Sources */,
+				81B7CAE62831291A006DE8A4 /* Employee.swift in Sources */,
 				819B915E282E522B00863FEC /* GuestInformationViewController.swift in Sources */,
+				81B7CAED28312A24006DE8A4 /* BookingDateViewController.swift in Sources */,
 				2A20BE6C282AE30C00D7024A /* CustomTextField.swift in Sources */,
 				81C06C1D282BDAB80084F996 /* EmployeeTableViewCell.swift in Sources */,
 				2A9D816E280459CB00DA6B02 /* OpenIdAuthenticationServiceDelegate.swift in Sources */,
@@ -992,7 +1004,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1029,7 +1041,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

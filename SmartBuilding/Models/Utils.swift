@@ -90,5 +90,24 @@ struct Utils {
             return nil
         }
     }
+    
+    func loadJson(fileName: String) -> [Employee]?{
+
+
+            guard  let path = Bundle.main.url(forResource: fileName, withExtension: "json") else {
+
+              return nil
+            }
+
+            do{
+                let data = try Data(contentsOf: path)
+                let result = try JSONDecoder().decode([Employee].self, from: data)
+                return result
+            }catch{
+                print(error.localizedDescription)
+                return nil
+            }
+
+        }
 
 }
