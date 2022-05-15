@@ -138,11 +138,10 @@ class BookingDateViewController: UIViewController {
     }
     
     //Navigation
-   
     @IBAction func searchRoomsPressed(_ sender: UIButton) {
         
         let vc = UIStoryboard.init(name: "MeetingRoom", bundle: Bundle.main).instantiateViewController(withIdentifier: "meetingRoomsTable") as? MeetingRoomsTableViewController
-        self.navigationController?.pushViewController(vc!, animated: true)
+         self.navigationController?.pushViewController(vc!, animated: true)
         
     }
     

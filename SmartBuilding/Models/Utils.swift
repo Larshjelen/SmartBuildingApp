@@ -13,6 +13,11 @@ import CoreData
 struct Utils {
     
     
+    func substractRoomName (string : String) -> String{
+        guard let endOfString = string.firstIndex(of:" ")else{return "error"}
+        let fistSentence = String(string[...endOfString])
+        return fistSentence
+    }
     
     //Convert URL to image
     func urlToImage (StringImage : String) -> UIImage?{

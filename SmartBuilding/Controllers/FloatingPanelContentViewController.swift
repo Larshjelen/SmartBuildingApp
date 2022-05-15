@@ -54,6 +54,7 @@ class FloatingPanelContentViewController: UIViewController, SFSafariViewControll
         //BottomAccesCodeView.isHidden = false
         //TopAccessCodeView.isHidden = false
         MiddleAccessCodeView.isHidden = false
+        performSegue(withIdentifier: "toMeetingRoom", sender: self)
     }
     
     

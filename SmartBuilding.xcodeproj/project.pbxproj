@@ -34,6 +34,8 @@
 		2A64A2072823F772002F63C3 /* StyleAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A64A2062823F772002F63C3 /* StyleAttributes.swift */; };
 		2A87A517280EA733008672E3 /* FloatingPanelContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A87A516280EA733008672E3 /* FloatingPanelContentViewController.swift */; };
 		2A87A519280EFDF2008672E3 /* RebelAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A87A518280EFDF2008672E3 /* RebelAuthentication.swift */; };
+		2A98EC4E28313FCD007CC44B /* MeetingRoomData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A98EC4D28313FCD007CC44B /* MeetingRoomData.swift */; };
+		2A98EC5028314127007CC44B /* MeetingRoomManagerApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A98EC4F28314127007CC44B /* MeetingRoomManagerApi.swift */; };
 		2A9D816C2804599F00DA6B02 /* ForkbeardAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9D816B2804599F00DA6B02 /* ForkbeardAuthentication.swift */; };
 		2A9D816E280459CB00DA6B02 /* OpenIdAuthenticationServiceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9D816D280459CB00DA6B02 /* OpenIdAuthenticationServiceDelegate.swift */; };
 		2AB7647E27E89F8D0084062C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB7647D27E89F8D0084062C /* AppDelegate.swift */; };
@@ -132,6 +134,8 @@
 		2A64A2062823F772002F63C3 /* StyleAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleAttributes.swift; sourceTree = "<group>"; };
 		2A87A516280EA733008672E3 /* FloatingPanelContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingPanelContentViewController.swift; sourceTree = "<group>"; };
 		2A87A518280EFDF2008672E3 /* RebelAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RebelAuthentication.swift; sourceTree = "<group>"; };
+		2A98EC4D28313FCD007CC44B /* MeetingRoomData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetingRoomData.swift; sourceTree = "<group>"; };
+		2A98EC4F28314127007CC44B /* MeetingRoomManagerApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetingRoomManagerApi.swift; sourceTree = "<group>"; };
 		2A9D816B2804599F00DA6B02 /* ForkbeardAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForkbeardAuthentication.swift; sourceTree = "<group>"; };
 		2A9D816D280459CB00DA6B02 /* OpenIdAuthenticationServiceDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenIdAuthenticationServiceDelegate.swift; sourceTree = "<group>"; };
 		2AB7647A27E89F8D0084062C /* SmartBuilding.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartBuilding.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -288,6 +292,15 @@
 			path = Buttons;
 			sourceTree = "<group>";
 		};
+		2A98EC4C28313F8F007CC44B /* MeetingRooms */ = {
+			isa = PBXGroup;
+			children = (
+				2A98EC4D28313FCD007CC44B /* MeetingRoomData.swift */,
+				2A98EC4F28314127007CC44B /* MeetingRoomManagerApi.swift */,
+			);
+			path = MeetingRooms;
+			sourceTree = "<group>";
+		};
 		2A9D816A2804598900DA6B02 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
@@ -361,6 +374,7 @@
 		2AB764B027E8A2D20084062C /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				2A98EC4C28313F8F007CC44B /* MeetingRooms */,
 				8163F7DE2827EF920002C60A /* Resturants */,
 				2A57C6D02820080A00FCB7EE /* Coordinates */,
 				2AB764B327E8A32C0084062C /* Constants.swift */,
@@ -729,6 +743,7 @@
 				815228BF282A7E5E007EEE74 /* FindEmployeeViewController.swift in Sources */,
 				2A0BCC4C28291DEF00363BEA /* LogInViewController.swift in Sources */,
 				819B9160282E52C600863FEC /* InviteSentViewController.swift in Sources */,
+				2A98EC4E28313FCD007CC44B /* MeetingRoomData.swift in Sources */,
 				2A57C6D62820215800FCB7EE /* FPMeetingRoomViewController.swift in Sources */,
 				81C06C2D282D01AF0084F996 /* CircleImageView.swift in Sources */,
 				2A0BCC4028291CF600363BEA /* ChooseUserViewController.swift in Sources */,
@@ -767,6 +782,7 @@
 				2AB7648827E89F8D0084062C /* SmartBuilding.xcdatamodeld in Sources */,
 				819B916A282E672900863FEC /* BookingConfirmationViewController.swift in Sources */,
 				2AD3D63928181B6F0008B8D2 /* MeetingRomManager.swift in Sources */,
+				2A98EC5028314127007CC44B /* MeetingRoomManagerApi.swift in Sources */,
 				2A035EBB2811643900E037AC /* CustomMapMarker.swift in Sources */,
 				8163F7E42827F12F0002C60A /* ResturantsData.swift in Sources */,
 				2A57C6D22820082200FCB7EE /* CoordinatesManager.swift in Sources */,

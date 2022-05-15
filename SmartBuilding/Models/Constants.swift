@@ -13,6 +13,8 @@ struct K {
     static let cellNibName = "EventCell"
     static let employeeCellNibname = "EmployeeTableViewCell"
     static let employeeCellIdentifier = "EmployeeCell"
+    static let meetingRommCellNibName = "MeetingRoomTableViewCell"
+    static let meetingRoomCellIdentifier = "MeetingRoomCell"
     
     
 }

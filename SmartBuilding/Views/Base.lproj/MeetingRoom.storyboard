@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="g8s-y6-ffL">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -164,7 +163,7 @@
                                     <color key="baseForegroundColor" red="0.13725490196078433" green="0.12156862745098039" blue="0.12549019607843137" alpha="1" colorSpace="calibratedRGB"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="searchPressed:" destination="jh2-fb-fmu" eventType="touchUpInside" id="xh2-mc-PqN"/>
+                                    <action selector="searchRoomsPressed:" destination="jh2-fb-fmu" eventType="touchUpInside" id="9N0-Wq-lBL"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -192,6 +191,12 @@
                         <barButtonItem key="backBarButtonItem" title="Tilbake" id="mJZ-fx-qwg"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="bookingDate" destination="Yzc-Nm-Vxq" id="axP-ky-OjN"/>
+                        <outlet property="bookingTimeFrom" destination="npH-B2-KlN" id="QBx-WY-8pT"/>
+                        <outlet property="bookingTimeTil" destination="GPP-3y-bGi" id="BYa-8h-qHk"/>
+                        <outlet property="dateDropIcon" destination="blU-eh-C00" id="ycw-no-YD6"/>
+                        <outlet property="timeFromDropicon" destination="Sgy-xb-EFg" id="KI4-RN-RdW"/>
+                        <outlet property="timeTilDropIcon" destination="gFk-Uz-aX3" id="bST-FW-pTz"/>
                         <segue destination="cHu-Lw-E7u" kind="show" id="J7k-u5-Ce9"/>
                     </connections>
                 </viewController>
@@ -225,6 +230,7 @@
                         <barButtonItem key="backBarButtonItem" title="Tilbake" id="aR8-JI-2CX"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="meetingRoomsTableView" destination="sNy-t0-ijw" id="J4y-Wj-10r"/>
                         <segue destination="ggT-f6-hkz" kind="show" id="xNw-w1-oV7"/>
                     </connections>
                 </viewController>

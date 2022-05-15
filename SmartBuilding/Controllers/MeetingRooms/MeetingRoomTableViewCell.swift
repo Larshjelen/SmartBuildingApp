@@ -8,7 +8,15 @@
 import UIKit
 
 class MeetingRoomTableViewCell: UITableViewCell {
-
+    
+    
+    @IBOutlet weak var roomImage: UIImageView!
+    
+    @IBOutlet weak var roomName: UILabel!
+    
+    @IBOutlet weak var roomCapacity: UILabel!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
