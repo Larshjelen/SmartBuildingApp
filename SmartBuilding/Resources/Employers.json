@@ -1,0 +1,62 @@
+[
+  {
+    "name": "monica",
+    "position": "backend utvikler",
+    "company": "shortcut",
+    "image": "https://randomuser.me/api/portraits/women/83.jpg"
+  },
+  {
+    "name": "Hans",
+    "position": "backend utvikler",
+    "company": "shortcut",
+    "image": "https://randomuser.me/api/portraits/men/34.jpg"
+  },
+  {
+    "name": "George",
+    "position": "CTO",
+    "company": "shortcut",
+    "image": "https://randomuser.me/api/portraits/men/88.jpg"
+  },
+  {
+    "name": "Jasmine",
+    "position": "Designer",
+    "company": "Webstep",
+    "image": "https://randomuser.me/api/portraits/women/8.jpg"
+  },
+  {
+    "name": "Jamal",
+    "position": "frontend utvikler",
+    "company": "shortcut",
+    "image": "https://randomuser.me/api/portraits/men/66.jpg"
+  },
+  {
+    "name": "Joakim",
+    "position": "backend utvikler",
+    "company": "Rebel",
+    "image": "https://randomuser.me/api/portraits/men/10.jpg"
+  },
+  {
+    "name": "Lars",
+    "position": "IOS utvikler",
+    "company": "xCode",
+    "image": "https://randomuser.me/api/portraits/men/52.jpg"
+  },
+  {
+    "name": "Rima",
+    "position": "HR konsulent",
+    "company": "codeZone",
+    "image": "https://randomuser.me/api/portraits/women/0.jpg"
+  },
+  {
+    "name": "Maria",
+    "position": "backend utvikler",
+    "company": "Vianor",
+    "image": "https://randomuser.me/api/portraits/women/68.jpg"
+  },
+  {
+    "name": "Siri",
+    "position": "fullstack utvikler",
+    "company": "Locate",
+    "image": "https://randomuser.me/api/portraits/women/3.jpg"
+  }
+]
