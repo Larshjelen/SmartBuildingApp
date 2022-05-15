@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "icon_restaurant_large.svg",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
