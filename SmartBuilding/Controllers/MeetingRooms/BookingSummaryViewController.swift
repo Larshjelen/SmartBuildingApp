@@ -28,6 +28,11 @@ class BookingSummaryViewController: UIViewController {
     var bookingDate : String?
     var bookingTimeFrom : String?
     var bookingTimeTil : String?
+    var selectedRoomImage : String?
+    
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    
+    var utils = Utils()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,21 +44,40 @@ class BookingSummaryViewController: UIViewController {
         guard let selectedMeetingRoomTimeFrom = bookingTimeFrom else {return}
         guard let selectedMeetingRoomTimeTil = bookingTimeTil else {return}
         
+        
         name.text = selectedMeetingRoomName
         date.text = selectedMeetingRoomDate
-        time.text = "\(selectedMeetingRoomTimeFrom):\(selectedMeetingRoomTimeTil)"
+        time.text = "\(selectedMeetingRoomTimeFrom) - \(selectedMeetingRoomTimeTil)"
         price.text = selectedMeetingRoomPrice
         capacity.text = selectedMeetingRoomCapacity
+        
+        navigationController?.title = "Book\(selectedMeetingRoomName)"
         
        
     }
     
 
     @IBAction func applePayPressed(_ sender: UIButton) {
+        
+        saveBooking()
+        
         let vc = UIStoryboard.init(name: "MeetingRoom", bundle: Bundle.main).instantiateViewController(withIdentifier: "bookingConfirmation") as? BookingConfirmationViewController
          self.navigationController?.pushViewController(vc!, animated: true)
     }
     
+    func saveBooking(){
+    
+        let newBooking = Booking(context: self.context)
+        newBooking.roomName = name.text
+        newBooking.bookingDate = bookingDate
+        newBooking.bookingStartTime = bookingTimeFrom
+        newBooking.bookingEndTime = bookingTimeTil
+        newBooking.roomPrice = meetingRoomPrice
+        newBooking.roomCapacity = meetingRoomCapacity
+        guard let selectedMeetingRoomImage = selectedRoomImage else {return}
+        newBooking.roomImage = selectedMeetingRoomImage
+        utils.saveToDB(context: context)
+    }
     
     /*
     // MARK: - Navigation

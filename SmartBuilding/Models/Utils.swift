@@ -82,7 +82,6 @@ struct Utils {
         }catch{
             print(error.localizedDescription)
         }
-        
     }
     
     func loadFromDB(context : NSManagedObjectContext) -> [User]?{

@@ -16,7 +16,7 @@ class BookingConfirmationViewController: UIViewController {
     }
     
     @IBAction func completePressed(_ sender: UIButton) {
-        let vc = UIStoryboard.init(name: "MeetingRoom", bundle: Bundle.main).instantiateViewController(withIdentifier: "bookingDetails") as? PersonaliaViewController
+        let vc = UIStoryboard.init(name: "MeetingRoom", bundle: Bundle.main).instantiateViewController(withIdentifier: "bookingDetails") as? BookingDetailsViewController
          self.navigationController?.pushViewController(vc!, animated: true)
     }
     

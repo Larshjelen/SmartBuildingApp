@@ -18,7 +18,7 @@ class MeetingRoomsDetailsViewController: UIViewController {
     @IBOutlet weak var aboutText: UILabel!
     var meetingRoom : MeetingRoomData?
     var utils = Utils()
-    
+    var selectedRoomImage : String?
     var bookingDate : String?
     var bookingTimeFrom : String?
     var bookingTimeTil : String?
@@ -35,6 +35,9 @@ class MeetingRoomsDetailsViewController: UIViewController {
         meetingRoomPrice.text = "\(String(selectedRoom.priceList.Hourly.net_price)),- per time"
         meetingRoomCapacity.text = "\(selectedRoom.maxPersons) pax"
         aboutText.text = "Om \(utils.substractRoomName(string: selectedRoom.name))"
+        selectedRoomImage = selectedRoom.imgUrl
+        
+        navigationController?.title = selectedRoom.name
     }
     
     @IBAction func choosePressed(_ sender: UIButton) {
@@ -51,6 +54,7 @@ class MeetingRoomsDetailsViewController: UIViewController {
         vc?.meetingRomName = meetingRoomName.text
         vc?.meetingRoomPrice = meetingRoomPrice.text
         vc?.meetingRoomCapacity = meetingRoomCapacity.text
+        vc?.selectedRoomImage = selectedRoomImage
     }
     
     /*
