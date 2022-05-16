@@ -8,16 +8,25 @@
 import UIKit
 
 class BookingSummaryViewController: UIViewController {
+    
+    var meetingRomName : String?
+    var meetingRoomCapacity : String?
+    var meetingRoomPrice : String?
+    var bookingDate : String
+    var bookingTimeFrom : String
+    var bookingTimeTil : String
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        guard let selectedMeetingRoomName = meetingRomName else {return}
+        
+        print(selectedMeetingRoomName)
     }
     
 
     @IBAction func applePayPressed(_ sender: UIButton) {
-        let vc = UIStoryboard.init(name: "MeetingRoom", bundle: Bundle.main).instantiateViewController(withIdentifier: "bookingConfirmation") as? PersonaliaViewController
+        let vc = UIStoryboard.init(name: "MeetingRoom", bundle: Bundle.main).instantiateViewController(withIdentifier: "bookingConfirmation") as? BookingConfirmationViewController
          self.navigationController?.pushViewController(vc!, animated: true)
     }
     
