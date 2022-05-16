@@ -58,6 +58,8 @@
 		813CC9C02832524E004331AC /* FPButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813CC9BF2832524E004331AC /* FPButtons.swift */; };
 		813CC9C228325A26004331AC /* FPButtonShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813CC9C128325A26004331AC /* FPButtonShadow.swift */; };
 		813CC9C528327216004331AC /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813CC9C428327216004331AC /* ShadowView.swift */; };
+		813CC9C728327906004331AC /* BorderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813CC9C628327906004331AC /* BorderView.swift */; };
+		813CC9CC28327B1B004331AC /* ACBorderYellowLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813CC9CB28327B1B004331AC /* ACBorderYellowLabel.swift */; };
 		815228BA282A6240007EEE74 /* AccessCode.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 815228B8282A6240007EEE74 /* AccessCode.storyboard */; };
 		815228BD282A7D5B007EEE74 /* LoginAccessCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815228BC282A7D5B007EEE74 /* LoginAccessCodeViewController.swift */; };
 		815228BF282A7E5E007EEE74 /* FindEmployeeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815228BE282A7E5E007EEE74 /* FindEmployeeViewController.swift */; };
@@ -165,6 +167,8 @@
 		813CC9BF2832524E004331AC /* FPButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPButtons.swift; sourceTree = "<group>"; };
 		813CC9C128325A26004331AC /* FPButtonShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPButtonShadow.swift; sourceTree = "<group>"; };
 		813CC9C428327216004331AC /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
+		813CC9C628327906004331AC /* BorderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderView.swift; sourceTree = "<group>"; };
+		813CC9CB28327B1B004331AC /* ACBorderYellowLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACBorderYellowLabel.swift; sourceTree = "<group>"; };
 		815228B9282A6240007EEE74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/AccessCode.storyboard; sourceTree = "<group>"; };
 		815228BC282A7D5B007EEE74 /* LoginAccessCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAccessCodeViewController.swift; sourceTree = "<group>"; };
 		815228BE282A7E5E007EEE74 /* FindEmployeeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindEmployeeViewController.swift; sourceTree = "<group>"; };
@@ -272,6 +276,7 @@
 		2A64A2012823F572002F63C3 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				813CC9CA28327AF8004331AC /* Label */,
 				813CC9C3283271FA004331AC /* View */,
 				81C06C2B282D018E0084F996 /* Images */,
 				81C06C1F282BE4C00084F996 /* Progress Bar */,
@@ -456,8 +461,17 @@
 			isa = PBXGroup;
 			children = (
 				813CC9C428327216004331AC /* ShadowView.swift */,
+				813CC9C628327906004331AC /* BorderView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		813CC9CA28327AF8004331AC /* Label */ = {
+			isa = PBXGroup;
+			children = (
+				813CC9CB28327B1B004331AC /* ACBorderYellowLabel.swift */,
+			);
+			path = Label;
 			sourceTree = "<group>";
 		};
 		815228BB282A7D08007EEE74 /* AccessCode */ = {
@@ -802,6 +816,7 @@
 				2AB7648827E89F8D0084062C /* SmartBuilding.xcdatamodeld in Sources */,
 				819B916A282E672900863FEC /* BookingConfirmationViewController.swift in Sources */,
 				2AD3D63928181B6F0008B8D2 /* MeetingRomManager.swift in Sources */,
+				813CC9CC28327B1B004331AC /* ACBorderYellowLabel.swift in Sources */,
 				2A98EC5028314127007CC44B /* MeetingRoomManagerApi.swift in Sources */,
 				2A035EBB2811643900E037AC /* CustomMapMarker.swift in Sources */,
 				8163F7E42827F12F0002C60A /* ResturantsData.swift in Sources */,
@@ -812,6 +827,7 @@
 				2A0BCC4A28291DB400363BEA /* CompletedUserRegistrationViewController.swift in Sources */,
 				2AB764B927E8A8110084062C /* EventCellController.swift in Sources */,
 				819B9168282E66F500863FEC /* BookingSummaryViewController.swift in Sources */,
+				813CC9C728327906004331AC /* BorderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
