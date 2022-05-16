@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LIN-0g-bIo">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -89,6 +88,8 @@
                         <barButtonItem key="backBarButtonItem" title="Tilbake" id="vIL-8J-www"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="employeeTableView" destination="Ejp-pz-odZ" id="CZu-p5-ByM"/>
+                        <outlet property="searchEmployerTextField" destination="53D-KZ-cVf" id="o3j-mE-MDD"/>
                         <segue destination="rbw-GZ-PQb" kind="show" identifier="toNotifyEmployee" id="70W-gD-1ml"/>
                     </connections>
                 </viewController>
@@ -279,10 +280,10 @@
             </objects>
             <point key="canvasLocation" x="6941.6000000000004" y="940.64039408866995"/>
         </scene>
-        <!--View Controller-->
+        <!--Generate Code View Controller-->
         <scene sceneID="VAw-RC-pL4">
             <objects>
-                <viewController id="J0Y-DQ-iYA" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="generateAccessCode" id="J0Y-DQ-iYA" customClass="GenerateCodeViewController" customModule="SmartBuilding" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eGr-ms-0F2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

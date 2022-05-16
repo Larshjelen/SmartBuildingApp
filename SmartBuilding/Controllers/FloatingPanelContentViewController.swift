@@ -36,9 +36,10 @@ class FloatingPanelContentViewController: UIViewController, SFSafariViewControll
     
     //Testing overlaying buttons
     
-    @IBAction func TopAccesCodeButtonPressed(_ sender: UIButton) {
-        print("TopAccessCodeButton Pressed")
+    @IBAction func UserGetCodePressed(_ sender: UIButton) {
+        performSegue(withIdentifier: "toEmployeeGenerateCode", sender: self)
     }
+    
     @IBAction func MiddleAccessCodeButtonPressed(_ sender: UIButton) {
         print("MiddleAccessCodeButton Pressed")
     }
@@ -46,9 +47,7 @@ class FloatingPanelContentViewController: UIViewController, SFSafariViewControll
         print("BottomAccessCodeButton Pressed")
     }
     @IBAction func SecondButtonPressed(_ sender: UIButton) {
-        BottomAccesCodeView.isHidden = true
-        //TopAccessCodeView.isHidden = true
-        MiddleAccessCodeView.isHidden = true
+        performSegue(withIdentifier: "toFindEmployee", sender: self)
     }
     @IBAction func ThirdButtonPressed(_ sender: UIButton) {
         //BottomAccesCodeView.isHidden = false
@@ -57,6 +56,9 @@ class FloatingPanelContentViewController: UIViewController, SFSafariViewControll
         performSegue(withIdentifier: "toMeetingRoom", sender: self)
     }
     
+    @IBAction func EventsPressed(_ sender: UIButton) {
+        performSegue(withIdentifier: "toEvents", sender: self)
+    }
     
     
     
