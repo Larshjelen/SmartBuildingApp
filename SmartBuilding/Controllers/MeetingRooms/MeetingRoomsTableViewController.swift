@@ -72,6 +72,9 @@ extension MeetingRoomsTableViewController : UITableViewDelegate {
         let selectedRoom = fetchedRooms[index]
         
         meetingRoomsDetailsVC!.meetingRoom = selectedRoom
+        meetingRoomsDetailsVC!.bookingDate = bookingDate
+        meetingRoomsDetailsVC!.bookingTimeFrom = bookingTimeFrom
+        meetingRoomsDetailsVC!.bookingTimeTil = bookingTimeTil
         
     }
 }
