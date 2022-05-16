@@ -55,6 +55,8 @@
 		2AB764BF27E8C7460084062C /* EventData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB764BE27E8C7460084062C /* EventData.swift */; };
 		2AD3D63928181B6F0008B8D2 /* MeetingRomManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD3D63828181B6F0008B8D2 /* MeetingRomManager.swift */; };
 		8136652027FEDF71001FD732 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8136651F27FEDF71001FD732 /* MapViewController.swift */; };
+		813CC9C02832524E004331AC /* FPButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813CC9BF2832524E004331AC /* FPButtons.swift */; };
+		813CC9C228325A26004331AC /* FPButtonShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813CC9C128325A26004331AC /* FPButtonShadow.swift */; };
 		815228BA282A6240007EEE74 /* AccessCode.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 815228B8282A6240007EEE74 /* AccessCode.storyboard */; };
 		815228BD282A7D5B007EEE74 /* LoginAccessCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815228BC282A7D5B007EEE74 /* LoginAccessCodeViewController.swift */; };
 		815228BF282A7E5E007EEE74 /* FindEmployeeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815228BE282A7E5E007EEE74 /* FindEmployeeViewController.swift */; };
@@ -159,6 +161,8 @@
 		2AB764BE27E8C7460084062C /* EventData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventData.swift; sourceTree = "<group>"; };
 		2AD3D63828181B6F0008B8D2 /* MeetingRomManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetingRomManager.swift; sourceTree = "<group>"; };
 		8136651F27FEDF71001FD732 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		813CC9BF2832524E004331AC /* FPButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPButtons.swift; sourceTree = "<group>"; };
+		813CC9C128325A26004331AC /* FPButtonShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPButtonShadow.swift; sourceTree = "<group>"; };
 		815228B9282A6240007EEE74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/AccessCode.storyboard; sourceTree = "<group>"; };
 		815228BC282A7D5B007EEE74 /* LoginAccessCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAccessCodeViewController.swift; sourceTree = "<group>"; };
 		815228BE282A7E5E007EEE74 /* FindEmployeeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindEmployeeViewController.swift; sourceTree = "<group>"; };
@@ -288,6 +292,8 @@
 			children = (
 				2A64A2042823F742002F63C3 /* SecondaryLargeButton.swift */,
 				81C06C29282CF8DE0084F996 /* CheckButton.swift */,
+				813CC9BF2832524E004331AC /* FPButtons.swift */,
+				813CC9C128325A26004331AC /* FPButtonShadow.swift */,
 			);
 			path = Buttons;
 			sourceTree = "<group>";
@@ -750,6 +756,7 @@
 				8163F7E22827F03F0002C60A /* ResturantsManager.swift in Sources */,
 				2AB7648227E89F8D0084062C /* EventsViewController.swift in Sources */,
 				819B916C282E675600863FEC /* BookingDetailsViewController.swift in Sources */,
+				813CC9C02832524E004331AC /* FPButtons.swift in Sources */,
 				2A0BCC4628291D8600363BEA /* PersonaliaViewController.swift in Sources */,
 				815228C3282A7F50007EEE74 /* NotifiedEmployeeViewController.swift in Sources */,
 				2AB764BF27E8C7460084062C /* EventData.swift in Sources */,
@@ -757,6 +764,7 @@
 				815228BD282A7D5B007EEE74 /* LoginAccessCodeViewController.swift in Sources */,
 				81B7CAE62831291A006DE8A4 /* Employee.swift in Sources */,
 				819B915E282E522B00863FEC /* GuestInformationViewController.swift in Sources */,
+				813CC9C228325A26004331AC /* FPButtonShadow.swift in Sources */,
 				81B7CAED28312A24006DE8A4 /* BookingDateViewController.swift in Sources */,
 				2A20BE6C282AE30C00D7024A /* CustomTextField.swift in Sources */,
 				81C06C1D282BDAB80084F996 /* EmployeeTableViewCell.swift in Sources */,
