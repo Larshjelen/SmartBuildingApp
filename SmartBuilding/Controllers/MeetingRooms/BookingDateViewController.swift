@@ -143,6 +143,9 @@ class BookingDateViewController: UIViewController {
         let vc = UIStoryboard.init(name: "MeetingRoom", bundle: Bundle.main).instantiateViewController(withIdentifier: "meetingRoomsTable") as? MeetingRoomsTableViewController
          self.navigationController?.pushViewController(vc!, animated: true)
         
+        vc?.bookingTimeFrom = bookingTimeFrom.text
+        vc?.bookingTimeTil = bookingTimeTil.text
+        vc?.bookingDate = bookingDate.text
     }
     
 }

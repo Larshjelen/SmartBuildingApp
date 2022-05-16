@@ -16,6 +16,10 @@ class MeetingRoomsTableViewController: UIViewController {
     var utils = Utils()
     var fetchedRooms : [MeetingRoomData] = []
     
+    var bookingDate : String?
+    var bookingTimeFrom : String?
+    var bookingTimeTil : String?
+    
     var refreshControll = UIRefreshControl()
     
     override func viewDidLoad() {
@@ -23,16 +27,13 @@ class MeetingRoomsTableViewController: UIViewController {
 
         meetingRoomsTableView.register(UINib(nibName: K.meetingRommCellNibName, bundle: nil), forCellReuseIdentifier: K.meetingRoomCellIdentifier)
         
-       // meetingRoomsTableView.delegate = self
+        meetingRoomsTableView.delegate = self
         meetingRoomsTableView.dataSource = self
         meetingRoomManager.delegate = self
         
         //fetch api-data
         meetingRoomManager.performRequest()
     }
-    
-
-
 }
 
 extension MeetingRoomsTableViewController : UITableViewDataSource {
@@ -49,6 +50,22 @@ extension MeetingRoomsTableViewController : UITableViewDataSource {
         cell.roomCapacity.text = "\(String(fetchedRooms[indexPath.row].maxPersons)) pax"
         cell.roomImage.image = utils.urlToImage(StringImage: fetchedRooms[indexPath.row].imgUrl)
         return cell
+    }
+}
+
+extension MeetingRoomsTableViewController : UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let meetingRoomsDetailsVC = UIStoryboard.init(name: "MeetingRoom", bundle: Bundle.main).instantiateViewController(withIdentifier: "meetingRoomDetails") as? MeetingRoomsDetailsViewController
+         self.navigationController?.pushViewController(meetingRoomsDetailsVC!, animated: true)
+        
+        let index = indexPath.row
+        
+        let selectedRoom = fetchedRooms[index]
+        
+        meetingRoomsDetailsVC!.meetingRoom = selectedRoom
+        
     }
 }
 
