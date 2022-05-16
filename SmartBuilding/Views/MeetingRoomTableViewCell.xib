@@ -12,7 +12,7 @@
         <tableViewCell contentMode="center" selectionStyle="default" indentationWidth="10" reuseIdentifier="MeetingRoomCell" rowHeight="113" id="KGk-i7-Jjw" customClass="MeetingRoomTableViewCell" customModule="SmartBuilding" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="345" height="113"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="345" height="113"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
@@ -60,7 +60,7 @@
                     <constraint firstItem="OZa-dr-edC" firstAttribute="leading" secondItem="bdf-it-VDa" secondAttribute="trailing" constant="8" id="VXo-MR-ky6"/>
                     <constraint firstItem="7sQ-fN-Zg8" firstAttribute="top" secondItem="Py7-mo-atd" secondAttribute="bottom" constant="4" id="dIa-oQ-sMK"/>
                     <constraint firstItem="Py7-mo-atd" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="lQI-Yb-YBB"/>
-                    <constraint firstAttribute="bottom" secondItem="bdf-it-VDa" secondAttribute="bottom" id="txz-fF-sPq"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="bdf-it-VDa" secondAttribute="bottom" id="txz-fF-sPq"/>
                     <constraint firstItem="bdf-it-VDa" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="u2B-Tl-8SX"/>
                     <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="OZa-dr-edC" secondAttribute="trailing" constant="102" id="zBi-cZ-3dd"/>
                 </constraints>
@@ -71,7 +71,7 @@
                 <outlet property="roomImage" destination="bdf-it-VDa" id="3fL-kd-HCe"/>
                 <outlet property="roomName" destination="7sQ-fN-Zg8" id="OZk-om-bvd"/>
             </connections>
-            <point key="canvasLocation" x="139.85507246376812" y="155.02232142857142"/>
+            <point key="canvasLocation" x="138.40000000000001" y="152.58620689655174"/>
         </tableViewCell>
     </objects>
     <resources>

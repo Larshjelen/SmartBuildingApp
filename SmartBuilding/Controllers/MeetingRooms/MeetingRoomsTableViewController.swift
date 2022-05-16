@@ -55,6 +55,13 @@ extension MeetingRoomsTableViewController : UITableViewDataSource {
 
 extension MeetingRoomsTableViewController : UITableViewDelegate {
     
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        UITableView.automaticDimension
+    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        UITableView.automaticDimension
+    }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let meetingRoomsDetailsVC = UIStoryboard.init(name: "MeetingRoom", bundle: Bundle.main).instantiateViewController(withIdentifier: "meetingRoomDetails") as? MeetingRoomsDetailsViewController
