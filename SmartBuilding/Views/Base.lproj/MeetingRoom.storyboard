@@ -536,6 +536,11 @@
                         <barButtonItem key="backBarButtonItem" title="Tilbake" id="pKx-kV-zlY"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="capacity" destination="FwS-ZF-AUT" id="4kn-hC-a1K"/>
+                        <outlet property="date" destination="OuC-FL-Rds" id="GeH-Oy-v4J"/>
+                        <outlet property="name" destination="oom-zI-IWA" id="Qxj-0g-Alx"/>
+                        <outlet property="price" destination="mi6-DL-rE3" id="ak7-0v-rch"/>
+                        <outlet property="time" destination="LbJ-sk-4gE" id="Qun-u0-qUA"/>
                         <segue destination="WGW-s2-29T" kind="show" id="33w-wQ-XFY"/>
                     </connections>
                 </viewController>
