@@ -13,7 +13,7 @@ import PhoneFUELGoogleMaps
 import PhoneFUELWayfinding
 import FloatingPanel
 
-class MapViewController: UIViewController, FloatingPanelControllerDelegate{
+class MapViewController: UIViewController, FloatingPanelControllerDelegate, UISearchBarDelegate{
 
     private lazy var openIdAuthenticationServiceDelegate = OpenIdAuthenticationServiceDelegate(viewController: self)
     private lazy var spfLocationManager = SPFLocationManager()
@@ -26,6 +26,7 @@ class MapViewController: UIViewController, FloatingPanelControllerDelegate{
     
         
     @IBOutlet weak var gMapView: GMSMapView!
+    @IBOutlet weak var mapSearchField: UISearchBar!
     
  
     var mapMarker : GMSMarker!
@@ -51,11 +52,14 @@ class MapViewController: UIViewController, FloatingPanelControllerDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        mapSearchField.delegate = self
+        
         do {
             gMapView.mapStyle = try GMSMapStyle(jsonString: MapStyle)
         } catch {}
         
         gMapView.delegate = self
+        
     
         clLocationManager.delegate = self
         if mapViewEnhancer == nil {
@@ -71,6 +75,10 @@ class MapViewController: UIViewController, FloatingPanelControllerDelegate{
        
     }
     
+    func searchBarShouldBeginEditing(_ searchBar: UISearchBar) -> Bool {
+        performSegue(withIdentifier: "toSearchView", sender: self)
+        return false
+    }
     
     func startNavigation (){
         

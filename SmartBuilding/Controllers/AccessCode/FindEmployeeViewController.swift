@@ -96,7 +96,8 @@ extension FindEmployeeViewController : UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        let EmployeeDetailsVC = UIStoryboard.init(name: "AccessCode", bundle: Bundle.main).instantiateViewController(withIdentifier: "notifyEmployee") as? FoundEmployeeViewController
+        let EmployeeDetailsVC = storyboard?.instantiateViewController(withIdentifier: "notifyEmployee") as? FoundEmployeeViewController
+       // let EmployeeDetailsVC = UIStoryboard.init(name: "AccessCode", bundle: Bundle.main).instantiateViewController(withIdentifier: "notifyEmployee") as? FoundEmployeeViewController
        
         
         self.navigationController?.pushViewController(EmployeeDetailsVC!, animated: true)
@@ -109,3 +110,4 @@ extension FindEmployeeViewController : UITableViewDelegate{
       }
             
      }
+

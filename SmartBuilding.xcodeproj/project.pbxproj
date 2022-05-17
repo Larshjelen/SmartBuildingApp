@@ -93,6 +93,7 @@
 		81C06C31282D62650084F996 /* MeetingRoom.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81C06C2F282D62650084F996 /* MeetingRoom.storyboard */; };
 		81C06C34282D63090084F996 /* MeetingRoomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C06C32282D63080084F996 /* MeetingRoomTableViewCell.swift */; };
 		81C06C35282D63090084F996 /* MeetingRoomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81C06C33282D63080084F996 /* MeetingRoomTableViewCell.xib */; };
+		81E130702833EFB4000CDECB /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E1306F2833EFB4000CDECB /* SearchViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -202,6 +203,7 @@
 		81C06C30282D62650084F996 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MeetingRoom.storyboard; sourceTree = "<group>"; };
 		81C06C32282D63080084F996 /* MeetingRoomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetingRoomTableViewCell.swift; sourceTree = "<group>"; };
 		81C06C33282D63080084F996 /* MeetingRoomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MeetingRoomTableViewCell.xib; sourceTree = "<group>"; };
+		81E1306F2833EFB4000CDECB /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		DEE8CEFABCAD7BE2E8EBD8F4 /* Pods-SmartBuilding.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartBuilding.debug.xcconfig"; path = "Target Support Files/Pods-SmartBuilding/Pods-SmartBuilding.debug.xcconfig"; sourceTree = "<group>"; };
 		F79748D6ED2F637BF5B1BA7C /* Pods_SmartBuilding.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartBuilding.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF91335F35C030B66A0B9AC8 /* Pods-SmartBuilding.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartBuilding.release.xcconfig"; path = "Target Support Files/Pods-SmartBuilding/Pods-SmartBuilding.release.xcconfig"; sourceTree = "<group>"; };
@@ -437,6 +439,7 @@
 				2A57C6D52820215800FCB7EE /* FPMeetingRoomViewController.swift */,
 				8163F7E52827FA7D0002C60A /* ResturantsViewController.swift */,
 				2A0BCC4B28291DEF00363BEA /* LogInViewController.swift */,
+				81E1306F2833EFB4000CDECB /* SearchViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -779,6 +782,7 @@
 				819B9160282E52C600863FEC /* InviteSentViewController.swift in Sources */,
 				2A98EC4E28313FCD007CC44B /* MeetingRoomData.swift in Sources */,
 				2A57C6D62820215800FCB7EE /* FPMeetingRoomViewController.swift in Sources */,
+				81E130702833EFB4000CDECB /* SearchViewController.swift in Sources */,
 				81C06C2D282D01AF0084F996 /* CircleImageView.swift in Sources */,
 				2A0BCC4028291CF600363BEA /* ChooseUserViewController.swift in Sources */,
 				8163F7E22827F03F0002C60A /* ResturantsManager.swift in Sources */,
