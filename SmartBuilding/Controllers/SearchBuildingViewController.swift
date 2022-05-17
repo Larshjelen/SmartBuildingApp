@@ -87,5 +87,15 @@ extension SearchBuildingViewController : UITableViewDataSource{
 extension SearchBuildingViewController : UITableViewDelegate{
     
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let mapVC = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "mapView") as? MapViewController
+        
+        mapVC?.searchedMeetingRoom = filteredRoomData.meetingRooms[indexPath.row]
+        print(filteredRoomData.meetingRooms[indexPath.row].name)
+        mapVC?.viewDidLoad()
+        self.navigationController?.dismiss(animated: true)
+        
+    }
     
 }

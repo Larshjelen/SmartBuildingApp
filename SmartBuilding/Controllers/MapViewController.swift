@@ -49,6 +49,8 @@ class MapViewController: UIViewController, FloatingPanelControllerDelegate, UISe
     var helpers = Utils()
     var coordinatesManager = CoordinatesManager()
     
+    var searchedMeetingRoom : SearchRoom?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -71,6 +73,10 @@ class MapViewController: UIViewController, FloatingPanelControllerDelegate, UISe
         showFloatingPanel()
         nextStartupStep()
         showAnnotations()
+        
+        guard let searchedRoom = searchedMeetingRoom else {return}
+        
+        print(searchedRoom.name)
         
        
     }

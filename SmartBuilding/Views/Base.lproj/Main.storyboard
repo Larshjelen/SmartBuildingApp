@@ -1734,7 +1734,7 @@
         <!--Item-->
         <scene sceneID="bVu-Lk-8ri">
             <objects>
-                <viewController storyboardIdentifier="mapView" id="qsv-hy-RSR" customClass="MapViewController" customModule="SmartBuilding" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="mapView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="qsv-hy-RSR" customClass="MapViewController" customModule="SmartBuilding" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vZu-WQ-TCI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1744,7 +1744,7 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                             <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="v5v-Pc-S8f">
-                                <rect key="frame" x="21" y="35" width="338" height="51"/>
+                                <rect key="frame" x="20" y="35" width="339" height="51"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
@@ -2032,9 +2032,7 @@
                             <constraint firstItem="a0U-Tm-Cag" firstAttribute="bottom" secondItem="Edi-rG-khh" secondAttribute="bottom" constant="34" id="ziV-8l-Xh9"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Tzh-JH-k9U">
-                        <barButtonItem key="backBarButtonItem" title="Tilbake" id="npU-tL-06Y"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="Tzh-JH-k9U"/>
                     <connections>
                         <outlet property="tableView" destination="Edi-rG-khh" id="hG2-ig-1ys"/>
                         <outlet property="textField" destination="mpD-0I-Z8P" id="Fsd-yV-64d"/>
