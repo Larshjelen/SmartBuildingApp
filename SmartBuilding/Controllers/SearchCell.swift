@@ -7,8 +7,11 @@
 
 import UIKit
 
-class SearchCellTableViewCell: UITableViewCell {
-
+class SearchCell: UITableViewCell {
+    
+    
+    @IBOutlet weak var roomName: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

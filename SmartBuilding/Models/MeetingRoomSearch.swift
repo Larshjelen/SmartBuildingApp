@@ -9,16 +9,16 @@ import Foundation
 
 struct MeetingRoomSearch : Codable {
     
-    let rooms : [Room]
+    let meetingRooms : [SearchRoom]
 }
 
-struct Room : Codable {
+struct SearchRoom : Codable {
     
     let name : String
-    let location : Location
+    let location : SearchLocation
 }
 
-struct Location : Codable {
+struct SearchLocation : Codable {
     
     let lat : Double
     let long : Double

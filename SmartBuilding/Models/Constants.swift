@@ -18,7 +18,7 @@ struct K {
     static let meetingRommCellNibName = "MeetingRoomTableViewCell"
     static let meetingRoomCellIdentifier = "MeetingRoomCell"
     
-    static let searchCellNibName = "searchTableViewCell"
+    static let searchCellNibName = "searchCell"
     static let searchCellIdentifier = "searchCell"
     
     

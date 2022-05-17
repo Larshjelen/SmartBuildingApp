@@ -33,7 +33,7 @@ class FindEmployeeViewController: UIViewController {
         employeeTableView.dataSource = self
         employeeTableView.delegate = self
         
-        if let data =  utils.loadJson(fileName: "Employers"){
+        if let data =  utils.loadEmployeeJson(fileName: "Employers"){
             employeeData = data
         }
         searchEmployerTextField.addTarget(self, action: #selector(textSearchChange(_:)), for: .editingChanged)

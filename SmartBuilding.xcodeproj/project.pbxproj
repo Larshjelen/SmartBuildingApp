@@ -57,9 +57,9 @@
 		2AD3D63928181B6F0008B8D2 /* MeetingRomManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD3D63828181B6F0008B8D2 /* MeetingRomManager.swift */; };
 		2ADF6FE52833FBFC00AED718 /* Coordinates_Rebel.json in Resources */ = {isa = PBXBuildFile; fileRef = 2ADF6FE42833FBFC00AED718 /* Coordinates_Rebel.json */; };
 		2AFB5CD3283406D100030008 /* SearchBuildingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFB5CD2283406D100030008 /* SearchBuildingViewController.swift */; };
-		2AFB5CD6283409F300030008 /* SearchCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFB5CD4283409F300030008 /* SearchCellTableViewCell.swift */; };
-		2AFB5CD7283409F300030008 /* SearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2AFB5CD5283409F300030008 /* SearchTableViewCell.xib */; };
+		2AFB5CD6283409F300030008 /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFB5CD4283409F300030008 /* SearchCell.swift */; };
 		2AFB5CD928340BFC00030008 /* MeetingRoomSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFB5CD828340BFC00030008 /* MeetingRoomSearch.swift */; };
+		2AFB5CDB2834169A00030008 /* searchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2AFB5CDA2834169A00030008 /* searchCell.xib */; };
 		8136652027FEDF71001FD732 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8136651F27FEDF71001FD732 /* MapViewController.swift */; };
 		813CC9C02832524E004331AC /* FPButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813CC9BF2832524E004331AC /* FPButtons.swift */; };
 		813CC9C228325A26004331AC /* FPButtonShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813CC9C128325A26004331AC /* FPButtonShadow.swift */; };
@@ -173,9 +173,9 @@
 		2AD3D63828181B6F0008B8D2 /* MeetingRomManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetingRomManager.swift; sourceTree = "<group>"; };
 		2ADF6FE42833FBFC00AED718 /* Coordinates_Rebel.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Coordinates_Rebel.json; sourceTree = "<group>"; };
 		2AFB5CD2283406D100030008 /* SearchBuildingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBuildingViewController.swift; sourceTree = "<group>"; };
-		2AFB5CD4283409F300030008 /* SearchCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCellTableViewCell.swift; sourceTree = "<group>"; };
-		2AFB5CD5283409F300030008 /* SearchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchTableViewCell.xib; sourceTree = "<group>"; };
+		2AFB5CD4283409F300030008 /* SearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
 		2AFB5CD828340BFC00030008 /* MeetingRoomSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetingRoomSearch.swift; sourceTree = "<group>"; };
+		2AFB5CDA2834169A00030008 /* searchCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = searchCell.xib; sourceTree = "<group>"; };
 		8136651F27FEDF71001FD732 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		813CC9BF2832524E004331AC /* FPButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPButtons.swift; sourceTree = "<group>"; };
 		813CC9C128325A26004331AC /* FPButtonShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPButtonShadow.swift; sourceTree = "<group>"; };
@@ -419,7 +419,6 @@
 		2AB764B127E8A2E10084062C /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				2AFB5CD5283409F300030008 /* SearchTableViewCell.xib */,
 				81C06C33282D63080084F996 /* MeetingRoomTableViewCell.xib */,
 				81C06C2F282D62650084F996 /* MeetingRoom.storyboard */,
 				81C06C24282BF1DF0084F996 /* Invite.storyboard */,
@@ -430,6 +429,7 @@
 				2AB764B827E8A8100084062C /* EventCell.xib */,
 				2A035EBC2811647E00E037AC /* CustomMapMarkerView.xib */,
 				8163F7E8282806090002C60A /* ResturantCell.xib */,
+				2AFB5CDA2834169A00030008 /* searchCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -453,7 +453,7 @@
 				2A0BCC4B28291DEF00363BEA /* LogInViewController.swift */,
 				81E1306F2833EFB4000CDECB /* SearchViewController.swift */,
 				2AFB5CD2283406D100030008 /* SearchBuildingViewController.swift */,
-				2AFB5CD4283409F300030008 /* SearchCellTableViewCell.swift */,
+				2AFB5CD4283409F300030008 /* SearchCell.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -691,11 +691,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2AFB5CD7283409F300030008 /* SearchTableViewCell.xib in Resources */,
 				81C06C31282D62650084F996 /* MeetingRoom.storyboard in Resources */,
 				81C06C1E282BDAB80084F996 /* EmployeeTableViewCell.xib in Resources */,
 				81B7CAEB283129C8006DE8A4 /* Employers.json in Resources */,
 				8163F7EA282806090002C60A /* ResturantCell.xib in Resources */,
+				2AFB5CDB2834169A00030008 /* searchCell.xib in Resources */,
 				815228BA282A6240007EEE74 /* AccessCode.storyboard in Resources */,
 				2AB764BA27E8A8120084062C /* EventCell.xib in Resources */,
 				2A20BE3128298F8400D7024A /* Events.storyboard in Resources */,
@@ -802,7 +802,7 @@
 				2A57C6D62820215800FCB7EE /* FPMeetingRoomViewController.swift in Sources */,
 				81E130702833EFB4000CDECB /* SearchViewController.swift in Sources */,
 				81C06C2D282D01AF0084F996 /* CircleImageView.swift in Sources */,
-				2AFB5CD6283409F300030008 /* SearchCellTableViewCell.swift in Sources */,
+				2AFB5CD6283409F300030008 /* SearchCell.swift in Sources */,
 				2A0BCC4028291CF600363BEA /* ChooseUserViewController.swift in Sources */,
 				8163F7E22827F03F0002C60A /* ResturantsManager.swift in Sources */,
 				2AB7648227E89F8D0084062C /* EventsViewController.swift in Sources */,
