@@ -112,7 +112,16 @@ extension EventsViewController {
     
 
 
-
+extension FloatingPanelContentViewController:BookingDetailsViewControllerDelegate {
+    func didUpdateBooking(booking: [Booking]) {
+        bookingRoomName.text = booking.last?.roomName
+        bookingRoomDate.text = booking.last?.bookingDate
+        let timeFrom = booking.last?.bookingStartTime
+        let timeTil = booking.last?.bookingEndTime
+        guard let bookingTimeFrom = timeFrom, let bookingTimeTil = timeTil else {return }
+        bookingRoomTime.text = "\(bookingTimeFrom)-\(bookingTimeTil)"
+    }
+}
 
 
 

@@ -6,11 +6,13 @@
 //
 
 import UIKit
+import CoreData
 import SafariServices
 
 class FloatingPanelContentViewController: UIViewController, SFSafariViewControllerDelegate {
 
     private lazy var rebelAuthManager = RebelAuthManager(viewController: self)
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     var meetingRomManager = MeetingRomManager()
     
@@ -23,8 +25,34 @@ class FloatingPanelContentViewController: UIViewController, SFSafariViewControll
     @IBOutlet weak var TopAccessCodeView: UIView!
     @IBOutlet weak var MiddleAccessCodeView: UIView!
     
+    @IBOutlet weak var bookingRoomName: UILabel!
+    @IBOutlet weak var bookingRoomDate: UILabel!
+    @IBOutlet weak var bookingRoomTime: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        loadBookingFromDB()
+        
+        
+    }
+    
+    func loadBookingFromDB(){
+        
+        let request : NSFetchRequest<Booking> = Booking.fetchRequest()
+            do{
+              let booking = try context.fetch(request)
+                
+                bookingRoomName.text = booking.last?.roomName
+                bookingRoomDate.text = booking.last?.bookingDate
+                let timeFrom = booking.last?.bookingStartTime
+                let timeTil = booking.last?.bookingEndTime
+                guard let bookingTimeFrom = timeFrom, let bookingTimeTil = timeTil else {return }
+                bookingRoomTime.text = "\(bookingTimeFrom)-\(bookingTimeTil)"
+            }catch{
+                print(error.localizedDescription)
+                
+            }
         
     }
     

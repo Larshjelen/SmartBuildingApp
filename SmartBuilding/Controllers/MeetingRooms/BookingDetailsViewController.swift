@@ -8,6 +8,13 @@
 import UIKit
 import CoreData
 
+protocol BookingDetailsViewControllerDelegate {
+ 
+    func didUpdateBooking(booking : [Booking] )
+    func didFailWithError(error : Error)
+    
+}
+
 class BookingDetailsViewController: UIViewController {
     
     
@@ -16,11 +23,11 @@ class BookingDetailsViewController: UIViewController {
     @IBOutlet weak var bookingTime: UILabel!
     @IBOutlet weak var roomCapacity: UILabel!
     @IBOutlet weak var roomPrice: UILabel!
-    
     @IBOutlet weak var roomName: UILabel!
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
+    var delegate: BookingDetailsViewControllerDelegate?
     var utils = Utils()
     
     override func viewDidLoad() {
@@ -37,6 +44,7 @@ class BookingDetailsViewController: UIViewController {
             do{
               let booking = try context.fetch(request)
                 
+                self.delegate?.didUpdateBooking(booking: booking)
                 roomName.text = booking.last?.roomName
                 roomImage.image = utils.urlToImage(StringImage: (booking.last?.roomImage)!)
                 bookingDate.text = booking.last?.bookingDate

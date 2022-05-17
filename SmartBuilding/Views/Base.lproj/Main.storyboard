@@ -532,7 +532,7 @@
                                                                         <constraints>
                                                                             <constraint firstItem="kjh-3z-Tx1" firstAttribute="leading" secondItem="GGY-Gp-5UX" secondAttribute="trailing" constant="6" id="0CU-Q1-aJQ"/>
                                                                             <constraint firstAttribute="trailing" secondItem="BK3-df-NTI" secondAttribute="trailing" constant="29" id="1OX-Fc-5T1"/>
-                                                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="p9o-yw-3gS" secondAttribute="trailing" symbolic="YES" id="1S4-kN-vnZ"/>
+                                                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="p9o-yw-3gS" secondAttribute="trailing" constant="20" symbolic="YES" id="1S4-kN-vnZ"/>
                                                                             <constraint firstAttribute="trailing" secondItem="YZu-67-sIs" secondAttribute="trailing" constant="8" id="5SQ-1f-jVy"/>
                                                                             <constraint firstItem="GGY-Gp-5UX" firstAttribute="top" secondItem="p9o-yw-3gS" secondAttribute="bottom" constant="6.6699999999999999" id="A9n-mz-yKi"/>
                                                                             <constraint firstAttribute="bottom" secondItem="etT-We-FmZ" secondAttribute="bottom" constant="11" id="BtH-sY-89h"/>
@@ -1038,6 +1038,9 @@
                         <outlet property="BottomAccesCodeView" destination="bFT-In-ONv" id="7bX-cq-wzl"/>
                         <outlet property="MiddleAccessCodeView" destination="ntq-Gf-NeT" id="zyB-pE-3Xi"/>
                         <outlet property="TopAccessCodeView" destination="6vJ-1E-m19" id="X3V-C3-0iD"/>
+                        <outlet property="bookingRoomDate" destination="kjh-3z-Tx1" id="SRs-pQ-LyC"/>
+                        <outlet property="bookingRoomName" destination="p9o-yw-3gS" id="9Zk-Vt-UVL"/>
+                        <outlet property="bookingRoomTime" destination="thB-Xr-hxf" id="ua8-Tt-gjn"/>
                         <segue destination="Qp3-eT-B7b" kind="presentation" identifier="toEvents" id="xFl-uu-xVo"/>
                         <segue destination="QmT-hi-FLa" kind="presentation" identifier="toFindEmployee" id="omb-wb-tUf"/>
                         <segue destination="BD2-Si-QBC" kind="presentation" identifier="toMeetingRoom" id="wlZ-nR-eeH"/>
