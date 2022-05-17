@@ -9,7 +9,7 @@ import Foundation
 
 struct MeetingRoomSearch : Codable {
     
-    let meetingRooms : [SearchRoom]
+    var meetingRooms : [SearchRoom]
 }
 
 struct SearchRoom : Codable {

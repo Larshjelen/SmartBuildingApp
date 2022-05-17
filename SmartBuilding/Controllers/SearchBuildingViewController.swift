@@ -16,6 +16,7 @@ class SearchBuildingViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     var searchMeetingRomData : MeetingRoomSearch!
+    var filteredRoomData : MeetingRoomSearch!
     
     var utils = Utils()
     
@@ -28,8 +29,37 @@ class SearchBuildingViewController: UIViewController {
             searchMeetingRomData = data
         }
         
-        //tableView.delegate = self
+        tableView.delegate = self
         tableView.dataSource = self
+        
+        textField.addTarget(self, action: #selector(textSearchChange(_:)), for: .editingChanged)
+        
+        filteredRoomData = searchMeetingRomData
+        
+    }
+    
+    
+    @IBAction func clearTextField(_ sender: UIButton) {
+        
+        textField.text = nil
+        filteredRoomData = searchMeetingRomData
+        tableView.reloadData()
+    }
+    
+    @IBAction func textSearchChange(_ sender: UITextField) {
+     
+        print("sasdas")
+        if let text = textField.text {
+            
+            if text.isEmpty{
+                filteredRoomData = searchMeetingRomData
+                tableView.reloadData()
+            }else {
+                
+                filteredRoomData.meetingRooms.removeAll{!$0.name.lowercased().contains(text)}
+                tableView.reloadData()
+            }
+        }
         
     }
     
@@ -39,7 +69,7 @@ class SearchBuildingViewController: UIViewController {
 extension SearchBuildingViewController : UITableViewDataSource{
     
      func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-         return searchMeetingRomData.meetingRooms.count
+         return filteredRoomData.meetingRooms.count
     }
     
     
@@ -48,8 +78,14 @@ extension SearchBuildingViewController : UITableViewDataSource{
         
         let cell = tableView.dequeueReusableCell(withIdentifier: K.searchCellIdentifier, for: indexPath) as! SearchCell
         
-         cell.roomName.text = searchMeetingRomData.meetingRooms[indexPath.row].name
+         cell.roomName.text = filteredRoomData.meetingRooms[indexPath.row].name
         return cell
     }
+    
+}
+
+extension SearchBuildingViewController : UITableViewDelegate{
+    
+    
     
 }
