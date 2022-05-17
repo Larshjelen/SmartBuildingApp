@@ -30,6 +30,7 @@
 		2A57C6CF281FF19100FCB7EE /* CoordinatesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A57C6CE281FF19100FCB7EE /* CoordinatesData.swift */; };
 		2A57C6D22820082200FCB7EE /* CoordinatesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A57C6D12820082200FCB7EE /* CoordinatesManager.swift */; };
 		2A57C6D62820215800FCB7EE /* FPMeetingRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A57C6D52820215800FCB7EE /* FPMeetingRoomViewController.swift */; };
+		2A5B92CD2833C59A0046BEA6 /* TransitionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5B92CC2833C59A0046BEA6 /* TransitionButton.swift */; };
 		2A64A2052823F742002F63C3 /* SecondaryLargeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A64A2042823F742002F63C3 /* SecondaryLargeButton.swift */; };
 		2A64A2072823F772002F63C3 /* StyleAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A64A2062823F772002F63C3 /* StyleAttributes.swift */; };
 		2A87A517280EA733008672E3 /* FloatingPanelContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A87A516280EA733008672E3 /* FloatingPanelContentViewController.swift */; };
@@ -135,6 +136,7 @@
 		2A57C6CE281FF19100FCB7EE /* CoordinatesData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatesData.swift; sourceTree = "<group>"; };
 		2A57C6D12820082200FCB7EE /* CoordinatesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatesManager.swift; sourceTree = "<group>"; };
 		2A57C6D52820215800FCB7EE /* FPMeetingRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPMeetingRoomViewController.swift; sourceTree = "<group>"; };
+		2A5B92CC2833C59A0046BEA6 /* TransitionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionButton.swift; sourceTree = "<group>"; };
 		2A64A2042823F742002F63C3 /* SecondaryLargeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryLargeButton.swift; sourceTree = "<group>"; };
 		2A64A2062823F772002F63C3 /* StyleAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleAttributes.swift; sourceTree = "<group>"; };
 		2A87A516280EA733008672E3 /* FloatingPanelContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingPanelContentViewController.swift; sourceTree = "<group>"; };
@@ -302,6 +304,7 @@
 				81C06C29282CF8DE0084F996 /* CheckButton.swift */,
 				813CC9BF2832524E004331AC /* FPButtons.swift */,
 				813CC9C128325A26004331AC /* FPButtonShadow.swift */,
+				2A5B92CC2833C59A0046BEA6 /* TransitionButton.swift */,
 			);
 			path = Buttons;
 			sourceTree = "<group>";
@@ -544,13 +547,13 @@
 		81C06C2E282D61F60084F996 /* MeetingRooms */ = {
 			isa = PBXGroup;
 			children = (
+				81B7CAEC28312A24006DE8A4 /* BookingDateViewController.swift */,
 				81C06C32282D63080084F996 /* MeetingRoomTableViewCell.swift */,
 				819B9163282E64E700863FEC /* MeetingRoomsTableViewController.swift */,
 				819B9165282E653200863FEC /* MeetingRoomsDetailsViewController.swift */,
 				819B9167282E66F500863FEC /* BookingSummaryViewController.swift */,
 				819B9169282E672900863FEC /* BookingConfirmationViewController.swift */,
 				819B916B282E675600863FEC /* BookingDetailsViewController.swift */,
-				81B7CAEC28312A24006DE8A4 /* BookingDateViewController.swift */,
 			);
 			path = MeetingRooms;
 			sourceTree = "<group>";
@@ -793,6 +796,7 @@
 				813CC9C528327216004331AC /* ShadowView.swift in Sources */,
 				81B7CAED28312A24006DE8A4 /* BookingDateViewController.swift in Sources */,
 				2A20BE6C282AE30C00D7024A /* CustomTextField.swift in Sources */,
+				2A5B92CD2833C59A0046BEA6 /* TransitionButton.swift in Sources */,
 				81C06C1D282BDAB80084F996 /* EmployeeTableViewCell.swift in Sources */,
 				2A9D816E280459CB00DA6B02 /* OpenIdAuthenticationServiceDelegate.swift in Sources */,
 				2A1C614527F1FD7800FFD2D4 /* Utils.swift in Sources */,
