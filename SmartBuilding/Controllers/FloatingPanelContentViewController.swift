@@ -118,7 +118,12 @@ class FloatingPanelContentViewController: UIViewController, SFSafariViewControll
     }
 }
 
-extension FloatingPanelContentViewController:BookingDetailsViewControllerDelegate {
+extension FloatingPanelContentViewController: BookingDetailsViewControllerDelegate {
+    func didFailWithError(error: Error) {
+        
+        print(error)
+    }
+    
     func didUpdateBooking(booking: [Booking]) {
         bookingRoomName.text = booking.last?.roomName
         bookingRoomDate.text = booking.last?.bookingDate

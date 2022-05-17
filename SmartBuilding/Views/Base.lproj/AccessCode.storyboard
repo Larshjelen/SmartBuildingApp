@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LIN-0g-bIo">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="l0a-nf-NtI">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -90,12 +90,12 @@
                     <connections>
                         <outlet property="employeeTableView" destination="Ejp-pz-odZ" id="CZu-p5-ByM"/>
                         <outlet property="searchEmployerTextField" destination="53D-KZ-cVf" id="o3j-mE-MDD"/>
-                        <segue destination="rbw-GZ-PQb" kind="show" identifier="toNotifyEmployee" id="70W-gD-1ml"/>
+                        <segue destination="rbw-GZ-PQb" kind="show" id="9rX-mI-hPH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yxt-kt-sMv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5365.6000000000004" y="940.64039408866995"/>
+            <point key="canvasLocation" x="8350" y="941"/>
         </scene>
         <!--Found Employee View Controller-->
         <scene sceneID="8XR-cv-Hqf">
@@ -210,18 +210,22 @@
                         <barButtonItem key="backBarButtonItem" title="Tilbake" id="lFK-fP-ZOp"/>
                     </navigationItem>
                     <connections>
-                        <segue destination="aab-x7-Lcc" kind="show" identifier="toNotifiedEmployee" id="hi2-Rg-SlQ"/>
-                        <segue destination="J0Y-DQ-iYA" kind="show" identifier="toGenerateCode" id="6lM-iI-G3E"/>
+                        <outlet property="employeeCompany" destination="YXR-ck-yTy" id="mM2-Qn-dle"/>
+                        <outlet property="employeeImage" destination="uAf-Ap-Vhg" id="o6b-UM-7la"/>
+                        <outlet property="employeeName" destination="nNM-LG-QsM" id="BY7-b5-YMs"/>
+                        <outlet property="employeePosition" destination="ebq-bM-H2i" id="vUd-xR-Fmi"/>
+                        <segue destination="aab-x7-Lcc" kind="show" id="vxk-5S-2p9"/>
+                        <segue destination="J0Y-DQ-iYA" kind="show" id="JuA-51-Wp5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4HU-eg-fqk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6135.1999999999998" y="940.64039408866995"/>
+            <point key="canvasLocation" x="9904.7999999999993" y="940.64039408866995"/>
         </scene>
-        <!--View Controller-->
+        <!--Notified Employee View Controller-->
         <scene sceneID="104-wQ-zY8">
             <objects>
-                <viewController storyboardIdentifier="notifiedEmployee" id="aab-x7-Lcc" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="notifiedEmployee" id="aab-x7-Lcc" customClass="NotifiedEmployeeViewController" customModule="SmartBuilding" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cih-B2-54b">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -278,7 +282,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7mP-W4-m9O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6941.6000000000004" y="940.64039408866995"/>
+            <point key="canvasLocation" x="10711.200000000001" y="940.64039408866995"/>
         </scene>
         <!--Generate Code View Controller-->
         <scene sceneID="VAw-RC-pL4">
@@ -430,25 +434,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1BE-Eb-4sl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7752.8000000000002" y="940.64039408866995"/>
+            <point key="canvasLocation" x="11522.4" y="940.64039408866995"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="Cbp-wY-QCK">
+        <scene sceneID="01K-J8-Irm">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="LIN-0g-bIo" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="weA-x0-veQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="l0a-nf-NtI" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="R36-do-RwV">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="pfR-qO-fEb">
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="FFy-ep-0FH" kind="relationship" relationship="rootViewController" id="7qK-Zw-U8l"/>
+                        <segue destination="FFy-ep-0FH" kind="relationship" relationship="rootViewController" id="yTN-gQ-wm2"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="36a-7x-Ali" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4421.6000000000004" y="940.64039408866995"/>
+            <point key="canvasLocation" x="7250.3999999999996" y="940.64039408866995"/>
         </scene>
     </scenes>
     <designables>

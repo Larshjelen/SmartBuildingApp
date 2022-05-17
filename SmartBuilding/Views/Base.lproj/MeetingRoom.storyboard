@@ -208,7 +208,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m9A-RP-cDX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6424.8000000000002" y="645.07389162561583"/>
+            <point key="canvasLocation" x="6425" y="644"/>
         </scene>
         <!--Meeting Rooms Table View Controller-->
         <scene sceneID="Bdq-qt-wnb">

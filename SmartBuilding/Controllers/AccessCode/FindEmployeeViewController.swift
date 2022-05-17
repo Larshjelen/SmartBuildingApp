@@ -39,6 +39,8 @@ class FindEmployeeViewController: UIViewController {
         searchEmployerTextField.addTarget(self, action: #selector(textSearchChange(_:)), for: .editingChanged)
         
         filteredData = employeeData
+        
+        
     }
     
 
@@ -79,7 +81,6 @@ extension FindEmployeeViewController : UITableViewDataSource{
      func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     
         
-        
         let cell = tableView.dequeueReusableCell(withIdentifier: K.employeeCellIdentifier, for: indexPath) as! EmployeeTableViewCell
         
          cell.employeeName.text = filteredData[indexPath.row].name
@@ -95,13 +96,16 @@ extension FindEmployeeViewController : UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        let EmployeeDetailsVC = UIStoryboard.init(name: "AccessCode", bundle: Bundle.main).instantiateViewController(withIdentifier: "notifyEmployee") as? MeetingRoomsDetailsViewController
-         self.navigationController?.pushViewController(EmployeeDetailsVC!, animated: true)
+        let EmployeeDetailsVC = UIStoryboard.init(name: "AccessCode", bundle: Bundle.main).instantiateViewController(withIdentifier: "notifyEmployee") as? FoundEmployeeViewController
+       
+        
+        self.navigationController?.pushViewController(EmployeeDetailsVC!, animated: true)
+        
                 let index = indexPath.row
 
                 let employee = filteredData[index]
-               print(employee)
-       
+               
+        EmployeeDetailsVC!.employee = employee
       }
             
      }

@@ -2727,7 +2727,7 @@
                 <viewControllerPlaceholder storyboardIdentifier="findEmployee" storyboardName="AccessCode" referencedIdentifier="findEmployee" id="QmT-hi-FLa" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b2p-bw-v6D" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="184" y="98"/>
+            <point key="canvasLocation" x="-26" y="-48"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="i3X-6h-y8o">
