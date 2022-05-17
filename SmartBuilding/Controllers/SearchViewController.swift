@@ -7,15 +7,23 @@
 
 import UIKit
 
-class SearchViewController: UIViewController {
+class SearchViewController: UIViewController, UISearchBarDelegate {
 
-    @IBOutlet weak var searchTableView: UITableView!
+
     @IBOutlet weak var searchBar: UISearchBar!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        searchBar.delegate = self
+    }
+    
+    func searchBarShouldBeginEditing(_ searchBar: UISearchBar) -> Bool {
+        let searchBuildingVC = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "searchBuilding") as? SearchBuildingViewController
+         self.navigationController?.pushViewController(searchBuildingVC!, animated: true)
+        return false
     }
     
 
