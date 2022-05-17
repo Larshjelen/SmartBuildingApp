@@ -95,9 +95,8 @@ extension FindEmployeeViewController : UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        let vc = UIStoryboard.init(name: "AccessCode", bundle: Bundle.main).instantiateViewController(withIdentifier: "notifyEmployee") as? FoundEmployeeViewController
-        self.navigationController?.pushViewController(vc!, animated: true)
-              
+        let EmployeeDetailsVC = UIStoryboard.init(name: "AccessCode", bundle: Bundle.main).instantiateViewController(withIdentifier: "notifyEmployee") as? MeetingRoomsDetailsViewController
+         self.navigationController?.pushViewController(EmployeeDetailsVC!, animated: true)
                 let index = indexPath.row
 
                 let employee = filteredData[index]

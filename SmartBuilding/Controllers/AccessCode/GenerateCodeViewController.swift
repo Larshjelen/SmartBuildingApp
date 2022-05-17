@@ -8,22 +8,43 @@
 import UIKit
 
 class GenerateCodeViewController: UINavigationController {
-
+    
+    
+    @IBOutlet weak var firstTF: UITextField!
+    
+    @IBOutlet weak var secondTF: UITextField!
+    
+    @IBOutlet weak var thirdTF: UITextField!
+    
+    
+    @IBOutlet weak var forthTF: UITextField!
+    
+    
+    @IBOutlet weak var generateCodeBtn: SpinningButton!
+    
+    
+    @IBOutlet weak var waitingText: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        
+        waitingText.isHidden = true
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    @IBAction func generateCodePressed(_ sender: SpinningButton) {
+        
+        generateCodeBtn.spinnerColor = .white
+        generateCodeBtn.startAnimation()
+        
+        DispatchQueue.main.asyncAfter(deadline: .now()+4){
+            
+            self.generateCodeBtn.stopAnimation()
+            self.generateCodeBtn.titleLabel?.text = "Fullfør"
+            self.waitingText.isHidden = false
+        }
     }
-    */
-
+    
 }
