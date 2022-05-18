@@ -2065,13 +2065,13 @@
                                         <rect key="frame" x="8" y="12" width="48" height="24"/>
                                         <color key="tintColor" red="0.47058823529999999" green="0.47058823529999999" blue="0.47058823529999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="search"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="icon_search"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0GZ-Gt-hZ0">
                                         <rect key="frame" x="286" y="12" width="48" height="24"/>
                                         <color key="tintColor" red="0.47058823529999999" green="0.47058823529999999" blue="0.47058823529999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="x"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="icon_x"/>
                                         <connections>
                                             <action selector="clearTextField:" destination="qJc-CG-aU7" eventType="touchUpInside" id="w7s-Uy-nQv"/>
                                         </connections>
@@ -3281,10 +3281,9 @@
         <image name="icon_restaurant_large" width="70" height="68"/>
         <image name="icon_search" width="24" height="24"/>
         <image name="icon_toilet_large" width="70" height="68"/>
+        <image name="icon_x" width="24" height="24"/>
         <image name="rebel_canteen" width="520" height="191"/>
         <image name="rebel_food" width="520" height="192"/>
-        <image name="search" width="24" height="24"/>
-        <image name="x" width="24" height="24"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
