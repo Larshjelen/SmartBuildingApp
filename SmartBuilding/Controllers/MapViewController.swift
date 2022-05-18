@@ -24,13 +24,11 @@ class MapViewController: UIViewController, FloatingPanelControllerDelegate, UISe
     private var requestingLocationAuth = false
     private var haveRequestedInput = false
     
-        
+    var fpcMain: FloatingPanelController!
     @IBOutlet weak var gMapView: GMSMapView!
     @IBOutlet weak var mapSearchField: UISearchBar!
     
- 
     var mapMarker : GMSMarker!
-    
     var infoWindow : CustomMapMarker!
     
    var isNavgating = false
@@ -80,6 +78,16 @@ class MapViewController: UIViewController, FloatingPanelControllerDelegate, UISe
         
        
     }
+    
+    //Testing show/hide FP
+    @IBAction func showFP(_ sender: UIButton) {
+        fpcMain.removePanelFromParent(animated: true)
+            
+    }
+    @IBAction func hideFP(_ sender: UIButton) {
+     //  fpcMain.addPanel(toParent: viewController, animated: true)
+    }
+    
     
     func searchBarShouldBeginEditing(_ searchBar: UISearchBar) -> Bool {
         performSegue(withIdentifier: "toSearchView", sender: self)
@@ -176,7 +184,7 @@ class MapViewController: UIViewController, FloatingPanelControllerDelegate, UISe
   
     func showFloatingPanel(){
         
-        let fpcMain = FloatingPanelController()
+        fpcMain = FloatingPanelController()
     
         fpcMain.delegate = self
         

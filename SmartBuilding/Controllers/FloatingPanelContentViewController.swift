@@ -9,6 +9,10 @@ import UIKit
 import CoreData
 import SafariServices
 
+extension Notification.Name {
+    static let load = Notification.Name("load")
+}
+
 class FloatingPanelContentViewController: UIViewController, SFSafariViewControllerDelegate {
 
     private lazy var rebelAuthManager = RebelAuthManager(viewController: self)
@@ -21,10 +25,12 @@ class FloatingPanelContentViewController: UIViewController, SFSafariViewControll
     @IBOutlet weak var meetingRoomButton: UIButton!
     
     @IBOutlet weak var activeTextField: UITextField!
-    @IBOutlet weak var BottomAccesCodeView: UIView!
-    @IBOutlet weak var TopAccessCodeView: UIView!
-    @IBOutlet weak var MiddleAccessCodeView: UIView!
+    @IBOutlet weak var hasAccessCodeView: UIView!
+    @IBOutlet weak var getAccessCodeView: FPButtonShadow!
     
+    
+    
+    @IBOutlet weak var hasBookingView: BorderView!
     @IBOutlet weak var bookingRoomName: UILabel!
     @IBOutlet weak var bookingRoomDate: UILabel!
     @IBOutlet weak var bookingRoomTime: UILabel!
@@ -32,55 +38,84 @@ class FloatingPanelContentViewController: UIViewController, SFSafariViewControll
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //checkUserStatus()
         loadBookingFromDB()
         
+        NotificationCenter.default.addObserver(self, selector: #selector(notification), name: .load, object: nil)
         
     }
+    @IBAction func testHideFP(_ sender: UIButton) {
+     //   fpcMain.removePanelFromParent(animated: true)
+    }
+    
+    @objc func notification() {
+        loadBookingFromDB()
+    }
+    
+//    func checkUserStatus() {
+//
+//        let request : NSFetchRequest<User> = User.fetchRequest()
+//
+//        do{
+//            let user = try context.fetch(request)
+//            if (user.last!.isEmployee == true) {
+//                getAccessCodeView.isHidden = false
+//            }
+//        }catch{
+//            print(error.localizedDescription)
+//        }
+//    }
     
     func loadBookingFromDB(){
         
         let request : NSFetchRequest<Booking> = Booking.fetchRequest()
+        
             do{
               let booking = try context.fetch(request)
+                if (booking.last?.roomName != nil) {
+                    hasBookingView.isHidden = false
                 
-                bookingRoomName.text = booking.last?.roomName
-                bookingRoomDate.text = booking.last?.bookingDate
-                let timeFrom = booking.last?.bookingStartTime
-                let timeTil = booking.last?.bookingEndTime
-                guard let bookingTimeFrom = timeFrom, let bookingTimeTil = timeTil else {return }
-                bookingRoomTime.text = "\(bookingTimeFrom)-\(bookingTimeTil)"
+                    bookingRoomName.text = booking.last?.roomName
+                    bookingRoomDate.text = booking.last?.bookingDate
+                    let timeFrom = booking.last?.bookingStartTime
+                    let timeTil = booking.last?.bookingEndTime
+                    guard let bookingTimeFrom = timeFrom, let bookingTimeTil = timeTil else {return }
+                    bookingRoomTime.text = "\(bookingTimeFrom)-\(bookingTimeTil)"
+                } else {
+                    hasBookingView.isHidden = true
+                }
             }catch{
                 print(error.localizedDescription)
                 
             }
         
     }
-    
-    @IBAction func eventsButtonPressed(_ sender: UIButton) {
-        performSegue(withIdentifier: "toEvents", sender: self)
-        //let vc = UIStoryboard.init(name: "Events", bundle: Bundle.main).instantiateViewController(withIdentifier: "events") as? EventsViewController
-       // self.navigationController?.pushViewController(vc!, animated: true)
+    @IBAction func authBtn(_ sender: UIButton) {
+        rebelAuthManager.login()
+        
     }
     
-    //Testing overlaying buttons
+    @IBAction func getToekn(_ sender: Any) {
+        meetingRomManager.sendRequest()
+    }
+
+    
+    //Navigation
     
     @IBAction func UserGetCodePressed(_ sender: UIButton) {
         performSegue(withIdentifier: "toEmployeeGenerateCode", sender: self)
     }
     
-    @IBAction func MiddleAccessCodeButtonPressed(_ sender: UIButton) {
-        print("MiddleAccessCodeButton Pressed")
+    @IBAction func inviteGuestPressed(_ sender: UIButton) {
+       // performSegue(withIdentifier: "toInvite", sender: self)
+        
     }
-    @IBAction func BottomAccessCodeButtonPressed(_ sender: UIButton) {
-        print("BottomAccessCodeButton Pressed")
-    }
-    @IBAction func SecondButtonPressed(_ sender: UIButton) {
+    
+    @IBAction func meetSomeonePressed(_ sender: UIButton) {
         performSegue(withIdentifier: "toFindEmployee", sender: self)
     }
-    @IBAction func ThirdButtonPressed(_ sender: UIButton) {
-        //BottomAccesCodeView.isHidden = false
-        //TopAccessCodeView.isHidden = false
-        MiddleAccessCodeView.isHidden = false
+    
+    @IBAction func bookRoomPressed(_ sender: UIButton) {
         performSegue(withIdentifier: "toMeetingRoom", sender: self)
     }
     
@@ -88,48 +123,30 @@ class FloatingPanelContentViewController: UIViewController, SFSafariViewControll
         performSegue(withIdentifier: "toEvents", sender: self)
     }
     
-    
-    
-    @IBAction func accessCodeButtonPressed(_ sender: UIButton) {
-        performSegue(withIdentifier: "toFindEmployee", sender: self)
-    }
-    
-    @IBAction func meetingRoomButtonPressed(_ sender: UIButton) {
-        performSegue(withIdentifier: "toMeetingRoom", sender: self)
-    }
-    @IBAction func inviteGuestPressed(_ sender: UIButton) {
-        performSegue(withIdentifier: "toInvite", sender: self)
-    }
-    
-    @IBAction func MeetingRoomPressed(_ sender: UIButton) {
-       
+    //Not functional warnings
+    func notAvailableAlert() {
+        let alert = UIAlertController(title: "Not Available", message: "This functionality is not available in this prototype.", preferredStyle: UIAlertController.Style.alert)
         
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+        
+        self.present(alert, animated: true, completion: nil)
     }
     
-    @IBAction func authBtn(_ sender: UIButton) {
-        
-        rebelAuthManager.login()
-        
+    @IBAction func resturantsPressed(_ sender: UIButton) {
+        notAvailableAlert()
+    }
+    @IBAction func cafeteriaPressed(_ sender: UIButton) {
+        notAvailableAlert()
+    }
+    @IBAction func newsPressed(_ sender: UIButton) {
+        notAvailableAlert()
+    }
+    @IBAction func profilePressed(_ sender: UIButton) {
+        notAvailableAlert()
+    }
+    @IBAction func contactUsPressed(_ sender: UIButton) {
+        notAvailableAlert()
     }
     
-    @IBAction func getToekn(_ sender: Any) {
-        
-        meetingRomManager.sendRequest()
-    }
-}
-
-extension FloatingPanelContentViewController: BookingDetailsViewControllerDelegate {
-    func didFailWithError(error: Error) {
-        
-        print(error)
-    }
     
-    func didUpdateBooking(booking: [Booking]) {
-        bookingRoomName.text = booking.last?.roomName
-        bookingRoomDate.text = booking.last?.bookingDate
-        let timeFrom = booking.last?.bookingStartTime
-        let timeTil = booking.last?.bookingEndTime
-        guard let bookingTimeFrom = timeFrom, let bookingTimeTil = timeTil else {return }
-        bookingRoomTime.text = "\(bookingTimeFrom)-\(bookingTimeTil)"
-    }
 }

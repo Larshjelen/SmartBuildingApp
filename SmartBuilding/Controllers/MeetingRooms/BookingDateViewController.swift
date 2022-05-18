@@ -41,6 +41,14 @@ class BookingDateViewController: UIViewController {
         bookingDate.addTarget(self, action: #selector(hideDateFieledIcon(sender:)), for: .editingDidBegin)
         bookingTimeFrom.addTarget(self, action: #selector(hideTimeFromFieledIcon(sender:)), for: .editingDidBegin)
         bookingTimeTil.addTarget(self, action: #selector(hideTimeTilFieledIcon(sender:)), for: .editingDidBegin)
+        
+        let button = UIBarButtonItem(title: "Send", style: .plain, target: self, action: #selector(lukk))
+        navigationItem.rightBarButtonItem = button
+        
+    }
+    
+    @objc func lukk() {
+        NotificationCenter.default.post(name: .load, object: nil)
     }
     
     

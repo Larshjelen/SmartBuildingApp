@@ -25,27 +25,28 @@
                                         <color key="textColor" red="0.23529411764705882" green="0.23529411764705882" blue="0.23529411764705882" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AYm-A2-SOf">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AYm-A2-SOf" customClass="BorderView" customModule="SmartBuilding" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="38" width="343" height="50"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="lma-fZ-Lrb">
-                                                <rect key="frame" x="5" y="7.9999999999999982" width="330" height="20.333333333333329"/>
+                                                <rect key="frame" x="5" y="8.0000000000000018" width="330" height="21.666666666666671"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Velg dato..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yzc-Nm-Vxq">
-                                                        <rect key="frame" x="0.0" y="0.0" width="310.33333333333331" height="20.333333333333332"/>
-                                                        <color key="backgroundColor" red="1" green="0.83137254900000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="310.33333333333331" height="21.666666666666668"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <color key="textColor" red="0.47058823529411764" green="0.47058823529411764" blue="0.47058823529411764" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.down" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="blU-eh-C00">
-                                                        <rect key="frame" x="311.33333333333331" y="5.3333333333333321" width="18.666666666666686" height="10.333333333333332"/>
+                                                        <rect key="frame" x="311.33333333333331" y="5.3333333333333321" width="18.666666666666686" height="11.666666666666668"/>
                                                         <color key="tintColor" red="0.13725490200000001" green="0.1215686275" blue="0.12549019610000001" alpha="1" colorSpace="calibratedRGB"/>
                                                     </imageView>
                                                 </subviews>
                                             </stackView>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.92549019610000005" green="0.4039215686" blue="0.2274509804" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="bottom" secondItem="lma-fZ-Lrb" secondAttribute="bottom" constant="8" id="NkW-K9-jKU"/>
                                             <constraint firstItem="lma-fZ-Lrb" firstAttribute="leading" secondItem="AYm-A2-SOf" secondAttribute="leading" constant="5" id="jK1-r2-TEL"/>
@@ -86,7 +87,7 @@
                                                 <color key="textColor" red="0.23529411764705882" green="0.23529411764705882" blue="0.23529411764705882" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tle-2m-vSz">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tle-2m-vSz" customClass="BorderView" customModule="SmartBuilding" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="34.333333333333314" width="108" height="48"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="12:00" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="npH-B2-KlN">
@@ -124,7 +125,7 @@
                                                 <color key="textColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="90h-w9-ef0">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="90h-w9-ef0" customClass="BorderView" customModule="SmartBuilding" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="34.333333333333314" width="108" height="48"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="12:00" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GPP-3y-bGi">
@@ -175,7 +176,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Uay-0x-9TG"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="BU8-Ws-reb" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Syr-su-goK" secondAttribute="bottom" constant="68.670000000000002" id="0gD-3F-aMz"/>
                             <constraint firstItem="Tow-fk-zqH" firstAttribute="leading" secondItem="Uay-0x-9TG" secondAttribute="leading" constant="16" id="1v1-Vk-KyQ"/>

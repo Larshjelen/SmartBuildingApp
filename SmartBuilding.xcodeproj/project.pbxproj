@@ -99,6 +99,7 @@
 		81C06C34282D63090084F996 /* MeetingRoomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C06C32282D63080084F996 /* MeetingRoomTableViewCell.swift */; };
 		81C06C35282D63090084F996 /* MeetingRoomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81C06C33282D63080084F996 /* MeetingRoomTableViewCell.xib */; };
 		81E130702833EFB4000CDECB /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E1306F2833EFB4000CDECB /* SearchViewController.swift */; };
+		81E1307228352905000CDECB /* CornerShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E1307128352904000CDECB /* CornerShadowView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -214,6 +215,7 @@
 		81C06C32282D63080084F996 /* MeetingRoomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetingRoomTableViewCell.swift; sourceTree = "<group>"; };
 		81C06C33282D63080084F996 /* MeetingRoomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MeetingRoomTableViewCell.xib; sourceTree = "<group>"; };
 		81E1306F2833EFB4000CDECB /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		81E1307128352904000CDECB /* CornerShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerShadowView.swift; sourceTree = "<group>"; };
 		DEE8CEFABCAD7BE2E8EBD8F4 /* Pods-SmartBuilding.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartBuilding.debug.xcconfig"; path = "Target Support Files/Pods-SmartBuilding/Pods-SmartBuilding.debug.xcconfig"; sourceTree = "<group>"; };
 		F79748D6ED2F637BF5B1BA7C /* Pods_SmartBuilding.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartBuilding.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF91335F35C030B66A0B9AC8 /* Pods-SmartBuilding.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartBuilding.release.xcconfig"; path = "Target Support Files/Pods-SmartBuilding/Pods-SmartBuilding.release.xcconfig"; sourceTree = "<group>"; };
@@ -482,6 +484,7 @@
 			children = (
 				813CC9C428327216004331AC /* ShadowView.swift */,
 				813CC9C628327906004331AC /* BorderView.swift */,
+				81E1307128352904000CDECB /* CornerShadowView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -816,6 +819,7 @@
 				815228BD282A7D5B007EEE74 /* LoginAccessCodeViewController.swift in Sources */,
 				81B7CAE62831291A006DE8A4 /* Employee.swift in Sources */,
 				819B915E282E522B00863FEC /* GuestInformationViewController.swift in Sources */,
+				81E1307228352905000CDECB /* CornerShadowView.swift in Sources */,
 				813CC9C228325A26004331AC /* FPButtonShadow.swift in Sources */,
 				813CC9C528327216004331AC /* ShadowView.swift in Sources */,
 				81B7CAED28312A24006DE8A4 /* BookingDateViewController.swift in Sources */,

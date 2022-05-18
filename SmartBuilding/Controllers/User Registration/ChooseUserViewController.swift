@@ -9,23 +9,17 @@ import UIKit
 
 class ChooseUserViewController: UIViewController {
     
-    
-    
     @IBOutlet weak var guestBtn: UIButton!
-    
     @IBOutlet weak var WorkAtRebelBtn: UIButton!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
     
-    
+    //Navigation
     
     @IBAction func EmployeePressed(_ sender: Any) {
-        
         let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "welcome-employee") as? IfEmployeeViewController
         self.navigationController?.pushViewController(vc!, animated: true)
     }
@@ -34,11 +28,4 @@ class ChooseUserViewController: UIViewController {
         let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "mapView") as? MapViewController
         self.present(vc!, animated: true)
     }
-    
-    
-    
-    // MARK: - Navigation
-    
-    
-
 }

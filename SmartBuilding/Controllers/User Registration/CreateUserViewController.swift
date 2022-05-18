@@ -19,9 +19,7 @@ class CreateUserViewController: UIViewController {
     
     @IBOutlet weak var progress25: CustomProgressBar!
     @IBOutlet weak var progress50: CustomProgressBar!
-    
     @IBOutlet weak var progress75: CustomProgressBar!
-    
     @IBOutlet weak var progress100: CustomProgressBar!
     
     @IBOutlet weak var wrongPasswordText: UILabel!
@@ -40,8 +38,6 @@ class CreateUserViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
         
         self.navigationController?.navigationBar.tintColor = .black
         
@@ -49,12 +45,7 @@ class CreateUserViewController: UIViewController {
         passwordTextField.delegate = self
         repeatPassTextField.delegate = self
         
-        
         setupKeyboardHiding()
-        
-        
-        
-        
     }
 
     

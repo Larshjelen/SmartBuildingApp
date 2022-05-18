@@ -13,15 +13,13 @@ class IfEmployeeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-    
-
-    @IBAction func skipCreateUserPressed(_ sender: UIButton) {
     }
     
     //Navigation
+    
+    @IBAction func skipCreateUserPressed(_ sender: UIButton) {
+    }
+    
     @IBAction func CreateUserPressed(_ sender: UIButton) {
         let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "createUser") as? CreateUserViewController
         self.navigationController?.pushViewController(vc!, animated: true)

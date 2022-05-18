@@ -9,6 +9,8 @@ import UIKit
 
 class BookingConfirmationViewController: UIViewController {
 
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -16,6 +18,9 @@ class BookingConfirmationViewController: UIViewController {
     }
     
     @IBAction func completePressed(_ sender: UIButton) {
+        
+        NotificationCenter.default.post(name: .load, object: nil)
+        
         let vc = UIStoryboard.init(name: "MeetingRoom", bundle: Bundle.main).instantiateViewController(withIdentifier: "bookingDetails") as? BookingDetailsViewController
          self.navigationController?.pushViewController(vc!, animated: true)
     }

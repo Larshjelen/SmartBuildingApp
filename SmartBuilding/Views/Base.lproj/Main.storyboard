@@ -41,9 +41,6 @@
                                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                                 <state key="normal" title="Adgangskode"/>
                                                                                 <buttonConfiguration key="configuration" style="plain"/>
-                                                                                <connections>
-                                                                                    <action selector="BottomAccessCodeButtonPressed:" destination="vcu-Wc-DtC" eventType="touchUpInside" id="0HU-eD-sXP"/>
-                                                                                </connections>
                                                                             </button>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Adgangskode" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7kQ-4L-xTI">
                                                                                 <rect key="frame" x="67" y="15" width="109" height="19"/>
@@ -104,7 +101,7 @@
                                                                             <constraint firstItem="7kQ-4L-xTI" firstAttribute="top" secondItem="bFT-In-ONv" secondAttribute="top" constant="15" id="wTV-yb-1qn"/>
                                                                         </constraints>
                                                                     </view>
-                                                                    <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ntq-Gf-NeT" userLabel="HasAccessCodeView">
+                                                                    <view hidden="YES" opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ntq-Gf-NeT" userLabel="HasAccessCodeView">
                                                                         <rect key="frame" x="0.0" y="0.0" width="345" height="81"/>
                                                                         <subviews>
                                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jAJ-ME-q0X" customClass="FPButtons" customModule="SmartBuilding" customModuleProvider="target">
@@ -166,7 +163,7 @@
                                                                             <constraint firstItem="kr5-l4-LNF" firstAttribute="top" secondItem="ntq-Gf-NeT" secondAttribute="top" constant="20" id="wWb-RG-P7R"/>
                                                                         </constraints>
                                                                     </view>
-                                                                    <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6vJ-1E-m19" userLabel="GetAccessCodeView" customClass="FPButtonShadow" customModule="SmartBuilding" customModuleProvider="target">
+                                                                    <view hidden="YES" opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6vJ-1E-m19" userLabel="GetAccessCodeView" customClass="FPButtonShadow" customModule="SmartBuilding" customModuleProvider="target">
                                                                         <rect key="frame" x="0.0" y="0.0" width="345" height="81"/>
                                                                         <subviews>
                                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xYy-Fi-4hp" customClass="FPButtons" customModule="SmartBuilding" customModuleProvider="target">
@@ -309,7 +306,7 @@
                                                                                 <state key="normal" title="Adgangskode"/>
                                                                                 <buttonConfiguration key="configuration" style="plain" title=""/>
                                                                                 <connections>
-                                                                                    <action selector="SecondButtonPressed:" destination="vcu-Wc-DtC" eventType="touchUpInside" id="aZ5-Ee-NQJ"/>
+                                                                                    <action selector="meetSomeonePressed:" destination="vcu-Wc-DtC" eventType="touchUpInside" id="LTA-IS-7QM"/>
                                                                                 </connections>
                                                                             </button>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Skal du møte noen?" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7jd-Rt-YPm">
@@ -425,7 +422,7 @@
                                                                         <state key="normal" title="Adgangskode"/>
                                                                         <buttonConfiguration key="configuration" style="plain" title=""/>
                                                                         <connections>
-                                                                            <action selector="ThirdButtonPressed:" destination="vcu-Wc-DtC" eventType="touchUpInside" id="Nxe-tD-Bcb"/>
+                                                                            <action selector="bookRoomPressed:" destination="vcu-Wc-DtC" eventType="touchUpInside" id="ENr-66-EUw"/>
                                                                         </connections>
                                                                     </button>
                                                                 </subviews>
@@ -522,6 +519,9 @@
                                                                                 <buttonConfiguration key="configuration" style="plain" title="Vis på kart">
                                                                                     <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                                                 </buttonConfiguration>
+                                                                                <connections>
+                                                                                    <action selector="testHideFP:" destination="vcu-Wc-DtC" eventType="touchUpInside" id="5uo-fU-S5b"/>
+                                                                                </connections>
                                                                             </button>
                                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_pin_dark_blue" translatesAutoresizingMaskIntoConstraints="NO" id="YZu-67-sIs">
                                                                                 <rect key="frame" x="314" y="59.999999999999993" width="24" height="24.666666666666664"/>
@@ -591,6 +591,14 @@
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Lr-tb-CBO" userLabel="KantineView">
                                                                 <rect key="frame" x="0.0" y="0.0" width="345" height="265"/>
                                                                 <subviews>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="viJ-sw-IpC">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="345" height="265"/>
+                                                                        <state key="normal" title="Button"/>
+                                                                        <buttonConfiguration key="configuration" style="plain" title=" "/>
+                                                                        <connections>
+                                                                            <action selector="cafeteriaPressed:" destination="vcu-Wc-DtC" eventType="touchUpInside" id="wVe-BL-FQr"/>
+                                                                        </connections>
+                                                                    </button>
                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rebel_logo_black" translatesAutoresizingMaskIntoConstraints="NO" id="LuB-5j-XrD">
                                                                         <rect key="frame" x="14" y="147" width="96" height="30"/>
                                                                         <constraints>
@@ -639,6 +647,7 @@
                                                                     <constraint firstAttribute="bottom" secondItem="YbK-bS-gpZ" secondAttribute="bottom" constant="17" id="6b1-Nw-YlY"/>
                                                                     <constraint firstAttribute="trailing" secondItem="U6h-1D-Cd9" secondAttribute="trailing" constant="253" id="7Pc-ho-aD0"/>
                                                                     <constraint firstItem="U6h-1D-Cd9" firstAttribute="top" secondItem="LuB-5j-XrD" secondAttribute="bottom" constant="6" id="7uW-UF-1Ol"/>
+                                                                    <constraint firstItem="viJ-sw-IpC" firstAttribute="leading" secondItem="7Lr-tb-CBO" secondAttribute="leading" id="Bmv-dO-ic5"/>
                                                                     <constraint firstAttribute="trailing" secondItem="YbK-bS-gpZ" secondAttribute="trailing" constant="27.670000000000002" id="Er4-hq-1FQ"/>
                                                                     <constraint firstItem="g7Y-r2-9St" firstAttribute="top" secondItem="U6h-1D-Cd9" secondAttribute="bottom" constant="17" id="FQR-77-dGP"/>
                                                                     <constraint firstItem="UyI-bu-kRZ" firstAttribute="top" secondItem="HTg-h9-OYG" secondAttribute="bottom" constant="98" id="FYe-3t-hHz"/>
@@ -646,14 +655,17 @@
                                                                     <constraint firstItem="U6h-1D-Cd9" firstAttribute="top" secondItem="LuB-5j-XrD" secondAttribute="bottom" constant="6" id="PTN-47-Ueo"/>
                                                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="LuB-5j-XrD" secondAttribute="trailing" constant="235" id="Q5h-J6-Sul"/>
                                                                     <constraint firstAttribute="bottom" secondItem="UyI-bu-kRZ" secondAttribute="bottom" constant="16" id="QHh-ON-S74"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="viJ-sw-IpC" secondAttribute="bottom" id="REH-tF-vdg"/>
                                                                     <constraint firstItem="YbK-bS-gpZ" firstAttribute="leading" secondItem="g7Y-r2-9St" secondAttribute="trailing" constant="72" id="RV9-e6-7R7"/>
                                                                     <constraint firstAttribute="trailing" secondItem="UyI-bu-kRZ" secondAttribute="trailing" constant="9" id="Y2Z-fk-V3p"/>
                                                                     <constraint firstItem="YbK-bS-gpZ" firstAttribute="top" secondItem="HTg-h9-OYG" secondAttribute="bottom" constant="95" id="cCP-uQ-gMW"/>
                                                                     <constraint firstItem="LuB-5j-XrD" firstAttribute="top" secondItem="HTg-h9-OYG" secondAttribute="bottom" constant="20" id="dV6-kS-Mx6"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="viJ-sw-IpC" secondAttribute="trailing" id="hwf-fi-Zit"/>
                                                                     <constraint firstAttribute="bottom" secondItem="g7Y-r2-9St" secondAttribute="bottom" constant="18.670000000000002" id="jKE-Zf-6On"/>
                                                                     <constraint firstItem="HTg-h9-OYG" firstAttribute="top" secondItem="7Lr-tb-CBO" secondAttribute="top" id="lPx-lV-v2W"/>
                                                                     <constraint firstItem="g7Y-r2-9St" firstAttribute="leading" secondItem="7Lr-tb-CBO" secondAttribute="leading" constant="14" id="lya-aL-0WX"/>
                                                                     <constraint firstItem="HTg-h9-OYG" firstAttribute="leading" secondItem="7Lr-tb-CBO" secondAttribute="leading" id="nxx-rh-XAq"/>
+                                                                    <constraint firstItem="viJ-sw-IpC" firstAttribute="top" secondItem="7Lr-tb-CBO" secondAttribute="top" id="wBY-Xz-ymN"/>
                                                                     <constraint firstAttribute="trailing" secondItem="HTg-h9-OYG" secondAttribute="trailing" id="wNn-DY-fD5"/>
                                                                     <constraint firstItem="LuB-5j-XrD" firstAttribute="leading" secondItem="7Lr-tb-CBO" secondAttribute="leading" constant="14" id="wZ6-9E-Ajo"/>
                                                                 </constraints>
@@ -672,6 +684,9 @@
                                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                         <state key="normal" title="Button"/>
                                                                         <buttonConfiguration key="configuration" style="plain" title=""/>
+                                                                        <connections>
+                                                                            <action selector="resturantsPressed:" destination="vcu-Wc-DtC" eventType="touchUpInside" id="gzj-5X-ksw"/>
+                                                                        </connections>
                                                                     </button>
                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="Rebel_logo_black" translatesAutoresizingMaskIntoConstraints="NO" id="AFB-kT-Hkh">
                                                                         <rect key="frame" x="14" y="147" width="96" height="30.666666666666657"/>
@@ -760,6 +775,9 @@
                                                                         <color key="backgroundColor" red="1" green="0.83137254901960778" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <state key="normal" title="Button"/>
                                                                         <buttonConfiguration key="configuration" style="plain" title=" "/>
+                                                                        <connections>
+                                                                            <action selector="newsPressed:" destination="vcu-Wc-DtC" eventType="touchUpInside" id="w7i-RE-se8"/>
+                                                                        </connections>
                                                                     </button>
                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rebel_logo_black" translatesAutoresizingMaskIntoConstraints="NO" id="2ed-aG-yfy">
                                                                         <rect key="frame" x="18" y="21" width="57" height="17"/>
@@ -883,6 +901,9 @@
                                                                         <color key="backgroundColor" red="0.8901960784313725" green="0.88235294117647056" blue="0.83137254901960778" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <state key="normal" title="Button"/>
                                                                         <buttonConfiguration key="configuration" style="plain" title=" "/>
+                                                                        <connections>
+                                                                            <action selector="profilePressed:" destination="vcu-Wc-DtC" eventType="touchUpInside" id="T32-9R-Aoy"/>
+                                                                        </connections>
                                                                     </button>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Min profil" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RKj-mg-CuI">
                                                                         <rect key="frame" x="14" y="14" width="105" height="17"/>
@@ -932,6 +953,9 @@
                                                                         <color key="backgroundColor" red="0.89019607840000003" green="0.88235294119999996" blue="0.83137254900000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <state key="normal" title="Button"/>
                                                                         <buttonConfiguration key="configuration" style="plain" title=" "/>
+                                                                        <connections>
+                                                                            <action selector="contactUsPressed:" destination="vcu-Wc-DtC" eventType="touchUpInside" id="ndZ-E5-RsQ"/>
+                                                                        </connections>
                                                                     </button>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kontakt oss" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DFv-xR-fyB">
                                                                         <rect key="frame" x="14" y="14" width="83" height="18"/>
@@ -1035,12 +1059,12 @@
                     </view>
                     <value key="contentSizeForViewInPopover" type="size" width="375" height="812"/>
                     <connections>
-                        <outlet property="BottomAccesCodeView" destination="bFT-In-ONv" id="7bX-cq-wzl"/>
-                        <outlet property="MiddleAccessCodeView" destination="ntq-Gf-NeT" id="zyB-pE-3Xi"/>
-                        <outlet property="TopAccessCodeView" destination="6vJ-1E-m19" id="X3V-C3-0iD"/>
                         <outlet property="bookingRoomDate" destination="kjh-3z-Tx1" id="SRs-pQ-LyC"/>
                         <outlet property="bookingRoomName" destination="p9o-yw-3gS" id="9Zk-Vt-UVL"/>
                         <outlet property="bookingRoomTime" destination="thB-Xr-hxf" id="ua8-Tt-gjn"/>
+                        <outlet property="getAccessCodeView" destination="6vJ-1E-m19" id="juW-V5-cHz"/>
+                        <outlet property="hasAccessCodeView" destination="ntq-Gf-NeT" id="0jm-CY-AU6"/>
+                        <outlet property="hasBookingView" destination="1N1-PR-Yrf" id="mb1-vw-29F"/>
                         <segue destination="Qp3-eT-B7b" kind="presentation" identifier="toEvents" id="xFl-uu-xVo"/>
                         <segue destination="QmT-hi-FLa" kind="presentation" identifier="toFindEmployee" id="omb-wb-tUf"/>
                         <segue destination="BD2-Si-QBC" kind="presentation" identifier="toMeetingRoom" id="wlZ-nR-eeH"/>
@@ -1743,9 +1767,34 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pjc-dn-A3b">
+                                <rect key="frame" x="250" y="100" width="67" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="ShowFP"/>
+                                <connections>
+                                    <action selector="showFP:" destination="qsv-hy-RSR" eventType="touchUpInside" id="jnN-d2-hmk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DJc-W9-oko">
+                                <rect key="frame" x="15" y="100" width="67" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="HideFP">
+                                    <color key="baseForegroundColor" red="1" green="0.83137254900000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="hideFP:" destination="qsv-hy-RSR" eventType="touchUpInside" id="uaf-mb-FuE"/>
+                                </connections>
+                            </button>
                             <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="v5v-Pc-S8f">
                                 <rect key="frame" x="20" y="35" width="339" height="51"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Fi-dw-v6z">
@@ -2991,10 +3040,10 @@
             </objects>
             <point key="canvasLocation" x="151" y="-9"/>
         </scene>
-        <!--findEmployee-->
+        <!--AccessCode-->
         <scene sceneID="B0E-eZ-sTl">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="findEmployee" storyboardName="AccessCode" referencedIdentifier="findEmployee" id="QmT-hi-FLa" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardIdentifier="findEmployee" storyboardName="AccessCode" id="QmT-hi-FLa" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b2p-bw-v6D" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-26" y="-48"/>
