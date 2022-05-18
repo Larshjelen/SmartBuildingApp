@@ -11,6 +11,7 @@ import SafariServices
 
 extension Notification.Name {
     static let load = Notification.Name("load")
+    static let navigation = Notification.Name("notification")
 }
 
 class FloatingPanelContentViewController: UIViewController, SFSafariViewControllerDelegate {

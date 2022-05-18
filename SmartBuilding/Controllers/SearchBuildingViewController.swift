@@ -89,10 +89,13 @@ extension SearchBuildingViewController : UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
+        let selectedRoom : [String : SearchRoom] = ["room" : filteredRoomData.meetingRooms[indexPath.row]]
+        
+        NotificationCenter.default.post(name: .navigation, object: nil, userInfo: selectedRoom)
+        
         let mapVC = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "mapView") as? MapViewController
         
         mapVC?.searchedMeetingRoom = filteredRoomData.meetingRooms[indexPath.row]
-        print(filteredRoomData.meetingRooms[indexPath.row].name)
         self.navigationController?.dismiss(animated: true)
         
     }

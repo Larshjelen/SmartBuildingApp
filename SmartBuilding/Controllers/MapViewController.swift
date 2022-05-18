@@ -47,6 +47,7 @@ class MapViewController: UIViewController, FloatingPanelControllerDelegate, UISe
     var helpers = Utils()
     var coordinatesManager = CoordinatesManager()
     
+    //SELECTED ROOM TO NAVIGATE TO 
     var searchedMeetingRoom : SearchRoom?
     
     override func viewDidLoad() {
@@ -72,11 +73,15 @@ class MapViewController: UIViewController, FloatingPanelControllerDelegate, UISe
         nextStartupStep()
         showAnnotations()
         
-        guard let searchedRoom = searchedMeetingRoom else {return}
         
-        print(searchedRoom.name)
+        NotificationCenter.default.addObserver(self, selector: #selector(getSelectedRoom), name: .navigation, object: nil)
+    }
+    
+    
+    @objc func getSelectedRoom(_ notification : NSNotification){
         
-       
+        searchedMeetingRoom = notification.userInfo?["room"] as? SearchRoom
+        print(searchedMeetingRoom?.name)
     }
     
     //Testing show/hide FP
