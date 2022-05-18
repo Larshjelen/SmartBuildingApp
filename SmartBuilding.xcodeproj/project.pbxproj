@@ -100,6 +100,9 @@
 		81C06C35282D63090084F996 /* MeetingRoomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81C06C33282D63080084F996 /* MeetingRoomTableViewCell.xib */; };
 		81E130702833EFB4000CDECB /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E1306F2833EFB4000CDECB /* SearchViewController.swift */; };
 		81E1307228352905000CDECB /* CornerShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E1307128352904000CDECB /* CornerShadowView.swift */; };
+		81E1307428352ACB000CDECB /* RoundedSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E1307328352ACA000CDECB /* RoundedSearchBar.swift */; };
+		81E1307628353116000CDECB /* GradientColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E1307528353116000CDECB /* GradientColorView.swift */; };
+		81E13078283534BF000CDECB /* GetAccessCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E13077283534BF000CDECB /* GetAccessCodeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -216,6 +219,9 @@
 		81C06C33282D63080084F996 /* MeetingRoomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MeetingRoomTableViewCell.xib; sourceTree = "<group>"; };
 		81E1306F2833EFB4000CDECB /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		81E1307128352904000CDECB /* CornerShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerShadowView.swift; sourceTree = "<group>"; };
+		81E1307328352ACA000CDECB /* RoundedSearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedSearchBar.swift; sourceTree = "<group>"; };
+		81E1307528353116000CDECB /* GradientColorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientColorView.swift; sourceTree = "<group>"; };
+		81E13077283534BF000CDECB /* GetAccessCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAccessCodeViewController.swift; sourceTree = "<group>"; };
 		DEE8CEFABCAD7BE2E8EBD8F4 /* Pods-SmartBuilding.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartBuilding.debug.xcconfig"; path = "Target Support Files/Pods-SmartBuilding/Pods-SmartBuilding.debug.xcconfig"; sourceTree = "<group>"; };
 		F79748D6ED2F637BF5B1BA7C /* Pods_SmartBuilding.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartBuilding.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF91335F35C030B66A0B9AC8 /* Pods-SmartBuilding.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartBuilding.release.xcconfig"; path = "Target Support Files/Pods-SmartBuilding/Pods-SmartBuilding.release.xcconfig"; sourceTree = "<group>"; };
@@ -299,6 +305,7 @@
 				2A20BE6A282AE2D100D7024A /* Text Field */,
 				2A64A2032823F686002F63C3 /* Buttons */,
 				2A64A2022823F655002F63C3 /* stylesConstants */,
+				81E1307328352ACA000CDECB /* RoundedSearchBar.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -485,6 +492,7 @@
 				813CC9C428327216004331AC /* ShadowView.swift */,
 				813CC9C628327906004331AC /* BorderView.swift */,
 				81E1307128352904000CDECB /* CornerShadowView.swift */,
+				81E1307528353116000CDECB /* GradientColorView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -506,6 +514,7 @@
 				815228C0282A7F15007EEE74 /* FoundEmployeeViewController.swift */,
 				815228C2282A7F50007EEE74 /* NotifiedEmployeeViewController.swift */,
 				815228C4282A7F84007EEE74 /* GenerateCodeViewController.swift */,
+				81E13077283534BF000CDECB /* GetAccessCodeViewController.swift */,
 			);
 			path = AccessCode;
 			sourceTree = "<group>";
@@ -802,6 +811,7 @@
 				2AFB5CD3283406D100030008 /* SearchBuildingViewController.swift in Sources */,
 				819B9160282E52C600863FEC /* InviteSentViewController.swift in Sources */,
 				2A98EC4E28313FCD007CC44B /* MeetingRoomData.swift in Sources */,
+				81E1307628353116000CDECB /* GradientColorView.swift in Sources */,
 				2A57C6D62820215800FCB7EE /* FPMeetingRoomViewController.swift in Sources */,
 				81E130702833EFB4000CDECB /* SearchViewController.swift in Sources */,
 				81C06C2D282D01AF0084F996 /* CircleImageView.swift in Sources */,
@@ -830,8 +840,10 @@
 				2A1C614527F1FD7800FFD2D4 /* Utils.swift in Sources */,
 				2A9D816C2804599F00DA6B02 /* ForkbeardAuthentication.swift in Sources */,
 				81A1405427FAFB2600A6448D /* CustomLocationManagerDelegate.swift in Sources */,
+				81E1307428352ACB000CDECB /* RoundedSearchBar.swift in Sources */,
 				2A035EBF28118D2B00E037AC /* RebelAuthManager.swift in Sources */,
 				8163F7E9282806090002C60A /* ResturantCellController.swift in Sources */,
+				81E13078283534BF000CDECB /* GetAccessCodeViewController.swift in Sources */,
 				81C06C2A282CF8DE0084F996 /* CheckButton.swift in Sources */,
 				815228C1282A7F15007EEE74 /* FoundEmployeeViewController.swift in Sources */,
 				2AB764BC27E8B9B90084062C /* EventManager.swift in Sources */,

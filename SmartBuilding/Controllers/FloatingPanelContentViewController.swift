@@ -40,12 +40,13 @@ class FloatingPanelContentViewController: UIViewController, SFSafariViewControll
         super.viewDidLoad()
         //checkUserStatus()
         loadBookingFromDB()
+        getAccessCodeView.isHidden = false
         
         NotificationCenter.default.addObserver(self, selector: #selector(notification), name: .load, object: nil)
         
     }
     @IBAction func testHideFP(_ sender: UIButton) {
-     //   fpcMain.removePanelFromParent(animated: true)
+       //fpcMain.removePanelFromParent(animated: true)
     }
     
     @objc func notification() {

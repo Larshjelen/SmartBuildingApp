@@ -93,7 +93,6 @@ extension SearchBuildingViewController : UITableViewDelegate{
         
         mapVC?.searchedMeetingRoom = filteredRoomData.meetingRooms[indexPath.row]
         print(filteredRoomData.meetingRooms[indexPath.row].name)
-        mapVC?.viewDidLoad()
         self.navigationController?.dismiss(animated: true)
         
     }

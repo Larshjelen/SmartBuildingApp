@@ -52,7 +52,7 @@ class MapViewController: UIViewController, FloatingPanelControllerDelegate, UISe
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        mapSearchField.delegate = self
+       // mapSearchField.delegate = self
         
         do {
             gMapView.mapStyle = try GMSMapStyle(jsonString: MapStyle)
@@ -85,14 +85,10 @@ class MapViewController: UIViewController, FloatingPanelControllerDelegate, UISe
             
     }
     @IBAction func hideFP(_ sender: UIButton) {
-     //  fpcMain.addPanel(toParent: viewController, animated: true)
+       //fpcMain.addPanel(toParent: viewController, animated: true)
+        fpcMain.addPanel(toParent: self, animated: true)
     }
-    
-    
-    func searchBarShouldBeginEditing(_ searchBar: UISearchBar) -> Bool {
-        performSegue(withIdentifier: "toSearchView", sender: self)
-        return false
-    }
+
     
     func startNavigation (){
         
@@ -165,7 +161,10 @@ class MapViewController: UIViewController, FloatingPanelControllerDelegate, UISe
         }
     }
     
- 
+    @IBAction func searchPressed(_ sender: UIButton) {
+        performSegue(withIdentifier: "toSearchView", sender: self)
+    }
+    
     
     
    
