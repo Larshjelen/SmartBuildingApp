@@ -23,6 +23,8 @@ class MapViewController: UIViewController, FloatingPanelControllerDelegate, UISe
     private var mapViewEnhancer: SPFGMSMapEnhancer?
     private var requestingLocationAuth = false
     private var haveRequestedInput = false
+    @IBOutlet weak var wayfindingView: UIView!
+    @IBOutlet weak var startWayfindingButton: FPButtons!
     
     var fpcMain: FloatingPanelController!
     @IBOutlet weak var gMapView: GMSMapView!
@@ -86,26 +88,30 @@ class MapViewController: UIViewController, FloatingPanelControllerDelegate, UISe
     
     //Testing show/hide FP
     @IBAction func showFP(_ sender: UIButton) {
-        fpcMain.removePanelFromParent(animated: true)
-            
+       // fpcMain.removePanelFromParent(animated: true)
     }
     @IBAction func hideFP(_ sender: UIButton) {
        //fpcMain.addPanel(toParent: viewController, animated: true)
-        fpcMain.addPanel(toParent: self, animated: true)
+       // fpcMain.addPanel(toParent: self, animated: true)
     }
+    
+    
     @IBAction func showPopUp(_ sender: UIButton) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                let viewController = storyboard.instantiateViewController(withIdentifier: "navPopUp")
-                
-                if let presentationController = viewController.presentationController as? UISheetPresentationController {
-                    presentationController.detents = [.medium()] /// change to [.medium(), .large()] for a half *and* full screen sheet
-                }
-                
-                self.present(viewController, animated: true)
-
+        wayfindingView.isHidden = false
+        startWayfindingButton.isHidden = false
+        fpcMain.removePanelFromParent(animated: true)
+        
+    }
+    @IBAction func endNavigationPressed(_ sender: UIButton) {
+        wayfindingView.isHidden = true
+        fpcMain.addPanel(toParent: self, animated: true)
         
     }
     
+    @IBAction func startNavigationPressed(_ sender: UIButton) {
+        startWayfindingButton.isHidden = true
+        
+    }
     
     func startNavigation (){
         

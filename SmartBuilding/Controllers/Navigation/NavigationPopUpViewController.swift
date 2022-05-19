@@ -17,6 +17,6 @@ class NavigationPopUpViewController: UIViewController {
     }
     
     @IBAction func startNavButton(_ sender: UIButton) {
-        
+        print("Start nav PRESSED")
     }
 }
