@@ -25,6 +25,10 @@ class FloatingPanelContentViewController: UIViewController, SFSafariViewControll
     
     var mapViewController = MapViewController()
     
+    var utils = Utils()
+    
+    var isLoggedIn : Bool?
+    
     @IBOutlet weak var meetingRoomButton: UIButton!
     
     @IBOutlet weak var activeTextField: UITextField!
@@ -43,26 +47,12 @@ class FloatingPanelContentViewController: UIViewController, SFSafariViewControll
         super.viewDidLoad()
         //checkUserStatus()
         loadBookingFromDB()
-      //  let request : NSFetchRequest<User> = User.fetchRequest()
-      //      do{
 
-      //              let user = try context.fetch(request)
-      //          print(user.last?.isLoggedIn)
-      //          if user.last?.isLoggedIn == true {
-                    
-      //              print("Check user")
-      //              getAccessCodeView.isHidden = false
-                    
-      //         }
-                
-      //      }catch{
-      //          print(error.localizedDescription)
-                
-      //     }
         
         NotificationCenter.default.addObserver(self, selector: #selector(loadDB), name: .load, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(updateAccessCodeButton), name: .accessCode, object: nil)
         
+        isLoggedIn = utils.checkUserStatus()
     }
     
     @objc func loadDB() {
@@ -74,20 +64,7 @@ class FloatingPanelContentViewController: UIViewController, SFSafariViewControll
         getAccessCodeView.isHidden = true
         
     }
-    
-//    func checkUserStatus() {
-//
-//        let request : NSFetchRequest<User> = User.fetchRequest()
-//
-//        do{
-//            let user = try context.fetch(request)
-//            if (user.last!.isEmployee == true) {
-//                getAccessCodeView.isHidden = false
-//            }
-//        }catch{
-//            print(error.localizedDescription)
-//        }
-//    }
+
     
     func loadBookingFromDB(){
         
@@ -126,7 +103,12 @@ class FloatingPanelContentViewController: UIViewController, SFSafariViewControll
     //Navigation
     
     @IBAction func UserGetCodePressed(_ sender: UIButton) {
-        performSegue(withIdentifier: "toEmployeeGenerateCode", sender: self)
+       
+        if isLoggedIn! {
+            performSegue(withIdentifier: "toEmployeeGenerateCode", sender: self)
+        } else {
+            print("You must log in")
+        }
     }
     
     @IBAction func inviteGuestPressed(_ sender: UIButton) {
@@ -135,11 +117,19 @@ class FloatingPanelContentViewController: UIViewController, SFSafariViewControll
     }
     
     @IBAction func meetSomeonePressed(_ sender: UIButton) {
-        performSegue(withIdentifier: "toFindEmployee", sender: self)
+        if isLoggedIn! {
+            performSegue(withIdentifier: "toFindEmployee", sender: self)
+        }else {
+            print("You mus log in")
+        }
     }
     
     @IBAction func bookRoomPressed(_ sender: UIButton) {
-        performSegue(withIdentifier: "toMeetingRoom", sender: self)
+        if isLoggedIn! {
+            performSegue(withIdentifier: "toMeetingRoom", sender: self)
+        } else {
+            print("You mus log in")
+        }
     }
     
     @IBAction func EventsPressed(_ sender: UIButton) {
@@ -177,47 +167,5 @@ class FloatingPanelContentViewController: UIViewController, SFSafariViewControll
         notAvailableAlert()
     }
     
-    @IBAction func didTapAlertButton() {
-        let customAlert = MyAlert()
-        customAlert.showAlert(with: "Hello world", messge: "This is my alert", on: self)
-    }
-    
 }
 
-class MyAlert {
-    
-    struct Constants {
-        static let backgroundAlphaTo: CGFloat = 0.6
-    }
-    
-    private let backgroundView: UIView = {
-        let backgroundView = UIView()
-        backgroundView.backgroundColor = .black
-        backgroundView.alpha = 0
-        return backgroundView
-    }()
-    
-    private let alertView: UIView = {
-        let alert = UIView()
-        alert.backgroundColor = .white
-        alert.layer.masksToBounds = true
-        alert.layer.cornerRadius = 12
-        return alert
-    }()
-    
-    func showAlert(with title: String, messge: String, on viewController: UIViewController) {
-        guard let targetView = viewController.view else {
-            return
-        }
-        backgroundView.frame = targetView.bounds
-        targetView.addSubview(backgroundView)
-        UIView.animate(withDuration: 0.25, animations: {
-            self.backgroundView.alpha = Constants.backgroundAlphaTo
-        })
-        
-    }
-    
-    func dismissAlert() {
-        
-    }
-}

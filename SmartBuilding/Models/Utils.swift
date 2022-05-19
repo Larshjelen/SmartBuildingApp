@@ -101,6 +101,17 @@ struct Utils {
         return context
     }
     
+    func checkUserStatus() -> Bool{
+        
+        guard  let user = loadFromDB() else {
+            
+            return false
+        }
+        guard let newUser = user.last else {return false}
+       
+        return newUser.isLoggedIn
+    }
+    
     func loadEmployeeJson(fileName: String) -> [Employee]?{
 
 

@@ -35,8 +35,6 @@ class AboutCompanyViewController: UIViewController {
         companyNameTextField.delegate = self
         positionTextField.delegate = self
         self.navigationController?.navigationBar.tintColor = .black
-        
-        loadUser()
     }
     
     
@@ -78,17 +76,7 @@ class AboutCompanyViewController: UIViewController {
         
     }
     
-    func loadUser(){
-        
-        guard  let user = helpers.loadFromDB() else {
-            
-            return
-        }
-        guard let newUser = user.last else {return}
-        guard let name = newUser.name else {return}
-       
-        print(name)
-    }
+
 
 }
 
