@@ -23,12 +23,17 @@ class MapViewController: UIViewController, FloatingPanelControllerDelegate, UISe
     private var mapViewEnhancer: SPFGMSMapEnhancer?
     private var requestingLocationAuth = false
     private var haveRequestedInput = false
+    var utils = Utils()
+    
+    var selectedRoomLat: Double?
+    var selectedRoomLong: Double?
+    
     @IBOutlet weak var wayfindingView: UIView!
     @IBOutlet weak var startWayfindingButton: FPButtons!
+    @IBOutlet weak var wayFindingRoomName: UILabel!
     
     var fpcMain: FloatingPanelController!
     @IBOutlet weak var gMapView: GMSMapView!
-    @IBOutlet weak var mapSearchField: UISearchBar!
     
     var mapMarker : GMSMarker!
     var infoWindow : CustomMapMarker!
@@ -94,22 +99,15 @@ class MapViewController: UIViewController, FloatingPanelControllerDelegate, UISe
         
         searchedMeetingRoom = notification.userInfo?["room"] as? SearchRoom
         print("This is the meeting room you selected")
-        print(searchedMeetingRoom?.name)
-        print(searchedMeetingRoom?.location.lat ?? "No lat")
-        print(searchedMeetingRoom?.location.long ?? "No long")
+        wayFindingRoomName.text = searchedMeetingRoom?.name
+        selectedRoomLat = searchedMeetingRoom?.location.lat
+        selectedRoomLong = searchedMeetingRoom?.location.long
+        print(searchedMeetingRoom?.location.lat)
         fpcMain.removePanelFromParent(animated: true)
         wayfindingView.isHidden = false
         startWayfindingButton.isHidden = false
-        
-        
     }
     
-    @IBAction func showPopUp(_ sender: UIButton) {
-        wayfindingView.isHidden = false
-        startWayfindingButton.isHidden = false
-        fpcMain.removePanelFromParent(animated: true)
-        
-    }
     @IBAction func endNavigationPressed(_ sender: UIButton) {
         wayfindingView.isHidden = true
         fpcMain.addPanel(toParent: self, animated: true)
@@ -120,10 +118,12 @@ class MapViewController: UIViewController, FloatingPanelControllerDelegate, UISe
         startWayfindingButton.isHidden = true
         //Start navigation
         
+        
     }
     
     func startNavigation (){
-        
+        guard let lat = selectedRoomLat else {return}
+        guard let long = selectedRoomLong else {return}
         guard let constantCoordinates =  coordinatesManager.loadJson(fileName: "Coordinates_Rebel") else {
             return
         }
@@ -145,7 +145,7 @@ class MapViewController: UIViewController, FloatingPanelControllerDelegate, UISe
 
             if (currentFloor == 2){
                 //if at the same floor, navigate direct to destination
-                let endLocation = SPFLocationBase.forCoordinate(CLLocationCoordinate2DMake(constantCoordinates.meetingRooms[0].location.lat, constantCoordinates.meetingRooms[0].location.long), onFloor: constantCoordinates.meetingRooms[0].floor)
+                let endLocation = SPFLocationBase.forCoordinate(CLLocationCoordinate2DMake(lat, long), onFloor: 2)
                 SPFWayfindingService.directions(from: startLocation, to: endLocation, optimize: false) { directions, locations, error in
                     if(error != nil) {
                         print("Unable to find directions (%s)", error?.localizedDescription ?? "");
@@ -186,9 +186,18 @@ class MapViewController: UIViewController, FloatingPanelControllerDelegate, UISe
     @IBAction func calculateRouteBtn(_ sender: Any) {
        
         isNavgating = !isNavgating
+        startWayfindingButton.backgroundColor = UIColor.black
+        startWayfindingButton.titleLabel?.tintColor = UIColor.white
+        startWayfindingButton.titleLabel!.text = "Avslutt"
         
         if(!isNavgating){
             self.mapViewEnhancer?.stopNavigation()
+            startWayfindingButton.backgroundColor = utils.colorWithHexString(hexString: "#FFD400")
+            startWayfindingButton.titleLabel?.tintColor = UIColor.black
+            
+            wayfindingView.isHidden = true
+            fpcMain.addPanel(toParent: self, animated: true)
+            
             
         }
     }

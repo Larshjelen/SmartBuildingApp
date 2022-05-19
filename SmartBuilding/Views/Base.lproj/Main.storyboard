@@ -1829,14 +1829,6 @@
                                     <constraint firstItem="5ZN-sO-Kkk" firstAttribute="leading" secondItem="Pb5-0d-i9J" secondAttribute="leading" id="rdn-1f-AFY"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Fi-dw-v6z">
-                                <rect key="frame" x="279" y="5" width="67" height="31"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
-                                <connections>
-                                    <action selector="calculateRouteBtn:" destination="qsv-hy-RSR" eventType="touchUpInside" id="F0s-EL-cG9"/>
-                                </connections>
-                            </button>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zS9-hI-NaJ">
                                 <rect key="frame" x="0.0" y="634.66666666666663" width="375" height="177.33333333333337"/>
                                 <subviews>
@@ -1873,6 +1865,7 @@
                                                     <fontDescription key="titleFontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
                                                 </buttonConfiguration>
                                                 <connections>
+                                                    <action selector="calculateRouteBtn:" destination="qsv-hy-RSR" eventType="touchUpInside" id="btj-sN-0Wa"/>
                                                     <action selector="startNavigationPressed:" destination="qsv-hy-RSR" eventType="touchUpInside" id="9nV-yg-bj5"/>
                                                 </connections>
                                             </button>
@@ -1920,12 +1913,9 @@
                             <constraint firstItem="hXM-oG-LJF" firstAttribute="top" secondItem="57y-Ey-Q1C" secondAttribute="top" constant="-44" id="KBo-kX-BhX"/>
                             <constraint firstItem="hXM-oG-LJF" firstAttribute="trailing" secondItem="57y-Ey-Q1C" secondAttribute="trailing" id="Uha-Su-7nT"/>
                             <constraint firstItem="57y-Ey-Q1C" firstAttribute="trailing" secondItem="Pb5-0d-i9J" secondAttribute="trailing" constant="15" id="fQc-dY-nhm"/>
-                            <constraint firstItem="7Fi-dw-v6z" firstAttribute="top" secondItem="vZu-WQ-TCI" secondAttribute="topMargin" constant="-39" id="i4j-Hw-72y"/>
                             <constraint firstAttribute="bottom" secondItem="zS9-hI-NaJ" secondAttribute="bottom" id="lcW-RG-ZFY"/>
-                            <constraint firstAttribute="trailing" secondItem="7Fi-dw-v6z" secondAttribute="trailing" constant="29" id="m3K-OW-Ndf"/>
                             <constraint firstItem="Pb5-0d-i9J" firstAttribute="leading" secondItem="57y-Ey-Q1C" secondAttribute="leading" constant="15" id="q9A-Ul-LGi"/>
                             <constraint firstItem="Pb5-0d-i9J" firstAttribute="top" secondItem="57y-Ey-Q1C" secondAttribute="top" constant="13" id="qEO-xe-kOS"/>
-                            <constraint firstItem="7Fi-dw-v6z" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="57y-Ey-Q1C" secondAttribute="leading" id="rbU-p0-sWe"/>
                             <constraint firstItem="hXM-oG-LJF" firstAttribute="leading" secondItem="57y-Ey-Q1C" secondAttribute="leading" id="xOD-HX-nbe"/>
                             <constraint firstItem="57y-Ey-Q1C" firstAttribute="bottom" secondItem="Pb5-0d-i9J" secondAttribute="bottom" constant="680" id="z8F-3o-Zyf"/>
                         </constraints>
@@ -1935,6 +1925,7 @@
                     <connections>
                         <outlet property="gMapView" destination="hXM-oG-LJF" id="c0Q-Wu-Rhi"/>
                         <outlet property="startWayfindingButton" destination="9hf-E0-BzY" id="Eig-eo-Cyh"/>
+                        <outlet property="wayFindingRoomName" destination="was-4d-iSb" id="FFd-S8-IbC"/>
                         <outlet property="wayfindingView" destination="zS9-hI-NaJ" id="3sS-VM-T4a"/>
                         <segue destination="053-Bm-0kO" kind="presentation" identifier="toSearchView" id="g4B-Rk-X41"/>
                         <segue destination="6Fi-ev-gbQ" kind="show" identifier="toNavPopUp" id="Oaz-JV-vLl"/>
