@@ -10,7 +10,6 @@ import CoreData
 
 class IfEmployeeViewController: UIViewController {
     
-    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var helpers = Utils()
     
     override func viewDidLoad() {
@@ -21,10 +20,10 @@ class IfEmployeeViewController: UIViewController {
     
     @IBAction func skipCreateUserPressed(_ sender: UIButton) {
         
-            let newUser = User(context: self.context)
+        let newUser = User(context: helpers.getContext())
             newUser.isLoggedIn = false
            
-            helpers.saveToDB(context: context)
+            helpers.saveToDB()
         
     }
     

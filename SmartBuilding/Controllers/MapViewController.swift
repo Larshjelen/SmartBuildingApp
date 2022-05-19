@@ -72,11 +72,21 @@ class MapViewController: UIViewController, FloatingPanelControllerDelegate, UISe
             mapViewEnhancer?.settings.renderLocationOutlines = true
         }
         showFloatingPanel()
-        nextStartupStep()
+        //nextStartupStep()
         showAnnotations()
-        
+        checkUserState()
         
         NotificationCenter.default.addObserver(self, selector: #selector(getSelectedRoom), name: .navigation, object: nil)
+    }
+    
+    
+    func checkUserState (){
+        
+        let user = helpers.loadFromDB()
+        
+        guard let newUserName = user?.last?.isLoggedIn else  {return}
+        
+        print(newUserName)
     }
     
     

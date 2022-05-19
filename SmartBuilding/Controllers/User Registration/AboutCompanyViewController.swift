@@ -27,7 +27,6 @@ class AboutCompanyViewController: UIViewController {
     @IBOutlet weak var isGuestCheckMark: CircleImageView!
     
     var helpers = Utils()
-    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var isGuest = false
     var isEmployee = false
     
@@ -36,6 +35,8 @@ class AboutCompanyViewController: UIViewController {
         companyNameTextField.delegate = self
         positionTextField.delegate = self
         self.navigationController?.navigationBar.tintColor = .black
+        
+        loadUser()
     }
     
     
@@ -56,6 +57,7 @@ class AboutCompanyViewController: UIViewController {
     }
     
     @IBAction func nextBtnPressed(_ sender: UIButton) {
+        updateUserInfo()
         let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "completed") as? CompletedUserRegistrationViewController
         self.navigationController?.pushViewController(vc!, animated: true)
     }
@@ -64,16 +66,28 @@ class AboutCompanyViewController: UIViewController {
         let request : NSFetchRequest<User> = User.fetchRequest()
         
         do{
-            let user = try context.fetch(request)
+            let user = try helpers.getContext().fetch(request)
             user.last?.company = companyNameTextField.text
             user.last?.position = positionTextField.text
             user.last?.isGuest = isGuest
             user.last?.isEmployee = isEmployee
-            helpers.saveToDB(context: context)
+            helpers.saveToDB()
         }catch {
             print(error.localizedDescription)
         }
         
+    }
+    
+    func loadUser(){
+        
+        guard  let user = helpers.loadFromDB() else {
+            
+            return
+        }
+        guard let newUser = user.last else {return}
+        guard let name = newUser.name else {return}
+       
+        print(name)
     }
 
 }

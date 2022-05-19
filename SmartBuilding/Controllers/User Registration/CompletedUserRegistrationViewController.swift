@@ -13,7 +13,7 @@ class CompletedUserRegistrationViewController: UIViewController {
     
     @IBOutlet weak var progressBarBorder: UIView!
     var helpers = Utils()
-    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+   
     
     
     override func viewDidLoad() {
@@ -28,9 +28,9 @@ class CompletedUserRegistrationViewController: UIViewController {
         let request : NSFetchRequest<User> = User.fetchRequest()
         
         do{
-            let user = try context.fetch(request)
+            let user = try helpers.getContext().fetch(request)
             user.last?.isLoggedIn = true
-            helpers.saveToDB(context: context)
+            helpers.saveToDB()
         }catch {
             print(error.localizedDescription)
         }
@@ -40,7 +40,7 @@ class CompletedUserRegistrationViewController: UIViewController {
     // MARK: - Navigation
 
      @IBAction func createUserPressed(_ sender: UIButton) {
-         
+         updateUserInfo()
          self.performSegue(withIdentifier: "toHomeMap", sender: self)
      }
 

@@ -76,7 +76,7 @@ class BookingSummaryViewController: UIViewController {
         newBooking.roomCapacity = meetingRoomCapacity
         guard let selectedMeetingRoomImage = selectedRoomImage else {return}
         newBooking.roomImage = selectedMeetingRoomImage
-        utils.saveToDB(context: context)
+        utils.saveToDB()
     }
     
     /*

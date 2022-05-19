@@ -27,7 +27,7 @@ class CreateUserViewController: UIViewController {
     @IBOutlet weak var repeatPasswordView: UIView!
     @IBOutlet weak var emailView: UIView!
     
-    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+   
     
     var helpers = Utils()
     
@@ -98,10 +98,12 @@ class CreateUserViewController: UIViewController {
     
 
     func saveNewUser(){
-        let newUser = User(context: self.context)
-        newUser.email = emailTextField.text
-        newUser.password = passwordTextField.text
-        helpers.saveToDB(context: context)
+        let newUser = User(context: helpers.getContext())
+        let email = emailTextField.text
+        let password = passwordTextField.text
+        newUser.email = email
+        newUser.password = password
+        helpers.saveToDB()
     }
 
 }

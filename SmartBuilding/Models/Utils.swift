@@ -12,6 +12,7 @@ import CoreData
 
 struct Utils {
     
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     func substractRoomName (string : String) -> String{
         guard let endOfString = string.firstIndex(of:" ")else{return "error"}
@@ -75,7 +76,7 @@ struct Utils {
         return hexInt
     }
     
-    func saveToDB(context : NSManagedObjectContext){
+    func saveToDB(){
         
         do{
             try context.save()
@@ -84,7 +85,7 @@ struct Utils {
         }
     }
     
-    func loadFromDB(context : NSManagedObjectContext) -> [User]?{
+    func loadFromDB() -> [User]?{
         let request : NSFetchRequest<User> = User.fetchRequest()
         do{
           let user =   try context.fetch(request)
@@ -93,6 +94,11 @@ struct Utils {
             print(error.localizedDescription)
             return nil
         }
+    }
+    
+    func getContext () -> NSManagedObjectContext{
+        
+        return context
     }
     
     func loadEmployeeJson(fileName: String) -> [Employee]?{
