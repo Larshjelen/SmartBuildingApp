@@ -77,11 +77,13 @@ class MapViewController: UIViewController, FloatingPanelControllerDelegate, UISe
             mapViewEnhancer?.settings.renderLocationOutlines = true
         }
         showFloatingPanel()
-        //nextStartupStep()
+        nextStartupStep()
         showAnnotations()
         checkUserState()
         
         NotificationCenter.default.addObserver(self, selector: #selector(getSelectedRoom), name: .navigation, object: nil)
+        
+        print(spfLocationManager)
     }
     
     
@@ -102,7 +104,6 @@ class MapViewController: UIViewController, FloatingPanelControllerDelegate, UISe
         wayFindingRoomName.text = searchedMeetingRoom?.name
         selectedRoomLat = searchedMeetingRoom?.location.lat
         selectedRoomLong = searchedMeetingRoom?.location.long
-        print(searchedMeetingRoom?.location.lat)
         fpcMain.removePanelFromParent(animated: true)
         wayfindingView.isHidden = false
         startWayfindingButton.isHidden = false
@@ -124,36 +125,40 @@ class MapViewController: UIViewController, FloatingPanelControllerDelegate, UISe
     func startNavigation (){
         guard let lat = selectedRoomLat else {return}
         guard let long = selectedRoomLong else {return}
-        guard let constantCoordinates =  coordinatesManager.loadJson(fileName: "Coordinates_Rebel") else {
-            return
-        }
+     
         
         if let spfLocationManager = self.spfLocationManager{
+            
+            print("location manager")
 
             guard let startLat = spfLocationManager.getLastKnownLocation()?.coordinate.latitude else {
+                print("StartLat not given by spfLocationManager")
                 return
             }
+            
 
             guard let startLong = spfLocationManager.getLastKnownLocation()?.coordinate.longitude else {
-
+                print("StartLong not given by spfLocationManager")
                 return
         }
+            print("Starting coordinates")
             guard let currentFloor = spfLocationManager.getLastKnownLocation()?.floor else {
                  return
             }
+            print(startLat)
             let startLocation = SPFLocationBase.forCoordinate(CLLocationCoordinate2DMake(startLat, startLong), onFloor: Int(currentFloor))
-
+            //onFloor:Int(currentFloor))
             if (currentFloor == 2){
                 //if at the same floor, navigate direct to destination
                 let endLocation = SPFLocationBase.forCoordinate(CLLocationCoordinate2DMake(lat, long), onFloor: 2)
                 SPFWayfindingService.directions(from: startLocation, to: endLocation, optimize: false) { directions, locations, error in
                     if(error != nil) {
-                        print("Unable to find directions (%s)", error?.localizedDescription ?? "");
+                        print("Unable to find directions (%s)");
                         return
                     }
 
                     guard let route = directions?.routes.first else {
-                        print("Unable to find directions", error?.localizedDescription ?? "");
+                        print("Unable to find directions");
                         return
                     }
 
@@ -162,10 +167,12 @@ class MapViewController: UIViewController, FloatingPanelControllerDelegate, UISe
     
             } else {
                 //if not, take the elevator
-                let endLocation = SPFLocationBase.forCoordinate(CLLocationCoordinate2DMake(constantCoordinates.elevator.elevatorFirst.lat, constantCoordinates.elevator.elevatorFirst.long), onFloor: constantCoordinates.elevator.elevatorFirst.floor)
+                
+                let endLocation = SPFLocationBase.forCoordinate(CLLocationCoordinate2DMake(59.91744954107789, 10.74023891971364), onFloor: 1)
                  SPFWayfindingService.directions(from: startLocation, to: endLocation, optimize: false) { directions, locations, error in
                      if(error != nil) {
-                         print("Unable to find directions (%s)", error?.localizedDescription ?? "");
+                         print("Unable to find directions (%s)", error?.localizedDescription ?? "")
+                         
                          return
                      }
 
@@ -180,6 +187,7 @@ class MapViewController: UIViewController, FloatingPanelControllerDelegate, UISe
             }
 
         }
+        
     }
     
     //Toggle navigation
@@ -414,9 +422,10 @@ extension MapViewController: SPFLocationManagerDelegate {
             //NSLog("Forkbeard Location Update: \(location.coordinate.latitude),\(location.coordinate.longitude)"
             if isNavgating {
                 startNavigation()
+                print("started")
             }else {
                 
-                print("stop navigation")
+               
             }
         } else {
             NSLog("Forkbeard Location Update: Unknown")
@@ -438,7 +447,7 @@ extension MapViewController: SPFLocationManagerDelegate {
                    
                 }
                 else {
-                    
+                    print("is not positioning")
                 }
             }
         }

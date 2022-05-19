@@ -22,19 +22,23 @@
 		2A1C614127F1B44700FFD2D4 /* EventDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1C614027F1B44700FFD2D4 /* EventDetailsViewController.swift */; };
 		2A1C614527F1FD7800FFD2D4 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1C614427F1FD7800FFD2D4 /* Utils.swift */; };
 		2A20BE3128298F8400D7024A /* Events.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A20BE2F28298F8400D7024A /* Events.storyboard */; };
-		2A20BE5E282A880500D7024A /* ForkbeardCore.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A20BE5D282A880500D7024A /* ForkbeardCore.xcframework */; };
-		2A20BE62282A880F00D7024A /* PhoneFUEL.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A20BE61282A880F00D7024A /* PhoneFUEL.xcframework */; };
-		2A20BE65282A881C00D7024A /* PhoneFUELGoogleMaps.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A20BE64282A881C00D7024A /* PhoneFUELGoogleMaps.xcframework */; };
-		2A20BE68282A882700D7024A /* PhoneFUELWayfinding.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A20BE67282A882700D7024A /* PhoneFUELWayfinding.xcframework */; };
 		2A20BE6C282AE30C00D7024A /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A20BE6B282AE30B00D7024A /* CustomTextField.swift */; };
 		2A57C6CF281FF19100FCB7EE /* CoordinatesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A57C6CE281FF19100FCB7EE /* CoordinatesData.swift */; };
 		2A57C6D22820082200FCB7EE /* CoordinatesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A57C6D12820082200FCB7EE /* CoordinatesManager.swift */; };
 		2A57C6D62820215800FCB7EE /* FPMeetingRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A57C6D52820215800FCB7EE /* FPMeetingRoomViewController.swift */; };
 		2A5B92CD2833C59A0046BEA6 /* TransitionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5B92CC2833C59A0046BEA6 /* TransitionButton.swift */; };
+		2A62275D2836CBB500B53700 /* Pods_SmartBuilding.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F79748D6ED2F637BF5B1BA7C /* Pods_SmartBuilding.framework */; };
+		2A62275E2836CBD300B53700 /* PhoneFUELWayfinding.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A8858082836C6A700380748 /* PhoneFUELWayfinding.xcframework */; };
+		2A62275F2836CBD300B53700 /* PhoneFUELWayfinding.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2A8858082836C6A700380748 /* PhoneFUELWayfinding.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2A6227612836CBD600B53700 /* PhoneFUEL.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A8858002836C69100380748 /* PhoneFUEL.xcframework */; };
+		2A6227622836CBD600B53700 /* PhoneFUEL.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2A8858002836C69100380748 /* PhoneFUEL.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2A6227632836CBD700B53700 /* ForkbeardCore.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A8857FC2836C68800380748 /* ForkbeardCore.xcframework */; };
+		2A6227642836CBD700B53700 /* ForkbeardCore.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2A8857FC2836C68800380748 /* ForkbeardCore.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2A64A2052823F742002F63C3 /* SecondaryLargeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A64A2042823F742002F63C3 /* SecondaryLargeButton.swift */; };
 		2A64A2072823F772002F63C3 /* StyleAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A64A2062823F772002F63C3 /* StyleAttributes.swift */; };
 		2A87A517280EA733008672E3 /* FloatingPanelContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A87A516280EA733008672E3 /* FloatingPanelContentViewController.swift */; };
 		2A87A519280EFDF2008672E3 /* RebelAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A87A518280EFDF2008672E3 /* RebelAuthentication.swift */; };
+		2A8858052836C69900380748 /* PhoneFUELGoogleMaps.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A8858042836C69900380748 /* PhoneFUELGoogleMaps.xcframework */; };
 		2A98EC4E28313FCD007CC44B /* MeetingRoomData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A98EC4D28313FCD007CC44B /* MeetingRoomData.swift */; };
 		2A98EC5028314127007CC44B /* MeetingRoomManagerApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A98EC4F28314127007CC44B /* MeetingRoomManagerApi.swift */; };
 		2A9D816C2804599F00DA6B02 /* ForkbeardAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9D816B2804599F00DA6B02 /* ForkbeardAuthentication.swift */; };
@@ -77,7 +81,6 @@
 		8163F7E62827FA7D0002C60A /* ResturantsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8163F7E52827FA7D0002C60A /* ResturantsViewController.swift */; };
 		8163F7E9282806090002C60A /* ResturantCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8163F7E7282806090002C60A /* ResturantCellController.swift */; };
 		8163F7EA282806090002C60A /* ResturantCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8163F7E8282806090002C60A /* ResturantCell.xib */; };
-		819835DF2805860A007BB7D7 /* Pods_SmartBuilding.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F79748D6ED2F637BF5B1BA7C /* Pods_SmartBuilding.framework */; };
 		819B915E282E522B00863FEC /* GuestInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819B915D282E522B00863FEC /* GuestInformationViewController.swift */; };
 		819B9160282E52C600863FEC /* InviteSentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819B915F282E52C600863FEC /* InviteSentViewController.swift */; };
 		819B9164282E64E700863FEC /* MeetingRoomsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819B9163282E64E700863FEC /* MeetingRoomsTableViewController.swift */; };
@@ -123,6 +126,22 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		2A6227602836CBD300B53700 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				2A6227622836CBD600B53700 /* PhoneFUEL.xcframework in Embed Frameworks */,
+				2A6227642836CBD700B53700 /* ForkbeardCore.xcframework in Embed Frameworks */,
+				2A62275F2836CBD300B53700 /* PhoneFUELWayfinding.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		2A035EBA2811643900E037AC /* CustomMapMarker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMapMarker.swift; sourceTree = "<group>"; };
 		2A035EBC2811647E00E037AC /* CustomMapMarkerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomMapMarkerView.xib; sourceTree = "<group>"; };
@@ -139,11 +158,8 @@
 		2A1C614027F1B44700FFD2D4 /* EventDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailsViewController.swift; sourceTree = "<group>"; };
 		2A1C614427F1FD7800FFD2D4 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		2A20BE3028298F8400D7024A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Events.storyboard; sourceTree = "<group>"; };
-		2A20BE5D282A880500D7024A /* ForkbeardCore.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = ForkbeardCore.xcframework; sourceTree = "<group>"; };
-		2A20BE61282A880F00D7024A /* PhoneFUEL.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = PhoneFUEL.xcframework; sourceTree = "<group>"; };
-		2A20BE64282A881C00D7024A /* PhoneFUELGoogleMaps.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = PhoneFUELGoogleMaps.xcframework; sourceTree = "<group>"; };
-		2A20BE67282A882700D7024A /* PhoneFUELWayfinding.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = PhoneFUELWayfinding.xcframework; sourceTree = "<group>"; };
 		2A20BE6B282AE30B00D7024A /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		2A2E24B92836B89E00CB7A0D /* AppAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AppAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A57C6CE281FF19100FCB7EE /* CoordinatesData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatesData.swift; sourceTree = "<group>"; };
 		2A57C6D12820082200FCB7EE /* CoordinatesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatesManager.swift; sourceTree = "<group>"; };
 		2A57C6D52820215800FCB7EE /* FPMeetingRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPMeetingRoomViewController.swift; sourceTree = "<group>"; };
@@ -152,6 +168,10 @@
 		2A64A2062823F772002F63C3 /* StyleAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleAttributes.swift; sourceTree = "<group>"; };
 		2A87A516280EA733008672E3 /* FloatingPanelContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingPanelContentViewController.swift; sourceTree = "<group>"; };
 		2A87A518280EFDF2008672E3 /* RebelAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RebelAuthentication.swift; sourceTree = "<group>"; };
+		2A8857FC2836C68800380748 /* ForkbeardCore.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = ForkbeardCore.xcframework; sourceTree = "<group>"; };
+		2A8858002836C69100380748 /* PhoneFUEL.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = PhoneFUEL.xcframework; sourceTree = "<group>"; };
+		2A8858042836C69900380748 /* PhoneFUELGoogleMaps.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = PhoneFUELGoogleMaps.xcframework; sourceTree = "<group>"; };
+		2A8858082836C6A700380748 /* PhoneFUELWayfinding.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = PhoneFUELWayfinding.xcframework; sourceTree = "<group>"; };
 		2A98EC4D28313FCD007CC44B /* MeetingRoomData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetingRoomData.swift; sourceTree = "<group>"; };
 		2A98EC4F28314127007CC44B /* MeetingRoomManagerApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetingRoomManagerApi.swift; sourceTree = "<group>"; };
 		2A9D816B2804599F00DA6B02 /* ForkbeardAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForkbeardAuthentication.swift; sourceTree = "<group>"; };
@@ -234,11 +254,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2A20BE62282A880F00D7024A /* PhoneFUEL.xcframework in Frameworks */,
-				819835DF2805860A007BB7D7 /* Pods_SmartBuilding.framework in Frameworks */,
-				2A20BE65282A881C00D7024A /* PhoneFUELGoogleMaps.xcframework in Frameworks */,
-				2A20BE5E282A880500D7024A /* ForkbeardCore.xcframework in Frameworks */,
-				2A20BE68282A882700D7024A /* PhoneFUELWayfinding.xcframework in Frameworks */,
+				2A6227612836CBD600B53700 /* PhoneFUEL.xcframework in Frameworks */,
+				2A8858052836C69900380748 /* PhoneFUELGoogleMaps.xcframework in Frameworks */,
+				2A6227632836CBD700B53700 /* ForkbeardCore.xcframework in Frameworks */,
+				2A62275D2836CBB500B53700 /* Pods_SmartBuilding.framework in Frameworks */,
+				2A62275E2836CBD300B53700 /* PhoneFUELWayfinding.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -543,10 +563,11 @@
 		81A1404E27FAD8CE00A6448D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				2A20BE67282A882700D7024A /* PhoneFUELWayfinding.xcframework */,
-				2A20BE64282A881C00D7024A /* PhoneFUELGoogleMaps.xcframework */,
-				2A20BE61282A880F00D7024A /* PhoneFUEL.xcframework */,
-				2A20BE5D282A880500D7024A /* ForkbeardCore.xcframework */,
+				2A8858082836C6A700380748 /* PhoneFUELWayfinding.xcframework */,
+				2A8858042836C69900380748 /* PhoneFUELGoogleMaps.xcframework */,
+				2A8858002836C69100380748 /* PhoneFUEL.xcframework */,
+				2A8857FC2836C68800380748 /* ForkbeardCore.xcframework */,
+				2A2E24B92836B89E00CB7A0D /* AppAuth.framework */,
 				F79748D6ED2F637BF5B1BA7C /* Pods_SmartBuilding.framework */,
 			);
 			name = Frameworks;
@@ -621,6 +642,7 @@
 				2AB7647827E89F8D0084062C /* Resources */,
 				78ADA5CFE113396F5D6F6A5F /* [CP] Embed Pods Frameworks */,
 				5A31DB81B556C0FD1A7DAB1F /* [CP] Copy Pods Resources */,
+				2A6227602836CBD300B53700 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1097,9 +1119,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 978NW4ULQ6;
+				DEVELOPMENT_TEAM = 73NCHQP3L2;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SmartBuilding/Info.plist;
 				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Location used for determining coarse location and improved position accuracy.";
@@ -1119,8 +1142,9 @@
 				);
 				MARKETING_VERSION = 1.0;
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = no.shortcut.SmartBuilding;
+				PRODUCT_BUNDLE_IDENTIFIER = no.shortcut.SmartBuildingg;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1134,9 +1158,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 978NW4ULQ6;
+				DEVELOPMENT_TEAM = 73NCHQP3L2;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SmartBuilding/Info.plist;
 				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Location used for determining coarse location and improved position accuracy.";
@@ -1156,8 +1181,9 @@
 				);
 				MARKETING_VERSION = 1.0;
 				ONLY_ACTIVE_ARCH = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = no.shortcut.SmartBuilding;
+				PRODUCT_BUNDLE_IDENTIFIER = no.shortcut.SmartBuildingg;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
