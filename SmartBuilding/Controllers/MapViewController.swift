@@ -38,6 +38,8 @@ class MapViewController: UIViewController, FloatingPanelControllerDelegate, UISe
     var mapMarker : GMSMarker!
     var infoWindow : CustomMapMarker!
     
+    var roomCoordinates : Coordinates?
+    
    var isNavgating = false
     
     let MapStyle = """
@@ -82,8 +84,8 @@ class MapViewController: UIViewController, FloatingPanelControllerDelegate, UISe
         checkUserState()
         
         NotificationCenter.default.addObserver(self, selector: #selector(getSelectedRoom), name: .navigation, object: nil)
-        
-        print(spfLocationManager)
+    
+        getMeetingRoomsCoordinates()
     }
     
     
@@ -249,36 +251,48 @@ class MapViewController: UIViewController, FloatingPanelControllerDelegate, UISe
 
        
     }
+    
+    func getMeetingRoomsCoordinates(){
+        
+        guard let coordinates = coordinatesManager.loadJson(fileName: "Coordinates_Rebel") else {return}
+        
+        roomCoordinates = coordinates
+    }
   
     func showAnnotations(){
-        let enterence = CLLocationCoordinate2D(latitude: 59.91750663489815, longitude: 10.740081153848683)
-        let coffeeShop = CLLocationCoordinate2D(latitude: 59.917513690438184, longitude: 10.740199699431164)
+        //Positions
+       
         let elevatorFirstFloor = CLLocationCoordinate2D(latitude: 59.91745227315649, longitude: 10.740245569903445)
-        let toiletFirstFloor = CLLocationCoordinate2D(latitude: 59.91751624975255, longitude: 10.740297283480029)
-        let cafeteria = CLLocationCoordinate2D(latitude: 59.917309133883975, longitude: 10.740020206822235)
         let liberary = CLLocationCoordinate2D(latitude: 59.91709632470611, longitude: 10.740116439727924)
         let coffeeSecondFloor = CLLocationCoordinate2D(latitude: 59.91733119435588, longitude: 10.74000016879904)
         let toiletBigSecondFloor = CLLocationCoordinate2D(latitude: 59.917165288285304, longitude: 10.740115140875274)
         let toiletSmallSecondFloor = CLLocationCoordinate2D(latitude: 59.91703410651393, longitude: 10.740185031394864)
-        let enterenceMarker = GMSMarker(position: enterence)
-        let coffeeShopMarker = GMSMarker(position: coffeeShop)
+        
         let elevatorFirstFloorMarker = GMSMarker(position: elevatorFirstFloor)
-        let toiletFirstFloorMarker = GMSMarker(position: toiletFirstFloor)
-        let cafeteriaMarker = GMSMarker(position: cafeteria)
         let liberaryMarker = GMSMarker(position: liberary)
         let coffeeSecondFloorMarker = GMSMarker(position: coffeeSecondFloor)
         let toiletBigSecondFloorMarker = GMSMarker(position: toiletBigSecondFloor)
         let toiletSmallSecondFloorMarker = GMSMarker(position: toiletSmallSecondFloor)
-        //locationMarker.icon = UIImage
-        enterenceMarker.map = gMapView
-        coffeeShopMarker.map = gMapView
+        toiletSmallSecondFloorMarker.icon = UIImage(named: "icon_toilet")
+        elevatorFirstFloorMarker.icon = UIImage(named: "icon_elevator")
+        liberaryMarker.icon = UIImage(named: "heis_ikon")
+        coffeeSecondFloorMarker.icon = UIImage(named: "icon_coffee")
+        toiletBigSecondFloorMarker.icon = UIImage(named: "icon_toilet")
         elevatorFirstFloorMarker.map = gMapView
-        toiletFirstFloorMarker.map = gMapView
-        cafeteriaMarker.map = gMapView
         liberaryMarker.map = gMapView
         coffeeSecondFloorMarker.map = gMapView
         toiletBigSecondFloorMarker.map = gMapView
         toiletSmallSecondFloorMarker.map = gMapView
+        
+        //Add room markers
+        
+        guard let coordinates = roomCoordinates?.meetingRooms else {return}
+        
+        let roomOne = CLLocationCoordinate2D(latitude: (coordinates[0].location.lat), longitude: (coordinates[0].location.long))
+        let roomOneMarker = GMSMarker(position: roomOne)
+        roomOneMarker.icon = UIImage(named: "heis_ikon")
+        roomOneMarker.map = gMapView
+        
         
     }
     
