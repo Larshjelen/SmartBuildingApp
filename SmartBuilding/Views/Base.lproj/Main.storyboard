@@ -1893,7 +1893,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="was-4d-iSb" secondAttribute="trailing" constant="60" id="6iz-4X-png"/>
                                     <constraint firstItem="was-4d-iSb" firstAttribute="top" secondItem="zS9-hI-NaJ" secondAttribute="top" constant="18" id="Lax-Pq-Jpe"/>
@@ -2531,6 +2531,9 @@
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                         </subviews>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="53" id="B6C-CL-4Xm"/>
+                                                        </constraints>
                                                     </view>
                                                 </subviews>
                                                 <constraints>
@@ -2826,6 +2829,11 @@
                                                         </constraints>
                                                     </view>
                                                 </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="NDM-9T-4Xe" firstAttribute="leading" secondItem="Wos-kC-5kg" secondAttribute="trailing" id="cNJ-Ox-hQ7"/>
+                                                    <constraint firstItem="Wos-kC-5kg" firstAttribute="leading" secondItem="wEg-Sx-vZs" secondAttribute="leading" id="sjl-ZH-332"/>
+                                                    <constraint firstAttribute="trailing" secondItem="NDM-9T-4Xe" secondAttribute="trailing" id="u1N-CJ-y3W"/>
+                                                </constraints>
                                             </stackView>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -3441,9 +3449,6 @@
         </systemColor>
         <systemColor name="systemBlueColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemTealColor">
             <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

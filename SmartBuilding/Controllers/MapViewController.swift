@@ -199,6 +199,7 @@ class MapViewController: UIViewController, FloatingPanelControllerDelegate, UISe
         startWayfindingButton.titleLabel!.text = "Avslutt"
         
         if(!isNavgating){
+            isNavgating = !isNavgating
             self.mapViewEnhancer?.stopNavigation()
             startWayfindingButton.backgroundColor = utils.colorWithHexString(hexString: "#FFD400")
             startWayfindingButton.titleLabel?.tintColor = UIColor.black
