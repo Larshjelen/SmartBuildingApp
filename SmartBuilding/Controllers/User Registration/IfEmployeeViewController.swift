@@ -6,11 +6,13 @@
 //
 
 import UIKit
+import CoreData
 
 class IfEmployeeViewController: UIViewController {
     
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    var helpers = Utils()
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -18,6 +20,12 @@ class IfEmployeeViewController: UIViewController {
     //Navigation
     
     @IBAction func skipCreateUserPressed(_ sender: UIButton) {
+        
+            let newUser = User(context: self.context)
+            newUser.isLoggedIn = false
+           
+            helpers.saveToDB(context: context)
+        
     }
     
     @IBAction func CreateUserPressed(_ sender: UIButton) {

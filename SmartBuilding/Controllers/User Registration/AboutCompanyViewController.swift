@@ -65,10 +65,10 @@ class AboutCompanyViewController: UIViewController {
         
         do{
             let user = try context.fetch(request)
-            user.first?.company = companyNameTextField.text
-            user.first?.position = positionTextField.text
-            user.first?.isGuest = isGuest
-            user.first?.isEmployee = isEmployee
+            user.last?.company = companyNameTextField.text
+            user.last?.position = positionTextField.text
+            user.last?.isGuest = isGuest
+            user.last?.isEmployee = isEmployee
             helpers.saveToDB(context: context)
         }catch {
             print(error.localizedDescription)

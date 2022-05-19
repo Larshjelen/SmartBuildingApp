@@ -101,7 +101,7 @@
                                                                             <constraint firstItem="7kQ-4L-xTI" firstAttribute="top" secondItem="bFT-In-ONv" secondAttribute="top" constant="15" id="wTV-yb-1qn"/>
                                                                         </constraints>
                                                                     </view>
-                                                                    <view hidden="YES" opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ntq-Gf-NeT" userLabel="HasAccessCodeView">
+                                                                    <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ntq-Gf-NeT" userLabel="HasAccessCodeView">
                                                                         <rect key="frame" x="0.0" y="0.0" width="345" height="81"/>
                                                                         <subviews>
                                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jAJ-ME-q0X" customClass="FPButtons" customModule="SmartBuilding" customModuleProvider="target">
@@ -111,9 +111,6 @@
                                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                                 <state key="normal" title="Adgangskode"/>
                                                                                 <buttonConfiguration key="configuration" style="plain" title=""/>
-                                                                                <connections>
-                                                                                    <action selector="MiddleAccessCodeButtonPressed:" destination="vcu-Wc-DtC" eventType="touchUpInside" id="bNa-ZX-hXj"/>
-                                                                                </connections>
                                                                             </button>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Adgangskode" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V3F-of-wDD">
                                                                                 <rect key="frame" x="69" y="14.999999999999998" width="109" height="20.333333333333329"/>
@@ -163,7 +160,7 @@
                                                                             <constraint firstItem="kr5-l4-LNF" firstAttribute="top" secondItem="ntq-Gf-NeT" secondAttribute="top" constant="20" id="wWb-RG-P7R"/>
                                                                         </constraints>
                                                                     </view>
-                                                                    <view hidden="YES" opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6vJ-1E-m19" userLabel="GetAccessCodeView" customClass="FPButtonShadow" customModule="SmartBuilding" customModuleProvider="target">
+                                                                    <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6vJ-1E-m19" userLabel="GetAccessCodeView" customClass="FPButtonShadow" customModule="SmartBuilding" customModuleProvider="target">
                                                                         <rect key="frame" x="0.0" y="0.0" width="345" height="81"/>
                                                                         <subviews>
                                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xYy-Fi-4hp" customClass="FPButtons" customModule="SmartBuilding" customModuleProvider="target">
@@ -519,9 +516,6 @@
                                                                                 <buttonConfiguration key="configuration" style="plain" title="Vis på kart">
                                                                                     <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                                                 </buttonConfiguration>
-                                                                                <connections>
-                                                                                    <action selector="testHideFP:" destination="vcu-Wc-DtC" eventType="touchUpInside" id="5uo-fU-S5b"/>
-                                                                                </connections>
                                                                             </button>
                                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_pin_dark_blue" translatesAutoresizingMaskIntoConstraints="NO" id="YZu-67-sIs">
                                                                                 <rect key="frame" x="314" y="59.999999999999993" width="24" height="24.666666666666664"/>
@@ -1074,7 +1068,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cBc-nz-CFp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2.3999999999999999" y="710.83743842364538"/>
+            <point key="canvasLocation" x="34" y="712"/>
         </scene>
         <!--Meeting Room View Controller-->
         <scene sceneID="Kky-Qd-05Q">
@@ -1097,7 +1091,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dJT-YS-V2d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1791.2" y="1328.5714285714287"/>
+            <point key="canvasLocation" x="1751" y="2331"/>
         </scene>
         <!--Choose user-->
         <scene sceneID="DPl-cX-M3I">
@@ -1755,6 +1749,30 @@
             </objects>
             <point key="canvasLocation" x="1990" y="-89"/>
         </scene>
+        <!--Pop Up View Controller-->
+        <scene sceneID="UQO-o7-Dci">
+            <objects>
+                <viewController id="Yyb-3o-bc6" customClass="PopUpViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iex-4I-0Ij">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w51-KT-pe0">
+                                <rect key="frame" x="166" y="91" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Tz6-g5-Jmb"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5RT-Ef-OFF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1975" y="618"/>
+        </scene>
         <!--Item-->
         <scene sceneID="bVu-Lk-8ri">
             <objects>
@@ -1811,6 +1829,16 @@
                                     <constraint firstItem="5ZN-sO-Kkk" firstAttribute="leading" secondItem="Pb5-0d-i9J" secondAttribute="leading" id="rdn-1f-AFY"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Ua-ga-ErN">
+                                <rect key="frame" x="154" y="390" width="67" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.83137254900000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="showPopUp:" destination="qsv-hy-RSR" eventType="touchUpInside" id="T8Z-oC-4UQ"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Fi-dw-v6z">
                                 <rect key="frame" x="279" y="5" width="67" height="31"/>
                                 <state key="normal" title="Button"/>
@@ -1860,6 +1888,7 @@
                     <connections>
                         <outlet property="gMapView" destination="hXM-oG-LJF" id="c0Q-Wu-Rhi"/>
                         <segue destination="053-Bm-0kO" kind="presentation" identifier="toSearchView" id="g4B-Rk-X41"/>
+                        <segue destination="6Fi-ev-gbQ" kind="show" identifier="toNavPopUp" id="Oaz-JV-vLl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FFh-LN-dV0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -3084,20 +3113,65 @@
             </objects>
             <point key="canvasLocation" x="-26" y="-48"/>
         </scene>
-        <!--View Controller-->
+        <!--Navigation Pop Up View Controller-->
         <scene sceneID="i3X-6h-y8o">
             <objects>
-                <viewController id="6Fi-ev-gbQ" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="navPopUp" id="6Fi-ev-gbQ" customClass="NavigationPopUpViewController" customModule="SmartBuilding" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XeT-sQ-TZD">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PDp-5p-tNr">
+                                <rect key="frame" x="0.0" y="92" width="375" height="138"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="be8-m7-xge">
+                                        <rect key="frame" x="41" y="67.666666666666657" width="295" height="34.333333333333343"/>
+                                        <color key="backgroundColor" red="1" green="0.83137254900000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Vis meg veien">
+                                            <fontDescription key="titleFontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="startNavButton:" destination="6Fi-ev-gbQ" eventType="touchUpInside" id="OIY-on-qqP"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RoomName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gam-gC-jNc">
+                                        <rect key="frame" x="114" y="8" width="146" height="33.666666666666664"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                        <color key="textColor" red="0.23529411764705882" green="0.23529411764705882" blue="0.23529411764705882" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="Gam-gC-jNc" firstAttribute="top" secondItem="PDp-5p-tNr" secondAttribute="top" constant="8" id="2gh-ea-Phw"/>
+                                    <constraint firstAttribute="trailing" secondItem="be8-m7-xge" secondAttribute="trailing" constant="39" id="4nH-oo-3BV"/>
+                                    <constraint firstAttribute="trailing" secondItem="Gam-gC-jNc" secondAttribute="trailing" constant="115" id="7Zz-PN-VyB"/>
+                                    <constraint firstItem="be8-m7-xge" firstAttribute="leading" secondItem="PDp-5p-tNr" secondAttribute="leading" constant="41" id="8Sk-Yk-DRn"/>
+                                    <constraint firstItem="Gam-gC-jNc" firstAttribute="leading" secondItem="PDp-5p-tNr" secondAttribute="leading" constant="114" id="D7Q-m8-BKD"/>
+                                    <constraint firstAttribute="bottom" secondItem="be8-m7-xge" secondAttribute="bottom" constant="36" id="S4W-c8-VDe"/>
+                                    <constraint firstItem="be8-m7-xge" firstAttribute="top" secondItem="Gam-gC-jNc" secondAttribute="bottom" constant="26" id="VkC-HV-SJm"/>
+                                    <constraint firstItem="be8-m7-xge" firstAttribute="top" secondItem="Gam-gC-jNc" secondAttribute="bottom" constant="26" id="WmF-9o-ySa"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="g1O-cl-rCJ"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="PDp-5p-tNr" firstAttribute="leading" secondItem="g1O-cl-rCJ" secondAttribute="leading" id="Utx-Lb-Whg"/>
+                            <constraint firstItem="PDp-5p-tNr" firstAttribute="top" secondItem="g1O-cl-rCJ" secondAttribute="top" constant="48" id="awG-s9-hx5"/>
+                            <constraint firstItem="PDp-5p-tNr" firstAttribute="bottom" secondItem="g1O-cl-rCJ" secondAttribute="bottom" constant="-528" id="pVf-t9-uJX"/>
+                            <constraint firstItem="PDp-5p-tNr" firstAttribute="trailing" secondItem="g1O-cl-rCJ" secondAttribute="trailing" id="s0O-YQ-GeU"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="TXN-Bx-XOS"/>
+                    <connections>
+                        <outlet property="roomNameLabel" destination="Gam-gC-jNc" id="Ez1-Yb-BBU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n0k-gm-8XW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2524" y="1328.5714285714287"/>
+            <point key="canvasLocation" x="-1842.4000000000001" y="1407.6354679802955"/>
         </scene>
         <!--Get Access Code View Controller-->
         <scene sceneID="WEO-PO-7vb">
@@ -3119,10 +3193,13 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kE3-72-Vaj">
                                         <rect key="frame" x="0.0" y="0.0" width="48" height="56"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HDl-fD-Sq0">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HDl-fD-Sq0">
                                                 <rect key="frame" x="2" y="2" width="44" height="52"/>
                                                 <color key="backgroundColor" red="1" green="0.83137254900000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="52" id="vBd-c6-oUz"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                         </subviews>
@@ -3136,10 +3213,13 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6X3-Jj-8C4">
                                         <rect key="frame" x="64" y="0.0" width="48" height="56"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ere-DJ-wJW">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ere-DJ-wJW">
                                                 <rect key="frame" x="2" y="2" width="44" height="52"/>
                                                 <color key="backgroundColor" red="1" green="0.83137254900000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="52" id="eJG-3I-m1z"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                         </subviews>
@@ -3153,10 +3233,13 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J8X-4f-03P">
                                         <rect key="frame" x="128" y="0.0" width="48" height="56"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pcY-PY-RvY">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pcY-PY-RvY">
                                                 <rect key="frame" x="2" y="2" width="44" height="52"/>
                                                 <color key="backgroundColor" red="1" green="0.83137254900000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="52" id="dCg-lD-nnB"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                         </subviews>
@@ -3170,10 +3253,13 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vs7-20-5UR">
                                         <rect key="frame" x="192" y="0.0" width="48" height="56"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WJI-7k-xcy">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WJI-7k-xcy">
                                                 <rect key="frame" x="2" y="2" width="44" height="52"/>
                                                 <color key="backgroundColor" red="1" green="0.83137254900000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="52" id="bkw-s8-QTU"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                         </subviews>
@@ -3185,6 +3271,9 @@
                                         </constraints>
                                     </view>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="28e-VH-uiK"/>
+                                </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u18-iI-yKi">
                                 <rect key="frame" x="92" y="439" width="191" height="52"/>
@@ -3197,6 +3286,9 @@
                                     <fontDescription key="titleFontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
                                     <color key="baseForegroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="generateCodePressed:" destination="f0a-xe-VvF" eventType="touchUpInside" id="rPq-Jh-ufj"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Adgangskoden vil være gyldig SYS GEN DATO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="987-SI-gei">
                                 <rect key="frame" x="49" y="701" width="279" height="15.666666666666629"/>
@@ -3235,6 +3327,12 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="8Tw-mz-RmD"/>
+                    <connections>
+                        <outlet property="firstNumberField" destination="HDl-fD-Sq0" id="nMS-hJ-Dqv"/>
+                        <outlet property="fourthNumberField" destination="WJI-7k-xcy" id="Ql7-uu-0rs"/>
+                        <outlet property="secondNumberField" destination="ere-DJ-wJW" id="9DC-zb-nK2"/>
+                        <outlet property="thirdNumberField" destination="pcY-PY-RvY" id="297-xy-I9d"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MSS-as-hiz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -11,6 +11,9 @@ class ChooseUserViewController: UIViewController {
     
     @IBOutlet weak var guestBtn: UIButton!
     @IBOutlet weak var WorkAtRebelBtn: UIButton!
+    
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    var helpers = Utils()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +28,12 @@ class ChooseUserViewController: UIViewController {
     }
     
     @IBAction func guestBtnPressed(_ sender: Any) {
+        
+        let newUser = User(context: self.context)
+        newUser.isLoggedIn = false
+       
+        helpers.saveToDB(context: context)
+        
         let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "mapView") as? MapViewController
         self.present(vc!, animated: true)
     }

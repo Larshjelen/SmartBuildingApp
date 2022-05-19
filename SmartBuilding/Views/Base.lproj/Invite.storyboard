@@ -2,10 +2,8 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zzR-OR-F3U">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -187,7 +185,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="PAK-Nn-clc"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="PAK-Nn-clc" firstAttribute="bottom" secondItem="GTW-4q-nmj" secondAttribute="bottom" constant="156.66666666666674" id="e24-Gg-R93"/>
                             <constraint firstItem="GTW-4q-nmj" firstAttribute="leading" secondItem="PAK-Nn-clc" secondAttribute="leading" constant="76" id="jfZ-Bu-U6f"/>
@@ -249,7 +247,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="PPR-6B-Nx3"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="LJk-Sx-Jaa" firstAttribute="top" secondItem="OmC-Vz-SDk" secondAttribute="bottom" constant="38" id="15l-jO-SUZ"/>
                             <constraint firstItem="PPR-6B-Nx3" firstAttribute="trailing" secondItem="LJk-Sx-Jaa" secondAttribute="trailing" constant="48.670000000000002" id="6A4-UD-RDB"/>
@@ -293,8 +291,5 @@
     </scenes>
     <resources>
         <image name="chevron.down" catalog="system" width="128" height="72"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>

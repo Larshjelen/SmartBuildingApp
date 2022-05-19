@@ -86,6 +86,8 @@
 		819B916A282E672900863FEC /* BookingConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819B9169282E672900863FEC /* BookingConfirmationViewController.swift */; };
 		819B916C282E675600863FEC /* BookingDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819B916B282E675600863FEC /* BookingDetailsViewController.swift */; };
 		81A1405427FAFB2600A6448D /* CustomLocationManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A1405327FAFB2600A6448D /* CustomLocationManagerDelegate.swift */; };
+		81B3E6D928354FF100CA390A /* NavigationPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B3E6D828354FF100CA390A /* NavigationPopUpViewController.swift */; };
+		81B3E6DB283643C000CA390A /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B3E6DA283643C000CA390A /* PopUpViewController.swift */; };
 		81B7CAE62831291A006DE8A4 /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B7CAE52831291A006DE8A4 /* Employee.swift */; };
 		81B7CAEB283129C8006DE8A4 /* Employers.json in Resources */ = {isa = PBXBuildFile; fileRef = 81B7CAEA283129C8006DE8A4 /* Employers.json */; };
 		81B7CAED28312A24006DE8A4 /* BookingDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B7CAEC28312A24006DE8A4 /* BookingDateViewController.swift */; };
@@ -100,7 +102,6 @@
 		81C06C35282D63090084F996 /* MeetingRoomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81C06C33282D63080084F996 /* MeetingRoomTableViewCell.xib */; };
 		81E130702833EFB4000CDECB /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E1306F2833EFB4000CDECB /* SearchViewController.swift */; };
 		81E1307228352905000CDECB /* CornerShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E1307128352904000CDECB /* CornerShadowView.swift */; };
-		81E1307428352ACB000CDECB /* RoundedSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E1307328352ACA000CDECB /* RoundedSearchBar.swift */; };
 		81E1307628353116000CDECB /* GradientColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E1307528353116000CDECB /* GradientColorView.swift */; };
 		81E13078283534BF000CDECB /* GetAccessCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E13077283534BF000CDECB /* GetAccessCodeViewController.swift */; };
 /* End PBXBuildFile section */
@@ -205,6 +206,8 @@
 		819B9169282E672900863FEC /* BookingConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingConfirmationViewController.swift; sourceTree = "<group>"; };
 		819B916B282E675600863FEC /* BookingDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingDetailsViewController.swift; sourceTree = "<group>"; };
 		81A1405327FAFB2600A6448D /* CustomLocationManagerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLocationManagerDelegate.swift; sourceTree = "<group>"; };
+		81B3E6D828354FF100CA390A /* NavigationPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationPopUpViewController.swift; sourceTree = "<group>"; };
+		81B3E6DA283643C000CA390A /* PopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
 		81B7CAE52831291A006DE8A4 /* Employee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Employee.swift; sourceTree = "<group>"; };
 		81B7CAEA283129C8006DE8A4 /* Employers.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Employers.json; sourceTree = "<group>"; };
 		81B7CAEC28312A24006DE8A4 /* BookingDateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingDateViewController.swift; sourceTree = "<group>"; };
@@ -219,7 +222,6 @@
 		81C06C33282D63080084F996 /* MeetingRoomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MeetingRoomTableViewCell.xib; sourceTree = "<group>"; };
 		81E1306F2833EFB4000CDECB /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		81E1307128352904000CDECB /* CornerShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerShadowView.swift; sourceTree = "<group>"; };
-		81E1307328352ACA000CDECB /* RoundedSearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedSearchBar.swift; sourceTree = "<group>"; };
 		81E1307528353116000CDECB /* GradientColorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientColorView.swift; sourceTree = "<group>"; };
 		81E13077283534BF000CDECB /* GetAccessCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAccessCodeViewController.swift; sourceTree = "<group>"; };
 		DEE8CEFABCAD7BE2E8EBD8F4 /* Pods-SmartBuilding.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartBuilding.debug.xcconfig"; path = "Target Support Files/Pods-SmartBuilding/Pods-SmartBuilding.debug.xcconfig"; sourceTree = "<group>"; };
@@ -305,7 +307,6 @@
 				2A20BE6A282AE2D100D7024A /* Text Field */,
 				2A64A2032823F686002F63C3 /* Buttons */,
 				2A64A2022823F655002F63C3 /* stylesConstants */,
-				81E1307328352ACA000CDECB /* RoundedSearchBar.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -446,6 +447,7 @@
 		2AB764B227E8A2F40084062C /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				81B3E6D728354FD000CA390A /* Navigation */,
 				819B915C282E51E900863FEC /* InviteGuest */,
 				81C06C2E282D61F60084F996 /* MeetingRooms */,
 				815228BB282A7D08007EEE74 /* AccessCode */,
@@ -463,6 +465,7 @@
 				81E1306F2833EFB4000CDECB /* SearchViewController.swift */,
 				2AFB5CD2283406D100030008 /* SearchBuildingViewController.swift */,
 				2AFB5CD4283409F300030008 /* SearchCell.swift */,
+				81B3E6DA283643C000CA390A /* PopUpViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -547,6 +550,14 @@
 				F79748D6ED2F637BF5B1BA7C /* Pods_SmartBuilding.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		81B3E6D728354FD000CA390A /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				81B3E6D828354FF100CA390A /* NavigationPopUpViewController.swift */,
+			);
+			path = Navigation;
 			sourceTree = "<group>";
 		};
 		81B7CAE72831294B006DE8A4 /* Resources */ = {
@@ -840,8 +851,8 @@
 				2A1C614527F1FD7800FFD2D4 /* Utils.swift in Sources */,
 				2A9D816C2804599F00DA6B02 /* ForkbeardAuthentication.swift in Sources */,
 				81A1405427FAFB2600A6448D /* CustomLocationManagerDelegate.swift in Sources */,
-				81E1307428352ACB000CDECB /* RoundedSearchBar.swift in Sources */,
 				2A035EBF28118D2B00E037AC /* RebelAuthManager.swift in Sources */,
+				81B3E6D928354FF100CA390A /* NavigationPopUpViewController.swift in Sources */,
 				8163F7E9282806090002C60A /* ResturantCellController.swift in Sources */,
 				81E13078283534BF000CDECB /* GetAccessCodeViewController.swift in Sources */,
 				81C06C2A282CF8DE0084F996 /* CheckButton.swift in Sources */,
@@ -860,6 +871,7 @@
 				2AB7648827E89F8D0084062C /* SmartBuilding.xcdatamodeld in Sources */,
 				819B916A282E672900863FEC /* BookingConfirmationViewController.swift in Sources */,
 				2AD3D63928181B6F0008B8D2 /* MeetingRomManager.swift in Sources */,
+				81B3E6DB283643C000CA390A /* PopUpViewController.swift in Sources */,
 				813CC9CC28327B1B004331AC /* ACBorderYellowLabel.swift in Sources */,
 				2A98EC5028314127007CC44B /* MeetingRoomManagerApi.swift in Sources */,
 				2A035EBB2811643900E037AC /* CustomMapMarker.swift in Sources */,

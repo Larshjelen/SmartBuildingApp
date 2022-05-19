@@ -29,6 +29,11 @@ class FoundEmployeeViewController: UIViewController {
         print(selectedEmployee.name)
     }
     
-
+    @IBAction func notifyPressed(_ sender: UIButton) {
+     //   let NotifiedVC = storyboard?.instantiateViewController(withIdentifier: "notifiedEmployee") as? NotifiedEmployeeViewController
+        
+      //  self.navigationController?.pushViewController(NotifiedVC!, animated: true)
+    }
+    
 
 }

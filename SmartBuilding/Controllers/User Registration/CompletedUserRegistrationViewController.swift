@@ -29,7 +29,7 @@ class CompletedUserRegistrationViewController: UIViewController {
         
         do{
             let user = try context.fetch(request)
-            user.first?.isLoggedIn = true
+            user.last?.isLoggedIn = true
             helpers.saveToDB(context: context)
         }catch {
             print(error.localizedDescription)

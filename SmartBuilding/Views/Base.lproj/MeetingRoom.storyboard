@@ -100,6 +100,7 @@
                                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </imageView>
                                                 </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="trailing" secondItem="Sgy-xb-EFg" secondAttribute="trailing" constant="10" id="1Oh-cu-r3d"/>
                                                     <constraint firstItem="Sgy-xb-EFg" firstAttribute="leading" secondItem="npH-B2-KlN" secondAttribute="trailing" constant="5" id="BoC-DK-yv2"/>
@@ -138,6 +139,7 @@
                                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </imageView>
                                                 </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstItem="GPP-3y-bGi" firstAttribute="leading" secondItem="90h-w9-ef0" secondAttribute="leading" constant="8" id="0pq-CT-pgb"/>
                                                     <constraint firstAttribute="height" constant="48" id="EF0-ED-fjU"/>
@@ -225,7 +227,7 @@
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="a0q-kK-wgy"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="sNy-t0-ijw" firstAttribute="leading" secondItem="a0q-kK-wgy" secondAttribute="leading" constant="16" id="jaL-Jx-52R"/>
                             <constraint firstItem="a0q-kK-wgy" firstAttribute="trailing" secondItem="sNy-t0-ijw" secondAttribute="trailing" constant="16" id="nh3-3i-kP1"/>
@@ -282,7 +284,7 @@
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="A1c-sI-SGT">
                                 <rect key="frame" x="12" y="397" width="351" height="237"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <string key="text">Grevinne Ada Lovelace (1815 – 1852) var a rebel with a cause, a rebel for a change. Selvsagt er hun vår sjefsheltinne – en legendarisk datapionér som hun var, ansett for å være verdens første dataprogrammerer. Hun er med oss i ånden, og vi ærer teknogrevinnen med det største og mest adelige møterommet i Rebel.
 
 «That brain of mine is something more than merely mortal; as time will show.»
@@ -332,7 +334,7 @@
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="v8D-4c-qGX"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="v8D-4c-qGX" firstAttribute="trailing" secondItem="cbc-Ha-OjP" secondAttribute="trailing" constant="254" id="0MK-Lj-BfE"/>
                             <constraint firstItem="v8D-4c-qGX" firstAttribute="trailing" secondItem="ajO-lJ-ZCo" secondAttribute="trailing" constant="15" id="3ce-Fb-9Nb"/>
@@ -495,7 +497,7 @@
                                             <fontDescription key="titleFontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <action selector="applePayPressed:" destination="eTx-5S-j0h" eventType="touchUpInside" id="DdQ-cv-cEh"/>
+                                            <action selector="applePayPressed:" destination="eTx-5S-j0h" eventType="touchUpInside" id="Xzh-qX-6p9"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qrC-Tl-5Cx">
@@ -506,7 +508,7 @@
                                             <fontDescription key="titleFontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <action selector="applePayPressed:" destination="eTx-5S-j0h" eventType="touchUpInside" id="bRg-KR-anA"/>
+                                            <action selector="applePayPressed:" destination="eTx-5S-j0h" eventType="touchUpInside" id="tnC-Jw-anW"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -522,7 +524,7 @@
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="S3L-HZ-UDL"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="S3L-HZ-UDL" firstAttribute="trailing" secondItem="iKR-1S-dRk" secondAttribute="trailing" constant="53" id="01z-1y-rxB"/>
                             <constraint firstItem="sOY-yl-1hp" firstAttribute="top" secondItem="iKR-1S-dRk" secondAttribute="bottom" constant="52" id="9Sa-gv-43Z"/>
@@ -704,7 +706,7 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vZM-DB-Uba"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="bcE-7J-juX" firstAttribute="leading" secondItem="vZM-DB-Uba" secondAttribute="leading" constant="15" id="0wT-UR-PZh"/>
                             <constraint firstItem="Y0i-dy-9VM" firstAttribute="top" secondItem="4El-Lk-AZj" secondAttribute="bottom" constant="18.670000000000002" id="4OQ-z4-egh"/>
@@ -783,7 +785,7 @@
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="k7v-oH-pAD"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="vRn-gw-4NQ" firstAttribute="top" relation="greaterThanOrEqual" secondItem="gyl-NP-KtT" secondAttribute="bottom" constant="38" id="0rA-A1-U3c"/>
                             <constraint firstItem="k7v-oH-pAD" firstAttribute="trailing" secondItem="vRn-gw-4NQ" secondAttribute="trailing" constant="76" id="1FE-bm-7bj"/>

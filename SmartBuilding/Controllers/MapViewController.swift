@@ -93,7 +93,19 @@ class MapViewController: UIViewController, FloatingPanelControllerDelegate, UISe
        //fpcMain.addPanel(toParent: viewController, animated: true)
         fpcMain.addPanel(toParent: self, animated: true)
     }
+    @IBAction func showPopUp(_ sender: UIButton) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let viewController = storyboard.instantiateViewController(withIdentifier: "navPopUp")
+                
+                if let presentationController = viewController.presentationController as? UISheetPresentationController {
+                    presentationController.detents = [.medium()] /// change to [.medium(), .large()] for a half *and* full screen sheet
+                }
+                
+                self.present(viewController, animated: true)
 
+        
+    }
+    
     
     func startNavigation (){
         

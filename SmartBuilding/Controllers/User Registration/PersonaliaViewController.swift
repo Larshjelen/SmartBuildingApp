@@ -41,8 +41,8 @@ class PersonaliaViewController: UIViewController {
         
         do{
             let user = try context.fetch(request)
-            user.first?.name = nameTextField.text
-            user.first?.lastName = lastNameTextField.text
+            user.last?.name = nameTextField.text
+            user.last?.lastName = lastNameTextField.text
             helpers.saveToDB(context: context)
         }catch {
             print(error.localizedDescription)

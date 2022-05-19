@@ -52,7 +52,7 @@
                                         </constraints>
                                     </imageView>
                                 </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="53D-KZ-cVf" firstAttribute="top" secondItem="giZ-Xv-h2R" secondAttribute="top" constant="4" id="8AY-0w-QDr"/>
                                     <constraint firstItem="lyZ-ha-K4c" firstAttribute="leading" secondItem="giZ-Xv-h2R" secondAttribute="leading" constant="2" id="F9b-5y-i8b"/>
@@ -70,7 +70,7 @@
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="hFW-bU-d6L"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="hFW-bU-d6L" firstAttribute="trailing" secondItem="giZ-Xv-h2R" secondAttribute="trailing" constant="15" id="21n-7h-wpa"/>
                             <constraint firstItem="Ejp-pz-odZ" firstAttribute="leading" secondItem="hFW-bU-d6L" secondAttribute="leading" constant="16" id="9Gs-UI-w2g"/>
@@ -167,15 +167,21 @@
                                             <color key="baseForegroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="baseBackgroundColor" red="1" green="0.83137254900000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="notifyPressed:" destination="rbw-GZ-PQb" eventType="touchUpInside" id="b1p-oM-TtS"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8yq-FK-Y5e">
                                         <rect key="frame" x="0.0" y="68" width="255" height="52"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Button">
+                                        <buttonConfiguration key="configuration" style="filled" title="Be om adgangskode">
                                             <fontDescription key="titleFontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
                                             <color key="baseForegroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="baseBackgroundColor" red="0.13725490196078433" green="0.12156862745098039" blue="0.12549019607843137" alpha="1" colorSpace="calibratedRGB"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="notifyPressed:" destination="rbw-GZ-PQb" eventType="touchUpInside" id="wSa-hc-1Bi"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -187,7 +193,7 @@
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Pq9-Wd-dTF"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="ctJ-dN-ijm" firstAttribute="leading" secondItem="Pq9-Wd-dTF" secondAttribute="leading" constant="112" id="AHW-4V-UE9"/>
                             <constraint firstItem="Pq9-Wd-dTF" firstAttribute="trailing" secondItem="Nia-ja-YTD" secondAttribute="trailing" constant="60" id="E9k-vI-P4y"/>
@@ -265,7 +271,7 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="OuN-xu-qrz"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="OuN-xu-qrz" firstAttribute="bottom" secondItem="I37-y3-FbK" secondAttribute="bottom" constant="174" id="5fD-2k-2zC"/>
                             <constraint firstItem="w0H-RS-c2n" firstAttribute="leading" secondItem="OuN-xu-qrz" secondAttribute="leading" constant="97" id="6Mq-8g-CBY"/>
