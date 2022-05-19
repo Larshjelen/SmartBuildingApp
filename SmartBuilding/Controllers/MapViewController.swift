@@ -93,18 +93,16 @@ class MapViewController: UIViewController, FloatingPanelControllerDelegate, UISe
     @objc func getSelectedRoom(_ notification : NSNotification){
         
         searchedMeetingRoom = notification.userInfo?["room"] as? SearchRoom
+        print("This is the meeting room you selected")
         print(searchedMeetingRoom?.name)
+        print(searchedMeetingRoom?.location.lat ?? "No lat")
+        print(searchedMeetingRoom?.location.long ?? "No long")
+        fpcMain.removePanelFromParent(animated: true)
+        wayfindingView.isHidden = false
+        startWayfindingButton.isHidden = false
+        
+        
     }
-    
-    //Testing show/hide FP
-    @IBAction func showFP(_ sender: UIButton) {
-       // fpcMain.removePanelFromParent(animated: true)
-    }
-    @IBAction func hideFP(_ sender: UIButton) {
-       //fpcMain.addPanel(toParent: viewController, animated: true)
-       // fpcMain.addPanel(toParent: self, animated: true)
-    }
-    
     
     @IBAction func showPopUp(_ sender: UIButton) {
         wayfindingView.isHidden = false
@@ -120,6 +118,7 @@ class MapViewController: UIViewController, FloatingPanelControllerDelegate, UISe
     
     @IBAction func startNavigationPressed(_ sender: UIButton) {
         startWayfindingButton.isHidden = true
+        //Start navigation
         
     }
     
