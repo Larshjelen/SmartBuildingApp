@@ -251,10 +251,34 @@ class MapViewController: UIViewController, FloatingPanelControllerDelegate, UISe
     }
   
     func showAnnotations(){
-        let position = CLLocationCoordinate2D(latitude: 52.649030, longitude: 1.174155)
-        let locationMarker = GMSMarker(position: position)
+        let enterence = CLLocationCoordinate2D(latitude: 59.91750663489815, longitude: 10.740081153848683)
+        let coffeeShop = CLLocationCoordinate2D(latitude: 59.917513690438184, longitude: 10.740199699431164)
+        let elevatorFirstFloor = CLLocationCoordinate2D(latitude: 59.91745227315649, longitude: 10.740245569903445)
+        let toiletFirstFloor = CLLocationCoordinate2D(latitude: 59.91751624975255, longitude: 10.740297283480029)
+        let cafeteria = CLLocationCoordinate2D(latitude: 59.917309133883975, longitude: 10.740020206822235)
+        let liberary = CLLocationCoordinate2D(latitude: 59.91709632470611, longitude: 10.740116439727924)
+        let coffeeSecondFloor = CLLocationCoordinate2D(latitude: 59.91733119435588, longitude: 10.74000016879904)
+        let toiletBigSecondFloor = CLLocationCoordinate2D(latitude: 59.917165288285304, longitude: 10.740115140875274)
+        let toiletSmallSecondFloor = CLLocationCoordinate2D(latitude: 59.91703410651393, longitude: 10.740185031394864)
+        let enterenceMarker = GMSMarker(position: enterence)
+        let coffeeShopMarker = GMSMarker(position: coffeeShop)
+        let elevatorFirstFloorMarker = GMSMarker(position: elevatorFirstFloor)
+        let toiletFirstFloorMarker = GMSMarker(position: toiletFirstFloor)
+        let cafeteriaMarker = GMSMarker(position: cafeteria)
+        let liberaryMarker = GMSMarker(position: liberary)
+        let coffeeSecondFloorMarker = GMSMarker(position: coffeeSecondFloor)
+        let toiletBigSecondFloorMarker = GMSMarker(position: toiletBigSecondFloor)
+        let toiletSmallSecondFloorMarker = GMSMarker(position: toiletSmallSecondFloor)
         //locationMarker.icon = UIImage
-        locationMarker.map = gMapView
+        enterenceMarker.map = gMapView
+        coffeeShopMarker.map = gMapView
+        elevatorFirstFloorMarker.map = gMapView
+        toiletFirstFloorMarker.map = gMapView
+        cafeteriaMarker.map = gMapView
+        liberaryMarker.map = gMapView
+        coffeeSecondFloorMarker.map = gMapView
+        toiletBigSecondFloorMarker.map = gMapView
+        toiletSmallSecondFloorMarker.map = gMapView
         
     }
     
