@@ -268,11 +268,42 @@ class MapViewController: UIViewController, FloatingPanelControllerDelegate, UISe
         let toiletBigSecondFloor = CLLocationCoordinate2D(latitude: 59.917165288285304, longitude: 10.740115140875274)
         let toiletSmallSecondFloor = CLLocationCoordinate2D(latitude: 59.91703410651393, longitude: 10.740185031394864)
         
+        let ada = CLLocationCoordinate2D(latitude: 59.917266462541185, longitude: 10.740013489228327)
+        let matt = CLLocationCoordinate2D(latitude: 59.91736362560823, longitude: 10.740132334655604)
+        let simula = CLLocationCoordinate2D(latitude: 59.91720312237747, longitude: 10.740112037522566)
+        let javaBin = CLLocationCoordinate2D(latitude: 59.91722570766675, longitude: 10.739955484665929)
+        let LKK = CLLocationCoordinate2D(latitude: 59.917146574871964, longitude: 10.739995238559287)
+        let emmett = CLLocationCoordinate2D(latitude: 59.91711097487949, longitude: 10.7400361318589)
+        let kim = CLLocationCoordinate2D(latitude: 59.91710124799489, longitude: 10.74005726488678)
+        let ziggy = CLLocationCoordinate2D(latitude: 59.91704942258073, longitude: 10.740129738061885)
+        let dorothy = CLLocationCoordinate2D(latitude: 59.91702860746778, longitude: 10.740184294991588)
+        let james = CLLocationCoordinate2D(latitude: 59.917156141707935, longitude: 10.740105923339057)
+        let hedy = CLLocationCoordinate2D(latitude: 59.91739626310092, longitude: 10.740073437318888)
+        let alan = CLLocationCoordinate2D(latitude: 59.91722663759778, longitude: 10.740077978822486)
+        let tandberg = CLLocationCoordinate2D(latitude: 59.91716457374579, longitude: 10.739947993091619)
+        let printerRoom = CLLocationCoordinate2D(latitude: 59.917383197583185, longitude: 10.740112226052801)
+        
         let elevatorFirstFloorMarker = GMSMarker(position: elevatorFirstFloor)
         let liberaryMarker = GMSMarker(position: liberary)
         let coffeeSecondFloorMarker = GMSMarker(position: coffeeSecondFloor)
         let toiletBigSecondFloorMarker = GMSMarker(position: toiletBigSecondFloor)
         let toiletSmallSecondFloorMarker = GMSMarker(position: toiletSmallSecondFloor)
+        
+        let adaMarker = GMSMarker(position: ada)
+        let mattMarker = GMSMarker(position: matt)
+        let simulaMarker = GMSMarker(position: simula)
+        let javaBinMarker = GMSMarker(position: javaBin)
+        let LKKMarker = GMSMarker(position: LKK)
+        let emmettMarker = GMSMarker(position: emmett)
+        let kimMarker = GMSMarker(position: kim)
+        let ziggyMarker = GMSMarker(position: ziggy)
+        let dorothyMarker = GMSMarker(position: dorothy)
+        let jamesMarker = GMSMarker(position: james)
+        let hedyMarker = GMSMarker(position: hedy)
+        let alanMarker = GMSMarker(position: alan)
+        let tandbergMarker = GMSMarker(position: tandberg)
+      //  let printerRoomMarker = GMSMarker(position: printerRoom)
+        
         toiletSmallSecondFloorMarker.icon = UIImage(named: "icon_toilet")
         elevatorFirstFloorMarker.icon = UIImage(named: "icon_elevator")
         liberaryMarker.icon = UIImage(named: "heis_ikon")
@@ -283,6 +314,36 @@ class MapViewController: UIViewController, FloatingPanelControllerDelegate, UISe
         coffeeSecondFloorMarker.map = gMapView
         toiletBigSecondFloorMarker.map = gMapView
         toiletSmallSecondFloorMarker.map = gMapView
+        
+        adaMarker.icon = UIImage(named: "heis_ikon")
+        mattMarker.icon = UIImage(named: "heis_ikon")
+        simulaMarker.icon = UIImage(named: "heis_ikon")
+        javaBinMarker.icon = UIImage(named: "heis_ikon")
+        LKKMarker.icon = UIImage(named: "heis_ikon")
+        emmettMarker.icon = UIImage(named: "heis_ikon")
+        kimMarker.icon = UIImage(named: "heis_ikon")
+        ziggyMarker.icon = UIImage(named: "heis_ikon")
+        dorothyMarker.icon = UIImage(named: "heis_ikon")
+        jamesMarker.icon = UIImage(named: "heis_ikon")
+        hedyMarker.icon = UIImage(named: "heis_ikon")
+        alanMarker.icon = UIImage(named: "heis_ikon")
+        tandbergMarker.icon = UIImage(named: "heis_ikon")
+        
+        adaMarker.map = gMapView
+        mattMarker.map = gMapView
+        simulaMarker.map = gMapView
+        javaBinMarker.map = gMapView
+        LKKMarker.map = gMapView
+        emmettMarker.map = gMapView
+        kimMarker.map = gMapView
+        ziggyMarker.map = gMapView
+        dorothyMarker.map = gMapView
+        jamesMarker.map = gMapView
+        hedyMarker.map = gMapView
+        alanMarker.map = gMapView
+        tandbergMarker.map = gMapView
+        
+        
         
         //Add room markers
         
